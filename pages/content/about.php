@@ -19,7 +19,7 @@
         </p>
         <p class="text-sm text-gray-600 max-w-3xl mx-auto mb-12 animated-on-scroll animate__animated animate__fadeInUp animate__slower animate__delay-1s">
             Proyek ini dibangun dengan semangat <strong class="font-semibold text-gray-700">open-source</strong>. Kami percaya pada kekuatan kolaborasi dan transparansi. Anda dapat melihat, menggunakan, dan berkontribusi pada kode kami melalui 
-            <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-semibold text-blue-600 hover:text-blue-800 hover:underline transition-colors">
+            <a href="https://github.com/deveazzy/EazZyProject" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-semibold text-blue-600 hover:text-blue-800 hover:underline transition-colors">
                 <span>repositori GitHub kami</span>
                 <i data-lucide="github" class="w-4 h-4"></i>
             </a>.
