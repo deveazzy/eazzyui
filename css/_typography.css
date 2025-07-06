@@ -1,0 +1,57 @@
+.drop-cap-initial {
+    font-weight: 700;
+    color: #16a34a;
+    margin-right: 0.5rem;
+    font-size: 4em;
+    -webkit-initial-letter: 3;
+    initial-letter: 3;
+}
+
+.drop-cap-framed {
+    float: left;
+    font-size: 4rem;
+    line-height: 0.85;
+    font-weight: 700;
+    margin-right: 0.75rem;
+    margin-bottom: -0.15em;
+    padding: 0.25rem 0.6rem;
+    border-width: 2px;
+    border-radius: 0.375rem;
+}
+
+.drop-cap-framed.blue {
+    color: #2563eb;
+    border-color: #bfdbfe;
+    background-color: #eff6ff;
+}
+
+.drop-cap-framed.green {
+    color: #16a34a;
+    border-color: #a7f3d0;
+    background-color: #f0fdf4;
+}
+
+.drop-cap-framed.dark {
+    color: #d1d5db;
+    border-color: #4b5563;
+    background-color: #374151;
+}
+
+.drop-cap-circle-dark {
+    float: left;
+    width: 4.5rem;
+    height: 4.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.25rem;
+    margin-right: 1rem;
+    margin-bottom: 0.25rem;
+    border-radius: 9999px;
+    background-color: #1f2937;
+    color: #f9fafb;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1;
+    font-family: 'Georgia', serif;
+}

@@ -1,0 +1,15 @@
+#mega-menu {
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+#mobile-menu {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.header-components-menu .lucide-chevron-down {
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-components-menu.is-expanded .lucide-chevron-down {
+    transform: rotate(180deg);
+}

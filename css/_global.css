@@ -1,0 +1,11 @@
+@import url('_header.css');
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.file-input-hidden { display: none; }
+main { flex-grow: 1; }
+#copy-notification { transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; }

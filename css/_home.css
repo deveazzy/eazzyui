@@ -1,0 +1,23 @@
+.timeline-item {
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    opacity: 0;
+}
+
+.timeline-item.right-timeline {
+    transform: translateX(50px);
+}
+
+.timeline-item.left-timeline {
+    transform: translateX(-50px);
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        transform: translateX(50px);
+    }
+}
+
+.timeline-item.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
