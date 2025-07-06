@@ -47,7 +47,6 @@ temp/
 # File Konfigurasi Editor/IDE (Editor/IDE Configuration Files)
 # File-file yang dibuat oleh editor atau IDE Anda.
 .idea/ # IntelliJ IDEA, WebStorm, PHPStorm
-.vscode/ # Visual Studio Code
 *.sublime-project
 *.sublime-workspace
 .DS_Store # macOS
@@ -84,3 +83,4 @@ coverage/
 .metadata/
 etc/
 js/vendor/
+.vscode/
