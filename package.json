@@ -6,7 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tailwindcss/cli -i ./css/input.css -o ./css/output.css --watch"
+    "build": "tailwindcss -i ./css/input.css -o ./css/output.css --watch"
   },
   "keywords": [],
   "author": "",

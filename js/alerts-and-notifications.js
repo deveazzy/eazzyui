@@ -16,7 +16,6 @@ PNotify.defaults.stack = {
 };
 
 // Menambahkan event listener ke setiap tombol.
-// Menggunakan fungsi pembantu (helper functions) sesuai dokumentasi resmi.
 document.getElementById('notify-success').addEventListener('click', () => {
     PNotify.success({
         title: 'Success!',
