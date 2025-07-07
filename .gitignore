@@ -85,3 +85,4 @@ etc/
 js/vendor/
 .vscode/
 src/
+vendor/
