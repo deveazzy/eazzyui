@@ -84,3 +84,4 @@ coverage/
 etc/
 js/vendor/
 .vscode/
+src/
