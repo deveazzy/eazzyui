@@ -73,7 +73,7 @@
             </div>
 
             <!-- WIDGET PERFORMA SITUS (col-span-6) -->
-            <div class="lg:col-span-6 widget-card p-6 rounded-lg flex items-center animated-on-scroll animated-fade-in-up delay-200">
+            <div class="lg:col-span-6 widget-card p-6 rounded-lg flex items-center animated-on-scroll animated-fade-in-up delay-200 performance-widget" data-score="92">
                 <div class="w-2/3">
                     <h3 class="text-lg font-semibold text-gray-900">Performa Situs Web</h3>
                     <p class="text-sm text-gray-500">Rata-rata waktu muat: <span class="font-bold text-gray-700">1.2s</span></p>
@@ -125,8 +125,9 @@
 
             <!-- WIDGET YOUTUBE (col-span-6) -->
             <div class="lg:col-span-6 widget-card rounded-lg overflow-hidden animated-on-scroll animated-slide-in-left delay-300">
-                <div class="aspect-w-16 aspect-h-9">
-                    <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ?si=FvK3dY3gZ2bX1c7n&amp;modestbranding=1&amp;controls=0&amp;rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- PERBAIKAN: Menggunakan kelas aspect-ratio modern, tidak perlu plugin -->
+                <div class="relative w-full aspect-[16/9]">
+                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/a8-yGm49kqk?si=WAogVvmGVM40ZC6C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
             
@@ -198,8 +199,3 @@
         </div>
     </div>
 </main>
-
-<!-- Memuat library Chart.js dari CDN -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<!-- Memuat library untuk aspect-ratio plugin (opsional, tapi baik untuk video) -->
-<script src="https://cdn.tailwindcss.com/3.4.1?plugins=aspect-ratio"></script>

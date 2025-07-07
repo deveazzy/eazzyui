@@ -1,5 +1,4 @@
-/* root/css/input.css */
-/* @import url('_style.css'); */
+
 @import url('_global.css');
 @import url('_animate.css');
 @import url('_sidebar-left.css');
@@ -7,14 +6,9 @@
 @import url('_typography.css');
 @import url('_tabs.css');
 @import url('_buttons.css');
-
-/* --- PERBAIKAN: Path ke vendor CSS --- */
-/* Path sekarang sudah diverifikasi berdasarkan struktur di dalam kontainer. */
-/* flatpickr.css berada langsung di dalam folder flatpickr/ */
 @import url('../assets/vendor/flatpickr/flatpickr.css');
-/* PNotifyBrightTheme.css berada langsung di dalam folder pnotify/ */
 @import url('../assets/vendor/pnotify/PNotifyBrightTheme.css');
 
-@import "tailwindcss";
-/* @import "tailwindcss/preflight"; */
 /* @tailwind utilities; */
+/* @import "tailwindcss/preflight"; */
+@import "tailwindcss";

@@ -7,7 +7,7 @@
 // import flatpickr from '/js/vendor/flatpickr/flatpickr.js';
 // Import createIcons dari Lucide untuk merender ulang ikon
 
-import { createIcons, icons } from '../../vendor/lucide/lucide.js';
+import { createIcons, icons } from '../assets/vendor/lucide/lucide.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // --- Script untuk Show/Hide Password ---
