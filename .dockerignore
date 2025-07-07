@@ -1,0 +1,19 @@
+# Abaikan folder node_modules
+node_modules/
+
+# Abaikan file konfigurasi development Node.js
+package-lock.json
+package.json
+postcss.config.js
+tailwind.config.js
+
+# Abaikan folder sumber yang tidak perlu di runtime produksi
+src/
+
+# Abaikan file/folder lain yang tidak perlu di kontainer produksi
+.git/
+.gitignore
+.env
+.DS_Store
+*.log
+npm-debug.log

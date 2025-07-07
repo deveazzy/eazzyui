@@ -1,0 +1,65 @@
+<?php
+// Mendefinisikan konstanta APP_ROOT yang menunjuk ke direktori root proyek.
+// __DIR__ adalah direktori dari file saat ini (misalnya, /var/www/mirror/public/).
+// realpath(__DIR__ . '/..') akan naik satu level ke atas, menghasilkan /var/www/mirror/ (root proyek).
+define('APP_ROOT', realpath(__DIR__ . '/..'));
+
+// Mendefinisikan path absolut ke file core.php menggunakan APP_ROOT.
+// Ini akan menghasilkan path seperti /var/www/mirror/app/Core/core.php
+include APP_ROOT . '/app/Core/core.php';
+
+// Definisikan semua halaman yang TIDAK BOLEH menggunakan sidebar
+$pages_without_sidebar = ['home', 'about', '401', '403', '404', '500', '503'];
+?>
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+<?php 
+    include 'config/html-config.php'; 
+    include 'config/meta-config.php';
+    include 'config/asset-config.php'; 
+?>
+    <!-- Memuat CSS utama yang sudah dikompilasi (output.css) -->
+    <link rel="stylesheet" href="/css/output.css"/>
+
+    <?php
+    // Logika untuk memuat CSS sidebar jika layout-nya ada dan diizinkan.
+    if (isset($layout) && $layout === 'sidebar-left' && !in_array($page, $pages_without_sidebar)) {
+        echo '<link rel="stylesheet" href="/css/sidebar-left.css"/>';
+    }
+
+    // Secara dinamis mencari file .css yang namanya sama dengan $page.
+    if (isset($page_css_file) && file_exists($_SERVER['DOCUMENT_ROOT'] . $page_css_file)) {
+        echo "<link rel='stylesheet' href='{$page_css_file}'/>";
+    }
+    ?>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <?php 
+    include 'layout/header.php';
+  ?>
+
+    <div class="flex flex-1">
+        <?php
+        if (isset($layout) && $layout === 'sidebar-left' && !in_array($page, $pages_without_sidebar)) {
+            include 'layout/sidebar-left.php';
+        }
+        include 'pages/switch.php'; 
+        ?>
+    </div>
+  <?php 
+  include 'layout/footer.php'; 
+  include 'config/js-config.php'; 
+
+  // Logika untuk memuat JavaScript spesifik untuk sidebar.
+  if (isset($layout) && $layout === 'sidebar-left' && !in_array($page, $pages_without_sidebar)) {
+      echo '<script type="module" src="/js/sidebar-left.js"></script>';
+  }
+  // Secara dinamis mencari file .js yang namanya sama dengan $page.
+  if (isset($page_js_file) && file_exists($_SERVER['DOCUMENT_ROOT'] . $page_js_file)) {
+        echo "<script type='module' src='{$page_js_file}'></script>";
+  }
+  ?>
+</body>
+</html>
