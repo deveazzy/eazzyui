@@ -81,6 +81,3 @@ coverage/
 .classpath
 .factorypath
 .metadata/
-etc/
-js/vendor/
-.vscode/
