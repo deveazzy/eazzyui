@@ -32,19 +32,6 @@ Dengan EazZy Project, kami membayangkan sebuah ekosistem di mana manajemen bisni
 
 ---
 
-## Fitur Utama (Rencana)
-
-EazZy Project dirancang untuk menyederhanakan berbagai aspek operasional bisnis. Beberapa fitur yang kami rencanakan meliputi:
-
-* **Manajemen Pelanggan (CRM):** Lacak interaksi, riwayat pembelian, dan preferensi pelanggan.
-* **Manajemen Inventaris:** Pantau stok produk secara *real-time*, kelola pemasok, dan optimalkan pesanan.
-* **Pencatatan Keuangan Sederhana:** Kelola pendapatan, pengeluaran, dan laporan dasar.
-* **Manajemen Proyek/Tugas:** Atur tugas, tenggat waktu, dan kolaborasi tim.
-* **Analisis Data Dasar:** Dapatkan wawasan dari data bisnis untuk pengambilan keputusan yang lebih baik.
-* **Antarmuka Pengguna yang Intuitif:** Desain yang bersih dan mudah digunakan untuk semua level pengguna.
-
----
-
 ## Tumpukan Teknologi (Tech Stack)
 
 Proyek ini dibangun dengan teknologi modern dan fleksibel untuk memastikan kinerja dan skalabilitas:
@@ -65,24 +52,6 @@ Untuk menjalankan EazZy Project di lingkungan pengembangan lokal Anda:
     git clone [https://github.com/deveazzy/EazZyProject.git](https://github.com/deveazzy/EazZyProject.git)
     cd EazZyProject
     ```
-2.  **Instal dependensi Backend (PHP - Composer):**
-    ```bash
-    composer install # Jika menggunakan Composer
-    ```
-3.  **Instal dependensi Frontend (Node.js - npm/yarn/pnpm):**
-    ```bash
-    npm install # atau yarn install atau pnpm install
-    ```
-4.  **Konfigurasi Lingkungan:**
-    Buat file `.env` berdasarkan `.env.example` (jika ada) dan sesuaikan pengaturan database serta variabel lingkungan lainnya.
-5.  **Jalankan Server Pengembangan:**
-    ```bash
-    # Contoh untuk PHP built-in server atau framework
-    php -S localhost:8000 -t public/
-    # Untuk Tailwind CSS watch mode
-    npm run build # Atau npm run dev jika ada script dev
-    ```
-    *Ikuti instruksi lebih lanjut di dalam dokumentasi proyek untuk setup spesifik.*
 
 ---
 
