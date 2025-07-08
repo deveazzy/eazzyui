@@ -7,7 +7,7 @@ Berikut adalah isi file .gitignore yang bisa Anda gunakan:
 # Direktori Dependensi (Dependencies Directories)
 # Folder tempat paket-paket diinstal oleh manajer paket.
 node_modules/
-vendor/ # Untuk dependensi PHP (Composer)
+vendor/
 
 # File Konfigurasi Lingkungan (Environment Configuration Files)
 # File yang berisi variabel lingkungan atau kredensial sensitif.
@@ -82,7 +82,6 @@ coverage/
 .factorypath
 .metadata/
 etc/
-js/vendor/
+public/assets/vendor/
 .vscode/
 src/
-vendor/
