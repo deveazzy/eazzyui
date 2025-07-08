@@ -76,13 +76,13 @@ const globalNavigationData = [
                 label: 'Halaman',
                 icon: 'file-text',
                 children: [ // Sub-menu untuk "Halaman"
-                    // Menambahkan properti 'group' untuk pengelompokan di Mega Menu
-                    { id: 'dashboard', label: 'Dashboard', page: 'dashboard', layout: 'sidebar-left', group: 'Utilitas & Error' },
-                    { id: 'error-401', label: 'Error 401', page: '401', group: 'Utilitas & Error' },
-                    { id: 'error-403', label: 'Error 403', page: '403', group: 'Utilitas & Error' },
-                    { id: 'error-404', label: 'Error 404', page: '404', group: 'Utilitas & Error' },
-                    { id: 'error-500', label: 'Error 500', page: '500', group: 'Utilitas & Error' },
-                    { id: 'error-503', label: 'Error 503', page: '503', group: 'Utilitas & Error' },
+                    // Mengelompokkan item berdasarkan properti 'group'
+                    { id: 'dashboard', label: 'Dashboard', page: 'dashboard', layout: 'sidebar-left', group: 'Contoh Halaman' }, // Grup baru
+                    { id: 'error-401', label: 'Error 401', page: '401', group: 'Halaman Error' }, // Grup baru
+                    { id: 'error-403', label: 'Error 403', page: '403', group: 'Halaman Error' },
+                    { id: 'error-404', label: 'Error 404', page: '404', group: 'Halaman Error' },
+                    { id: 'error-500', label: 'Error 500', page: '500', group: 'Halaman Error' },
+                    { id: 'error-503', label: 'Error 503', page: '503', group: 'Halaman Error' },
                 ]
             },
         ]
