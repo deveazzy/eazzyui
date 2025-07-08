@@ -24,10 +24,18 @@
     </main>
 
     <!-- Footer -->
-    <?php 
-        include 'layout/footer.php'; 
-    ?>
-    <!-- JavaScript Libraries -->
-    <script src="js/menu.min.js"></script>
+<?php 
+include 'layout/footer.php'; 
+include 'config/js-config.php'; 
+
+// Logika untuk memuat JavaScript spesifik untuk sidebar.
+if (isset($layout) && $layout === 'sidebar-left' && !in_array($page, $pages_without_sidebar)) {
+    echo '<script type="module" src="/js/sidebar-left.js"></script>';
+}
+// Secara dinamis mencari file .js yang namanya sama dengan $page.
+if (isset($page_js_file) && file_exists($_SERVER['DOCUMENT_ROOT'] . $page_js_file)) {
+    echo "<script type='module' src='{$page_js_file}'></script>";
+}
+?>
 </body>
 </html>
