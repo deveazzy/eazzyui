@@ -1,38 +1,38 @@
-<main class="container mx-auto p-6 md:p-10 flex-grow">
-    <div class="bg-white p-8 rounded-lg shadow-lg">
+<main class="container mx-auto p-4 md:p-8 lg:p-10 flex-grow">
+    <div class="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl max-w-7xl mx-auto">
 
         <!-- Judul Halaman -->
-        <div class="flex items-center space-x-4 mb-8">
-            <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
-                <i data-lucide="area-chart" class="w-8 h-8"></i>
+        <div class="flex flex-col md:flex-row items-center md:space-x-4 mb-8 md:mb-12 text-center md:text-left">
+            <div class="bg-blue-100 text-blue-600 p-4 rounded-full mb-4 md:mb-0">
+                <i data-lucide="area-chart" class="w-10 h-10 md:w-12 md:h-12"></i>
             </div>
             <div>
-                <h1 class="text-4xl font-bold text-gray-800">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">
                     <a href="https://apexcharts.com/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-300">ApexCharts.js</a>
                 </h1>
-                <p class="text-lg text-gray-500">Pustaka Grafik Modern & Interaktif.</p>
+                <p class="text-lg md:text-xl text-gray-500 mt-1">Pustaka Grafik Modern & Interaktif untuk Visualisasi Data.</p>
             </div>
         </div>
 
         <!-- Seksi: Apa itu ApexCharts? -->
-        <section class="mb-10">
-            <h2 class="text-2xl font-semibold text-gray-700 border-b-2 border-blue-200 pb-2 mb-4">Apa itu ApexCharts?</h2>
-            <p class="text-gray-600 leading-relaxed">
+        <section class="mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Apa itu ApexCharts?</h2>
+            <p class="text-gray-600 leading-relaxed text-base md:text-lg">
                 ApexCharts adalah pustaka grafik (charting library) modern yang bersifat open-source untuk membuat visualisasi data yang indah dan interaktif. Keunggulan utamanya terletak pada tampilannya yang sangat profesional, animasi yang halus, dan fitur interaktif seperti zoom, pan, dan tooltip yang informatif langsung dari kotaknya.
             </p>
-            <p class="text-gray-600 leading-relaxed mt-4">
+            <p class="text-gray-600 leading-relaxed text-base md:text-lg mt-4">
                 Pustaka ini sangat cocok untuk dasbor analitik dan laporan data karena kemampuannya untuk menyajikan data kompleks dengan cara yang mudah dipahami dan menarik secara visual.
             </p>
         </section>
 
         <!-- Seksi: Instalasi & Konfigurasi -->
-        <section class="mb-10">
-            <h2 class="text-2xl font-semibold text-gray-700 border-b-2 border-blue-200 pb-2 mb-4">Panduan Pemasangan</h2>
-            <p class="text-gray-600 leading-relaxed mb-4">
+        <section class="mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Panduan Pemasangan</h2>
+            <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-4">
                 Berikut adalah langkah-langkah untuk memasang dan mengkonfigurasi ApexCharts di dalam proyek ini secara lokal.
             </p>
             
-            <ol class="list-decimal list-inside space-y-6 text-gray-600">
+            <ol class="list-decimal list-inside space-y-6 text-gray-600 text-base md:text-lg">
                 <li>
                     <strong>Instalasi via npm:</strong>
                     <p class="mt-1">Buka terminal di direktori root proyek dan jalankan perintah berikut. Ini akan mengunduh library ke dalam folder `node_modules`.</p>
@@ -82,42 +82,41 @@ chart.render();
             </ol>
         </section>
 
-        <!-- PENAMBAHAN BARU: Seksi Manfaat ApexCharts -->
-        <section class="mb-10">
-            <h2 class="text-2xl font-semibold text-gray-700 border-b-2 border-blue-200 pb-2 mb-4">Manfaat ApexCharts</h2>
+        <!-- Seksi: Manfaat ApexCharts -->
+        <section class="mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Manfaat ApexCharts</h2>
             <ul class="space-y-4">
                 <li class="flex items-start">
                     <i data-lucide="sparkles" class="w-6 h-6 text-yellow-500 mr-3 mt-1 flex-shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Tampilan Modern & Estetis</h3>
-                        <p class="text-gray-600">Menghasilkan grafik yang terlihat profesional dan indah secara default, dengan animasi yang halus saat data dimuat.</p>
+                        <p class="text-gray-600 text-base md:text-lg">Menghasilkan grafik yang terlihat profesional dan indah secara default, dengan animasi yang halus saat data dimuat.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
                     <i data-lucide="mouse-pointer-click" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Sangat Interaktif</h3>
-                        <p class="text-gray-600">Mendukung fitur zoom, pan, dan tooltips yang kaya tanpa konfigurasi tambahan, meningkatkan pengalaman pengguna.</p>
+                        <p class="text-gray-600 text-base md:text-lg">Mendukung fitur zoom, pan, dan tooltips yang kaya tanpa konfigurasi tambahan, meningkatkan pengalaman pengguna.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
                     <i data-lucide="settings-2" class="w-6 h-6 text-purple-500 mr-3 mt-1 flex-shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Kaya Opsi Kustomisasi</h3>
-                        <p class="text-gray-600">Menyediakan API yang luas untuk mengubah hampir setiap aspek visual dari grafik, mulai dari warna hingga format label.</p>
+                        <p class="text-gray-600 text-base md:text-lg">Menyediakan API yang luas untuk mengubah hampir setiap aspek visual dari grafik, mulai dari warna hingga format label.</p>
                     </div>
                 </li>
                  <li class="flex items-start">
                     <i data-lucide="file-check-2" class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Dokumentasi Lengkap</h3>
-                        <p class="text-gray-600">Memiliki dokumentasi yang sangat baik dengan puluhan contoh untuk setiap jenis grafik, memudahkan proses pengembangan.</p>
+                        <p class="text-gray-600 text-base md:text-lg">Memiliki dokumentasi yang sangat baik dengan puluhan contoh untuk setiap jenis grafik, memudahkan proses pengembangan.</p>
                     </div>
                 </li>
             </ul>
         </section>
 
-        
         <!-- Seksi: Contoh Penerapan -->
         <section class="mb-10 md:mb-12">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Contoh Penerapan</h2>
@@ -131,7 +130,7 @@ chart.render();
 
         <!-- Seksi: Contoh Anda -->
         <section class="mb-10 md:mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Pie Charts</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Contoh Anda</h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-4">
                 Anda bisa menyisipkan contoh grafik Anda di bawah ini. Buat sebuah `div` dengan ID unik dan inisialisasikan di file `public/js/apexcharts.js`.
             </p>
@@ -142,7 +141,7 @@ chart.render();
         </section>
 
         <!-- NEW CHARTS START HERE -->
-        <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Berbagai Jenis Grafik Lainnya</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6 mb-8">Berbagai Jenis Grafik Lainnya</h2>
 
         <section class="mb-10 md:mb-12">
             <h3 class="text-xl md:text-2xl font-semibold text-gray-700 mb-4">Line Chart (Suhu Rata-rata)</h3>
