@@ -17,7 +17,7 @@
 
         <!-- Bagian: Apa itu Tabulator.info? -->
         <section class="mb-10 md:mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Apa itu Tabulator.info?</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Apa itu Tabulator?</h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg">
                 Tabulator adalah pustaka JavaScript yang ringan dan sangat fleksibel untuk membuat tabel data interaktif di halaman web Anda. Berbeda dengan pustaka tabel lain yang mungkin lebih berat, Tabulator fokus pada performa dan kustomisasi yang mendalam, memungkinkan Anda untuk menampilkan, memanipulasi, dan berinteraksi dengan data tabel dengan efisien.
             </p>
@@ -26,14 +26,14 @@
             </p>
             <!-- Backlink ke Tabulator.info -->
             <p class="text-gray-600 leading-relaxed text-base md:text-lg mt-4">
-                Kunjungi situs resmi Tabulator.info untuk melihat semua fitur, demo, dan dokumentasi lengkapnya: 
+                Kunjungi situs resmi Tabulator untuk melihat semua fitur, demo, dan dokumentasi lengkapnya: 
                 <a href="https://tabulator.info/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-semibold">tabulator.info</a>.
             </p>
         </section>
 
         <!-- Bagian: Panduan Pemasangan Tabulator.info -->
         <section class="mb-10 md:mb-12 pt-10 border-t border-gray-200">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Panduan Pemasangan Tabulator.info</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Panduan Pemasangan Tabulator</h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-4">
                 Berikut adalah langkah-langkah dasar untuk memasang dan menggunakan Tabulator.info di proyek Anda:
             </p>
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <!-- Bagian: Manfaat Tabulator.info -->
         <section class="mb-10 md:mb-12 pt-10 border-t border-gray-200">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Manfaat Tabulator.info</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Manfaat Tabulator</h2>
             <ul class="space-y-4">
                 <li class="flex items-start">
                     <i data-lucide="zap" class="w-6 h-6 text-yellow-500 mr-3 mt-1 flex-shrink-0"></i>
