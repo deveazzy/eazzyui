@@ -27,8 +27,17 @@ const baseTheme = {
         foreColor: '#373d3f', // Warna teks umum
         fontFamily: 'Inter, sans-serif', // Menggunakan font Inter
         toolbar: {
-            // Menghapus konfigurasi 'tools' agar ApexCharts menggunakan ikon defaultnya
-            show: true // Pastikan toolbar tetap ditampilkan
+            show: true, // Pastikan toolbar tetap ditampilkan
+            tools: {
+                download: true, // Aktifkan tombol download (SVG, PNG, CSV)
+                selection: true, // Aktifkan Selection Zoom
+                zoom: true,      // Aktifkan Zoom (Zoom In/Out)
+                zoomin: true,
+                zoomout: true,
+                pan: true,       // Aktifkan Panning
+                reset: true,     // Aktifkan Reset Zoom
+                customIcons: []  // Biarkan kosong jika tidak ada ikon kustom
+            }
         }
     },
     colors: themePalette, // Menggunakan palet warna kustom

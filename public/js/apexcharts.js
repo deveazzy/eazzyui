@@ -158,12 +158,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.area.chart, // Gabungkan pengaturan chart dari tema
                 height: 350,
                 type: 'area', // Tipe area untuk tampilan yang lebih menarik
-                toolbar: {
-                    show: true // Tampilkan toolbar (zoom, pan, dll)
-                },
-                zoom: {
-                    enabled: true
-                }
+                // Hapus properti toolbar dan zoom yang menimpa di sini
+                // toolbar: { show: true },
+                // zoom: { enabled: true }
             },
             // Pengaturan warna (dihapus karena sudah diatur oleh tema)
             // dataLabels, stroke, xaxis, yaxis, tooltip, fill akan diwarisi atau ditimpa sesuai kebutuhan
@@ -246,6 +243,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.donut.chart, // Gabungkan pengaturan chart dari tema
                 type: 'donut',
                 height: 250
+                // Hapus properti toolbar dan zoom yang menimpa di sini
+                // toolbar: { show: true },
+                // zoom: { enabled: true }
             },
             responsive: [{
                 breakpoint: 480,
@@ -282,6 +282,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.line.chart,
                 height: 350,
                 type: 'line',
+                // Hapus properti toolbar dan zoom yang menimpa di sini
+                // toolbar: { show: true },
+                // zoom: { enabled: true }
             },
             xaxis: {
                 ...chartTheme.line.xaxis,
@@ -325,6 +328,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.bar.chart,
                 height: 350,
                 type: 'bar',
+                // Hapus properti toolbar dan zoom yang menimpa di sini
+                // toolbar: { show: true },
+                // zoom: { enabled: true }
             },
             plotOptions: {
                 bar: {
@@ -370,6 +376,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.bar.chart,
                 height: 350,
                 type: 'bar',
+                // Hapus properti toolbar dan zoom yang menimpa di sini
+                // toolbar: { show: true },
+                // zoom: { enabled: true }
             },
             plotOptions: {
                 bar: {
@@ -424,6 +433,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 height: 350,
                 type: 'line', // Tipe utama
                 stacked: false,
+                // Hapus properti toolbar dan zoom yang menimpa di sini
+                // toolbar: { show: true },
+                // zoom: { enabled: true }
             },
             stroke: {
                 ...chartTheme.line.stroke,
@@ -491,6 +503,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.area.chart,
                 height: 350,
                 type: 'rangeArea',
+                // Hapus properti toolbar dan zoom yang menimpa di sini
+                // toolbar: { show: true },
+                // zoom: { enabled: true }
             },
             xaxis: {
                 ...chartTheme.area.xaxis,
@@ -537,6 +552,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.boxPlot.chart,
                 height: 350,
                 type: 'boxPlot',
+                // Hapus properti toolbar dan zoom yang menimpa di sini
+                // toolbar: { show: true },
+                // zoom: { enabled: true }
             },
             xaxis: {
                 ...chartTheme.boxPlot.xaxis,
@@ -578,6 +596,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.bubble.chart,
                 height: 350,
                 type: 'bubble',
+                // Hapus properti toolbar dan zoom yang menimpa di sini
+                // toolbar: { show: true },
+                // zoom: { enabled: true }
             },
             xaxis: {
                 ...chartTheme.bubble.xaxis,
@@ -639,6 +660,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.scatter.chart,
                 height: 350,
                 type: 'scatter',
+                // Hapus properti toolbar dan zoom yang menimpa di sini
+                // toolbar: { show: true },
+                // zoom: { enabled: true }
             },
             xaxis: {
                 ...chartTheme.scatter.xaxis,
@@ -693,6 +717,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.heatmap.chart,
                 height: 350,
                 type: 'heatmap',
+                // Hapus properti toolbar dan zoom yang menimpa di sini
+                // toolbar: { show: true },
+                // zoom: { enabled: true }
             },
             xaxis: {
                 ...chartTheme.heatmap.xaxis,
@@ -747,6 +774,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.treemap.chart,
                 height: 350,
                 type: 'treemap',
+                // Hapus properti toolbar dan zoom yang menimpa di sini
+                // toolbar: { show: true },
+                // zoom: { enabled: true }
             },
             title: {
                 text: 'Ukuran File Berdasarkan Kategori',
@@ -784,9 +814,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 zoom: {
                     enabled: false // Biasanya tidak ada zoom untuk slope chart
                 },
-                toolbar: {
-                    show: false // Sembunyikan toolbar
-                }
+                // Hapus properti toolbar yang menimpa di sini
+                // toolbar: { show: false }
             },
             stroke: {
                 ...chartTheme.line.stroke,
@@ -888,6 +917,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.radialBar.chart,
                 height: 350,
                 type: 'radialBar',
+                // Hapus properti toolbar dan zoom yang menimpa di sini
+                // toolbar: { show: true },
+                // zoom: { enabled: true }
             },
             plotOptions: {
                 radialBar: {
@@ -943,6 +975,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.radar.chart,
                 height: 350,
                 type: 'radar',
+                // Hapus properti toolbar dan zoom yang menimpa di sini
+                // toolbar: { show: true },
+                // zoom: { enabled: true }
             },
             xaxis: {
                 categories: ['Kecepatan', 'Kekuatan', 'Ketahanan', 'Agility', 'Akurasi', 'Kerja Sama'],
@@ -983,6 +1018,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.polarArea.chart,
                 height: 350,
                 type: 'polarArea',
+                // Hapus properti toolbar dan zoom yang menimpa di sini
+                // toolbar: { show: true },
+                // zoom: { enabled: true }
             },
             stroke: {
                 colors: ['#fff']

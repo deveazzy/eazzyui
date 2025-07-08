@@ -142,7 +142,7 @@ chart.render();
         </section>
 
         <!-- NEW CHARTS START HERE -->
-        <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6 mb-8">Berbagai Jenis Grafik Lainnya</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Berbagai Jenis Grafik Lainnya</h2>
 
         <section class="mb-10 md:mb-12">
             <h3 class="text-xl md:text-2xl font-semibold text-gray-700 mb-4">Line Chart (Suhu Rata-rata)</h3>

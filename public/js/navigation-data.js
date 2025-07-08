@@ -63,14 +63,12 @@ const globalNavigationData = [
                 id: 'assets',
                 label: 'Aset',
                 icon: 'image',
-                children: [ // Sub-menu untuk "Aset"
-                    // Menambahkan properti 'group' untuk pengelompokan di Mega Menu
-                    { id: 'icons', label: 'Icons Lucide', page: 'icons', layout: '', group: 'Grafis' },
-                    // Menambahkan submenu ApexCharts di sini
+                children: [ // Sub-menu untuk "Aset" dengan pengelompokan horizontal
+                    { id: 'icons', label: 'Icons Lucide', icon: 'layers', page: 'icons', layout: '', group: 'Grafis' },
                     { id: 'apexcharts', label: 'ApexCharts', icon: 'area-chart', page: 'apexcharts', layout: '', group: 'Grafis' },
-                    { id: 'alerts-notifications', label: 'Alerts & Notifikasi', icon: 'bell-ring', page: 'alerts-and-notifications', layout: '', group: 'Alerts' },
-                    { id: 'tailwind-css', label: 'Tailwind CSS', icon: 'wind', page: 'tailwind-css', layout: '', group: 'Framework' },
-                    { id: 'flatpickr', label: 'Flatpickr', icon: 'calendar-days', page: 'flatpickr', layout: '', group: 'Date & Time' },
+                    { id: 'alerts-notifications', label: 'Alerts & Notifikasi', icon: 'bell-ring', page: 'alerts-and-notifications', layout: '', group: 'Utilitas' },
+                    { id: 'tailwind-css', label: 'Tailwind CSS', icon: 'wind', page: 'tailwind-css', layout: '', group: 'Frameworks' },
+                    { id: 'flatpickr', label: 'Flatpickr', icon: 'calendar-days', page: 'flatpickr', layout: '', group: 'Form & Interaksi' }, // Mengubah grup agar lebih spesifik
                 ]
             },
             {
@@ -78,13 +76,13 @@ const globalNavigationData = [
                 label: 'Halaman',
                 icon: 'file-text',
                 children: [ // Sub-menu untuk "Halaman"
-                    // Menambahkan properti 'group' untuk pengelompokan di Mega Menu
-                    { id: 'dashboard', label: 'Dashboard', page: 'dashboard', layout: 'sidebar-left', group: 'Utilitas & Error' },
-                    { id: 'error-401', label: 'Error 401', page: '401', group: 'Utilitas & Error' },
-                    { id: 'error-403', label: 'Error 403', page: '403', group: 'Utilitas & Error' },
-                    { id: 'error-404', label: 'Error 404', page: '404', group: 'Utilitas & Error' },
-                    { id: 'error-500', label: 'Error 500', page: '500', group: 'Utilitas & Error' },
-                    { id: 'error-503', label: 'Error 503', page: '503', group: 'Utilitas & Error' },
+                    // Mengelompokkan item berdasarkan properti 'group'
+                    { id: 'dashboard', label: 'Dashboard', page: 'dashboard', layout: 'sidebar-left', group: 'Contoh Halaman' }, // Grup baru
+                    { id: 'error-401', label: 'Error 401', page: '401', group: 'Halaman Error' }, // Grup baru
+                    { id: 'error-403', label: 'Error 403', page: '403', group: 'Halaman Error' },
+                    { id: 'error-404', label: 'Error 404', page: '404', group: 'Halaman Error' },
+                    { id: 'error-500', label: 'Error 500', page: '500', group: 'Halaman Error' },
+                    { id: 'error-503', label: 'Error 503', page: '503', group: 'Halaman Error' },
                 ]
             },
         ]
@@ -115,6 +113,19 @@ const sidebarNavigationData = [
                 ]
             },
             { id: 'menu-level-2-b', label: 'Menu Level 2 B', icon: 'file', page: 'menu-level-2-item-c', layout: 'sidebar-left' },
+        ]
+    },
+    // Menambahkan struktur 'Aset' ke sidebarNavigationData
+    {
+        id: 'assets-sidebar', // ID unik untuk sidebar agar tidak bentrok dengan globalNav
+        label: 'Aset',
+        icon: 'image',
+        children: [
+            { id: 'icons', label: 'Icons Lucide', icon: 'layers', page: 'icons', layout: 'sidebar-left', group: 'Grafis' },
+            { id: 'apexcharts', label: 'ApexCharts', icon: 'area-chart', page: 'apexcharts', layout: 'sidebar-left', group: 'Grafis' },
+            { id: 'alerts-notifications', label: 'Alerts & Notifikasi', icon: 'bell-ring', page: 'alerts-and-notifications', layout: 'sidebar-left', group: 'Utilitas' },
+            { id: 'tailwind-css', label: 'Tailwind CSS', icon: 'wind', page: 'tailwind-css', layout: 'sidebar-left', group: 'Frameworks' },
+            { id: 'flatpickr', label: 'Flatpickr', icon: 'calendar-days', page: 'flatpickr', layout: 'sidebar-left', group: 'Form & Interaksi' },
         ]
     },
     { id: 'settings', label: 'Pengaturan', icon: 'settings', page: 'settings', layout: 'sidebar-left' },
