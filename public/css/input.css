@@ -1,4 +1,3 @@
-
 @import url('_global.css');
 @import url('_animate.css');
 @import url('_sidebar-left.css');
@@ -8,7 +7,9 @@
 @import url('_buttons.css');
 @import url('../assets/vendor/flatpickr/flatpickr.css');
 @import url('../assets/vendor/pnotify/PNotifyBrightTheme.css');
-
-/* @tailwind utilities; */
 /* @import "tailwindcss/preflight"; */
 @import "tailwindcss";
+
+
+
+/* @tailwind utilities; */

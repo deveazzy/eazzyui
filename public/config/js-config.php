@@ -7,5 +7,7 @@
 
 <!-- Memuat library Chart.js dari CDN -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Memuat library ApexCharts dari lokal -->
+<script src="assets/vendor/apexcharts/apexcharts.js"></script>
 <!-- Memuat library untuk aspect-ratio plugin (opsional, tapi baik untuk video) -->
 <!-- <script src="https://cdn.tailwindcss.com/3.4.1?plugins=aspect-ratio"></script> -->
