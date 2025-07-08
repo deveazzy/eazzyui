@@ -2,6 +2,7 @@
 // Mendefinisikan konstanta APP_ROOT yang menunjuk ke direktori root proyek.
 // __DIR__ adalah direktori dari file saat ini (misalnya, /var/www/mirror/public/).
 // realpath(__DIR__ . '/..') akan naik satu level ke atas, menghasilkan /var/www/mirror/ (root proyek).
+
 define('APP_ROOT', realpath(__DIR__ . '/..'));
 
 // Mendefinisikan path absolut ke file core.php menggunakan APP_ROOT.
@@ -9,7 +10,9 @@ define('APP_ROOT', realpath(__DIR__ . '/..'));
 include APP_ROOT . '/app/Core/core.php';
 
 // Definisikan semua halaman yang TIDAK BOLEH menggunakan sidebar
-$pages_without_sidebar = ['home', 'about', '401', '403', '404', '500', '503'];
+$pages_without_sidebar = [
+    '401', '403', '500', '503', '404', 'home', 'about', 'atoms', 'icons', 'typography', 'tabs', 'widgets', 'buttons', 'alerts-and-notifications', 'tailwind-css', 'flatpickr', 'apexcharts'
+];
 ?>
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">

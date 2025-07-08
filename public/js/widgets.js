@@ -5,56 +5,83 @@
  * yang ada di halaman widgets.php yang telah diperbarui.
  */
 
+// Diasumsikan Lucide diimpor dari path yang benar di proyek Anda.
+// Jika path salah, ikon mungkin tidak muncul, tapi tidak akan menyebabkan bug pada chart.
+import { createIcons, icons } from '../assets/vendor/lucide/lucide.js';
+
 document.addEventListener('DOMContentLoaded', () => {
 
     /**
      * Inisialisasi Grafik Performa Situs
      * Menganimasikan SVG ring chart saat elemen masuk ke dalam viewport.
-     * Target: .performance-ring
+     * Target: .performance-widget (sebagai container)
      */
     const initPerformanceChart = () => {
-        const ringContainer = document.querySelector('.performance-ring');
-        if (!ringContainer) return;
+        // PERBAIKAN: Target diubah ke container pembungkus, .performance-widget
+        const performanceWidgets = document.querySelectorAll('.performance-widget');
+        if (performanceWidgets.length === 0) return;
 
-        const progressBar = ringContainer.querySelector('.performance-progress-bar');
-        const progressText = ringContainer.querySelector('.performance-text');
-        
-        // Nilai performa bisa diatur di sini (0-100)
-        const performanceScore = 92; 
-        const radius = progressBar.r.baseVal.value;
-        const circumference = 2 * Math.PI * radius;
-
-        progressBar.style.strokeDasharray = `${circumference} ${circumference}`;
-        progressBar.style.strokeDashoffset = circumference;
-
-        // Fungsi untuk menganimasikan chart saat terlihat
-        const animateChart = () => {
-            const offset = circumference - (performanceScore / 100) * circumference;
-            progressBar.style.strokeDashoffset = offset;
+        performanceWidgets.forEach((widgetContainer, index) => {
+            // PERBAIKAN: Cari elemen-elemen di dalam container widget yang benar
+            const progressBar = widgetContainer.querySelector('.performance-progress-bar');
+            const progressText = widgetContainer.querySelector('.performance-text');
             
-            // Animasi teks angka dari 0 ke nilai target
-            let current = 0;
-            const stepTime = 1500 / performanceScore; // Total animasi 1.5 detik
-            const timer = setInterval(() => {
-                current++;
-                progressText.textContent = `${current}%`;
-                if (current >= performanceScore) {
-                    clearInterval(timer);
-                }
-            }, stepTime);
-        };
+            // Validasi yang lebih kuat untuk memastikan semua elemen ada
+            if (!progressBar || !progressText) {
+                console.error(`Elemen untuk chart performa #${index + 1} tidak lengkap. Pastikan .performance-widget, .performance-progress-bar, dan .performance-text ada di dalam HTML.`);
+                return; // Lanjutkan ke widget berikutnya jika ada yang tidak lengkap
+            }
+            
+            // Ambil nilai performa dari atribut data-score pada widget container
+            const performanceScore = parseInt(widgetContainer.dataset.score) || 92; 
+            const radius = progressBar.r.baseVal.value;
+            const circumference = 2 * Math.PI * radius;
 
-        // Gunakan Intersection Observer untuk memicu animasi hanya saat terlihat
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateChart();
-                    observer.unobserve(entry.target); // Hanya animasikan sekali
-                }
-            });
-        }, { threshold: 0.5 });
+            progressBar.style.strokeDasharray = `${circumference} ${circumference}`;
+            progressBar.style.strokeDashoffset = circumference;
 
-        observer.observe(ringContainer);
+            // Fungsi untuk menganimasikan chart saat terlihat
+            const animateChart = () => {
+                // Hindari animasi ganda jika sudah berjalan
+                if (widgetContainer.classList.contains('is-animated')) return;
+                widgetContainer.classList.add('is-animated');
+
+                const offset = circumference - (performanceScore / 100) * circumference;
+                progressBar.style.strokeDashoffset = offset;
+                
+                // Animasi teks angka dari 0 ke nilai target
+                let current = 0;
+                // Pastikan performanceScore tidak 0 untuk menghindari pembagian dengan nol
+                const stepTime = performanceScore > 0 ? Math.max(1, 1500 / performanceScore) : 0;
+                
+                if (stepTime === 0) {
+                    progressText.textContent = `${performanceScore}%`;
+                    return;
+                }
+
+                const timer = setInterval(() => {
+                    current++;
+                    progressText.textContent = `${current}%`;
+                    if (current >= performanceScore) {
+                        clearInterval(timer);
+                        // Pastikan nilai akhir tepat
+                        progressText.textContent = `${performanceScore}%`;
+                    }
+                }, stepTime);
+            };
+
+            // Gunakan Intersection Observer untuk memicu animasi hanya saat terlihat
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateChart();
+                        observer.unobserve(entry.target); // Hanya animasikan sekali
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(widgetContainer); // Observasi container utamanya
+        });
     };
 
     /**
@@ -75,9 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
             playPauseBtn.innerHTML = isPlaying ? pauseIcon : playIcon;
             
             // Render ulang ikon Lucide setelah mengubah innerHTML
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
+            createIcons({ icons });
         });
     };
 
@@ -94,6 +119,11 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const button = form.querySelector('button[type="submit"]');
             const btnText = button.querySelector('.btn-text');
+
+            if (!btnText) {
+                console.error("Elemen .btn-text tidak ditemukan di dalam tombol submit.");
+                return;
+            }
 
             form.addEventListener('submit', (e) => {
                 e.preventDefault();

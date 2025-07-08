@@ -15,12 +15,14 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.1.11",
     "animate.css": "^4.1.1",
+    "apexcharts": "^4.7.0",
     "flatpickr": "^4.6.13",
     "lucide": "^0.525.0",
     "pnotify": "^4.0.1",
     "tabulator-tables": "^6.3.1"
   },
   "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
     "postcss-import": "^16.1.1",

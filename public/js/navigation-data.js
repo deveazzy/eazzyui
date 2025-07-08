@@ -66,6 +66,8 @@ const globalNavigationData = [
                 children: [ // Sub-menu untuk "Aset"
                     // Menambahkan properti 'group' untuk pengelompokan di Mega Menu
                     { id: 'icons', label: 'Icons Lucide', page: 'icons', layout: '', group: 'Grafis' },
+                    // Menambahkan submenu ApexCharts di sini
+                    { id: 'apexcharts', label: 'ApexCharts', icon: 'area-chart', page: 'apexcharts', layout: '', group: 'Grafis' },
                     { id: 'alerts-notifications', label: 'Alerts & Notifikasi', icon: 'bell-ring', page: 'alerts-and-notifications', layout: '', group: 'Alerts' },
                     { id: 'tailwind-css', label: 'Tailwind CSS', icon: 'wind', page: 'tailwind-css', layout: '', group: 'Framework' },
                     { id: 'flatpickr', label: 'Flatpickr', icon: 'calendar-days', page: 'flatpickr', layout: '', group: 'Date & Time' },
