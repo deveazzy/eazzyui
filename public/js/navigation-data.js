@@ -66,9 +66,10 @@ const globalNavigationData = [
                 children: [ // Sub-menu untuk "Aset" dengan pengelompokan horizontal
                     { id: 'icons', label: 'Icons Lucide', icon: 'layers', page: 'icons', layout: '', group: 'Grafis' },
                     { id: 'apexcharts', label: 'ApexCharts', icon: 'area-chart', page: 'apexcharts', layout: '', group: 'Grafis' },
+                    { id: 'animate-style', label: 'Animate.css', icon: 'sparkles', page: 'animate-style', layout: '', group: 'Animasi' }, // Menambahkan Animate.css
                     { id: 'alerts-notifications', label: 'Alerts & Notifikasi', icon: 'bell-ring', page: 'alerts-and-notifications', layout: '', group: 'Utilitas' },
                     { id: 'tailwind-css', label: 'Tailwind CSS', icon: 'wind', page: 'tailwind-css', layout: '', group: 'Frameworks' },
-                    { id: 'flatpickr', label: 'Flatpickr', icon: 'calendar-days', page: 'flatpickr', layout: '', group: 'Form & Interaksi' }, // Mengubah grup agar lebih spesifik
+                    { id: 'flatpickr', label: 'Flatpickr', icon: 'calendar-days', page: 'flatpickr', layout: '', group: 'Form & Interaksi' },
                 ]
             },
             {
@@ -123,6 +124,7 @@ const sidebarNavigationData = [
         children: [
             { id: 'icons', label: 'Icons Lucide', icon: 'layers', page: 'icons', layout: 'sidebar-left', group: 'Grafis' },
             { id: 'apexcharts', label: 'ApexCharts', icon: 'area-chart', page: 'apexcharts', layout: 'sidebar-left', group: 'Grafis' },
+            { id: 'animate-style', label: 'Animate.css', icon: 'sparkles', page: 'animate-style', layout: 'sidebar-left', group: 'Animasi' }, // Menambahkan Animate.css
             { id: 'alerts-notifications', label: 'Alerts & Notifikasi', icon: 'bell-ring', page: 'alerts-and-notifications', layout: 'sidebar-left', group: 'Utilitas' },
             { id: 'tailwind-css', label: 'Tailwind CSS', icon: 'wind', page: 'tailwind-css', layout: 'sidebar-left', group: 'Frameworks' },
             { id: 'flatpickr', label: 'Flatpickr', icon: 'calendar-days', page: 'flatpickr', layout: 'sidebar-left', group: 'Form & Interaksi' },
