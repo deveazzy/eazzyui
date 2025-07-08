@@ -14,12 +14,12 @@
 
         <!-- Judul Halaman -->
         <div class="flex items-center space-x-4 mb-8">
-            <div class="bg-green-100 text-green-600 p-3 rounded-full">
+            <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
                 <i data-lucide="calendar-days" class="w-8 h-8"></i>
             </div>
             <div>
                 <h1 class="text-4xl font-bold text-gray-800">
-                    <a href="https://flatpickr.js.org/" target="_blank" rel="noopener noreferrer" class="hover:text-green-600 transition-colors duration-300">flatpickr</a>
+                    <a href="https://flatpickr.js.org/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-300">flatpickr</a>
                 </h1>
                 <p class="text-lg text-gray-500">Datepicker JavaScript yang Ringan dan Kuat.</p>
             </div>
@@ -27,7 +27,7 @@
 
         <!-- Seksi: Apa itu flatpickr? -->
         <section class="mb-10">
-            <h2 class="text-2xl font-semibold text-gray-700 border-b-2 border-green-200 pb-2 mb-4">Apa itu flatpickr?</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 border-b-2 border-blue-200 pb-2 mb-4">Apa itu flatpickr?</h2>
             <p class="text-gray-600 leading-relaxed">
                 flatpickr adalah library datepicker yang ringan, kuat, dan tidak memiliki dependensi. Ia menawarkan pengalaman pengguna yang luar biasa dengan desain yang bersih dan modern. Library ini sangat bisa dikustomisasi, mendukung tema, dan memiliki banyak plugin untuk fungsionalitas tambahan seperti pemilihan rentang tanggal.
             </p>
@@ -38,7 +38,7 @@
 
         <!-- Seksi: Instalasi -->
         <section class="mb-10">
-            <h2 class="text-2xl font-semibold text-gray-700 border-b-2 border-green-200 pb-2 mb-4">Instalasi</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 border-b-2 border-blue-200 pb-2 mb-4">Instalasi</h2>
             <p class="text-gray-600 leading-relaxed mb-4">
                 flatpickr dapat diinstal dengan mudah melalui npm dan sudah termasuk dalam `package.json` proyek ini.
             </p>
@@ -78,9 +78,9 @@ flatpickr("#date-range-picker", {
             </ol>
         </section>
 
-        <!-- Seksi: Manfaat flatpickr -->
+         <!-- Seksi: Manfaat flatpickr -->
         <section>
-            <h2 class="text-2xl font-semibold text-gray-700 border-b-2 border-green-200 pb-2 mb-4">Manfaat flatpickr</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 border-b-2 border-blue-200 pb-2 mb-4">Manfaat flatpickr</h2>
             <ul class="space-y-4">
                 <li class="flex items-start">
                     <i data-lucide="feather" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>

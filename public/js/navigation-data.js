@@ -66,9 +66,11 @@ const globalNavigationData = [
                 children: [ // Sub-menu untuk "Aset" dengan pengelompokan horizontal
                     { id: 'icons', label: 'Icons Lucide', icon: 'layers', page: 'icons', layout: '', group: 'Grafis' },
                     { id: 'apexcharts', label: 'ApexCharts', icon: 'area-chart', page: 'apexcharts', layout: '', group: 'Grafis' },
+                    { id: 'animate-style', label: 'Animate.css', icon: 'sparkles', page: 'animate-style', layout: '', group: 'Animasi' },
+                    { id: 'tabulator', label: 'Tabulator', icon: 'table', page: 'tabulator', layout: '', group: 'Tabel & Data' },
                     { id: 'alerts-notifications', label: 'Alerts & Notifikasi', icon: 'bell-ring', page: 'alerts-and-notifications', layout: '', group: 'Utilitas' },
                     { id: 'tailwind-css', label: 'Tailwind CSS', icon: 'wind', page: 'tailwind-css', layout: '', group: 'Frameworks' },
-                    { id: 'flatpickr', label: 'Flatpickr', icon: 'calendar-days', page: 'flatpickr', layout: '', group: 'Form & Interaksi' }, // Mengubah grup agar lebih spesifik
+                    { id: 'flatpickr', label: 'Flatpickr', icon: 'calendar-days', page: 'flatpickr', layout: '', group: 'Form & Interaksi' },
                 ]
             },
             {
@@ -77,8 +79,8 @@ const globalNavigationData = [
                 icon: 'file-text',
                 children: [ // Sub-menu untuk "Halaman"
                     // Mengelompokkan item berdasarkan properti 'group'
-                    { id: 'dashboard', label: 'Dashboard', page: 'dashboard', layout: 'sidebar-left', group: 'Contoh Halaman' }, // Grup baru
-                    { id: 'error-401', label: 'Error 401', page: '401', group: 'Halaman Error' }, // Grup baru
+                    { id: 'dashboard', label: 'Dashboard', page: 'dashboard', layout: 'sidebar-left', group: 'Contoh Halaman' },
+                    { id: 'error-401', label: 'Error 401', page: '401', group: 'Halaman Error' },
                     { id: 'error-403', label: 'Error 403', page: '403', group: 'Halaman Error' },
                     { id: 'error-404', label: 'Error 404', page: '404', group: 'Halaman Error' },
                     { id: 'error-500', label: 'Error 500', page: '500', group: 'Halaman Error' },
@@ -123,6 +125,8 @@ const sidebarNavigationData = [
         children: [
             { id: 'icons', label: 'Icons Lucide', icon: 'layers', page: 'icons', layout: 'sidebar-left', group: 'Grafis' },
             { id: 'apexcharts', label: 'ApexCharts', icon: 'area-chart', page: 'apexcharts', layout: 'sidebar-left', group: 'Grafis' },
+            { id: 'animate-style', label: 'Animate.css', icon: 'sparkles', page: 'animate-style', layout: 'sidebar-left', group: 'Animasi' },
+            { id: 'tabulator', label: 'Tabulator', icon: 'table', page: 'tabulator', layout: 'sidebar-left', group: 'Tabel & Data' },
             { id: 'alerts-notifications', label: 'Alerts & Notifikasi', icon: 'bell-ring', page: 'alerts-and-notifications', layout: 'sidebar-left', group: 'Utilitas' },
             { id: 'tailwind-css', label: 'Tailwind CSS', icon: 'wind', page: 'tailwind-css', layout: 'sidebar-left', group: 'Frameworks' },
             { id: 'flatpickr', label: 'Flatpickr', icon: 'calendar-days', page: 'flatpickr', layout: 'sidebar-left', group: 'Form & Interaksi' },
