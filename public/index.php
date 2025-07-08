@@ -27,14 +27,14 @@ $pages_without_sidebar = [
 
     <?php
     // Logika untuk memuat CSS sidebar jika layout-nya ada dan diizinkan.
-    if (isset($layout) && $layout === 'sidebar-left' && !in_array($page, $pages_without_sidebar)) {
-        echo '<link rel="stylesheet" href="/css/sidebar-left.css"/>';
-    }
+    // if (isset($layout) && $layout === 'sidebar-left' && !in_array($page, $pages_without_sidebar)) {
+    //     echo '<link rel="stylesheet" href="/css/sidebar-left.css"/>';
+    // }
 
     // Secara dinamis mencari file .css yang namanya sama dengan $page.
-    if (isset($page_css_file) && file_exists($_SERVER['DOCUMENT_ROOT'] . $page_css_file)) {
-        echo "<link rel='stylesheet' href='{$page_css_file}'/>";
-    }
+    // if (isset($page_css_file) && file_exists($_SERVER['DOCUMENT_ROOT'] . $page_css_file)) {
+    //     echo "<link rel='stylesheet' href='{$page_css_file}'/>";
+    // }
     ?>
 </head>
 <body class="bg-gray-50 text-gray-800">

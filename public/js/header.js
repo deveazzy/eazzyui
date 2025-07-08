@@ -118,7 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 link.href = category.disabled ? '#' : href;
-                link.className = `mega-menu-trigger flex items-center justify-between p-2 rounded-lg text-gray-600 hover:bg-blue-50 font-medium ${category.disabled ? 'opacity-50 cursor-not-allowed' : ''}`;
+                // Tambahkan kelas 'bg-blue-50' ke trigger pertama untuk menandai sebagai aktif
+                link.className = `mega-menu-trigger flex items-center justify-between p-2 rounded-lg text-gray-600 hover:bg-blue-50 font-medium ${category.disabled ? 'opacity-50 cursor-not-allowed' : ''} ${index === 0 ? 'bg-blue-50' : ''}`;
                 link.setAttribute('data-menu-target', category.id);
                 link.innerHTML = `${category.label} <i data-lucide="arrow-right" class="w-4 h-4"></i>`;
                 
@@ -131,7 +132,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const contentDiv = document.createElement('div');
                 contentDiv.id = `${category.id}-content`;
-                contentDiv.className = `mega-menu-content ${index === 0 ? 'grid grid-cols-3 gap-8' : 'hidden'}`; 
+                
+                // PERBAIKAN: Hanya kategori pertama (index === 0) yang tidak 'hidden' secara default.
+                // Layout grid/flex diterapkan berdasarkan apakah ada children atau tidak.
+                let initialVisibilityClass = index === 0 ? '' : 'hidden'; // Hanya yang pertama yang terlihat
+                let layoutClass = '';
+
+                if (category.children) {
+                    layoutClass = 'grid grid-cols-3 gap-8'; // Layout grid untuk item dengan children
+                } else {
+                    layoutClass = 'flex flex-col space-y-2'; // Layout flex untuk item tanpa children
+                }
+
+                contentDiv.className = `mega-menu-content ${initialVisibilityClass} ${layoutClass}`;
 
                 if (category.children) {
                     const groupedItems = {};
@@ -175,8 +188,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         contentDiv.appendChild(colDiv);
                     }
                 } else {
-                    contentDiv.classList.remove('grid', 'grid-cols-3', 'gap-8');
-                    contentDiv.classList.add('flex', 'flex-col', 'space-y-2');
+                    // Jika tidak ada children, pastikan layoutnya flex
+                    // contentDiv.classList.remove('grid', 'grid-cols-3', 'gap-8'); // Ini sudah ditangani oleh layoutClass
+                    // contentDiv.classList.add('flex', 'flex-col', 'space-y-2'); // Ini juga sudah ditangani oleh layoutClass
                     const p = document.createElement('p');
                     p.className = 'text-gray-600';
                     p.textContent = `Segera hadir: ${category.label.replace(' (soon)', '')} ...`;
@@ -225,14 +239,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         triggers.forEach(trigger => {
             trigger.addEventListener('mouseenter', () => {
-                triggers.forEach(t => t.classList.remove('bg-blue-50'));
-                contents.forEach(c => c.classList.add('hidden'));
+                triggers.forEach(t => t.classList.remove('bg-blue-50')); // Hapus aktif dari semua trigger
+                contents.forEach(c => c.classList.add('hidden')); // Sembunyikan semua konten
                 
-                trigger.classList.add('bg-blue-50');
+                trigger.classList.add('bg-blue-50'); // Tandai trigger saat ini sebagai aktif
                 const targetId = trigger.getAttribute('data-menu-target');
                 const targetContent = document.getElementById(targetId + '-content');
                 if (targetContent) {
-                    targetContent.classList.remove('hidden');
+                    targetContent.classList.remove('hidden'); // Tampilkan konten target
                 }
             });
         });

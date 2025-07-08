@@ -154,79 +154,103 @@ document.addEventListener('DOMContentLoaded', () => {
         // Bersihkan konten yang ada sebelum merender ulang
         parentElement.innerHTML = ''; 
 
+        // Mengelompokkan item berdasarkan properti 'group'
+        const groupedItems = {};
         menuItems.forEach(item => {
-            if (item.children) {
-                // Jika memiliki sub-menu, buat tombol accordion
-                const wrapperDiv = document.createElement('div');
-                wrapperDiv.className = 'w-full';
-
-                const button = document.createElement('button');
-                button.id = `sidebar-${item.id}-trigger`;
-                
-                let buttonTextSizeClass = '';
-                let buttonTextColorClass = '';
-                let buttonIconSizeClass = ''; // Kelas ukuran ikon baru untuk tombol
-
-                if (level === 0) {
-                    buttonTextSizeClass = 'text-lg';
-                    buttonTextColorClass = 'text-gray-700';
-                    buttonIconSizeClass = 'w-5 h-5'; // Ukuran ikon untuk level 0
-                } else if (level === 1) {
-                    buttonTextSizeClass = 'text-md';
-                    buttonTextColorClass = 'text-gray-600';
-                    buttonIconSizeClass = 'w-4 h-4'; // Ukuran ikon untuk level 1
-                } else { // level >= 2
-                    buttonTextSizeClass = 'text-sm';
-                    buttonTextColorClass = 'text-gray-500';
-                    buttonIconSizeClass = 'w-4 h-4'; // Ukuran ikon untuk level 2+
-                }
-
-                button.className = `flex justify-between items-center w-full p-3 rounded-lg ${buttonTextColorClass} hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 group ${buttonTextSizeClass}`;
-                
-                // Sesuaikan padding/margin berdasarkan level jika diperlukan
-                if (level > 0) {
-                    button.classList.remove('p-3');
-                    button.classList.add('p-2');
-                }
-
-                // Terapkan buttonIconSizeClass pada elemen <i> di dalam tombol
-                button.innerHTML = `
-                    <span class="flex items-center overflow-hidden">
-                        <i data-lucide="${item.icon}" class="${buttonIconSizeClass} mr-3 flex-shrink-0"></i>
-                        <span class="sidebar-text whitespace-nowrap">${item.label}</span>
-                    </span>
-                    <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 flex-shrink-0"></i>
-                `;
-                
-                const panelDiv = document.createElement('div');
-                panelDiv.id = `sidebar-${item.id}-panel`;
-                panelDiv.className = `hidden mt-1 space-y-1 pl-4 border-l-2 border-gray-200`;
-
-                wrapperDiv.appendChild(button);
-                wrapperDiv.appendChild(panelDiv);
-                parentElement.appendChild(wrapperDiv);
-
-                // Rekursif untuk merender sub-menu
-                renderDesktopSidebarNav(item.children, panelDiv, level + 1);
-
-                // Tambahkan event listener untuk accordion
-                button.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    panelDiv.classList.toggle('hidden');
-                    // Perbaikan: Toggle kelas rotate-180 pada SVG ikon chevron
-                    const actualChevron = button.querySelector('svg[data-lucide="chevron-down"]');
-                    if (actualChevron) {
-                        actualChevron.classList.toggle('rotate-180');
-                    }
-                    // createIcons({ icons }) TIDAK diperlukan di sini
-                });
-
-            } else {
-                // Jika tidak memiliki sub-menu, buat link biasa
-                const link = createSidebarLink(item, level);
-                parentElement.appendChild(link);
+            const groupName = item.group || 'Tanpa Grup'; // Default group jika tidak ada
+            if (!groupedItems[groupName]) {
+                groupedItems[groupName] = [];
             }
+            groupedItems[groupName].push(item);
         });
+
+        // Render setiap grup
+        for (const groupName in groupedItems) {
+            const itemsInGroup = groupedItems[groupName];
+
+            // Jika ada lebih dari satu grup atau grup bukan 'Tanpa Grup', tambahkan judul grup
+            if (Object.keys(groupedItems).length > 1 || groupName !== 'Tanpa Grup') {
+                const groupTitle = document.createElement('h4');
+                groupTitle.className = `text-xs font-semibold text-gray-400 uppercase tracking-wider mt-4 mb-2 ${level === 0 ? 'pl-3' : 'pl-0'}`;
+                groupTitle.textContent = groupName;
+                parentElement.appendChild(groupTitle);
+            }
+
+            // Render item-item dalam grup
+            itemsInGroup.forEach(item => {
+                if (item.children) {
+                    // Jika memiliki sub-menu, buat tombol accordion
+                    const wrapperDiv = document.createElement('div');
+                    wrapperDiv.className = 'w-full';
+
+                    const button = document.createElement('button');
+                    button.id = `sidebar-${item.id}-trigger`;
+                    
+                    let buttonTextSizeClass = '';
+                    let buttonTextColorClass = '';
+                    let buttonIconSizeClass = ''; // Kelas ukuran ikon baru untuk tombol
+
+                    if (level === 0) {
+                        buttonTextSizeClass = 'text-lg';
+                        buttonTextColorClass = 'text-gray-700';
+                        buttonIconSizeClass = 'w-5 h-5'; // Ukuran ikon untuk level 0
+                    } else if (level === 1) {
+                        buttonTextSizeClass = 'text-md';
+                        buttonTextColorClass = 'text-gray-600';
+                        buttonIconSizeClass = 'w-4 h-4'; // Ukuran ikon untuk level 1
+                    } else { // level >= 2
+                        buttonTextSizeClass = 'text-sm';
+                        buttonTextColorClass = 'text-gray-500';
+                        buttonIconSizeClass = 'w-4 h-4'; // Ukuran ikon untuk level 2+
+                    }
+
+                    button.className = `flex justify-between items-center w-full p-3 rounded-lg ${buttonTextColorClass} hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 group ${buttonTextSizeClass}`;
+                    
+                    // Sesuaikan padding/margin berdasarkan level jika diperlukan
+                    if (level > 0) {
+                        button.classList.remove('p-3');
+                        button.classList.add('p-2');
+                    }
+
+                    // Terapkan buttonIconSizeClass pada elemen <i> di dalam tombol
+                    button.innerHTML = `
+                        <span class="flex items-center overflow-hidden">
+                            <i data-lucide="${item.icon}" class="${buttonIconSizeClass} mr-3 flex-shrink-0"></i>
+                            <span class="sidebar-text whitespace-nowrap">${item.label}</span>
+                        </span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 flex-shrink-0"></i>
+                    `;
+                    
+                    const panelDiv = document.createElement('div');
+                    panelDiv.id = `sidebar-${item.id}-panel`;
+                    panelDiv.className = `hidden mt-1 space-y-1 pl-4 border-l-2 border-gray-200`;
+
+                    wrapperDiv.appendChild(button);
+                    wrapperDiv.appendChild(panelDiv);
+                    parentElement.appendChild(wrapperDiv);
+
+                    // Rekursif untuk merender sub-menu
+                    renderDesktopSidebarNav(item.children, panelDiv, level + 1);
+
+                    // Tambahkan event listener untuk accordion
+                    button.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        panelDiv.classList.toggle('hidden');
+                        // Perbaikan: Toggle kelas rotate-180 pada SVG ikon chevron
+                        const actualChevron = button.querySelector('svg[data-lucide="chevron-down"]');
+                        if (actualChevron) {
+                            actualChevron.classList.toggle('rotate-180');
+                        }
+                        // createIcons({ icons }) TIDAK diperlukan di sini
+                    });
+
+                } else {
+                    // Jika tidak memiliki sub-menu, buat link biasa
+                    const link = createSidebarLink(item, level);
+                    parentElement.appendChild(link);
+                }
+            });
+        }
         createIcons({ icons }); // Render ikon setelah DOM dibuat
     };
 
