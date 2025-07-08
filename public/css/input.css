@@ -8,6 +8,7 @@
 @import url('../assets/vendor/flatpickr/flatpickr.css');
 @import url('../assets/vendor/pnotify/PNotifyBrightTheme.css');
 @import url('_apexcharts.css');
+@import url('_tabulator.css');
 /* @import "tailwindcss/preflight"; */
 @import "tailwindcss";
 
