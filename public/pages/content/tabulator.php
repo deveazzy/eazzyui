@@ -19,7 +19,7 @@
         <section class="mb-10 md:mb-12">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Apa itu Tabulator.info?</h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg">
-                Tabulator.info adalah pustaka JavaScript yang ringan dan sangat fleksibel untuk membuat tabel data interaktif di halaman web Anda. Berbeda dengan pustaka tabel lain yang mungkin lebih berat, Tabulator fokus pada performa dan kustomisasi yang mendalam, memungkinkan Anda untuk menampilkan, memanipulasi, dan berinteraksi dengan data tabel dengan efisien.
+                Tabulator adalah pustaka JavaScript yang ringan dan sangat fleksibel untuk membuat tabel data interaktif di halaman web Anda. Berbeda dengan pustaka tabel lain yang mungkin lebih berat, Tabulator fokus pada performa dan kustomisasi yang mendalam, memungkinkan Anda untuk menampilkan, memanipulasi, dan berinteraksi dengan data tabel dengan efisien.
             </p>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg mt-4">
                 Ini adalah alternatif yang sangat baik untuk pustaka seperti DataTables jika Anda membutuhkan solusi yang lebih ringan namun tetap kaya fitur seperti penyortiran, pemfilteran, pengelompokan, pengeditan sel, dan *pagination*.

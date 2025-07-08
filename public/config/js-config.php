@@ -12,4 +12,4 @@
 <!-- Memuat library untuk aspect-ratio plugin (opsional, tapi baik untuk video) -->
 <!-- <script src="https://cdn.tailwindcss.com/3.4.1?plugins=aspect-ratio"></script> -->
 <!-- Memuat library Tabulator dari lokal -->
-<script src="assets\vendor\tabulator\dist\js\tabulator.js"></script>
+<script src="assets\vendor\tabulator\tabulator.js"></script>
