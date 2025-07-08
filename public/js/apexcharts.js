@@ -7,7 +7,7 @@
 // Pastikan path ini benar relatif terhadap file yang mengimpornya.
 // Jika apexcharts.js dan apexcharts-theme.js berada di direktori yang sama (public/js/),
 // maka gunakan './apexcharts-theme.js'.
-import { chartTheme } from '../js/apexcharts-theme.js'; // PERBAIKAN PATH IMPOR
+import { chartTheme } from './apexcharts-theme.js'; // PERBAIKAN PATH IMPOR
 
 // Fungsi-fungsi helper untuk menghasilkan data grafik
 function generateDayWiseTimeSeries(baseval, count, yrange) {
@@ -158,9 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.area.chart, // Gabungkan pengaturan chart dari tema
                 height: 350,
                 type: 'area', // Tipe area untuk tampilan yang lebih menarik
-                // Hapus properti toolbar dan zoom yang menimpa di sini
-                // toolbar: { show: true },
-                // zoom: { enabled: true }
             },
             // Pengaturan warna (dihapus karena sudah diatur oleh tema)
             // dataLabels, stroke, xaxis, yaxis, tooltip, fill akan diwarisi atau ditimpa sesuai kebutuhan
@@ -213,7 +210,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     opacityTo: 0.2,
                     stops: [0, 90, 100]
                 }
-            }
+            },
+            responsive: [{ // Tambahkan responsive option untuk toolbar
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        toolbar: {
+                            show: true // Paksa toolbar tampil di mobile
+                        }
+                    }
+                }
+            }]
         };
 
         // 2. Buat instance baru dari ApexCharts
@@ -243,18 +250,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.donut.chart, // Gabungkan pengaturan chart dari tema
                 type: 'donut',
                 height: 250
-                // Hapus properti toolbar dan zoom yang menimpa di sini
-                // toolbar: { show: true },
-                // zoom: { enabled: true }
             },
             responsive: [{
                 breakpoint: 480,
                 options: {
-                    chart: {
-                        width: 200
-                    },
                     legend: {
                         position: 'bottom'
+                    },
+                    chart: { // Tambahkan responsive option untuk toolbar
+                        toolbar: {
+                            show: true // Paksa toolbar tampil di mobile
+                        }
                     }
                 }
             }]
@@ -282,9 +288,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.line.chart,
                 height: 350,
                 type: 'line',
-                // Hapus properti toolbar dan zoom yang menimpa di sini
-                // toolbar: { show: true },
-                // zoom: { enabled: true }
             },
             xaxis: {
                 ...chartTheme.line.xaxis,
@@ -306,7 +309,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         return val + " °C";
                     }
                 }
-            }
+            },
+            responsive: [{ // Tambahkan responsive option untuk toolbar
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        toolbar: {
+                            show: true // Paksa toolbar tampil di mobile
+                        }
+                    }
+                }
+            }]
         };
         new ApexCharts(chartContainer, options).render();
     };
@@ -328,9 +341,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.bar.chart,
                 height: 350,
                 type: 'bar',
-                // Hapus properti toolbar dan zoom yang menimpa di sini
-                // toolbar: { show: true },
-                // zoom: { enabled: true }
             },
             plotOptions: {
                 bar: {
@@ -354,7 +364,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: {
                     text: 'Jumlah Penjualan'
                 }
-            }
+            },
+            responsive: [{ // Tambahkan responsive option untuk toolbar
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        toolbar: {
+                            show: true // Paksa toolbar tampil di mobile
+                        }
+                    }
+                }
+            }]
         };
         new ApexCharts(chartContainer, options).render();
     };
@@ -376,9 +396,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.bar.chart,
                 height: 350,
                 type: 'bar',
-                // Hapus properti toolbar dan zoom yang menimpa di sini
-                // toolbar: { show: true },
-                // zoom: { enabled: true }
             },
             plotOptions: {
                 bar: {
@@ -405,7 +422,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: {
                     text: 'Kategori'
                 }
-            }
+            },
+            responsive: [{ // Tambahkan responsive option untuk toolbar
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        toolbar: {
+                            show: true // Paksa toolbar tampil di mobile
+                        }
+                    }
+                }
+            }]
         };
         new ApexCharts(chartContainer, options).render();
     };
@@ -433,9 +460,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 height: 350,
                 type: 'line', // Tipe utama
                 stacked: false,
-                // Hapus properti toolbar dan zoom yang menimpa di sini
-                // toolbar: { show: true },
-                // zoom: { enabled: true }
             },
             stroke: {
                 ...chartTheme.line.stroke,
@@ -481,7 +505,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         return y;
                     }
                 }
-            }
+            },
+            responsive: [{ // Tambahkan responsive option untuk toolbar
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        toolbar: {
+                            show: true // Paksa toolbar tampil di mobile
+                        }
+                    }
+                }
+            }]
         };
         new ApexCharts(chartContainer, options).render();
     };
@@ -503,9 +537,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.area.chart,
                 height: 350,
                 type: 'rangeArea',
-                // Hapus properti toolbar dan zoom yang menimpa di sini
-                // toolbar: { show: true },
-                // zoom: { enabled: true }
             },
             xaxis: {
                 ...chartTheme.area.xaxis,
@@ -530,7 +561,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         return `Min: ${val[0]}, Max: ${val[1]}`;
                     }
                 }
-            }
+            },
+            responsive: [{ // Tambahkan responsive option untuk toolbar
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        toolbar: {
+                            show: true // Paksa toolbar tampil di mobile
+                        }
+                    }
+                }
+            }]
         };
         new ApexCharts(chartContainer, options).render();
     };
@@ -552,9 +593,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.boxPlot.chart,
                 height: 350,
                 type: 'boxPlot',
-                // Hapus properti toolbar dan zoom yang menimpa di sini
-                // toolbar: { show: true },
-                // zoom: { enabled: true }
             },
             xaxis: {
                 ...chartTheme.boxPlot.xaxis,
@@ -568,7 +606,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: {
                     text: 'Nilai'
                 }
-            }
+            },
+            responsive: [{ // Tambahkan responsive option untuk toolbar
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        toolbar: {
+                            show: true // Paksa toolbar tampil di mobile
+                        }
+                    }
+                }
+            }]
         };
         new ApexCharts(chartContainer, options).render();
     };
@@ -596,9 +644,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.bubble.chart,
                 height: 350,
                 type: 'bubble',
-                // Hapus properti toolbar dan zoom yang menimpa di sini
-                // toolbar: { show: true },
-                // zoom: { enabled: true }
             },
             xaxis: {
                 ...chartTheme.bubble.xaxis,
@@ -635,7 +680,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         return val + " Tugas Selesai";
                     }
                 }
-            }
+            },
+            responsive: [{ // Tambahkan responsive option untuk toolbar
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        toolbar: {
+                            show: true // Paksa toolbar tampil di mobile
+                        }
+                    }
+                }
+            }]
         };
         new ApexCharts(chartContainer, options).render();
     };
@@ -660,9 +715,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.scatter.chart,
                 height: 350,
                 type: 'scatter',
-                // Hapus properti toolbar dan zoom yang menimpa di sini
-                // toolbar: { show: true },
-                // zoom: { enabled: true }
             },
             xaxis: {
                 ...chartTheme.scatter.xaxis,
@@ -686,7 +738,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: {
                     text: 'Variabel Y'
                 }
-            }
+            },
+            responsive: [{ // Tambahkan responsive option untuk toolbar
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        toolbar: {
+                            show: true // Paksa toolbar tampil di mobile
+                        }
+                    }
+                }
+            }]
         };
         new ApexCharts(chartContainer, options).render();
     };
@@ -717,9 +779,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.heatmap.chart,
                 height: 350,
                 type: 'heatmap',
-                // Hapus properti toolbar dan zoom yang menimpa di sini
-                // toolbar: { show: true },
-                // zoom: { enabled: true }
             },
             xaxis: {
                 ...chartTheme.heatmap.xaxis,
@@ -733,9 +792,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: {
                     text: 'Bagian Hari'
                 }
-            }
-            // plotOptions.heatmap.colorScale.ranges tidak lagi didefinisikan di sini
-            // karena sudah diwarisi dari chartTheme.heatmap
+            },
+            responsive: [{ // Tambahkan responsive option untuk toolbar
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        toolbar: {
+                            show: true // Paksa toolbar tampil di mobile
+                        }
+                    }
+                }
+            }]
         };
         new ApexCharts(chartContainer, options).render();
     };
@@ -774,9 +841,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.treemap.chart,
                 height: 350,
                 type: 'treemap',
-                // Hapus properti toolbar dan zoom yang menimpa di sini
-                // toolbar: { show: true },
-                // zoom: { enabled: true }
             },
             title: {
                 text: 'Ukuran File Berdasarkan Kategori',
@@ -786,7 +850,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     fontWeight: 'bold',
                     color: '#373d3f'
                 }
-            }
+            },
+            responsive: [{ // Tambahkan responsive option untuk toolbar
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        toolbar: {
+                            show: true // Paksa toolbar tampil di mobile
+                        }
+                    }
+                }
+            }]
         };
         new ApexCharts(chartContainer, options).render();
     };
@@ -814,8 +888,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 zoom: {
                     enabled: false // Biasanya tidak ada zoom untuk slope chart
                 },
-                // Hapus properti toolbar yang menimpa di sini
-                // toolbar: { show: false }
             },
             stroke: {
                 ...chartTheme.line.stroke,
@@ -859,9 +931,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     formatter: function(val) {
                         return `Peringkat ${Math.round(val)}`;
                     }
-                },
-                title: {
-                    text: 'Peringkat'
                 }
             },
             grid: {
@@ -896,7 +965,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.line.legend,
                 position: 'right',
                 offsetY: 40
-            }
+            },
+            responsive: [{ // Tambahkan responsive option untuk toolbar
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        toolbar: {
+                            show: true // Paksa toolbar tampil di mobile
+                        }
+                    }
+                }
+            }]
         };
         new ApexCharts(chartContainer, options).render();
     };
@@ -917,9 +996,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.radialBar.chart,
                 height: 350,
                 type: 'radialBar',
-                // Hapus properti toolbar dan zoom yang menimpa di sini
-                // toolbar: { show: true },
-                // zoom: { enabled: true }
             },
             plotOptions: {
                 radialBar: {
@@ -950,7 +1026,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     }
                 }
-            }
+            },
+            responsive: [{ // Tambahkan responsive option untuk toolbar
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        toolbar: {
+                            show: true // Paksa toolbar tampil di mobile
+                        }
+                    }
+                }
+            }]
         };
         new ApexCharts(chartContainer, options).render();
     };
@@ -975,9 +1061,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.radar.chart,
                 height: 350,
                 type: 'radar',
-                // Hapus properti toolbar dan zoom yang menimpa di sini
-                // toolbar: { show: true },
-                // zoom: { enabled: true }
             },
             xaxis: {
                 categories: ['Kecepatan', 'Kekuatan', 'Ketahanan', 'Agility', 'Akurasi', 'Kerja Sama'],
@@ -998,7 +1081,17 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             markers: {
                 size: 4
-            }
+            },
+            responsive: [{ // Tambahkan responsive option untuk toolbar
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        toolbar: {
+                            show: true // Paksa toolbar tampil di mobile
+                        }
+                    }
+                }
+            }]
         };
         new ApexCharts(chartContainer, options).render();
     };
@@ -1018,9 +1111,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.polarArea.chart,
                 height: 350,
                 type: 'polarArea',
-                // Hapus properti toolbar dan zoom yang menimpa di sini
-                // toolbar: { show: true },
-                // zoom: { enabled: true }
             },
             stroke: {
                 colors: ['#fff']
@@ -1031,11 +1121,13 @@ document.addEventListener('DOMContentLoaded', () => {
             responsive: [{
                 breakpoint: 480,
                 options: {
-                    chart: {
-                        width: 200
-                    },
                     legend: {
                         position: 'bottom'
+                    },
+                    chart: { // Tambahkan responsive option untuk toolbar
+                        toolbar: {
+                            show: true // Paksa toolbar tampil di mobile
+                        }
                     }
                 }
             }]

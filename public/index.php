@@ -11,7 +11,7 @@ include APP_ROOT . '/app/Core/core.php';
 
 // Definisikan semua halaman yang TIDAK BOLEH menggunakan sidebar
 $pages_without_sidebar = [
-    '401', '403', '500', '503', '404', 'home', 'about', 'atoms', 'icons', 'typography', 'tabs', 'widgets', 'buttons', 'alerts-and-notifications', 'tailwind-css', 'flatpickr', 'apexcharts'
+    '401', '403', '500', '503', '404', 'home', 'about'
 ];
 ?>
 <!DOCTYPE html>
