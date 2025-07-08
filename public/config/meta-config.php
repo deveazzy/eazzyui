@@ -1,4 +1,5 @@
 <!-- SEO Meta Tags -->
+<meta name="google-site-verification" content="89JkTa5uXIjQ84J8qMaZEWHRh53Lqf5vFjuTKwWaYKs" />
 <meta name="description" content="Eazzy Project - Aplikasi Bisnis Gratis untuk Pelaku Usaha adalah aplikasi ini untuk membantu pelaku UMKM dan usaha agar berkembang lebih mudah. Daftar sekarang untuk mendapatkan akses pertama saat rilis!">
 <meta name="keywords" content="aplikasi usaha, aplikasi umkm, eazzy project, aplikasi bisnis, software gratis, startup, aplikasi kasir, manajemen usaha">
 <meta name="author" content="EazZy Project">
