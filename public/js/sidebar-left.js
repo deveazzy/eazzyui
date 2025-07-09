@@ -1,20 +1,19 @@
-/**
- * js/sidebar-left-specific.js
- *
- * File ini berisi JavaScript yang spesifik untuk sidebar kiri (desktop)
- * dan Floating Action Button (FAB) menu (mobile), termasuk fungsionalitas
- * toggle (buka/tutup), akordeon menu, dan menu bertingkat di FAB mobile.
- *
- * Menu dirender secara dinamis dari js/navigation-data.js.
- */
+//
+//  * js/sidebar-left.js// 
+//  * css/about.js
+//  *
+//  * @author    [EazZy Project]
+//  * @copyright Copyright (c) [2025] [EazZy Project]
+//  * @license   https://opensource.org/licenses/MIT MIT License
+//  * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
+//  * dan font yang digunakan di EazZy Project.
+//  */
+
 
 import { sidebarNavigationData } from './navigation-data.js';
 import { createIcons, icons } from '../assets/vendor/lucide/lucide.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    // --- DEBUGGING: Konfirmasi bahwa script ini sedang berjalan ---
-    // console.log('js/sidebar-left-specific.js: Script sidebar sedang berjalan.');
-
     // Elemen Sidebar Desktop
     const sidebarDesktop = document.getElementById('sidebar-left-desktop');
     const desktopSidebarToggleBtn = document.getElementById('desktop-sidebar-toggle-btn');
@@ -28,17 +27,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileFabOverlay = document.getElementById('mobile-fab-overlay');
 
     // --- Logika Sidebar Collapsed/Expanded (Desktop) ---
-    const isDesktop = () => window.innerWidth >= 768; // Fungsi untuk cek desktop
+    const isDesktop = () => window.innerWidth >= 768; 
     let isSidebarExpanded = isDesktop() ? (localStorage.getItem('sidebarExpanded') === 'true') : false;
 
     const applySidebarState = () => {
         if (sidebarDesktop) {
             if (isSidebarExpanded) {
                 sidebarDesktop.classList.remove('sidebar-collapsed');
-                sidebarDesktop.classList.add('expanded'); // Tambahkan kelas 'expanded'
+                sidebarDesktop.classList.add('expanded'); 
             } else {
                 sidebarDesktop.classList.add('sidebar-collapsed');
-                sidebarDesktop.classList.remove('expanded'); // Hapus kelas 'expanded'
+                sidebarDesktop.classList.remove('expanded'); 
             }
         }
         // Logika rotasi ikon chevron Dihapus dari sini.
@@ -88,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Fungsi Pembantu untuk Membuat Link Sidebar ---
     const createSidebarLink = (item, level = 0) => {
         const link = document.createElement('a');
-        let href = ''; // Inisialisasi href kosong
+        let href = ''; 
 
         // Logika untuk membuat URL yang lebih bersih (Pretty URLs)
         if (item.page === 'home') {
@@ -105,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
             href = '#'; // Fallback jika tidak ada page
         }
 
-        // Tambahkan hash jika ada
         if (item.hash) {
             href += item.hash;
         }
@@ -114,31 +112,29 @@ document.addEventListener('DOMContentLoaded', () => {
         
         let textSizeClass = '';
         let textColorClass = '';
-        let iconSizeClass = ''; // Kelas ukuran ikon baru
+        let iconSizeClass = ''; 
 
         if (level === 0) {
             textSizeClass = 'text-lg';
             textColorClass = 'text-gray-700';
-            iconSizeClass = 'w-5 h-5'; // Ukuran ikon untuk level 0
+            iconSizeClass = 'w-5 h-5'; 
         } else if (level === 1) {
             textSizeClass = 'text-md';
             textColorClass = 'text-gray-600';
-            iconSizeClass = 'w-4 h-4'; // Ukuran ikon untuk level 1
-        } else { // level >= 2
+            iconSizeClass = 'w-4 h-4'; 
+        } else { 
             textSizeClass = 'text-sm';
             textColorClass = 'text-gray-500';
-            iconSizeClass = 'w-4 h-4'; // Ukuran ikon untuk level 2+
+            iconSizeClass = 'w-4 h-4'; 
         }
 
         link.className = `flex items-center p-3 rounded-lg ${textColorClass} hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 group ${item.disabled ? 'opacity-50 cursor-not-allowed' : ''} ${textSizeClass}`;
         
-        // Sesuaikan padding/margin berdasarkan level jika diperlukan
         if (level > 0) {
             link.classList.remove('p-3');
             link.classList.add('p-2');
         }
 
-        // Terapkan iconSizeClass pada elemen <i>
         link.innerHTML = `<i data-lucide="${item.icon}" class="${iconSizeClass} mr-3 flex-shrink-0"></i><span class="sidebar-text whitespace-nowrap">${item.label}</span>`;
         
         if (item.disabled) {
@@ -151,13 +147,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const renderDesktopSidebarNav = (menuItems, parentElement, level = 0) => {
         if (!parentElement) return;
 
-        // Bersihkan konten yang ada sebelum merender ulang
         parentElement.innerHTML = ''; 
 
-        // Mengelompokkan item berdasarkan properti 'group'
         const groupedItems = {};
         menuItems.forEach(item => {
-            const groupName = item.group || 'Tanpa Grup'; // Default group jika tidak ada
+            const groupName = item.group || 'Tanpa Grup'; 
             if (!groupedItems[groupName]) {
                 groupedItems[groupName] = [];
             }
@@ -188,20 +182,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     let buttonTextSizeClass = '';
                     let buttonTextColorClass = '';
-                    let buttonIconSizeClass = ''; // Kelas ukuran ikon baru untuk tombol
+                    let buttonIconSizeClass = ''; 
 
                     if (level === 0) {
                         buttonTextSizeClass = 'text-lg';
                         buttonTextColorClass = 'text-gray-700';
-                        buttonIconSizeClass = 'w-5 h-5'; // Ukuran ikon untuk level 0
+                        buttonIconSizeClass = 'w-5 h-5'; 
                     } else if (level === 1) {
                         buttonTextSizeClass = 'text-md';
                         buttonTextColorClass = 'text-gray-600';
-                        buttonIconSizeClass = 'w-4 h-4'; // Ukuran ikon untuk level 1
-                    } else { // level >= 2
+                        buttonIconSizeClass = 'w-4 h-4'; 
+                    } else {
                         buttonTextSizeClass = 'text-sm';
                         buttonTextColorClass = 'text-gray-500';
-                        buttonIconSizeClass = 'w-4 h-4'; // Ukuran ikon untuk level 2+
+                        buttonIconSizeClass = 'w-4 h-4'; 
                     }
 
                     button.className = `flex justify-between items-center w-full p-3 rounded-lg ${buttonTextColorClass} hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 group ${buttonTextSizeClass}`;
@@ -236,29 +230,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     button.addEventListener('click', (e) => {
                         e.preventDefault();
                         panelDiv.classList.toggle('hidden');
-                        // Perbaikan: Toggle kelas rotate-180 pada SVG ikon chevron
                         const actualChevron = button.querySelector('svg[data-lucide="chevron-down"]');
                         if (actualChevron) {
                             actualChevron.classList.toggle('rotate-180');
                         }
-                        // createIcons({ icons }) TIDAK diperlukan di sini
                     });
 
                 } else {
-                    // Jika tidak memiliki sub-menu, buat link biasa
                     const link = createSidebarLink(item, level);
                     parentElement.appendChild(link);
                 }
             });
         }
-        createIcons({ icons }); // Render ikon setelah DOM dibuat
+        createIcons({ icons }); 
     };
 
     // --- Logika Akordeon Sidebar (Desktop) ---
     // Fungsi setupAccordion yang lama diganti dengan renderDesktopSidebarNav
-
     // --- Logika Floating Action Button (FAB) Menu Mobile ---
-    let currentMobileMenuLevel = sidebarNavigationData; // Menunjukkan level menu yang sedang ditampilkan
+    let currentMobileMenuLevel = sidebarNavigationData; 
     let mobileMenuHistory = []; // Untuk tombol kembali
 
     // Fungsi untuk menghitung posisi item melingkar
@@ -271,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < numItems; i++) {
             const angle = Math.PI - (i + 1) * angleStep;
             const x = radius * Math.cos(angle);
-            const y = radius * Math.sin(angle); // Positive y means upwards
+            const y = radius * Math.sin(angle); 
             positions.push({ x: x, y: y });
         }
         return positions;
@@ -284,14 +274,14 @@ document.addEventListener('DOMContentLoaded', () => {
         Array.from(mobileMenuItemsContainer.children).forEach(child => {
             child.style.opacity = '0';
             // Mempertahankan transform yang ada dan menambahkan scale out
-            const currentTransform = child.style.transform.replace(/scale\((.*?)\)/, '').trim(); // Hapus scale yang ada
+            const currentTransform = child.style.transform.replace(/scale\((.*?)\)/, '').trim(); 
             child.style.transform = `${currentTransform} scale(0.5)`; 
             child.style.transition = 'all 0.2s ease-out';
-            child.style.pointerEvents = 'none'; // Nonaktifkan interaksi segera
+            child.style.pointerEvents = 'none'; 
         });
 
         setTimeout(() => { // Beri waktu untuk fade out
-            mobileMenuItemsContainer.innerHTML = ''; // Bersihkan item yang ada
+            mobileMenuItemsContainer.innerHTML = ''; 
 
             const isThirdLevel = mobileMenuHistory.length === 2; // Cek apakah ini level 3
             const radius = isThirdLevel ? 140 : 140; // Radius untuk item level 3 dan 2
@@ -307,15 +297,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Tambahkan tombol kembali jika bukan level utama
             if (hasBackButton) {
                 const backButton = document.createElement('button');
-                // Gunakan kelas ukuran yang benar
                 const backButtonSizeClass = mobileMenuHistory.length === 1 ? 'level-2-item' : 'level-3-item'; 
                 backButton.className = `mobile-fab-item mobile-fab-back-btn bg-gray-500 text-white rounded-full shadow-md flex items-center justify-center ${backButtonSizeClass}`; 
                 backButton.innerHTML = `<i data-lucide="arrow-left"></i>`; 
                 
                 const pos = positions[currentItemIndex++];
-                // Mengatur posisi relatif terhadap pusat mobileMenuItemsContainer
-                // top: 50%; left: 50%; transform: translate(-50%, -50%) sudah ada di CSS
-                // Jadi, di sini kita hanya menambahkan offset pos.x dan pos.y
                 backButton.style.transform = `translate(calc(-50% + ${pos.x}px), calc(-50% - ${pos.y}px))`;
                 backButton.style.opacity = '1';
                 backButton.style.transition = `all 0.3s ease-out`;
@@ -325,16 +311,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 backButton.addEventListener('click', (e) => {
                     e.stopPropagation();
-
-                    // Ambil level menu sebelumnya dari riwayat dengan .pop().
-                    // .pop() akan menghapus item terakhir dari array dan MENGEMBALIKAN item tersebut.
                     const previousMenuLevel = mobileMenuHistory.pop();
-
-                    // Jadikan level yang dikembalikan tadi sebagai level menu saat ini.
-                    // Jika `previousMenuLevel` kosong (artinya kita kembali dari level 1), gunakan struktur menu utama.
                     currentMobileMenuLevel = previousMenuLevel || sidebarNavigationData;
-                    
-                    // Render ulang menu dengan data yang benar.
                     renderMobileFabMenuItems(currentMobileMenuLevel);
                     toggleFabMenu(true);
                 });
@@ -366,7 +344,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 mobileMenuItemsContainer.appendChild(fabItem);
 
                 if (item.page) {
-                    // Gunakan logika Pretty URLs untuk FAB item
                     let fabHref = '';
                     if (item.page === 'home') {
                         fabHref = '/';
@@ -429,7 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 mobileMenuItemsContainer.innerHTML = '';
                 mobileMenuHistory = [];
-                currentMobileMenuLevel = sidebarNavigationData; // Reset ke level utama sidebar
+                currentMobileMenuLevel = sidebarNavigationData; 
             }
         }
         createIcons({ icons });
@@ -445,27 +422,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Menandai Link Aktif (untuk Desktop Sidebar dan Mobile FAB) ---
     const markActiveLink = () => {
-        const currentPath = window.location.pathname; // Ambil hanya pathname, Nginx sudah menangani query string
-        // Pilih semua link di sidebar desktop dan item FAB mobile yang merupakan link
+        const currentPath = window.location.pathname; 
         const allLinks = document.querySelectorAll('#desktop-sidebar-nav a, .mobile-fab-item[href]');
 
         allLinks.forEach(link => {
             link.classList.remove('active-link');
             const linkHref = link.getAttribute('href');
             if (linkHref) {
-                // Normalisasi linkHref untuk perbandingan
-                const normalizedLinkHref = linkHref.startsWith('/') ? linkHref : '/' + linkHref; // Pastikan diawali /
-
-                // Cek apakah linkHref cocok dengan currentPath
-                // Handle kasus khusus untuk root '/' dan '/home'
+                const normalizedLinkHref = linkHref.startsWith('/') ? linkHref : '/' + linkHref; 
                 if (normalizedLinkHref === currentPath) {
                     link.classList.add('active-link');
                 } else if (currentPath === '/' && normalizedLinkHref === '/home') {
-                    // Jika di root dan link adalah /home, tandai aktif
                     link.classList.add('active-link');
                 } else if (currentPath.startsWith(normalizedLinkHref) && normalizedLinkHref !== '/') {
-                    // Untuk link seperti /atoms, /about, dll.
-                    // Jika currentPath dimulai dengan linkHref (misal /atoms/sidebarleft cocok dengan /atoms)
                     link.classList.add('active-link');
                 }
             }
@@ -473,8 +442,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     // --- Inisialisasi Awal ---
-    renderDesktopSidebarNav(sidebarNavigationData, desktopSidebarNav); // Render sidebar desktop
-    markActiveLink(); // Tandai link aktif setelah rendering
+    renderDesktopSidebarNav(sidebarNavigationData, desktopSidebarNav); 
+    markActiveLink(); 
 
     // --- Penyesuaian State saat Resize Jendela ---
     window.addEventListener('resize', () => {
@@ -484,21 +453,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if (mobileFabAvatarFixed) mobileFabAvatarFixed.classList.add('hidden');
             if (sidebarDesktop) sidebarDesktop.classList.remove('hidden');
             applySidebarState();
-            // Panggil renderDesktopSidebarNav lagi untuk memastikan DOM diperbarui
             renderDesktopSidebarNav(sidebarNavigationData, desktopSidebarNav);
-            // Tambahkan penundaan untuk markActiveLink saat beralih ke desktop
             setTimeout(() => {
                 markActiveLink();
-            }, 100); // Penundaan 100ms
+            }, 100); 
         } else {
             if (sidebarDesktop) sidebarDesktop.classList.add('hidden');
             if (mobileFabMenu) mobileFabMenu.classList.remove('hidden');
             if (mobileFabAvatarFixed) mobileFabAvatarFixed.classList.remove('hidden');
             toggleFabMenu(false);
-            markActiveLink(); // Langsung panggil untuk mobile view
+            markActiveLink(); 
         }
     });
-
-    // Panggil event resize secara manual saat pertama kali dimuat untuk menyesuaikan tampilan
     window.dispatchEvent(new Event('resize'));
 });

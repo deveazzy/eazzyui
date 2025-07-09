@@ -1,3 +1,12 @@
+// /**
+//  * css/alerts-and-notification.js
+//  *
+//  * @author    [EazZy Project]
+//  * @copyright Copyright (c) [2025] [EazZy Project]
+//  * @license   https://opensource.org/licenses/MIT MIT License
+//  * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
+//  * dan font yang digunakan di EazZy Project.
+//  */
 // Import PNotify dari path lokal yang benar.
 import PNotify from '../assets/vendor/pnotify/PNotify.js';
 import PNotifyButtons from '../assets/vendor/pnotify/PNotifyButtons.js';

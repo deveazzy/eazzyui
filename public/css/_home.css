@@ -1,3 +1,12 @@
+/**
+ * css/_home.css
+ *
+ * @author    [EazZy Project]
+ * @copyright Copyright (c) [2025] [EazZy Project]
+ * @license   https://opensource.org/licenses/MIT MIT License
+ * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
+ * dan font yang digunakan di EazZy Project.
+ */
 .timeline-item {
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     opacity: 0;

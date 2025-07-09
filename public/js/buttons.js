@@ -1,10 +1,13 @@
-/**
- * js/buttons.js
- *
- * File ini berisi logika untuk komponen tombol interaktif,
- * termasuk fungsionalitas dropdown dan animasi klik.
- * Versi ini telah disempurnakan untuk memastikan semua interaksi berjalan lancar.
- */
+// /**
+//  * css/buttons.js
+//  *
+//  * @author    [EazZy Project]
+//  * @copyright Copyright (c) [2025] [EazZy Project]
+//  * @license   https://opensource.org/licenses/MIT MIT License
+//  * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
+//  * dan font yang digunakan di EazZy Project.
+//  */
+
 
 document.addEventListener('DOMContentLoaded', () => {
     /**

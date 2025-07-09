@@ -1,14 +1,13 @@
-/**
- * js/navigation-data.js
- *
- * File ini berisi struktur data menu global untuk seluruh aplikasi EazZy Project.
- * Data ini akan digunakan untuk merender navigasi desktop (header & mega menu),
- * menu mobile (accordion), sidebar desktop, dan Floating Action Button (FAB) mobile
- * secara dinamis.
- *
- * Dengan satu sumber kebenaran ini, perubahan pada struktur menu hanya perlu
- * dilakukan di sini, dan akan tercermin di semua bagian aplikasi.
- */
+//
+//  * js/navigation-data.js
+//  *
+//  * @author    [EazZy Project]
+//  * @copyright Copyright (c) [2025] [EazZy Project]
+//  * @license   https://opensource.org/licenses/MIT MIT License
+//  * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
+//  * dan font yang digunakan di EazZy Project.
+//  */
+
 
 const globalNavigationData = [
     // Menu Level 1
@@ -16,32 +15,28 @@ const globalNavigationData = [
         id: 'home',
         label: 'Beranda',
         icon: 'home',
-        page: 'home', // Parameter 'page' untuk URL
-        layout: '', // Layout default (tanpa sidebar)
+        page: 'home', 
+        layout: '', 
     },
     {
         id: 'components',
         label: 'Komponen',
         icon: 'grid',
-        children: [ // Sub-menu untuk "Komponen"
+        children: [ 
             {
                 id: 'atoms',
                 label: 'Elemen Dasar',
                 icon: 'square',
-                // Halaman induk tidak lagi diperlukan karena anak-anaknya memiliki halaman sendiri
                 // page: 'atoms', 
                 layout: '', 
                 children: [ // Sub-menu untuk "Elemen Dasar" (untuk Mega Menu & Mobile Accordion)
-                    // ===== STRUKTUR MENU DIPERBARUI =====
                     {
                         id: 'ui-elements',
                         label: 'Koleksi Elemen',
                         icon: 'layers',
-                        page: 'atoms', // Ini mengarah ke halaman utama elemen
+                        page: 'atoms', 
                         layout: '',
-                        group: 'Dasar', // Grup untuk Mega Menu
-                        // Anak-anak ini sekarang hanya untuk navigasi dalam halaman (jika diperlukan)
-                        // atau bisa dihapus jika tidak digunakan untuk sub-navigasi
+                        group: 'Dasar', 
                         children: [
                             { id: 'buttons', label: 'Buttons', page: 'atoms', hash: '#buttons', layout: '' },
                             { id: 'inputs', label: 'Inputs', page: 'atoms', hash: '#inputs', layout: '' },
@@ -78,7 +73,6 @@ const globalNavigationData = [
                 label: 'Halaman',
                 icon: 'file-text',
                 children: [ // Sub-menu untuk "Halaman"
-                    // Mengelompokkan item berdasarkan properti 'group'
                     { id: 'dashboard', label: 'Dashboard', page: 'dashboard', layout: 'sidebar-left', group: 'Contoh Halaman' },
                     { id: 'error-401', label: 'Error 401', page: '401', group: 'Halaman Error' },
                     { id: 'error-403', label: 'Error 403', page: '403', group: 'Halaman Error' },
@@ -94,7 +88,7 @@ const globalNavigationData = [
         label: 'Tentang',
         icon: 'info',
         page: 'about',
-        layout: '', // Layout default
+        layout: '', 
     },
 ];
 
@@ -136,6 +130,4 @@ const sidebarNavigationData = [
     { id: 'help', label: 'Bantuan', icon: 'help-circle', page: 'help', layout: 'sidebar-left' },
 ];
 
-
-// Ekspor data agar bisa diimpor di file JS lain
 export { globalNavigationData, sidebarNavigationData };

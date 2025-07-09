@@ -1,10 +1,13 @@
-/**
- * js/tabs.js
- *
- * Versi ini telah direvisi total untuk meningkatkan kestabilan.
- * Logika pencarian panel konten sekarang langsung terikat pada setiap tombol,
- * sehingga tidak lagi rentan terhadap perubahan struktur HTML.
- */
+// /**
+//  * css/tabs.js
+//  *
+//  * @author    [EazZy Project]
+//  * @copyright Copyright (c) [2025] [EazZy Project]
+//  * @license   https://opensource.org/licenses/MIT MIT License
+//  * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
+//  * dan font yang digunakan di EazZy Project.
+//  */
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const initSlidingIndicator = (nav) => {
@@ -31,31 +34,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     allTabNavs.forEach(nav => {
         const buttons = nav.querySelectorAll('.tab-button');
-        
-        // Inisialisasi indikator jika ada
         if (nav.classList.contains('pill-nav-container')) {
             initSlidingIndicator(nav);
         }
 
         buttons.forEach(button => {
             button.addEventListener('click', () => {
-                // 1. Nonaktifkan semua tombol di dalam navigasi ini
                 buttons.forEach(btn => btn.classList.remove('active'));
-                
-                // 2. Sembunyikan semua panel yang terkait dengan navigasi ini
                 buttons.forEach(btn => {
                     const panel = document.querySelector(btn.dataset.tabTarget);
                     if (panel) panel.classList.remove('active');
                 });
 
-                // 3. Aktifkan tombol yang diklik dan panel targetnya
                 button.classList.add('active');
                 const targetPanel = document.querySelector(button.dataset.tabTarget);
                 if (targetPanel) {
                     targetPanel.classList.add('active');
                 }
 
-                // Logika pewarnaan spesifik (tetap sama)
                 if (nav.classList.contains('pill-nav-container')) {
                     buttons.forEach(btn => {
                         btn.classList.remove('text-white', 'text-blue-700', 'text-green-800', 'text-gray-600');
