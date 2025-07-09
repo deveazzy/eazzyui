@@ -3,7 +3,7 @@
  * page/content/buttons.php
  *
  * Halaman untuk menampilkan berbagai variasi komponen tombol.
- * Versi ini adalah versi final yang mencakup semua variasi yang diminta.
+ * Versi ini telah diperbaiki untuk responsivitas dan kebersihan kode.
  */
 ?>
 <!-- Kontainer utama untuk konten halaman -->
@@ -11,6 +11,7 @@
     <!-- Bagian Atas Halaman (Hero) -->
     <div class="bg-white">
         <div class="relative isolate">
+            <!-- Background Blur Effect -->
             <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
                 <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#93c5fd] to-[#a7f3d0] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
             </div>
@@ -65,17 +66,15 @@
             <!-- 2. Ukuran & Grup Tombol (Bentuk Kotak) -->
             <section>
                  <h2 class="text-2xl font-bold text-gray-800 mb-6">Ukuran & Grup (Bentuk Kotak)</h2>
-                 <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm space-y-6">
-                    <div class="flex flex-wrap items-center gap-4">
-                        <button class="font-semibold transition-colors flex items-center justify-center gap-2 bg-transparent text-blue-600 border-2 border-blue-600 rounded-sm py-1 px-2 text-xs">Tombol XS</button>
-                        <button class="font-semibold transition-colors flex items-center justify-center gap-2 bg-transparent text-blue-600 border-2 border-blue-600 rounded-sm py-1.5 px-3 text-sm">Tombol SM</button>
-                        <button class="font-semibold transition-colors flex items-center justify-center gap-2 bg-transparent text-blue-600 border-2 border-blue-600 rounded-sm py-2 px-4 text-base">Tombol Base</button>
-                        <button class="font-semibold transition-colors flex items-center justify-center gap-2 bg-transparent text-blue-600 border-2 border-blue-600 rounded-sm py-2.5 px-5 text-lg">Tombol LG</button>
-                        <button class="font-semibold transition-colors flex items-center justify-center gap-2 bg-transparent text-blue-600 border-2 border-blue-600 rounded-sm py-3 px-6 text-xl">Tombol XL</button>
-                    </div>
-                    <div class="flex flex-wrap items-center gap-4">
-                        <div class="inline-flex shadow-sm"><button class="px-4 py-2 text-sm font-medium text-blue-700 bg-white border border-gray-300 rounded-l-sm hover:bg-gray-100">Satu</button><button class="px-4 py-2 text-sm font-medium text-blue-700 bg-white border-t border-b border-gray-300 hover:bg-gray-100">Dua</button><button class="px-4 py-2 text-sm font-medium text-blue-700 bg-white border border-gray-300 rounded-r-sm hover:bg-gray-100">Tiga</button></div>
-                    </div>
+                 <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-wrap items-center gap-4">
+                    <button class="font-semibold transition-colors flex items-center justify-center gap-2 bg-transparent text-blue-600 border-2 border-blue-600 rounded-sm py-1 px-2 text-xs">Tombol XS</button>
+                    <button class="font-semibold transition-colors flex items-center justify-center gap-2 bg-transparent text-blue-600 border-2 border-blue-600 rounded-sm py-1.5 px-3 text-sm">Tombol SM</button>
+                    <button class="font-semibold transition-colors flex items-center justify-center gap-2 bg-transparent text-blue-600 border-2 border-blue-600 rounded-sm py-2 px-4 text-base">Tombol Base</button>
+                    <button class="font-semibold transition-colors flex items-center justify-center gap-2 bg-transparent text-blue-600 border-2 border-blue-600 rounded-sm py-2.5 px-5 text-lg">Tombol LG</button>
+                    <button class="font-semibold transition-colors flex items-center justify-center gap-2 bg-transparent text-blue-600 border-2 border-blue-600 rounded-sm py-3 px-6 text-xl">Tombol XL</button>
+                 </div>
+                 <div class="flex flex-wrap items-center gap-4 mt-4">
+                    <div class="inline-flex shadow-sm"><button class="px-4 py-2 text-sm font-medium text-blue-700 bg-white border border-gray-300 rounded-l-sm hover:bg-gray-100">Satu</button><button class="px-4 py-2 text-sm font-medium text-blue-700 bg-white border-t border-b border-gray-300 hover:bg-gray-100">Dua</button><button class="px-4 py-2 text-sm font-medium text-blue-700 bg-white border border-gray-300 rounded-r-sm hover:bg-gray-100">Tiga</button></div>
                  </div>
             </section>
 
@@ -89,7 +88,8 @@
                             Opsi
                             <i data-lucide="chevron-down" class="w-5 h-5 -mr-1"></i>
                         </button>
-                        <div class="dropdown-menu dropdown-animated absolute left-0 md:right-0 md:left-auto z-20 mt-2 min-w-40 max-w-xs w-56 origin-top-right rounded-xl bg-white shadow-2xl ring-1 ring-blue-200 ring-opacity-60 overflow-hidden border border-blue-100 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 pointer-events-none group-hover:pointer-events-auto transition-all duration-200">
+                        <!-- Updated dropdown-menu classes for responsiveness -->
+                        <div class="dropdown-menu dropdown-animated absolute left-0 md:right-0 md:left-auto z-20 mt-2 min-w-40 w-56 origin-top-right rounded-xl bg-white shadow-2xl ring-1 ring-blue-200 ring-opacity-60 overflow-hidden border border-blue-100">
                             <a href="#" class="flex items-center gap-2 px-4 py-2 text-sm text-blue-700 hover:bg-blue-50 transition-colors"><i data-lucide="edit-3" class="w-4 h-4"></i>Edit</a>
                             <a href="#" class="flex items-center gap-2 px-4 py-2 text-sm text-red-600 hover:bg-red-50 transition-colors"><i data-lucide="trash-2" class="w-4 h-4"></i>Hapus</a>
                         </div>
@@ -101,7 +101,8 @@
                             <span>Simpan</span>
                             <i data-lucide="chevron-down" class="h-5 w-5"></i>
                         </button>
-                        <div class="dropdown-menu dropdown-animated absolute left-0 md:right-0 md:left-auto z-20 mt-2 min-w-40 max-w-xs w-56 origin-top-right rounded-xl bg-white shadow-2xl ring-1 ring-blue-200 ring-opacity-60 overflow-hidden border border-blue-100 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 pointer-events-none group-hover:pointer-events-auto transition-all duration-200">
+                        <!-- Updated dropdown-menu classes for responsiveness -->
+                        <div class="dropdown-menu dropdown-animated absolute left-0 md:right-0 md:left-auto z-20 mt-2 min-w-40 w-56 origin-top-right rounded-xl bg-white shadow-2xl ring-1 ring-blue-200 ring-opacity-60 overflow-hidden border border-blue-100">
                             <a href="#" class="flex items-center gap-2 px-4 py-2 text-sm text-blue-700 hover:bg-blue-50 transition-colors"><i data-lucide="check-circle" class="w-4 h-4"></i>Simpan & Publikasi</a>
                         </div>
                     </div>
@@ -110,7 +111,8 @@
                         <button type="button" class="dropdown-toggle p-2 rounded-full bg-white text-gray-500 hover:bg-gray-100 border border-gray-200 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all">
                             <i data-lucide="more-vertical" class="w-5 h-5"></i>
                         </button>
-                        <div class="dropdown-menu dropdown-animated absolute left-0 md:right-0 md:left-auto z-20 mt-2 min-w-40 max-w-xs w-56 origin-top-right rounded-xl bg-white shadow-2xl ring-1 ring-blue-200 ring-opacity-60 overflow-hidden border border-blue-100 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 pointer-events-none group-hover:pointer-events-auto transition-all duration-200">
+                        <!-- Updated dropdown-menu classes for responsiveness -->
+                        <div class="dropdown-menu dropdown-animated absolute left-0 md:right-0 md:left-auto z-20 mt-2 min-w-40 w-56 origin-top-right rounded-xl bg-white shadow-2xl ring-1 ring-blue-200 ring-opacity-60 overflow-hidden border border-blue-100">
                             <a href="#" class="flex items-center gap-2 px-4 py-2 text-sm text-blue-700 hover:bg-blue-50 transition-colors"><i data-lucide="eye" class="w-4 h-4"></i>Lihat Detail</a>
                         </div>
                     </div>
@@ -200,7 +202,7 @@
                 <a href="#" class="flex items-center gap-2 bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-800 transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i>Facebook</a>
                 <a href="#" class="flex items-center gap-2 bg-sky-400 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-sky-500 transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i>Twitter</a>
                 <a href="#" class="flex items-center gap-2 bg-pink-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-pink-600 transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i>Instagram</a>
-                <a href="#" class="flex items-center gap-2 bg-gray-900 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-gray-800 transition-colors"><i data-lucide="github" class="w-5 h-5"></i>GitHub</a>
+                <a href="#" class="flex items-center gap-2 bg-gray-900 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-gray-800 transition-colors"><i data-lucide="github" class="w-6 h-6"></i>GitHub</a>
             </div>
         </section>
 
@@ -267,51 +269,65 @@
         <!-- 14. Button Icon Media Sosial dengan Tooltip Slider -->
         <section>
             <h2 class="text-2xl font-bold text-gray-800 mb-6">Button Icon Media Sosial dengan Tooltip Slider</h2>
-            <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex gap-6">
+            <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-wrap items-center gap-6">
                 <div class="relative group">
                     <a href="#" class="flex items-center justify-center p-4 rounded-full bg-blue-700 text-white shadow-md hover:bg-blue-800 transition-colors">
                         <i data-lucide="facebook" class="w-6 h-6"></i>
                     </a>
-                    <span class="social-tooltip absolute left-full top-1/2 -translate-y-1/2 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 translate-x-2 transition-all duration-300 pointer-events-none whitespace-nowrap bg-blue-700 text-white px-3 py-1 rounded shadow-lg">Facebook</span>
+                    <span class="social-tooltip bg-blue-700 text-white">Facebook</span>
                 </div>
                 <div class="relative group">
                     <a href="#" class="flex items-center justify-center p-4 rounded-full bg-sky-400 text-white shadow-md hover:bg-sky-500 transition-colors">
                         <i data-lucide="twitter" class="w-6 h-6"></i>
                     </a>
-                    <span class="social-tooltip absolute left-full top-1/2 -translate-y-1/2 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 translate-x-2 transition-all duration-300 pointer-events-none whitespace-nowrap bg-sky-400 text-white px-3 py-1 rounded shadow-lg">Twitter</span>
+                    <span class="social-tooltip bg-sky-400 text-white">Twitter</span>
                 </div>
                 <div class="relative group">
                     <a href="#" class="flex items-center justify-center p-4 rounded-full bg-pink-500 text-white shadow-md hover:bg-pink-600 transition-colors">
                         <i data-lucide="instagram" class="w-6 h-6"></i>
                     </a>
-                    <span class="social-tooltip absolute left-full top-1/2 -translate-y-1/2 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 translate-x-2 transition-all duration-300 pointer-events-none whitespace-nowrap bg-pink-500 text-white px-3 py-1 rounded shadow-lg">Instagram</span>
+                    <span class="social-tooltip bg-pink-500 text-white">Instagram</span>
                 </div>
                 <div class="relative group">
                     <a href="#" class="flex items-center justify-center p-4 rounded-full bg-gray-900 text-white shadow-md hover:bg-gray-800 transition-colors">
                         <i data-lucide="github" class="w-6 h-6"></i>
                     </a>
-                    <span class="social-tooltip absolute left-full top-1/2 -translate-y-1/2 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 translate-x-2 transition-all duration-300 pointer-events-none whitespace-nowrap bg-gray-900 text-white px-3 py-1 rounded shadow-lg">GitHub</span>
+                    <span class="social-tooltip bg-gray-900 text-white">GitHub</span>
                 </div>
-
             </div>
         </section>
+
+        <!-- 15. Search & Slider Buttons -->
         <section>
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Search & Slider Buttons</h2>
             <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col gap-6">
-                <!-- Button Search Expand on Hover -->
-                <div class="relative group flex items-center mobile-slider-scroll">
-                    <form action="#" class="flex items-center overflow-hidden bg-white rounded-full shadow-md border border-gray-300 transition-all duration-300" style="min-width:56px;">
-                        <button type="button" tabindex="-1" class="flex items-center justify-center p-4 rounded-full bg-white text-gray-700 transition-all duration-300 focus:outline-none">
+                <!-- Button Search Expand on Hover (Left Icon) -->
+                <!-- Perilaku: Full width di mobile, efek expand input via JS (fokus/klik) di mobile.
+                     Di desktop, form menjadi tombol melingkar saat non-hover, dan memanjang saat hover. -->
+                <div class="relative group flex items-center mobile-slider-scroll w-full md:w-auto">
+                    <!-- Form ini akan menjadi tombol melingkar di desktop non-hover, dan memanjang saat hover -->
+                    <form action="#" class="flex items-center bg-white rounded-full shadow-md border border-gray-300 transition-all duration-300
+                        h-[56px] overflow-hidden desktop-expandable-form">
+                        <button type="button" tabindex="-1" class="flex-shrink-0 flex items-center justify-center p-4 rounded-full bg-white text-gray-700 transition-all duration-300 focus:outline-none">
                             <i data-lucide="search" class="w-6 h-6"></i>
                         </button>
-                        <input type="text" placeholder="Cari..." class="search-expand-input w-0 opacity-0 px-0 py-2 text-gray-700 bg-white border-0 rounded-full transition-all duration-300 focus:outline-none group-hover:w-64 group-hover:opacity-100 group-hover:px-4 group-hover:ml-2" style="min-width:0;" autocomplete="off" />
+                        <!-- Input sekarang akan beradaptasi di dalam lebar form yang memanjang -->
+                        <input type="text" placeholder="Cari..." class="search-expand-input w-0 opacity-0 px-0 py-2 text-gray-700 bg-white border-0 rounded-full transition-all duration-300 focus:outline-none
+                            flex-grow" autocomplete="off" />
                     </form>
                 </div>
 
-                <!-- Button Search Expand on Hover (Icon Right) -->
-                <div class="relative group flex items-center mobile-slider-scroll w-full">
-                    <form action="#" class="flex items-center overflow-hidden bg-white rounded-full shadow-md border border-gray-300 transition-all duration-300" style="min-width:56px;">
-                        <input type="text" placeholder="Cari..." class="search-expand-input w-0 opacity-0 px-0 py-2 text-gray-700 bg-white border-0 rounded-full transition-all duration-300 focus:outline-none group-hover:w-64 group-hover:opacity-100 group-hover:px-4 group-hover:mr-2" style="min-width:0;" autocomplete="off" />
-                        <button type="button" tabindex="-1" class="flex items-center justify-center p-4 rounded-full bg-white text-gray-700 transition-all duration-300 focus:outline-none">
+                <!-- Button Search Expand on Hover (Right Icon) -->
+                <!-- Perilaku: 70% width di mobile, rata kanan, efek expand input via JS (fokus/klik) di mobile.
+                     Di desktop, form menjadi tombol melingkar saat non-hover, dan memanjang saat hover. -->
+                <div class="relative group flex items-center mobile-slider-scroll w-full justify-end search-form-right">
+                    <!-- Form ini akan menjadi tombol melingkar di desktop non-hover, dan memanjang saat hover -->
+                    <form action="#" class="flex items-center overflow-hidden bg-white rounded-full shadow-md border border-gray-300 transition-all duration-300
+                        h-[56px] desktop-expandable-form">
+                        <!-- Input sekarang akan beradaptasi di dalam lebar form yang memanjang -->
+                        <input type="text" placeholder="Cari..." class="search-expand-input w-0 opacity-0 px-0 py-2 text-gray-700 bg-white border-0 rounded-full transition-all duration-300 focus:outline-none
+                            flex-grow" autocomplete="off" />
+                        <button type="button" tabindex="-1" class="flex-shrink-0 flex items-center justify-center p-4 rounded-full bg-white text-gray-700 transition-all duration-300 focus:outline-none">
                             <i data-lucide="search" class="w-6 h-6"></i>
                         </button>
                     </form>
@@ -319,7 +335,7 @@
 
                 <!-- Button Slider Hover: Icon Only, Slide Text on Hover -->
                 <div class="relative group mobile-slider-scroll slider-hover-desktop slider-hover-icononly">
-                    <a href="#" class="flex items-center justify-center p-4 rounded-full bg-blue-500 text-white shadow-md transition-all duration-300 overflow-hidden" style="width:auto; min-width:56px;">
+                    <a href="#" class="flex items-center justify-center p-4 rounded-full bg-blue-500 text-white shadow-md transition-all duration-300 overflow-hidden min-w-[56px]">
                         <i data-lucide="zap" class="w-6 h-6 transition-all duration-300"></i>
                         <span class="slider-label-icononly max-w-0 overflow-hidden whitespace-nowrap opacity-0 ml-0 slider-hover-desktop-hover:max-w-xs slider-hover-desktop-hover:opacity-100 slider-hover-desktop-hover:ml-3 transition-all duration-300">Slider Hover</span>
                     </a>
@@ -327,6 +343,5 @@
             </div>
         </section>
 
-    </div>
     </div>
 </main>

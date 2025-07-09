@@ -1,3 +1,8 @@
+/* Global reset to prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+}
+
 /* Pastikan tombol icon only tetap bulat di mobile (slider hover icon only) */
 @media (max-width: 640px) {
   .slider-hover-icononly > a {
@@ -15,56 +20,9 @@
   .slider-hover-icononly > a .slider-label-icononly {
     display: none !important;
   }
-}
-/* Slider Hover IconOnly: efek slide label hanya di desktop, class khusus agar tidak bentrok dengan search */
-@media (min-width: 641px) {
-  .slider-hover-icononly:hover .slider-label-icononly,
-  .slider-hover-icononly:focus-within .slider-label-icononly {
-    max-width: 12rem;
-    opacity: 1;
-    margin-left: 0.75rem;
-    transition: all 0.3s;
-  }
-}
-@media (max-width: 640px) {
-  .slider-hover-icononly .slider-label-icononly {
-    max-width: 0 !important;
-    opacity: 0 !important;
-    margin-left: 0 !important;
-    transition: none !important;
-  }
-}
-/* Slider Hover Desktop Only: efek slide label hanya di desktop */
-@media (min-width: 641px) {
-  .slider-hover-desktop:hover .slider-label,
-  .slider-hover-desktop:focus-within .slider-label {
-    max-width: 12rem;
-    opacity: 1;
-    margin-left: 0.75rem;
-    transition: all 0.3s;
-  }
-}
-@media (max-width: 640px) {
-  .slider-hover-desktop .slider-label {
-    max-width: 0 !important;
-    opacity: 0 !important;
-    margin-left: 0 !important;
-    transition: none !important;
-  }
-}
-@media (max-width: 640px) {
-  .search-expand-input,
-  .slider-label {
-    min-width: 180px;
-  }
-  /* Efek expand hanya aktif saat .group.active di mobile, bukan hover */
-  /* Tidak perlu .group.active, efek expand diatur via JS inline style di mobile */
-  .mobile-slider-scroll {
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
-  }
+
   /* Nonaktifkan efek hover di mobile untuk .slider-label pada .group.mobile-slider-scroll a */
+  .group.mobile-slider-scroll .slider-label,
   .group.mobile-slider-scroll:hover .slider-label,
   .group.mobile-slider-scroll:active .slider-label,
   .group.mobile-slider-scroll:focus .slider-label {
@@ -75,29 +33,147 @@
     padding-right: 0 !important;
     transition: none !important;
   }
-  /* Pastikan .slider-label tidak auto expand di mobile */
-  @media (max-width: 640px) {
-    .group.mobile-slider-scroll .slider-label {
-      max-width: 0 !important;
-      opacity: 0 !important;
-      margin-left: 0 !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-      transition: none !important;
-    }
-    .group.mobile-slider-scroll:hover .slider-label,
-    .group.mobile-slider-scroll:active .slider-label,
-    .group.mobile-slider-scroll:focus .slider-label {
-      max-width: 0 !important;
-      opacity: 0 !important;
-      margin-left: 0 !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-      transition: none !important;
-    }
+
+  /* Mobile Search Form Expansion: Form akan menjadi lingkaran saat tidak expand, dan memanjang saat expand */
+  .mobile-expandable-form {
+    width: 56px; /* Lebar awal (collapsed) di mobile: hanya seukuran tombol */
+    transition: width 0.3s ease-in-out; /* Transisi untuk lebar form */
+    border-radius: 9999px; /* Pastikan bentuk lingkaran awal */
+  }
+  .mobile-expandable-form.is-expanded-mobile {
+    /* Lebar penuh saat expand untuk form pertama (default) */
+    width: 100%;
+    border-radius: 9999px; /* TETAPKAN BENTUK LINGKARAN SAAT MEMANJANG */
+  }
+  /* Override untuk form kedua (70% lebar) */
+  .mobile-slider-scroll.search-form-right .mobile-expandable-form.is-expanded-mobile {
+    width: 70%; /* Lebar 70% saat expand untuk form kedua */
+  }
+
+  /* Mobile Search Input Expansion: Input akan muncul dan memanjang saat form expand */
+  .mobile-expandable-form input.search-expand-input {
+    width: 0;
+    opacity: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+  }
+  .mobile-expandable-form.is-expanded-mobile input.search-expand-input {
+    /* Input mengambil sisa ruang form yang memanjang, dikurangi lebar tombol ikon */
+    width: calc(100% - 56px);
+    opacity: 1;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 0.5rem;
+  }
+  /* Pastikan tombol ikon tidak menyusut di mobile */
+  .mobile-expandable-form button {
+      flex-shrink: 0;
   }
 }
-/* Efek Hover Baru & Animasi Tambahan untuk 20 tombol hover */
+
+/* Slider Hover IconOnly: efek slide label hanya di desktop, class khusus agar tidak bentrok dengan search */
+@media (min-width: 641px) {
+  .slider-hover-icononly > a {
+    border-radius: 9999px !important;
+    min-width: 56px !important;
+    width: 56px !important;
+    height: 56px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    justify-content: center !important;
+    align-items: center !important;
+    display: flex !important;
+    overflow: hidden !important;
+    transition: width 0.3s, min-width 0.3s;
+  }
+  .slider-hover-icononly > a:hover,
+  .slider-hover-icononly > a:focus-within {
+    width: 160px !important;
+    min-width: 56px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .slider-hover-icononly > a .slider-label-icononly {
+    display: inline-block !important;
+    max-width: 0;
+    opacity: 0;
+    margin-left: 0;
+    transition: all 0.3s;
+  }
+  .slider-hover-icononly > a:hover .slider-label-icononly,
+  .slider-hover-icononly > a:focus-within .slider-label-icononly {
+    max-width: 12rem;
+    opacity: 1;
+    margin-left: 0.75rem;
+  }
+
+  /* Desktop Search Form: Form akan menjadi lingkaran saat tidak hover, dan memanjang saat hover */
+  .desktop-expandable-form {
+      width: 56px; /* Lebar awal (collapsed) di desktop: hanya seukuran tombol */
+      border-radius: 9999px; /* Bentuk lingkaran awal */
+      transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+  }
+  .desktop-expandable-form:hover,
+  .desktop-expandable-form:focus-within {
+      /* Lebar penuh untuk form pertama saat hover di desktop */
+      width: 100%; /* Default untuk form pertama */
+      border-radius: 9999px; /* TETAPKAN BENTUK LINGKARAN SAAT MEMANJANG */
+  }
+  /* Override untuk form kedua (70% lebar) saat hover di desktop */
+  .mobile-slider-scroll.search-form-right .desktop-expandable-form:hover,
+  .mobile-slider-scroll.search-form-right .desktop-expandable-form:focus-within {
+      width: 70%; /* Lebar 70% saat hover/fokus untuk form kedua */
+  }
+
+  /* Input di desktop: muncul dan memanjang saat form expand */
+  .desktop-expandable-form input.search-expand-input {
+      width: 0;
+      opacity: 0;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0;
+      transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+  }
+  .desktop-expandable-form:hover input.search-expand-input,
+  .desktop-expandable-form:focus-within input.search-expand-input {
+      width: calc(100% - 56px); /* Input mengambil sisa ruang form yang memanjang */
+      opacity: 1;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-left: 0.5rem;
+  }
+}
+
+/* Slider Hover Desktop Only: efek slide label hanya di desktop */
+@media (min-width: 641px) {
+  .slider-hover-desktop:hover .slider-label,
+  .slider-hover-desktop:focus-within .slider-label {
+    max-width: 12rem;
+    opacity: 1;
+    margin-left: 0.75rem;
+    transition: all 0.3s;
+  }
+}
+
+/* Mobile specific overrides for slider-label */
+@media (max-width: 640px) {
+  .slider-hover-desktop .slider-label {
+    max-width: 0 !important;
+    opacity: 0 !important;
+    margin-left: 0 !important;
+    transition: none !important;
+  }
+  /* Ensure mobile slider scroll is responsive */
+  .mobile-slider-scroll {
+    overflow-x: hidden !important; /* Mencegah scroll horizontal */
+    -webkit-overflow-scrolling: touch;
+    width: 100%; /* Pastikan kontainer utama mengambil lebar penuh */
+  }
+}
+
+/* Efek Hover Baru & Animasi Tambahan untuk tombol hover */
 .btn-hover-shadow-grow:hover {
   box-shadow: 0 8px 32px 0 rgba(80,0,200,0.25), 0 1.5px 8px 0 rgba(0,0,0,0.10);
   transform: scale(1.07);
@@ -198,14 +274,13 @@
   70% { transform: translateY(-5px); }
   100% { transform: translateY(0); }
 }
+
 /* Tooltip slider untuk button icon sosial media */
 .social-tooltip {
     position: absolute;
     left: 100%;
     top: 50%;
-    transform: translateY(-50%) translateX(-10px);
-    background: #fff;
-    color: #222;
+    transform: translateY(-50%) translateX(10px); /* Adjusted initial translate-x for smoother entry */
     font-size: 0.95rem;
     font-weight: 600;
     padding: 0.4rem 1rem;
@@ -220,9 +295,10 @@
 .group:hover .social-tooltip,
 .group:focus-within .social-tooltip {
     opacity: 1;
-    transform: translateY(-50%) translateX(10px);
+    transform: translateY(-50%) translateX(0); /* Adjusted final translate-x */
     pointer-events: auto;
 }
+
 /* Animasi dropdown fade/slide */
 .dropdown-animated {
     opacity: 0;
@@ -235,26 +311,23 @@
     transform: translateY(0) scale(1);
     pointer-events: auto;
 }
-/**
- * css/_buttons.css
- *
- * @author    [EazZy Project]
- * @copyright Copyright (c) [2025] [EazZy Project]
- * @license   https://opensource.org/licenses/MIT MIT License
- * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
- * dan font yang digunakan di EazZy Project.
- */
 
-/* Transisi untuk dropdown menu */
-.dropdown-menu { transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out; }
-.dropdown-wrapper:not(.is-open) .dropdown-menu { opacity: 0; transform: translateY(-10px); pointer-events: none; }
+/* Transisi untuk dropdown menu (konsolidasi) */
+.dropdown-menu {
+    transition: opacity 0.25s cubic-bezier(.4,0,.2,1), transform 0.25s cubic-bezier(.4,0,.2,1);
+}
+.dropdown-wrapper:not(.is-open) .dropdown-menu {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+}
 .dropdown-wrapper.is-open .dropdown-menu {
     opacity: 1;
     transform: translateY(0);
-    pointer-events: auto; /* <-- TAMBAHKAN INI */
+    pointer-events: auto;
 }
 
-/* Efek Hover */
+/* Efek Hover umum */
 .btn-hover { transition: all 0.3s ease; }
 .btn-hover-pop:hover { transform: scale(1.08); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
 .btn-hover-glow-blue:hover { box-shadow: 0 0 15px 3px rgba(59, 130, 246, 0.4); }
@@ -272,15 +345,4 @@
 .is-animating {
     pointer-events: none;
     cursor: wait;
-}
-@media (max-width: 768px) {
-    /* Full width pada mobile untuk form kedua */
-    .mobile-slider-scroll form.w-full {
-        width: 100% !important;
-        min-width: 0 !important;
-    }
-    .mobile-slider-scroll .search-expand-input.group-hover\:w-full {
-        width: 100% !important;
-        min-width: 0 !important;
-    }
 }
