@@ -6,6 +6,17 @@ FROM php:8.2-fpm-alpine
 # Tetapkan direktori kerja di dalam kontainer
 WORKDIR /var/www/mirror
 
+RUN apk add --no-cache git zip unzip
+
+# Install Composer secara global di dalam image
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+# Salin file composer terlebih dahulu untuk optimasi cache Docker
+COPY composer.json composer.lock ./
+
+# Jalankan composer install untuk mengunduh semua dependensi
+# Ini akan membuat folder /vendor di dalam image
+RUN composer install --no-dev --optimize-autoloader
 # 2. Install fcgi untuk healthcheck
 RUN apk add --no-cache fcgi
 

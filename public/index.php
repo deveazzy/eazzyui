@@ -18,9 +18,9 @@ $pages_without_sidebar = [
 <html lang="id" class="scroll-smooth">
 <head>
 <?php 
-    include 'config/html-config.php'; 
-    include 'config/meta-config.php';
-    include 'config/asset-config.php'; 
+    include_once 'config/html-config.php'; 
+    include_once 'config/meta-config.php';
+    include_once 'config/asset-config.php'; 
 ?>
     <!-- Memuat CSS utama yang sudah dikompilasi (output.css) -->
     <link rel="stylesheet" href="/css/output.css"/>
@@ -45,6 +45,14 @@ $pages_without_sidebar = [
 
     <div class="flex flex-1">
         <?php
+        // try {
+        //       $dotenv = Dotenv::createImmutable(__DIR__); // __DIR__ di sini adalah root proyek
+        //       $dotenv->load();
+        //       echo "Dotenv loaded successfully!\n";
+        //       echo "APP_NAME from .env: " . ($_ENV['APP_NAME'] ?? 'Not set') . "\n";
+        //   } catch (\Exception $e) {
+        //       echo "Error loading Dotenv: " . $e->getMessage() . "\n";
+        //   }
         if (isset($layout) && $layout === 'sidebar-left' && !in_array($page, $pages_without_sidebar)) {
             include 'layout/sidebar-left.php';
         }

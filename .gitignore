@@ -1,9 +1,3 @@
-Tentu, saya akan bantu membuatkan file .gitignore yang komprehensif untuk proyek Anda, dengan mempertimbangkan teknologi yang Anda gunakan seperti Node.js, PHP, dan pengembangan web umum.
-
-File .gitignore ini akan membantu Anda menjaga repositori Git tetap rapi dan ringan dengan mengabaikan file-file yang tidak perlu dilacak, seperti dependensi, file build, file konfigurasi lokal, dan file sistem operasi.
-
-Berikut adalah isi file .gitignore yang bisa Anda gunakan:
-
 # Direktori Dependensi (Dependencies Directories)
 # Folder tempat paket-paket diinstal oleh manajer paket.
 node_modules/
