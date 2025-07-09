@@ -1,7 +1,10 @@
 <?php
 /**
- * head/asset-config.php
+ * config/asset-config.php
  *
+ * @author    [EazZy Project]
+ * @copyright Copyright (c) [2025] [EazZy Project]
+ * @license   https://opensource.org/licenses/MIT MIT License
  * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
  * dan font yang digunakan di EazZy Project.
  */

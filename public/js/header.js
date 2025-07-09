@@ -1,8 +1,13 @@
-/**
- * js/header.js
- * PENTING: Pastikan tag <script> untuk file ini di HTML menyertakan type="module"
- * Contoh: <script type="module" src=".../header.js"></script>
- */
+// /**
+//  * css/header.js
+//  *
+//  * @author    [EazZy Project]
+//  * @copyright Copyright (c) [2025] [EazZy Project]
+//  * @license   https://opensource.org/licenses/MIT MIT License
+//  * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
+//  * dan font yang digunakan di EazZy Project.
+//  */
+
 import { createIcons } from '../assets/vendor/lucide/lucide.js';
 import * as icons from '../assets/vendor/lucide/iconsAndAliases.js';
 import { globalNavigationData } from './navigation-data.js';
@@ -133,15 +138,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 const contentDiv = document.createElement('div');
                 contentDiv.id = `${category.id}-content`;
                 
-                // PERBAIKAN: Hanya kategori pertama (index === 0) yang tidak 'hidden' secara default.
-                // Layout grid/flex diterapkan berdasarkan apakah ada children atau tidak.
-                let initialVisibilityClass = index === 0 ? '' : 'hidden'; // Hanya yang pertama yang terlihat
+                let initialVisibilityClass = index === 0 ? '' : 'hidden'; 
                 let layoutClass = '';
 
                 if (category.children) {
-                    layoutClass = 'grid grid-cols-3 gap-8'; // Layout grid untuk item dengan children
+                    layoutClass = 'grid grid-cols-3 gap-8'; 
                 } else {
-                    layoutClass = 'flex flex-col space-y-2'; // Layout flex untuk item tanpa children
+                    layoutClass = 'flex flex-col space-y-2'; 
                 }
 
                 contentDiv.className = `mega-menu-content ${initialVisibilityClass} ${layoutClass}`;
@@ -188,9 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         contentDiv.appendChild(colDiv);
                     }
                 } else {
-                    // Jika tidak ada children, pastikan layoutnya flex
-                    // contentDiv.classList.remove('grid', 'grid-cols-3', 'gap-8'); // Ini sudah ditangani oleh layoutClass
-                    // contentDiv.classList.add('flex', 'flex-col', 'space-y-2'); // Ini juga sudah ditangani oleh layoutClass
                     const p = document.createElement('p');
                     p.className = 'text-gray-600';
                     p.textContent = `Segera hadir: ${category.label.replace(' (soon)', '')} ...`;
@@ -239,14 +239,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         triggers.forEach(trigger => {
             trigger.addEventListener('mouseenter', () => {
-                triggers.forEach(t => t.classList.remove('bg-blue-50')); // Hapus aktif dari semua trigger
-                contents.forEach(c => c.classList.add('hidden')); // Sembunyikan semua konten
+                triggers.forEach(t => t.classList.remove('bg-blue-50')); 
+                contents.forEach(c => c.classList.add('hidden')); 
                 
-                trigger.classList.add('bg-blue-50'); // Tandai trigger saat ini sebagai aktif
+                trigger.classList.add('bg-blue-50'); 
                 const targetId = trigger.getAttribute('data-menu-target');
                 const targetContent = document.getElementById(targetId + '-content');
                 if (targetContent) {
-                    targetContent.classList.remove('hidden'); // Tampilkan konten target
+                    targetContent.classList.remove('hidden'); 
                 }
             });
         });

@@ -1,12 +1,14 @@
-/**
- * public/js/page/apexcharts.js
- * File ini berisi kode JavaScript untuk menginisialisasi
- * contoh-contoh grafik di halaman dokumentasi ApexCharts.
- */
+// /**
+//  * css/apexchart.js
+//  *
+//  * @author    [EazZy Project]
+//  * @copyright Copyright (c) [2025] [EazZy Project]
+//  * @license   https://opensource.org/licenses/MIT MIT License
+//  * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
+//  * dan font yang digunakan di EazZy Project.
+//  */
+
 // Mengimpor tema dari file apexcharts-theme.js
-// Pastikan path ini benar relatif terhadap file yang mengimpornya.
-// Jika apexcharts.js dan apexcharts-theme.js berada di direktori yang sama (public/js/),
-// maka gunakan './apexcharts-theme.js'.
 import { chartTheme } from './apexcharts-theme.js'; // PERBAIKAN PATH IMPOR
 
 // Fungsi-fungsi helper untuk menghasilkan data grafik
@@ -139,40 +141,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const renderContohPendapatanChart = () => {
         const chartContainer = document.querySelector("#chart-pendapatan-bulanan");
 
-        // Jangan jalankan jika elemen tidak ditemukan di halaman
         if (!chartContainer) {
             return;
         }
 
-        // 1. Opsi Konfigurasi Grafik
-        // Menggabungkan tema area dengan opsi spesifik grafik ini
         const options = {
-            ...chartTheme.area, // Terapkan tema area
-            // Data yang akan ditampilkan
+            ...chartTheme.area, 
             series: [{
                 name: 'Pendapatan (Juta Rp)',
                 data: [120, 155, 130, 180, 160, 210, 240, 220, 250, 280, 310, 300]
             }],
-            // Pengaturan umum grafik (akan menimpa properti dari tema jika didefinisikan di sini)
             chart: {
-                ...chartTheme.area.chart, // Gabungkan pengaturan chart dari tema
+                ...chartTheme.area.chart, 
                 height: 350,
-                type: 'area', // Tipe area untuk tampilan yang lebih menarik
+                type: 'area', 
             },
-            // Pengaturan warna (dihapus karena sudah diatur oleh tema)
-            // dataLabels, stroke, xaxis, yaxis, tooltip, fill akan diwarisi atau ditimpa sesuai kebutuhan
             dataLabels: {
-                enabled: false // Sembunyikan label di atas titik data (menimpa tema jika tema mengaktifkannya)
+                enabled: false 
             },
-            // Pengaturan garis (akan diwarisi dari tema jika tidak didefinisikan di sini)
             stroke: {
-                ...chartTheme.area.stroke, // Gabungkan pengaturan stroke dari tema
-                curve: 'smooth', // Buat garis menjadi lebih halus
+                ...chartTheme.area.stroke, 
+                curve: 'smooth', 
                 width: 2
             },
-            // Pengaturan sumbu X (horizontal)
             xaxis: {
-                ...chartTheme.area.xaxis, // Gabungkan pengaturan xaxis dari tema
+                ...chartTheme.area.xaxis,
                 categories: [
                     'Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun',
                     'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'
@@ -181,18 +174,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     text: 'Bulan'
                 }
             },
-            // Pengaturan sumbu Y (vertikal)
             yaxis: {
-                ...chartTheme.area.yaxis, // Gabungkan pengaturan yaxis dari tema
+                ...chartTheme.area.yaxis, 
                 title: {
                     text: 'Pendapatan (Juta Rp)'
                 }
             },
-            // Pengaturan tooltip saat hover
             tooltip: {
-                ...chartTheme.area.tooltip, // Gabungkan pengaturan tooltip dari tema
+                ...chartTheme.area.tooltip, 
                 x: {
-                    format: 'MMMM' // Tampilkan nama bulan lengkap
+                    format: 'MMMM'
                 },
                 y: {
                     formatter: function (val) {
@@ -200,9 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             },
-            // Pengaturan fill (area di bawah garis)
             fill: {
-                ...chartTheme.area.fill, // Gabungkan pengaturan fill dari tema
+                ...chartTheme.area.fill, 
                 type: 'gradient',
                 gradient: {
                     shadeIntensity: 1,
@@ -211,43 +201,33 @@ document.addEventListener('DOMContentLoaded', () => {
                     stops: [0, 90, 100]
                 }
             },
-            responsive: [{ // Tambahkan responsive option untuk toolbar
+            responsive: [{ 
                 breakpoint: 480,
                 options: {
                     chart: {
                         toolbar: {
-                            show: true // Paksa toolbar tampil di mobile
+                            show: true 
                         }
                     }
                 }
             }]
         };
 
-        // 2. Buat instance baru dari ApexCharts
         const chart = new ApexCharts(chartContainer, options);
 
-        // 3. Render grafik ke dalam elemen div
         chart.render();
     };
 
-
-    /**
-     * Fungsi untuk merender contoh grafik Anda.
-     * Anda bisa meniru struktur fungsi di atas untuk membuat grafik Anda sendiri.
-     */
     const renderContohAndaChart = () => {
         const chartContainer = document.querySelector("#chart-contoh-anda");
         if (!chartContainer) return;
 
-        // --- MULAI KODE ANDA DI SINI ---
-        // Contoh: Membuat grafik donat sederhana
-        // Menggabungkan tema donut dengan opsi spesifik grafik ini
         const options = {
             ...chartTheme.donut, // Terapkan tema donut
             series: [44, 55, 13, 33],
             labels: ['Tim A', 'Tim B', 'Tim C', 'Tim D'],
             chart: {
-                ...chartTheme.donut.chart, // Gabungkan pengaturan chart dari tema
+                ...chartTheme.donut.chart, 
                 type: 'donut',
                 height: 250
             },
@@ -257,9 +237,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     legend: {
                         position: 'bottom'
                     },
-                    chart: { // Tambahkan responsive option untuk toolbar
+                    chart: { 
                         toolbar: {
-                            show: true // Paksa toolbar tampil di mobile
+                            show: true 
                         }
                     }
                 }
@@ -268,12 +248,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const chart = new ApexCharts(chartContainer, options);
         chart.render();
-        // --- AKHIR KODE ANDA ---
     };
 
-    /**
-     * Fungsi untuk merender Line Chart (Contoh Baru: Suhu Rata-rata).
-     */
     const renderLineChartNew = () => {
         const chartContainer = document.querySelector("#lineChartNew");
         if (!chartContainer) return;
@@ -310,12 +286,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             },
-            responsive: [{ // Tambahkan responsive option untuk toolbar
+            responsive: [{ 
                 breakpoint: 480,
                 options: {
                     chart: {
                         toolbar: {
-                            show: true // Paksa toolbar tampil di mobile
+                            show: true 
                         }
                     }
                 }
@@ -324,15 +300,12 @@ document.addEventListener('DOMContentLoaded', () => {
         new ApexCharts(chartContainer, options).render();
     };
 
-    /**
-     * Fungsi untuk merender Column Chart (Penjualan Produk).
-     */
     const renderColumnChart = () => {
         const chartContainer = document.querySelector("#columnChart");
         if (!chartContainer) return;
 
         const options = {
-            ...chartTheme.bar, // Column chart menggunakan tema bar secara default
+            ...chartTheme.bar, 
             series: [{
                 name: 'Penjualan',
                 data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
@@ -344,13 +317,13 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             plotOptions: {
                 bar: {
-                    horizontal: false, // Column chart adalah vertikal
+                    horizontal: false, 
                     columnWidth: '55%',
                     borderRadius: 5,
                 },
             },
             dataLabels: {
-                enabled: false // Biasanya tidak menampilkan data label di column chart
+                enabled: false 
             },
             xaxis: {
                 ...chartTheme.bar.xaxis,
@@ -365,12 +338,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     text: 'Jumlah Penjualan'
                 }
             },
-            responsive: [{ // Tambahkan responsive option untuk toolbar
+            responsive: [{ 
                 breakpoint: 480,
                 options: {
                     chart: {
                         toolbar: {
-                            show: true // Paksa toolbar tampil di mobile
+                            show: true 
                         }
                     }
                 }
@@ -379,9 +352,6 @@ document.addEventListener('DOMContentLoaded', () => {
         new ApexCharts(chartContainer, options).render();
     };
 
-    /**
-     * Fungsi untuk merender Bar Chart (Contoh Baru: Survei Kepuasan).
-     */
     const renderBarChartNew = () => {
         const chartContainer = document.querySelector("#barChartNew");
         if (!chartContainer) return;
@@ -399,13 +369,13 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             plotOptions: {
                 bar: {
-                    horizontal: true, // Bar chart horizontal
+                    horizontal: true, 
                     columnWidth: '70%',
                     borderRadius: 5,
                 },
             },
             dataLabels: {
-                enabled: true, // Tampilkan data label
+                enabled: true, 
                 formatter: function (val) {
                     return val + "%";
                 }
@@ -423,12 +393,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     text: 'Kategori'
                 }
             },
-            responsive: [{ // Tambahkan responsive option untuk toolbar
+            responsive: [{ 
                 breakpoint: 480,
                 options: {
                     chart: {
                         toolbar: {
-                            show: true // Paksa toolbar tampil di mobile
+                            show: true 
                         }
                     }
                 }
@@ -437,15 +407,12 @@ document.addEventListener('DOMContentLoaded', () => {
         new ApexCharts(chartContainer, options).render();
     };
 
-    /**
-     * Fungsi untuk merender Mixed Chart (Penjualan & Laba).
-     */
     const renderMixedChart = () => {
         const chartContainer = document.querySelector("#mixedChart");
         if (!chartContainer) return;
 
         const options = {
-            ...chartTheme.line, // Menggunakan tema line sebagai dasar
+            ...chartTheme.line, 
             series: [{
                 name: 'Penjualan',
                 type: 'column',
@@ -458,12 +425,12 @@ document.addEventListener('DOMContentLoaded', () => {
             chart: {
                 ...chartTheme.line.chart,
                 height: 350,
-                type: 'line', // Tipe utama
+                type: 'line', 
                 stacked: false,
             },
             stroke: {
                 ...chartTheme.line.stroke,
-                width: [0, 2] // Lebar stroke untuk column dan line
+                width: [0, 2] 
             },
             plotOptions: {
                 bar: {
@@ -506,12 +473,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             },
-            responsive: [{ // Tambahkan responsive option untuk toolbar
+            responsive: [{ 
                 breakpoint: 480,
                 options: {
                     chart: {
                         toolbar: {
-                            show: true // Paksa toolbar tampil di mobile
+                            show: true 
                         }
                     }
                 }
@@ -520,15 +487,12 @@ document.addEventListener('DOMContentLoaded', () => {
         new ApexCharts(chartContainer, options).render();
     };
 
-    /**
-     * Fungsi untuk merender Range Area Chart (Rentang Harga Saham).
-     */
     const renderRangeAreaChart = () => {
         const chartContainer = document.querySelector("#rangeAreaChart");
         if (!chartContainer) return;
 
         const options = {
-            ...chartTheme.area, // Menggunakan tema area sebagai dasar
+            ...chartTheme.area, 
             series: [{
                 name: 'Rentang Harga',
                 data: generateRangeAreaData(30, { min: 100, max: 200 })
@@ -562,12 +526,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             },
-            responsive: [{ // Tambahkan responsive option untuk toolbar
+            responsive: [{ 
                 breakpoint: 480,
                 options: {
                     chart: {
                         toolbar: {
-                            show: true // Paksa toolbar tampil di mobile
+                            show: true 
                         }
                     }
                 }
@@ -576,9 +540,6 @@ document.addEventListener('DOMContentLoaded', () => {
         new ApexCharts(chartContainer, options).render();
     };
 
-    /**
-     * Fungsi untuk merender Box Plot Chart (Contoh Baru: Distribusi Nilai).
-     */
     const renderBoxPlotChartNew = () => {
         const chartContainer = document.querySelector("#boxPlotChartNew");
         if (!chartContainer) return;
@@ -587,7 +548,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ...chartTheme.boxPlot,
             series: [{
                 type: 'boxPlot',
-                data: generateBoxPlotData(7) // Menghasilkan 7 set data box plot
+                data: generateBoxPlotData(7) 
             }],
             chart: {
                 ...chartTheme.boxPlot.chart,
@@ -607,12 +568,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     text: 'Nilai'
                 }
             },
-            responsive: [{ // Tambahkan responsive option untuk toolbar
+            responsive: [{ 
                 breakpoint: 480,
                 options: {
                     chart: {
                         toolbar: {
-                            show: true // Paksa toolbar tampil di mobile
+                            show: true 
                         }
                     }
                 }
@@ -621,10 +582,7 @@ document.addEventListener('DOMContentLoaded', () => {
         new ApexCharts(chartContainer, options).render();
     };
 
-    /**
-     * Fungsi untuk merender Bubble Chart (Contoh Baru: Kinerja Karyawan).
-     */
-    const renderBubbleChartNew = () => {
+     const renderBubbleChartNew = () => {
         const chartContainer = document.querySelector("#bubbleChartNew");
         if (!chartContainer) return;
 
@@ -681,12 +639,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             },
-            responsive: [{ // Tambahkan responsive option untuk toolbar
+            responsive: [{ 
                 breakpoint: 480,
                 options: {
                     chart: {
                         toolbar: {
-                            show: true // Paksa toolbar tampil di mobile
+                            show: true 
                         }
                     }
                 }
@@ -695,9 +653,6 @@ document.addEventListener('DOMContentLoaded', () => {
         new ApexCharts(chartContainer, options).render();
     };
 
-    /**
-     * Fungsi untuk merender Scatter Chart (Contoh Baru: Korelasi Data).
-     */
     const renderScatterChartNew = () => {
         const chartContainer = document.querySelector("#scatterChartNew");
         if (!chartContainer) return;
@@ -739,12 +694,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     text: 'Variabel Y'
                 }
             },
-            responsive: [{ // Tambahkan responsive option untuk toolbar
+            responsive: [{ 
                 breakpoint: 480,
                 options: {
                     chart: {
                         toolbar: {
-                            show: true // Paksa toolbar tampil di mobile
+                            show: true 
                         }
                     }
                 }
@@ -753,9 +708,6 @@ document.addEventListener('DOMContentLoaded', () => {
         new ApexCharts(chartContainer, options).render();
     };
 
-    /**
-     * Fungsi untuk merender Heatmap Chart (Contoh Baru: Aktivitas Pengguna).
-     */
     const renderHeatmapChartNew = () => {
         const chartContainer = document.querySelector("#heatmapChartNew");
         if (!chartContainer) return;
@@ -793,12 +745,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     text: 'Bagian Hari'
                 }
             },
-            responsive: [{ // Tambahkan responsive option untuk toolbar
+            responsive: [{ 
                 breakpoint: 480,
                 options: {
                     chart: {
                         toolbar: {
-                            show: true // Paksa toolbar tampil di mobile
+                            show: true 
                         }
                     }
                 }
@@ -807,9 +759,6 @@ document.addEventListener('DOMContentLoaded', () => {
         new ApexCharts(chartContainer, options).render();
     };
 
-    /**
-     * Fungsi untuk merender Treemap Chart (Contoh Baru: Struktur File).
-     */
     const renderTreemapChartNew = () => {
         const chartContainer = document.querySelector("#treemapChartNew");
         if (!chartContainer) return;
@@ -851,12 +800,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     color: '#373d3f'
                 }
             },
-            responsive: [{ // Tambahkan responsive option untuk toolbar
+            responsive: [{ 
                 breakpoint: 480,
                 options: {
                     chart: {
                         toolbar: {
-                            show: true // Paksa toolbar tampil di mobile
+                            show: true 
                         }
                     }
                 }
@@ -865,10 +814,6 @@ document.addEventListener('DOMContentLoaded', () => {
         new ApexCharts(chartContainer, options).render();
     };
 
-    /**
-     * Fungsi untuk merender Slope Chart (Perubahan Peringkat).
-     * Diimplementasikan sebagai Line Chart.
-     */
     const renderSlopeChart = () => {
         const chartContainer = document.querySelector("#slopeChart");
         if (!chartContainer) return;
@@ -886,17 +831,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 height: 350,
                 type: 'line',
                 zoom: {
-                    enabled: false // Biasanya tidak ada zoom untuk slope chart
+                    enabled: false 
                 },
             },
             stroke: {
                 ...chartTheme.line.stroke,
-                curve: 'straight', // Garis lurus antar titik
+                curve: 'straight', 
                 width: 3
             },
             markers: {
                 ...chartTheme.line.markers,
-                size: 6, // Ukuran marker
+                size: 6, 
                 strokeWidth: 2,
                 hover: {
                     sizeOffset: 4
@@ -923,7 +868,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             yaxis: {
                 ...chartTheme.line.yaxis,
-                reversed: true, // Peringkat: 1 di atas, 10 di bawah
+                reversed: true, 
                 min: 1,
                 max: 10,
                 tickAmount: 9,
@@ -937,12 +882,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 ...chartTheme.line.grid,
                 xaxis: {
                     lines: {
-                        show: true // Tampilkan garis vertikal untuk tahun
+                        show: true 
                     }
                 },
                 yaxis: {
                     lines: {
-                        show: true // Tampilkan garis horizontal untuk peringkat
+                        show: true 
                     }
                 }
             },
@@ -951,7 +896,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 shared: false,
                 intersect: true,
                 x: {
-                    show: false // Sembunyikan label X di tooltip
+                    show: false 
                 },
                 y: {
                     formatter: function (val, { seriesIndex, dataPointIndex, w }) {
@@ -966,12 +911,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 position: 'right',
                 offsetY: 40
             },
-            responsive: [{ // Tambahkan responsive option untuk toolbar
+            responsive: [{ 
                 breakpoint: 480,
                 options: {
                     chart: {
                         toolbar: {
-                            show: true // Paksa toolbar tampil di mobile
+                            show: true 
                         }
                     }
                 }
@@ -980,10 +925,6 @@ document.addEventListener('DOMContentLoaded', () => {
         new ApexCharts(chartContainer, options).render();
     };
 
-
-    /**
-     * Fungsi untuk merender Radial Bar Chart (Contoh Baru: Kemajuan Proyek).
-     */
     const renderRadialBarChartNew = () => {
         const chartContainer = document.querySelector("#radialBarChartNew");
         if (!chartContainer) return;
@@ -1027,12 +968,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             },
-            responsive: [{ // Tambahkan responsive option untuk toolbar
+            responsive: [{ 
                 breakpoint: 480,
                 options: {
                     chart: {
                         toolbar: {
-                            show: true // Paksa toolbar tampil di mobile
+                            show: true 
                         }
                     }
                 }
@@ -1041,9 +982,6 @@ document.addEventListener('DOMContentLoaded', () => {
         new ApexCharts(chartContainer, options).render();
     };
 
-    /**
-     * Fungsi untuk merender Radar Chart (Contoh Baru: Statistik Pemain).
-     */
     const renderRadarChartNew = () => {
         const chartContainer = document.querySelector("#radarChartNew");
         if (!chartContainer) return;
@@ -1082,12 +1020,12 @@ document.addEventListener('DOMContentLoaded', () => {
             markers: {
                 size: 4
             },
-            responsive: [{ // Tambahkan responsive option untuk toolbar
+            responsive: [{ 
                 breakpoint: 480,
                 options: {
                     chart: {
                         toolbar: {
-                            show: true // Paksa toolbar tampil di mobile
+                            show: true 
                         }
                     }
                 }
@@ -1096,9 +1034,6 @@ document.addEventListener('DOMContentLoaded', () => {
         new ApexCharts(chartContainer, options).render();
     };
 
-    /**
-     * Fungsi untuk merender Polar Area Chart (Contoh Baru: Preferensi Kategori).
-     */
     const renderPolarAreaChartNew = () => {
         const chartContainer = document.querySelector("#polarAreaChartNew");
         if (!chartContainer) return;
@@ -1124,9 +1059,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     legend: {
                         position: 'bottom'
                     },
-                    chart: { // Tambahkan responsive option untuk toolbar
+                    chart: { 
                         toolbar: {
-                            show: true // Paksa toolbar tampil di mobile
+                            show: true 
                         }
                     }
                 }
@@ -1135,12 +1070,8 @@ document.addEventListener('DOMContentLoaded', () => {
         new ApexCharts(chartContainer, options).render();
     };
 
-
-    // Panggil semua fungsi untuk merender grafik di halaman
     renderContohPendapatanChart();
     renderContohAndaChart();
-
-    // Panggil fungsi-fungsi untuk grafik baru
     renderLineChartNew();
     renderColumnChart();
     renderBarChartNew();

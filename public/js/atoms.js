@@ -1,9 +1,13 @@
-/**
- * js/atoms-specific.js
- *
- * File ini berisi JavaScript yang spesifik hanya untuk halaman atoms,
- * seperti fungsionalitas show/hide password dan inisialisasi Flatpickr.
- */// Import Flatpickr dari folder vendor lokal
+// /**
+//  * css/atoms.js
+//  *
+//  * @author    [EazZy Project]
+//  * @copyright Copyright (c) [2025] [EazZy Project]
+//  * @license   https://opensource.org/licenses/MIT MIT License
+//  * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
+//  * dan font yang digunakan di EazZy Project.
+//  */
+
 // import flatpickr from '/js/vendor/flatpickr/flatpickr.js';
 // Import createIcons dari Lucide untuk merender ulang ikon
 

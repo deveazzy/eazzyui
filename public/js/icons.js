@@ -1,8 +1,13 @@
-/**
- * js/icons.js
- * PENTING: Pastikan tag <script> untuk file ini di HTML menyertakan type="module"
- * Contoh: <script type="module" src=".../icons-specific.js"></script>
- */
+// /**
+//  * css/icons.js
+//  *
+//  * @author    [EazZy Project]
+//  * @copyright Copyright (c) [2025] [EazZy Project]
+//  * @license   https://opensource.org/licenses/MIT MIT License
+//  * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
+//  * dan font yang digunakan di EazZy Project.
+//  */
+
 import { createIcons, icons } from '../assets/vendor/lucide/lucide.js';
 // import * as icons from '/js/vendor/lucide/iconsAndAliases.js';
 
@@ -253,15 +258,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function createIconCard(name) {
         const card = document.createElement('div');
         card.className = 'icon-item flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md hover:border-blue-500 transition-all duration-200 cursor-pointer';
-        // Menggunakan overflow-hidden, whitespace-nowrap, dan text-overflow-ellipsis
-        // untuk memastikan nama ikon tidak memecah baris dan dipotong jika terlalu panjang.
         card.innerHTML = `<i data-lucide="${name}" class="w-8 h-8 text-gray-700 mb-3"></i><span class="text-xs text-gray-600 text-center w-full overflow-hidden whitespace-nowrap text-ellipsis">${name}</span>`;
         card.addEventListener('click', () => copyToClipboard(name));
         return card;
     }
 
     function renderIcons(searchTerm = '') {
-        iconGrid.innerHTML = ''; // Bersihkan ikon yang ada
+        iconGrid.innerHTML = ''; 
         
         const lowerSearchTerm = searchTerm.toLowerCase();
         let iconsFound = false;
@@ -270,52 +273,39 @@ document.addEventListener('DOMContentLoaded', () => {
         for (const categoryName in categorizedIconList) {
             const iconsInCategory = categorizedIconList[categoryName];
             
-            // Filter ikon dalam kategori berdasarkan istilah pencarian
             const filteredIconsInCategory = iconsInCategory.filter(name => 
                 name.toLowerCase().includes(lowerSearchTerm)
             );
 
-            // Jika ada ikon yang cocok dalam kategori ini, tampilkan kategori dan ikonnya
             if (filteredIconsInCategory.length > 0) {
                 iconsFound = true;
 
-                // Buat bagian untuk kategori
                 const categorySection = document.createElement('div');
-                // Tambahkan w-full untuk memastikan setiap kategori mengambil lebar penuh
-                categorySection.className = 'mb-8 w-full'; // Margin bawah untuk memisahkan kategori
+                categorySection.className = 'mb-8 w-full'; 
 
-                // Judul kategori
                 const categoryTitle = document.createElement('h3');
                 categoryTitle.className = 'text-xl font-bold text-gray-800 border-b pb-2 mb-4';
                 categoryTitle.textContent = categoryName;
                 categorySection.appendChild(categoryTitle);
 
-                // Grid untuk ikon dalam kategori ini
                 const categoryGrid = document.createElement('div');
                 categoryGrid.className = 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4';
                 
-                // Tambahkan setiap ikon ke grid kategori
                 filteredIconsInCategory.forEach(name => {
                     categoryGrid.appendChild(createIconCard(name));
                 });
                 
                 categorySection.appendChild(categoryGrid);
-                iconGrid.appendChild(categorySection); // Tambahkan bagian kategori ke grid utama
+                iconGrid.appendChild(categorySection); 
             }
         }
 
-        // Jika tidak ada ikon yang ditemukan sama sekali setelah pencarian
         if (!iconsFound) {
             iconGrid.innerHTML = `<p class="text-gray-500 col-span-full text-center">Ikon tidak ditemukan dalam kategori mana pun.</p>`;
         }
         
-        // Render ulang ikon Lucide setelah memperbarui DOM
         createIcons({ icons });
     }
-
-    // Event listener untuk kolom pencarian
     searchInput.addEventListener('input', () => renderIcons(searchInput.value));
-    
-    // --- Inisialisasi Awal ---
-    renderIcons(); // Render semua ikon saat halaman dimuat
+    renderIcons(); 
 });

@@ -1,4 +1,13 @@
 <?php
+/**
+ * head/core.php
+ *
+ * @author    [EazZy Project]
+ * @copyright Copyright (c) [2025] [EazZy Project]
+ * @license   https://opensource.org/licenses/MIT MIT License
+ * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
+ * dan font yang digunakan di EazZy Project.
+ */
 // Dapatkan path URL yang diminta oleh pengguna
 $requestUri = $_SERVER['REQUEST_URI'];
 // Hapus query string jika ada, hanya ambil path-nya

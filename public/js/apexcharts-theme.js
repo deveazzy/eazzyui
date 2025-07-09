@@ -1,53 +1,51 @@
-/**
- * public/js/apexcharts-theme.js
- * Modul ini berisi semua konfigurasi tema untuk ApexCharts.
- * Menggunakan struktur warisan untuk memastikan setiap jenis grafik
- * hanya menerima opsi yang relevan.
- *
- * Menggunakan export untuk kompatibilitas modul ES6.
- */
+// /**
+//  * css/apexcharts-theme.js
+//  *
+//  * @author    [EazZy Project]
+//  * @copyright Copyright (c) [2025] [EazZy Project]
+//  * @license   https://opensource.org/licenses/MIT MIT License
+//  * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
+//  * dan font yang digunakan di EazZy Project.
+//  */
 
-// 1. Definisikan Palet Warna Tema Utama
 // Ini adalah tempat Anda bisa mengubah warna default.
-// Contoh palet baru yang lebih cerah:
 export const themePalette = [
-    '#4299E1', // Biru Cerah (Tailwind blue-500)
-    '#48BB78', // Hijau Cerah (Tailwind green-500)
-    '#F6AD55', // Oranye Cerah (Tailwind orange-400)
-    '#9F7AEA', // Ungu Cerah (Tailwind purple-500)
-    '#ED8936', // Oranye Tua (Tailwind orange-600)
-    '#ECC94B', // Kuning Cerah (Tailwind yellow-400)
-    '#38B2AC', // Teal (Tailwind teal-500)
-    '#A0AEC0'  // Abu-abu Sedang (Tailwind gray-400)
+    '#4299E1', 
+    '#48BB78', 
+    '#F6AD55', 
+    '#9F7AEA', 
+    '#ED8936', 
+    '#ECC94B', 
+    '#38B2AC', 
+    '#A0AEC0'  
 ];
 
-// 2. Definisikan Tema Dasar (Berlaku untuk SEMUA grafik)
 const baseTheme = {
     chart: {
-        foreColor: '#373d3f', // Warna teks umum
-        fontFamily: 'Inter, sans-serif', // Menggunakan font Inter
+        foreColor: '#373d3f', 
+        fontFamily: 'Inter, sans-serif', 
         toolbar: {
-            show: true, // Pastikan toolbar tetap ditampilkan
+            show: true, 
             tools: {
-                download: true, // Aktifkan tombol download (SVG, PNG, CSV)
-                selection: true, // Aktifkan Selection Zoom
-                zoom: true,      // Aktifkan Zoom (Zoom In/Out)
+                download: true, 
+                selection: true, 
+                zoom: true,      
                 zoomin: true,
                 zoomout: true,
-                pan: true,       // Aktifkan Panning
-                reset: true,     // Aktifkan Reset Zoom
-                customIcons: []  // Biarkan kosong jika tidak ada ikon kustom
+                pan: true,       
+                reset: true,     
+                customIcons: []  
             }
         }
     },
-    colors: themePalette, // Menggunakan palet warna kustom
+    colors: themePalette, 
     stroke: { width: 2, curve: 'smooth' },
     dataLabels: {
-        style: { colors: ['#FFFFFF'] }, // Warna label data
+        style: { colors: ['#FFFFFF'] }, 
         dropShadow: { enabled: true, top: 1, left: 1, blur: 1, opacity: 0.45 }
     },
     markers: { size: 4, strokeWidth: 0, hover: { sizeOffset: 3 } },
-    tooltip: { theme: 'dark' }, // Tema tooltip gelap
+    tooltip: { theme: 'dark' }, 
     legend: {
         position: 'top', horizontalAlign: 'left', fontSize: '14px', fontFamily: 'inherit',
         fontWeight: 500, markers: { width: 12, height: 12, strokeWidth: 0, radius: 12 },
@@ -55,24 +53,20 @@ const baseTheme = {
     }
 };
 
-// 3. Definisikan Tema untuk Grafik Cartesian (yang memiliki sumbu X dan Y)
-// Tema ini mewarisi dari baseTheme dan menambahkan grid, xaxis, yaxis.
 const cartesianTheme = {
     ...baseTheme,
     xaxis: {
-        labels: { style: { colors: '#888ea8' } }, // Warna label sumbu X
-        axisBorder: { color: '#e0e6ed' }, // Warna border sumbu X
-        axisTicks: { color: '#e0e6ed' } // Warna tick sumbu X
+        labels: { style: { colors: '#888ea8' } }, 
+        axisBorder: { color: '#e0e6ed' }, 
+        axisTicks: { color: '#e0e6ed' } 
     },
     yaxis: {
-        labels: { style: { colors: '#888ea8' } } // Warna label sumbu Y
+        labels: { style: { colors: '#888ea8' } } 
     },
-    grid: { borderColor: '#e0e6ed' } // Warna garis grid
+    grid: { borderColor: '#e0e6ed' } 
 };
 
-// 4. Buat Kamus Tema Final untuk Setiap Jenis Grafik
 export const chartTheme = {
-    // Grafik Cartesian mewarisi dari cartesianTheme
     line: { ...cartesianTheme, stroke: { ...cartesianTheme.stroke, width: 3 } },
     area: {
         ...cartesianTheme,
@@ -82,46 +76,42 @@ export const chartTheme = {
     bar: {
         ...cartesianTheme,
         plotOptions: { bar: { horizontal: false, columnWidth: '55%', borderRadius: 4 } },
-        dataLabels: { ...cartesianTheme.dataLabels, enabled: false }, // Data labels dinonaktifkan untuk bar
+        dataLabels: { ...cartesianTheme.dataLabels, enabled: false }, 
         stroke: { show: true, width: 2, colors: ['transparent'] },
     },
     candlestick: {
         ...cartesianTheme,
-        plotOptions: { candlestick: { colors: { upward: '#48BB78', downward: '#ED8936' }, wick: { useFillColor: true } } }, // Warna kustom untuk candlestick
+        plotOptions: { candlestick: { colors: { upward: '#48BB78', downward: '#ED8936' }, wick: { useFillColor: true } } }, 
         xaxis: { ...cartesianTheme.xaxis, type: 'datetime' }
     },
-    boxPlot: { ...cartesianTheme, plotOptions: { boxPlot: { colors: { upper: '#4299E1', lower: '#F6AD55' } } } }, // Warna kustom untuk box plot
+    boxPlot: { ...cartesianTheme, plotOptions: { boxPlot: { colors: { upper: '#4299E1', lower: '#F6AD55' } } } }, 
     bubble: { ...cartesianTheme, dataLabels: { ...cartesianTheme.dataLabels, enabled: false }, xaxis: { ...cartesianTheme.xaxis, type: 'numeric' }, plotOptions: { bubble: { zScaling: true } } },
     scatter: { ...cartesianTheme, markers: { ...cartesianTheme.markers, size: 6, strokeWidth: 1, hover: { sizeOffset: 4 } } },
     heatmap: {
         ...cartesianTheme,
         dataLabels: { ...cartesianTheme.dataLabels, enabled: false },
         plotOptions: { heatmap: { enableShades: true, shadeIntensity: 0.5, colorScale: { ranges: [
-            // Menggunakan nilai heksadesimal langsung untuk menghindari masalah timing
-            { from: 0, to: 25, name: 'Rendah', color: '#ED8936' }, // Oranye
-            { from: 26, to: 50, name: 'Sedang', color: '#48BB78' }, // Hijau
-            { from: 51, to: 75, name: 'Tinggi', color: '#4299E1' }, // Biru
-            { from: 76, to: 100, name: 'Sangat Tinggi', color: '#9F7AEA' } // Ungu
+            { from: 0, to: 25, name: 'Rendah', color: '#ED8936' }, 
+            { from: 26, to: 50, name: 'Sedang', color: '#48BB78' }, 
+            { from: 51, to: 75, name: 'Tinggi', color: '#4299E1' }, 
+            { from: 76, to: 100, name: 'Sangat Tinggi', color: '#9F7AEA' } 
         ] } } }
     },
     rangeBar: {
         ...cartesianTheme,
         plotOptions: { bar: { horizontal: true, borderRadius: 5 } },
         xaxis: { ...cartesianTheme.xaxis, type: 'datetime' },
-        // Data labels menunjukkan nilai X untuk range bar
         dataLabels: {
             ...cartesianTheme.dataLabels,
             enabled: true,
             formatter: (val, { seriesIndex, dataPointIndex, w }) => {
-                // Mengambil nilai X (label) dari data
                 const data = w.config.series[seriesIndex].data[dataPointIndex];
-                return data.x || ''; // Mengembalikan label atau string kosong jika tidak ada
+                return data.x || ''; 
             },
-            style: { colors: ['#333'] } // Warna label data untuk range bar
+            style: { colors: ['#333'] } 
         }
     },
 
-    // Grafik Non-Cartesian mewarisi langsung dari baseTheme
     donut: {
         ...baseTheme,
         stroke: { ...baseTheme.stroke, colors: ['#FFFFFF'] }, // Garis putih antar slice
@@ -129,7 +119,7 @@ export const chartTheme = {
         dataLabels: { enabled: true, formatter: (val) => val.toFixed(1) + '%' },
         legend: { ...baseTheme.legend, position: 'bottom' }
     },
-    pie: { // Tema untuk Pie sama dengan Donut, hanya tanpa lubang
+    pie: { 
         ...baseTheme,
         stroke: { ...baseTheme.stroke, colors: ['#FFFFFF'] },
         dataLabels: { enabled: true, formatter: (val) => val.toFixed(1) + '%' },

@@ -1,8 +1,16 @@
+// /**
+//  * css/tabulator.js
+//  *
+//  * @author    [EazZy Project]
+//  * @copyright Copyright (c) [2025] [EazZy Project]
+//  * @license   https://opensource.org/licenses/MIT MIT License
+//  * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
+//  * dan font yang digunakan di EazZy Project.
+//  */
 // Impor createIcons dan icons dari Lucide Icons
 import { createIcons, icons } from '/assets/vendor/lucide/lucide.js';
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Contoh data tabel
     var tabledata = [
         {id:1, nama:"Budi Santoso", umur:30, kota:"Jakarta", status:true},
         {id:2, nama:"Siti Aminah", umur:24, kota:"Bandung", status:false},
@@ -15,13 +23,12 @@ document.addEventListener('DOMContentLoaded', function() {
         {id:9, nama:"Fitriani", umur:33, kota:"Denpasar", status:true},
         {id:10, nama:"Rio Pratama", umur:27, kota:"Balikpapan", status:false},
     ];
-
     // Inisialisasi Tabulator
     var table = new Tabulator("#my-data-table", {
-        height:"311px", // Tinggi tabel
-        data:tabledata, // Muat data
-        layout:"fitColumns", // Sesuaikan kolom agar pas dengan lebar tabel
-        columns:[ // Definisikan kolom
+        height:"311px", 
+        data:tabledata, 
+        layout:"fitColumns", 
+        columns:[ 
             {title:"ID", field:"id", width:60},
             {title:"Nama Lengkap", field:"nama", minWidth:150, editor:"input"},
             {title:"Umur", field:"umur", width:80, hozAlign:"center", sorter:"number"},
@@ -37,7 +44,5 @@ document.addEventListener('DOMContentLoaded', function() {
             },
         ],
     });
-
-    // Pastikan Lucide Icons di-render setelah tabel dibuat
     createIcons({ icons });
 });
