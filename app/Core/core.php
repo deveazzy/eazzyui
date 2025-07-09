@@ -8,6 +8,14 @@
  * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
  * dan font yang digunakan di EazZy Project.
  */
+
+// Path dari app/Core/ ke root adalah naik dua tingkat (../../)
+require_once __DIR__ . '/../../vendor/autoload.php';
+// Path ke file .env juga berada di root
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
+$dotenv->load(); 
+
 // Dapatkan path URL yang diminta oleh pengguna
 $requestUri = $_SERVER['REQUEST_URI'];
 // Hapus query string jika ada, hanya ambil path-nya
