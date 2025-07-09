@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "@tailwindcss/cli": "^4.1.11",
     "animate.css": "^4.1.1",
     "apexcharts": "^4.7.0",
