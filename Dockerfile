@@ -1,4 +1,10 @@
-# Dockerfile untuk layanan "mirror" (PHP-FPM)
+# @path    /mnt/c/www/mirror/Dockerfile
+# @author  [EazZy Project]
+# @license https://opensource.org/licenses/MIT MIT License
+#
+# [EazZy Project] Copyright (c) 2025 [EazZy Project]
+#
+# Dockerfile untuk layanan PHP-FPM (mirror-app) dengan ekstensi Redis.
 
 # Gunakan base image resmi PHP 8.2-FPM yang ringan
 FROM php:8.2-fpm-alpine
@@ -6,7 +12,16 @@ FROM php:8.2-fpm-alpine
 # Tetapkan direktori kerja di dalam kontainer
 WORKDIR /var/www/mirror
 
-RUN apk add --no-cache git zip unzip
+# Instal semua dependensi OS dan ekstensi PHP dalam satu layer untuk efisiensi
+RUN apk add --no-cache \
+    git \
+    zip \
+    unzip \
+    fcgi \
+    $PHPIZE_DEPS \
+    && pecl install redis \
+    && docker-php-ext-enable redis \
+    && apk del $PHPIZE_DEPS
 
 # Install Composer secara global di dalam image
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
@@ -15,19 +30,16 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY composer.json composer.lock ./
 
 # Jalankan composer install untuk mengunduh semua dependensi
-# Ini akan membuat folder /vendor di dalam image
 RUN composer install --no-dev --optimize-autoloader
-# 2. Install fcgi untuk healthcheck
-RUN apk add --no-cache fcgi
 
-# Salin semua file dari /mnt/c/www/mirror ke direktori kerja kontainer
+# Salin semua file dari konteks build ke direktori kerja kontainer
 COPY . .
 
-# (Opsional) Jika aplikasi Anda butuh ekstensi PHP, aktifkan baris di bawah ini
+# (Opsional) Jika Anda butuh ekstensi PHP lain, tambahkan di sini
 # Contoh:
 # RUN docker-php-ext-install pdo pdo_mysql
 
-# 4. UBAH PATH 'chown' agar cocok dengan WORKDIR baru
+# Ubah kepemilikan file agar sesuai dengan pengguna PHP-FPM
 RUN chown -R www-data:www-data /var/www/mirror
 
 # Port standar untuk PHP-FPM
