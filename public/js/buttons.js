@@ -1,5 +1,5 @@
 // /**
-//  * css/buttons.js
+//  * js/buttons.js
 //  *
 //  * @author    [EazZy Project]
 //  * @copyright Copyright (c) [2025] [EazZy Project]
@@ -7,44 +7,108 @@
 //  * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
 //  * dan font yang digunakan di EazZy Project.
 //  */
-
-
 document.addEventListener('DOMContentLoaded', () => {
-    /**
-     * Inisialisasi semua komponen dropdown di halaman.
-     */
+    const initMobileSliderExpand = () => {
+        
+        if (!window.matchMedia('(max-width: 640px)').matches) return;
+
+        const groups = document.querySelectorAll('.group.mobile-slider-scroll');
+
+        groups.forEach(group => {
+            const form = group.querySelector('form'); 
+            
+            if (!form) {
+                return; 
+            }
+
+            const input = form.querySelector('input'); 
+            const button = form.querySelector('button'); 
+
+            if (!input || !button) return; 
+
+            form.classList.add('mobile-expandable-form');
+
+            const expandForm = () => {
+                form.classList.add('is-expanded-mobile');
+            };
+
+            const collapseForm = () => {
+                form.classList.remove('is-expanded-mobile');
+            };
+
+            button.addEventListener('click', (event) => {
+                event.stopPropagation(); 
+                if (form.classList.contains('is-expanded-mobile')) {
+                    
+                    collapseForm();
+                    input.blur(); 
+                } else {
+                    
+                    expandForm();
+                    input.focus(); 
+                }
+            });
+
+            input.addEventListener('focus', () => {
+                expandForm();
+            });
+
+            input.addEventListener('blur', () => {
+                
+                setTimeout(() => {
+                    
+                    if (!form.contains(document.activeElement)) {
+                        collapseForm();
+                    }
+                }, 100);
+            });
+
+            
+            document.addEventListener('click', (event) => {
+                if (!form.contains(event.target) && form.classList.contains('is-expanded-mobile')) {
+                    collapseForm();
+                    input.blur(); 
+                }
+            });
+        });
+    };
+
+    
     const initDropdowns = () => {
         const dropdownWrappers = document.querySelectorAll('.dropdown-wrapper');
-
         if (dropdownWrappers.length === 0) return;
 
         dropdownWrappers.forEach(wrapper => {
             const toggleButton = wrapper.querySelector('.dropdown-toggle');
-            
             if (toggleButton) {
                 toggleButton.addEventListener('click', (event) => {
-                    // Menghentikan event agar tidak langsung ditangkap oleh listener window
-                    event.stopPropagation();
-                    
-                    // Tutup semua dropdown lain sebelum membuka yang ini
-                    closeAllDropdowns(wrapper);
+                    event.stopPropagation(); 
+                    closeAllDropdowns(wrapper); 
+                    wrapper.classList.toggle('is-open'); 
 
-                    // Buka/tutup dropdown yang diklik
-                    wrapper.classList.toggle('is-open');
+                    
+                    if (wrapper.classList.contains('is-open')) {
+                        const firstMenu = wrapper.querySelector('.dropdown-menu a:not(.cursor-not-allowed)');
+                        if (firstMenu) firstMenu.focus();
+                        if (window.lucide && typeof window.lucide.createIcons === 'function') {
+                            window.lucide.createIcons({ icons: window.lucide.icons });
+                        }
+                    }
                 });
             }
         });
 
-        // Menambahkan listener di window untuk menutup dropdown saat klik di luar
-        window.addEventListener('click', () => {
-            closeAllDropdowns();
+        window.addEventListener('click', (event) => { 
+            
+            if (!event.target.closest('.dropdown-wrapper') && !event.target.closest('.mobile-slider-scroll')) {
+                closeAllDropdowns();
+            }
+        });
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeAllDropdowns();
         });
     };
 
-    /**
-     * Fungsi bantuan untuk menutup semua dropdown yang sedang terbuka.
-     * @param {HTMLElement} [exceptWrapper=null] - Wrapper dropdown yang tidak akan ditutup.
-     */
     const closeAllDropdowns = (exceptWrapper = null) => {
         document.querySelectorAll('.dropdown-wrapper.is-open').forEach(openWrapper => {
             if (openWrapper !== exceptWrapper) {
@@ -53,44 +117,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    /**
-     * Inisialisasi tombol dengan efek animasi saat diklik.
-     * Logika ini telah disempurnakan untuk memastikan animasi dapat diputar ulang dengan andal.
-     */
+ 
     const initClickAnimations = () => {
         const animatedButtons = document.querySelectorAll('.clickable-animated-btn');
 
         animatedButtons.forEach(button => {
-            // Hapus event listener lama jika ada untuk mencegah duplikasi
             button.removeEventListener('click', handleAnimationClick);
-            // Tambahkan event listener yang baru
             button.addEventListener('click', handleAnimationClick);
         });
     };
 
-    /**
-     * Handler untuk event klik pada tombol animasi.
-     */
     function handleAnimationClick(event) {
         const button = event.currentTarget;
         const animationName = button.dataset.animation;
         
-        // Hentikan jika animasi sedang berjalan
         if (!animationName || button.classList.contains('is-animating')) {
             return;
         }
 
-        // Menambahkan kelas dari Animate.css
         const animationClasses = ['is-animating', 'animate__animated', `animate__${animationName}`];
         button.classList.add(...animationClasses);
 
-        // Menghapus kelas setelah animasi selesai agar bisa diputar ulang
         button.addEventListener('animationend', () => {
             button.classList.remove(...animationClasses);
-        }, { once: true });
+        }, { once: true }); 
     }
 
-    // Panggil semua fungsi inisialisasi
+   
     initDropdowns();
     initClickAnimations();
+    initMobileSliderExpand();
+
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons({ icons: window.lucide.icons });
+    }
 });

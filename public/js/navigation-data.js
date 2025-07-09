@@ -1,12 +1,12 @@
-//
-//  * js/navigation-data.js
-//  *
-//  * @author    [EazZy Project]
-//  * @copyright Copyright (c) [2025] [EazZy Project]
-//  * @license   https://opensource.org/licenses/MIT MIT License
-//  * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
-//  * dan font yang digunakan di EazZy Project.
-//  */
+/**
+ * @path    public/js/navigation-data.js
+ * @author  [EazZy Project]
+ * @copyright Copyright (c) [2025] [EazZy Project]
+ * @license   https://opensource.org/licenses/MIT MIT License
+ *
+ * File ini berisi semua data untuk struktur navigasi
+ * yang digunakan di EazZy Project.
+ */
 
 
 const globalNavigationData = [
@@ -66,6 +66,8 @@ const globalNavigationData = [
                     { id: 'alerts-notifications', label: 'Alerts & Notifikasi', icon: 'bell-ring', page: 'alerts-and-notifications', layout: '', group: 'Utilitas' },
                     { id: 'tailwind-css', label: 'Tailwind CSS', icon: 'wind', page: 'tailwind-css', layout: '', group: 'Frameworks' },
                     { id: 'flatpickr', label: 'Flatpickr', icon: 'calendar-days', page: 'flatpickr', layout: '', group: 'Form & Interaksi' },
+                    // --- BARIS BARU DITAMBAHKAN DI SINI ---
+                    { id: 'splide-js', label: 'Splide', icon: 'gallery-horizontal', page: 'splide', layout: '', group: 'Form & Interaksi' },
                 ]
             },
             {
@@ -124,6 +126,7 @@ const sidebarNavigationData = [
             { id: 'alerts-notifications', label: 'Alerts & Notifikasi', icon: 'bell-ring', page: 'alerts-and-notifications', layout: 'sidebar-left', group: 'Utilitas' },
             { id: 'tailwind-css', label: 'Tailwind CSS', icon: 'wind', page: 'tailwind-css', layout: 'sidebar-left', group: 'Frameworks' },
             { id: 'flatpickr', label: 'Flatpickr', icon: 'calendar-days', page: 'flatpickr', layout: 'sidebar-left', group: 'Form & Interaksi' },
+            { id: 'splide-js', label: 'Splide.js', icon: 'gallery-horizontal', page: 'splide', layout: 'sidebar-left', group: 'Form & Interaksi' },
         ]
     },
     { id: 'settings', label: 'Pengaturan', icon: 'settings', page: 'settings', layout: 'sidebar-left' },
