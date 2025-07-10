@@ -48,9 +48,10 @@ const globalNavigationData = [
                         ]
                     },
                     { id: 'typography', label: 'Typography', icon: 'type', page: 'typography', layout: '', group: 'Dasar' },
-                    { id: 'tabs', label: 'Tabs', icon: 'folder-tabs', page: 'tabs', layout: '', group: 'Dasar' },
                     { id: 'buttons', label: 'Buttons', icon: 'circle', page: 'buttons', layout: '', group: 'Dasar' },
                     { id: 'widgets', label: 'Widgets', icon: 'layout-grid', page: 'widgets', layout: '', group: 'Komponen Lanjutan' },
+                    { id: 'modal-form', label: 'Modal & Form', page: 'modal-form', layout: '', group: 'Form & Utilitas' },
+                    { id: 'tabs', label: 'Tabs', icon: 'folder-tabs', page: 'tabs', layout: '', group: 'Form & Utilitas' },
                 ]
             },
             // ===================================
@@ -60,14 +61,13 @@ const globalNavigationData = [
                 icon: 'image',
                 children: [ // Sub-menu untuk "Aset" dengan pengelompokan horizontal
                     { id: 'icons', label: 'Icons Lucide', icon: 'layers', page: 'icons', layout: '', group: 'Grafis' },
-                    { id: 'apexcharts', label: 'ApexCharts', icon: 'area-chart', page: 'apexcharts', layout: '', group: 'Grafis' },
-                    { id: 'animate-style', label: 'Animate.css', icon: 'sparkles', page: 'animate-style', layout: '', group: 'Animasi' },
+                    { id: 'alerts-notifications', label: 'Alerts & Notifikasi', icon: 'bell-ring', page: 'alerts-and-notifications', layout: '', group: 'Form & Utilitas' },
+                    { id: 'flatpickr', label: 'Flatpickr', icon: 'calendar-days', page: 'flatpickr', layout: '', group: 'Form & Utilitas' },
+                    { id: 'splide-js', label: 'Splide', icon: 'gallery-horizontal', page: 'splide', layout: '', group: 'Form & Utilitas' },
                     { id: 'tabulator', label: 'Tabulator', icon: 'table', page: 'tabulator', layout: '', group: 'Tabel & Data' },
-                    { id: 'alerts-notifications', label: 'Alerts & Notifikasi', icon: 'bell-ring', page: 'alerts-and-notifications', layout: '', group: 'Utilitas' },
+                    { id: 'apexcharts', label: 'ApexCharts', icon: 'area-chart', page: 'apexcharts', layout: '', group: 'Tabel & Data' },
                     { id: 'tailwind-css', label: 'Tailwind CSS', icon: 'wind', page: 'tailwind-css', layout: '', group: 'Frameworks' },
-                    { id: 'flatpickr', label: 'Flatpickr', icon: 'calendar-days', page: 'flatpickr', layout: '', group: 'Form & Interaksi' },
-                    // --- BARIS BARU DITAMBAHKAN DI SINI ---
-                    { id: 'splide-js', label: 'Splide', icon: 'gallery-horizontal', page: 'splide', layout: '', group: 'Form & Interaksi' },
+                    { id: 'animate-style', label: 'Animate.css', icon: 'sparkles', page: 'animate-style', layout: '', group: 'Animasi' },
                 ]
             },
             {
@@ -75,12 +75,12 @@ const globalNavigationData = [
                 label: 'Halaman',
                 icon: 'file-text',
                 children: [ // Sub-menu untuk "Halaman"
-                    { id: 'dashboard', label: 'Dashboard', page: 'dashboard', layout: 'sidebar-left', group: 'Contoh Halaman' },
-                    { id: 'error-401', label: 'Error 401', page: '401', group: 'Halaman Error' },
-                    { id: 'error-403', label: 'Error 403', page: '403', group: 'Halaman Error' },
-                    { id: 'error-404', label: 'Error 404', page: '404', group: 'Halaman Error' },
-                    { id: 'error-500', label: 'Error 500', page: '500', group: 'Halaman Error' },
-                    { id: 'error-503', label: 'Error 503', page: '503', group: 'Halaman Error' },
+                    { id: 'dashboard', label: 'Dashboard', page: 'dashboard', layout: 'sidebar-left', group: 'Contoh' },
+                    { id: 'error-401', label: 'Error 401', page: '401', group: 'Error' },
+                    { id: 'error-403', label: 'Error 403', page: '403', group: 'Error' },
+                    { id: 'error-404', label: 'Error 404', page: '404', group: 'Error' },
+                    { id: 'error-500', label: 'Error 500', page: '500', group: 'Error' },
+                    { id: 'error-503', label: 'Error 503', page: '503', group: 'Error' },
                 ]
             },
         ]
@@ -120,13 +120,13 @@ const sidebarNavigationData = [
         icon: 'image',
         children: [
             { id: 'icons', label: 'Icons Lucide', icon: 'layers', page: 'icons', layout: 'sidebar-left', group: 'Grafis' },
-            { id: 'apexcharts', label: 'ApexCharts', icon: 'area-chart', page: 'apexcharts', layout: 'sidebar-left', group: 'Grafis' },
-            { id: 'animate-style', label: 'Animate.css', icon: 'sparkles', page: 'animate-style', layout: 'sidebar-left', group: 'Animasi' },
+            { id: 'alerts-notifications', label: 'Alerts & Notifikasi', icon: 'bell-ring', page: 'alerts-and-notifications', layout: 'sidebar-left', group: 'Form & Utilitas' },
+            { id: 'flatpickr', label: 'Flatpickr', icon: 'calendar-days', page: 'flatpickr', layout: 'sidebar-left', group: 'Form & Utilitas' },
+            { id: 'splide-js', label: 'Splide', icon: 'gallery-horizontal', page: 'splide', layout: 'sidebar-left', group: 'Form & Utilitas' },
             { id: 'tabulator', label: 'Tabulator', icon: 'table', page: 'tabulator', layout: 'sidebar-left', group: 'Tabel & Data' },
-            { id: 'alerts-notifications', label: 'Alerts & Notifikasi', icon: 'bell-ring', page: 'alerts-and-notifications', layout: 'sidebar-left', group: 'Utilitas' },
+            { id: 'apexcharts', label: 'ApexCharts', icon: 'area-chart', page: 'apexcharts', layout: 'sidebar-left', group: 'Tabel & Data' },
             { id: 'tailwind-css', label: 'Tailwind CSS', icon: 'wind', page: 'tailwind-css', layout: 'sidebar-left', group: 'Frameworks' },
-            { id: 'flatpickr', label: 'Flatpickr', icon: 'calendar-days', page: 'flatpickr', layout: 'sidebar-left', group: 'Form & Interaksi' },
-            { id: 'splide-js', label: 'Splide.js', icon: 'gallery-horizontal', page: 'splide', layout: 'sidebar-left', group: 'Form & Interaksi' },
+            { id: 'animate-style', label: 'Animate.css', icon: 'sparkles', page: 'animate-style', layout: 'sidebar-left', group: 'Animasi' },
         ]
     },
     { id: 'settings', label: 'Pengaturan', icon: 'settings', page: 'settings', layout: 'sidebar-left' },

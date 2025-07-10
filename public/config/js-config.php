@@ -17,7 +17,7 @@
  <!-- <script type="module" src="/js/vendor/lucide/lucide.js"></script> -->
 
 <!-- Memuat library Chart.js dari CDN -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
 <!-- Memuat library ApexCharts dari lokal -->
 <script src="assets/vendor/apexcharts/apexcharts.js"></script>
 <!-- Memuat library Tabulator dari lokal -->
