@@ -1,7 +1,7 @@
 import { createIcons, icons } from '../assets/vendor/lucide/lucide.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    // --- BAGIAN LOGIKA RENDER IKON (KODE ASLI ANDA) ---
+    // --- BAGIAN LOGIKA RENDER IKON (TIDAK DIUBAH) ---
     const categorizedIconList = {
         "Umum": ['home', 'info', 'alert-circle', 'check', 'x', 'search', 'settings', 'bell', 'star', 'heart', 'help-circle', 'calendar'],
         "Navigasi & Arah": ['arrow-right', 'arrow-left', 'chevron-down', 'menu', 'plus', 'minus', 'arrow-up', 'arrow-down', 'arrow-left-circle', 'arrow-right-circle'],
@@ -95,61 +95,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     renderIcons();
 
-    // --- BAGIAN LOGIKA STICKY SEARCH (KODE BARU) ---
+    // --- BAGIAN LOGIKA STICKY SEARCH (KODE BARU DENGAN INTERSECTION OBSERVER) ---
     const stickySection = document.getElementById('sticky-search-section');
     const placeholder = document.getElementById('sticky-placeholder');
     const mainContainer = document.getElementById('main-content-container');
 
-    if (!stickySection || !placeholder || !mainContainer) {
-        console.error('Elemen untuk sticky tidak ditemukan. Pastikan ID elemen sudah benar.');
-        return;
-    }
+    if (stickySection && placeholder && mainContainer) {
+        // Buat elemen sentinel untuk diobservasi
+        const sentinel = document.createElement('div');
+        // Posisikan sentinel tepat di atas search bar
+        stickySection.before(sentinel);
 
-    let stickyOffsetTop = 0;
+        const observerCallback = (entries) => {
+            const entry = entries[0];
+            const isSticky = !entry.isIntersecting;
 
-    function calculateInitialPosition() {
-        // Hitung posisi awal relatif terhadap dokumen
-        stickyOffsetTop = stickySection.getBoundingClientRect().top + window.scrollY;
-        // Atur tinggi placeholder sesuai tinggi section
-        placeholder.style.height = `${stickySection.offsetHeight}px`;
-    }
-    
-    function handleScroll() {
-        const isSticky = window.scrollY >= (stickyOffsetTop - 88); // 88 adalah offset dari top
-
-        if (isSticky) {
-            if (!stickySection.classList.contains('is-sticky')) {
-                // Dapatkan lebar dari kontainer utama
-                const containerRect = mainContainer.getBoundingClientRect();
-                stickySection.style.width = `${containerRect.width}px`;
-                
+            placeholder.style.height = isSticky ? `${stickySection.offsetHeight}px` : '0px';
+            placeholder.style.display = isSticky ? 'block' : 'none';
+            
+            if (isSticky) {
+                const containerWidth = mainContainer.offsetWidth;
+                stickySection.style.width = `${containerWidth}px`;
                 stickySection.classList.add('is-sticky');
-                placeholder.style.display = 'block';
-            }
-        } else {
-            if (stickySection.classList.contains('is-sticky')) {
+            } else {
                 stickySection.classList.remove('is-sticky');
-                stickySection.style.width = ''; // Hapus style width
-                placeholder.style.display = 'none';
+                stickySection.style.width = ''; // Hapus inline width
             }
-        }
-    }
-    
-    function handleResize() {
-        // Hapus sticky saat resize untuk perhitungan ulang
-        stickySection.classList.remove('is-sticky');
-        stickySection.style.width = '';
-        placeholder.style.display = 'none';
-        
-        // Hitung ulang posisi dan atur kembali state scroll
-        calculateInitialPosition();
-        handleScroll();
-    }
+        };
 
-    // Inisialisasi
-    calculateInitialPosition();
+        const observer = new IntersectionObserver(observerCallback, {
+            // Aktifkan saat sentinel berada 88px di atas viewport (untuk memberi ruang bagi header utama)
+            rootMargin: '-88px 0px 0px 0px',
+            threshold: 1.0,
+        });
 
-    // Tambahkan event listener
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleResize);
+        observer.observe(sentinel);
+    } else {
+        console.error('Elemen untuk sticky tidak ditemukan. Pastikan ID elemen sudah benar.');
+    }
 });

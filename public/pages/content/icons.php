@@ -11,12 +11,12 @@
 ?>
 
 <main class="flex-1 container mx-auto p-4 md:p-8 lg:p-10">
-    <div id="main-content-container" class="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl max-w-7xl mx-auto">
+    <div id="main-content-container" class="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl max-w-7xl mx-auto relative">
 
         <!-- Header Halaman -->
         <div class="flex flex-col md:flex-row items-center md:space-x-4 mb-8 md:mb-12 text-center md:text-left">
             <div class="bg-blue-100 text-blue-600 p-4 rounded-full mb-4 md:mb-0">
-                <i data-lucide="icons" class="w-10 h-10 md:w-12 md:h-12"></i>
+                <i data-lucide="palette" class="w-10 h-10 md:w-12 md:h-12"></i>
             </div>
             <div>
                 <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">Galeri Ikon Lucide</h1>
@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <!-- Search & Guide Section (dibuat sticky oleh icons.js) -->
+        <!-- Search & Guide Section -->
         <section id="sticky-search-section" class="mb-12 bg-gray-50/80 backdrop-blur-sm py-4 z-10">
             <div class="relative mb-6">
                 <label for="icon-search" class="sr-only">Cari ikon</label>
