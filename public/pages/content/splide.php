@@ -1,10 +1,14 @@
 <?php
-// public/pages/splide-js.php
-// MIT license EazZy Project
 /**
- * Halaman ini berfungsi sebagai dokumentasi untuk library Splide.js
- * dalam EazZy Project.
- * Menggunakan: Tailwind CSS, Lucide Icons, Splide.js.
+ * @[EazZy Project] Copyright (c) [2025] [EazZy Project] license
+ * @https://opensource.org/licenses/MIT MIT License
+ * @path public/pages/atoms.php
+ * @author EazZy Project
+ *
+ * File ini berisi konten utama untuk halaman "Template Elemen Dasar (Atoms)" EazZy Project.
+ * Ini mencakup berbagai komponen UI dasar seperti tombol, input, tipografi, badge, avatar,
+ * alert, toggle, dan progress bar.
+ * Konten ini akan di-include oleh page/switch.php.
  */
 ?>
 

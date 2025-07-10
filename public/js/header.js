@@ -16,6 +16,8 @@ let componentsTriggerLink = null;
 
 document.addEventListener('DOMContentLoaded', () => {
     // --- Elemen Header ---
+    const header = document.querySelector('header');
+    const sentinel = document.getElementById('header-sentinel'); // Ambil elemen penanda
     const desktopNavContainer = document.getElementById('desktop-nav-container');
     const megaMenu = document.getElementById('mega-menu');
     const megaMenuCategories = document.getElementById('mega-menu-category-list');
@@ -32,11 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (item.page === 'home') {
             href = '/';
         } else if (item.page) {
-            if (item.layout) {
-                href = `/${item.page}/${item.layout}`;
-            } else {
-                href = `/${item.page}`;
-            }
+            href = item.layout ? `/${item.page}/${item.layout}` : `/${item.page}`;
         } else {
             href = '#';
         }
@@ -99,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         megaMenuContentPanel.innerHTML = '';
 
         const categoryListUl = document.getElementById('mega-menu-category-list-ul');
+        if (!categoryListUl) return;
 
         const componentsItem = globalNavigationData.find(item => item.id === 'components');
         if (componentsItem && componentsItem.children) {
@@ -110,11 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (category.page === 'home') {
                     href = '/';
                 } else if (category.page) {
-                    if (category.layout) {
-                        href = `/${category.page}/${category.layout}`;
-                    } else {
-                        href = `/${category.page}`;
-                    }
+                    href = category.layout ? `/${category.page}/${category.layout}` : `/${category.page}`;
                 } else {
                     href = '#';
                 }
@@ -123,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 link.href = category.disabled ? '#' : href;
-                // Tambahkan kelas 'bg-blue-50' ke trigger pertama untuk menandai sebagai aktif
                 link.className = `mega-menu-trigger flex items-center justify-between p-2 rounded-lg text-gray-600 hover:bg-blue-50 font-medium ${category.disabled ? 'opacity-50 cursor-not-allowed' : ''} ${index === 0 ? 'bg-blue-50' : ''}`;
                 link.setAttribute('data-menu-target', category.id);
                 link.innerHTML = `${category.label} <i data-lucide="arrow-right" class="w-4 h-4"></i>`;
@@ -138,15 +132,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const contentDiv = document.createElement('div');
                 contentDiv.id = `${category.id}-content`;
                 
-                let initialVisibilityClass = index === 0 ? '' : 'hidden'; 
-                let layoutClass = '';
-
-                if (category.children) {
-                    layoutClass = 'grid grid-cols-3 gap-8'; 
-                } else {
-                    layoutClass = 'flex flex-col space-y-2'; 
-                }
-
+                const initialVisibilityClass = index === 0 ? '' : 'hidden'; 
+                const layoutClass = category.children ? 'grid grid-cols-3 gap-8' : 'flex flex-col space-y-2'; 
                 contentDiv.className = `mega-menu-content ${initialVisibilityClass} ${layoutClass}`;
 
                 if (category.children) {
@@ -168,11 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             if (subItem.page === 'home') {
                                 subHref = '/';
                             } else if (subItem.page) {
-                                if (subItem.layout) {
-                                    subHref = `/${subItem.page}/${subItem.layout}`;
-                                } else {
-                                    subHref = `/${subItem.page}`;
-                                }
+                                subHref = subItem.layout ? `/${subItem.page}/${subItem.layout}` : `/${subItem.page}`;
                             } else {
                                 subHref = '#';
                             }
@@ -203,9 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Setup Listeners untuk Mega Menu (Desktop) ---
     const setupMegaMenuListeners = () => {
-        const mainChevron = componentsTriggerLink ? componentsTriggerLink.querySelector('svg[data-lucide="chevron-down"]') : null;
-
-        if (!componentsTriggerLink || !megaMenu || !mainChevron) return; 
+        if (!componentsTriggerLink || !megaMenu) return; 
 
         let menuHideTimeout;
 
@@ -272,7 +253,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 button.id = `mobile-${item.id}-trigger`;
                 
                 let buttonTextSizeClass = '';
-                let buttonTextColorClass = '';
                 if (level === 0) {
                     buttonTextSizeClass = 'text-lg text-gray-800';
                 } else if (level === 1) {
@@ -288,11 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (item.page === 'home') {
                         subHref = '/';
                     } else if (item.page) {
-                        if (item.layout) {
-                            subHref = `/${item.page}/${item.layout}`;
-                        } else {
-                            subHref = `/${item.page}`;
-                        }
+                        subHref = item.layout ? `/${item.page}/${item.layout}` : `/${item.page}`;
                     } else {
                         subHref = '#';
                     }
@@ -337,8 +313,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     const actualChevron = button.querySelector('svg[data-lucide="chevron-down"]');
                     if (actualChevron) {
                         actualChevron.classList.toggle('rotate-180');
-                    } else if (chevronIcon) {
-                        chevronIcon.classList.toggle('rotate-180');
                     }
                 });
 
@@ -354,13 +328,8 @@ document.addEventListener('DOMContentLoaded', () => {
         menuBtn.addEventListener('click', () => {
             const isHidden = mobileMenu.classList.toggle('hidden');
             
-            if (isHidden) {
-                menuBtn.innerHTML = '<i data-lucide="menu" class="h-6 w-6"></i>';
-                createIcons({ icons });
-            } else {
-                menuBtn.innerHTML = '<i data-lucide="x" class="h-6 w-6"></i>';
-                createIcons({ icons });
-            }
+            menuBtn.innerHTML = isHidden ? '<i data-lucide="menu" class="h-6 w-6"></i>' : '<i data-lucide="x" class="h-6 w-6"></i>';
+            createIcons({ icons });
         });
     }
 
@@ -374,18 +343,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    mobileNavContainer.addEventListener('click', (e) => {
-        if (e.target.classList.contains('mobile-link')) {
-            closeMobileMenu();
-        }
-    });
+    if (mobileNavContainer) {
+        mobileNavContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('mobile-link')) {
+                closeMobileMenu();
+            }
+        });
+    }
+    
+    // --- Logika untuk Sticky Header dengan Intersection Observer ---
+    if (header && sentinel) {
+        const observerCallback = (entries) => {
+            const entry = entries[0];
+            // Jika sentinel TIDAK lagi terlihat di layar (artinya kita sudah scroll melewatinya)
+            if (!entry.isIntersecting) {
+                header.classList.add('header-sticky');
+            } else {
+                header.classList.remove('header-sticky');
+            }
+        };
+
+        const headerObserver = new IntersectionObserver(observerCallback, {
+            root: null, // relatif terhadap viewport
+            threshold: 0, // trigger saat 0% dari elemen terlihat
+        });
+        
+        headerObserver.observe(sentinel);
+    }
 
     // --- Inisialisasi Awal ---
     renderDesktopNav();
     renderMegaMenu();
-    renderMobileNav(globalNavigationData, mobileNavContainer);
-
+    if (mobileNavContainer) {
+        renderMobileNav(globalNavigationData, mobileNavContainer);
+    }
     createIcons({ icons });
-
     setupMegaMenuListeners();
 });

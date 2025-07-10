@@ -1,0 +1,33 @@
+/**
+ * css/_home.css
+ *
+ * @author    [EazZy Project]
+ * @copyright Copyright (c) [2025] [EazZy Project]
+ * @license   https://opensource.org/licenses/MIT MIT License
+ * File ini berisi semua tautan ke aset eksternal (CSS, JavaScript)
+ * dan font yang digunakan di EazZy Project.
+ */
+
+#sticky-search-section.is-sticky {
+    position: fixed;
+    /* Sesuaikan nilai 'top' dengan tinggi header utama Anda saat sticky */
+    /* Nilai 88px adalah perkiraan, bisa diubah jika perlu */
+    top: 88px; 
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    animation: slideDownSticky 0.3s ease-out;
+}
+
+@keyframes slideDownSticky {
+    from {
+        transform: translate(-50%, -20px);
+        opacity: 0.8;
+    }
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}

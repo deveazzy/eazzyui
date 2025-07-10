@@ -1,13 +1,15 @@
 <?php
 /**
- * page/content/widgets.php
+ * @[EazZy Project] Copyright (c) [2025] [EazZy Project] license
+ * @https://opensource.org/licenses/MIT MIT License
+ * @path public/pages/widgets.php
+ * @author EazZy Project
  *
  * Halaman baru untuk menampilkan berbagai komponen widget.
  * Versi ini adalah kreasi ulang total dengan daftar widget yang lebih kaya dan menarik.
  */
 ?>
 
-<!-- Style kustom khusus untuk halaman widget -->
 <style>
     /* Efek hover yang lebih halus untuk semua kartu widget */
     .widget-card {
@@ -27,7 +29,7 @@
     .performance-ring circle {
         transition: stroke-dashoffset 1.5s cubic-bezier(0.25, 1, 0.5, 1);
     }
-    
+
     /* Style untuk widget musik */
     .music-progress-bar-bg { background-color: rgba(255, 255, 255, 0.3); overflow: hidden; }
     .music-progress-bar-fg { background-color: #fff; height: 100%; width: 0%; transition: width 1s linear; }
@@ -40,22 +42,20 @@
     }
 </style>
 
-<!-- Kontainer utama untuk konten halaman -->
-<main class="flex-1 w-full bg-gray-100">
-    <!-- Bagian Atas Halaman (Hero) -->
-    <div class="bg-white border-b border-gray-200">
-        <div class="container mx-auto px-6 md:px-10 py-12">
-            <h1 class="text-3xl font-bold text-gray-900">Dasbor Widget</h1>
-            <p class="mt-1 text-gray-600">Selamat datang kembali! Berikut adalah ringkasan aktivitas Anda.</p>
+<main class="flex-1 container mx-auto p-4 md:p-8 lg:p-10">
+    <div class="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl max-w-7xl mx-auto">
+
+        <div class="flex flex-col md:flex-row items-center md:space-x-4 mb-8 md:mb-12 text-center md:text-left">
+            <div class="bg-blue-100 text-blue-600 p-4 rounded-full mb-4 md:mb-0">
+                <i data-lucide="layout-grid" class="w-10 h-10 md:w-12 md:h-12"></i>
+            </div>
+            <div>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">Dasbor Widget</h1>
+                <p class="text-lg md:text-xl text-gray-500 mt-1">Selamat datang kembali! Berikut adalah ringkasan aktivitas Anda.</p>
+            </div>
         </div>
-    </div>
 
-    <!-- Kontainer untuk semua widget dengan layout grid 12 kolom -->
-    <div class="container mx-auto px-6 md:px-10 py-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
-
-            <!-- WIDGET PENDAPATAN (col-span-3) -->
-            <div class="lg:col-span-3 widget-card p-6 rounded-lg animated-on-scroll animated-fade-in-up">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pt-10 border-t border-gray-200"> <div class="lg:col-span-3 widget-card p-6 rounded-lg animated-on-scroll animated-fade-in-up">
                 <div class="flex items-center justify-between">
                     <h3 class="text-base font-semibold text-gray-500">Pendapatan</h3>
                     <div class="p-2 bg-blue-100 rounded-full"><i data-lucide="dollar-sign" class="w-6 h-6 text-blue-600"></i></div>
@@ -63,7 +63,6 @@
                 <p class="text-3xl font-bold text-gray-900 mt-4">Rp 1.2 M</p>
             </div>
 
-            <!-- WIDGET USER BARU (col-span-3) -->
             <div class="lg:col-span-3 widget-card p-6 rounded-lg animated-on-scroll animated-fade-in-up delay-100">
                 <div class="flex items-center justify-between">
                     <h3 class="text-base font-semibold text-gray-500">User Baru</h3>
@@ -72,7 +71,6 @@
                 <p class="text-3xl font-bold text-gray-900 mt-4">3,452</p>
             </div>
 
-            <!-- WIDGET PERFORMA SITUS (col-span-6) -->
             <div class="lg:col-span-6 widget-card p-6 rounded-lg flex items-center animated-on-scroll animated-fade-in-up delay-200 performance-widget" data-score="92">
                 <div class="w-2/3">
                     <h3 class="text-lg font-semibold text-gray-900">Performa Situs Web</h3>
@@ -90,7 +88,6 @@
                 </div>
             </div>
 
-            <!-- WIDGET USER PROFILE (col-span-4) -->
             <div class="lg:col-span-4 widget-card p-6 rounded-lg text-center flex flex-col items-center animated-on-scroll animated-zoom-in delay-300">
                 <img class="h-24 w-24 rounded-full mx-auto border-4 border-blue-200" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="User avatar">
                 <h3 class="text-xl font-bold mt-4">Andi Wijaya</h3>
@@ -102,7 +99,6 @@
                 </div>
             </div>
 
-            <!-- WIDGET MEDIA SOSIAL (col-span-4) -->
             <div class="lg:col-span-4 widget-card p-6 rounded-lg animated-on-scroll animated-zoom-in delay-400">
                 <h3 class="text-lg font-semibold text-gray-900 mb-4">Media Sosial</h3>
                 <div class="space-y-3">
@@ -112,7 +108,6 @@
                 </div>
             </div>
 
-            <!-- WIDGET MUSIK (col-span-4) -->
             <div class="lg:col-span-4 widget-card music-player bg-gray-800 text-white p-6 rounded-lg flex items-center space-x-4 animated-on-scroll animated-zoom-in delay-500">
                 <img class="h-16 w-16 rounded-md" src="https://placehold.co/80x80/1f2937/ffffff?text=Song" alt="Album Art">
                 <div class="flex-1">
@@ -123,17 +118,13 @@
                 <button class="play-pause-btn text-gray-300 hover:text-white"><i data-lucide="play-circle" class="w-10 h-10"></i></button>
             </div>
 
-            <!-- WIDGET YOUTUBE (col-span-6) -->
             <div class="lg:col-span-6 widget-card rounded-lg overflow-hidden animated-on-scroll animated-slide-in-left delay-300">
-                <!-- PERBAIKAN: Menggunakan kelas aspect-ratio modern, tidak perlu plugin -->
                 <div class="relative w-full aspect-[16/9]">
                     <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/a8-yGm49kqk?si=WAogVvmGVM40ZC6C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
-            
-            <!-- WIDGET IMAGE & ICON (col-span-6) -->
+
             <div class="lg:col-span-6 grid grid-cols-2 gap-8">
-                <!-- WIDGET IMAGE -->
                 <div class="col-span-1 widget-card rounded-lg overflow-hidden relative animated-on-scroll animated-slide-in-right delay-400">
                     <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=1920&auto=format&fit=crop" class="w-full h-full object-cover" alt="Featured Image">
                     <div class="absolute bottom-0 left-0 bg-gradient-to-t from-black/60 to-transparent w-full p-4">
@@ -141,7 +132,6 @@
                         <p class="text-xs text-gray-200">Diambil pada 4 Juli 2025</p>
                     </div>
                 </div>
-                <!-- WIDGET ICON -->
                 <div class="col-span-1 widget-card p-6 rounded-lg animated-on-scroll animated-slide-in-right delay-500">
                     <h3 class="text-lg font-semibold text-gray-900 mb-4">Aksi Cepat</h3>
                     <div class="grid grid-cols-2 gap-4 text-center">
@@ -153,7 +143,6 @@
                 </div>
             </div>
 
-            <!-- WIDGET EMAIL & KONTAK (col-span-6) -->
             <div class="lg:col-span-6 widget-card p-6 rounded-lg form-widget animated-on-scroll animated-fade-in-up delay-600">
                 <h3 class="text-lg font-semibold text-gray-900 mb-4">Kirim Pesan Cepat</h3>
                 <form class="space-y-4" onsubmit="return false;">
@@ -166,7 +155,6 @@
                 </form>
             </div>
 
-            <!-- WIDGET TIM SUPPORT (col-span-6) -->
             <div class="lg:col-span-6 widget-card p-6 rounded-lg animated-on-scroll animated-fade-in-up delay-700">
                  <h3 class="text-lg font-semibold text-gray-900 mb-4">Tim Support Online</h3>
                  <ul class="space-y-4">
