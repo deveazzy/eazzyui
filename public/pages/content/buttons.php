@@ -1,71 +1,59 @@
 <?php
 /**
- * page/content/buttons.php
+ * @[EazZy Project] Copyright (c) [2025] [EazZy Project] license
+ * @https://opensource.org/licenses/MIT MIT License
+ * @path public/pages/buttons.php
+ * @author EazZy Project
  *
- * Halaman untuk menampilkan berbagai variasi komponen tombol.
- * Versi ini telah diperbaiki untuk responsivitas dan kebersihan kode.
+ * File ini berisi konten utama untuk halaman "Variasi Tombol (Buttons)" EazZy Project.
+ * Ini mencakup berbagai komponen UI tombol seperti tombol dasar, ukuran, grup, dropdown,
+ * tombol dengan efek hover, tombol animasi, tombol link, tombol ikon saja,
+ * tombol media sosial, tombol toggle, tombol status, tombol block, tombol minimalis,
+ * tombol lingkaran dengan notifikasi, dan tombol search/slider.
+ * Konten ini akan di-include oleh page/switch.php.
  */
 ?>
-<!-- Kontainer utama untuk konten halaman -->
-<main class="flex-1 w-full bg-gray-50">
-    <!-- Bagian Atas Halaman (Hero) -->
-    <div class="bg-white">
-        <div class="relative isolate">
-            <!-- Background Blur Effect -->
-            <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-                <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#93c5fd] to-[#a7f3d0] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+
+<main class="flex-1 container mx-auto p-4 md:p-8 lg:p-10">
+    <div class="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl max-w-7xl mx-auto">
+
+        <div class="flex flex-col md:flex-row items-center md:space-x-4 mb-8 md:mb-12 text-center md:text-left">
+            <div class="bg-blue-100 text-blue-600 p-4 rounded-full mb-4 md:mb-0">
+                <i data-lucide="pointer" class="w-10 h-10 md:w-12 md:h-12"></i>
             </div>
-            <div class="container mx-auto px-6 md:px-10 py-20 text-center">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">Buttons</h1>
-                <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
-                    Koleksi lengkap variasi tombol, dari ukuran, grup, hingga interaksi dropdown yang kompleks.
-                </p>
+            <div>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">Buttons</h1>
+                <p class="text-lg md:text-xl text-gray-500 mt-1">Koleksi lengkap variasi tombol untuk setiap kebutuhan antarmuka Anda.</p>
             </div>
         </div>
-    </div>
 
-    <!-- Kontainer untuk semua contoh tombol -->
-    <div class="container mx-auto px-6 md:px-10 py-12">
         <div class="space-y-12">
 
-            <!-- 1. Variasi Tombol Dasar & Modern -->
-            <section>
-                <h2 class="text-2xl font-bold text-gray-800 mb-6">Variasi Tombol Dasar & Modern</h2>
+            <section class="mb-10 md:mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Variasi Tombol Dasar & Modern</h2>
                 <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-wrap items-center gap-4">
-                    <!-- Tombol klasik -->
                     <button class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 transition-colors">Primer</button>
                     <button class="bg-green-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-green-600 transition-colors">Sekunder</button>
                     <button class="bg-red-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-red-600 transition-colors">Bahaya</button>
                     <button class="bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-indigo-600 transition-colors">Info</button>
                     <button class="bg-white text-gray-700 font-semibold py-2 px-4 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">Netral</button>
                     <button class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-full shadow-md hover:bg-blue-600 transition-colors">Bentuk Pil</button>
-                    <!-- Tombol gradient (ubah ke solid) -->
                     <button class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-blue-600 transition-all">Gradient</button>
-                    <!-- Tombol glassmorphism -->
                     <button class="backdrop-blur-md bg-white/30 border border-white/40 text-blue-700 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-white/50 transition-all">Glass</button>
-                    <!-- Tombol outline -->
                     <button class="bg-transparent border-2 border-blue-500 text-blue-500 font-semibold py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors">Outline</button>
-                    <!-- Tombol ghost -->
                     <button class="bg-transparent text-gray-700 font-semibold py-2 px-4 rounded-lg hover:bg-gray-100 border border-transparent transition-colors">Ghost</button>
-                    <!-- Tombol shadow tebal -->
                     <button class="bg-purple-500 text-white font-semibold py-2 px-4 rounded-lg shadow-2xl hover:bg-purple-600 transition-colors">Shadow XL</button>
-                    <!-- Tombol ripple (butuh JS untuk efek, hanya contoh class) -->
                     <button class="bg-pink-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-pink-600 transition-colors relative overflow-hidden ripple">Ripple</button>
-                    <!-- Tombol disabled -->
                     <button class="bg-gray-300 text-gray-500 font-semibold py-2 px-4 rounded-lg shadow-md cursor-not-allowed opacity-60" disabled>Disabled</button>
-                    <!-- Tombol loading -->
                     <button class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md flex items-center gap-2 hover:bg-blue-600 transition-colors"><svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path></svg>Loading</button>
-                    <!-- Tombol dengan badge -->
                     <button class="relative bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 transition-colors"><span>Inbox</span><span class="absolute -top-2 -right-2 bg-red-500 text-xs text-white rounded-full px-2 py-0.5">5</span></button>
-                    <!-- Tombol dengan icon kiri/kanan -->
                     <button class="bg-green-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md flex items-center gap-2 hover:bg-green-600 transition-colors"><i data-lucide="arrow-left" class="w-5 h-5"></i>Kembali</button>
                     <button class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md flex items-center gap-2 hover:bg-blue-600 transition-colors">Lanjut<i data-lucide="arrow-right" class="w-5 h-5"></i></button>
                 </div>
             </section>
 
-            <!-- 2. Ukuran & Grup Tombol (Bentuk Kotak) -->
-            <section>
-                 <h2 class="text-2xl font-bold text-gray-800 mb-6">Ukuran & Grup (Bentuk Kotak)</h2>
+            <section class="mb-10 md:mb-12">
+                 <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Ukuran & Grup (Bentuk Kotak)</h2>
                  <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-wrap items-center gap-4">
                     <button class="font-semibold transition-colors flex items-center justify-center gap-2 bg-transparent text-blue-600 border-2 border-blue-600 rounded-sm py-1 px-2 text-xs">Tombol XS</button>
                     <button class="font-semibold transition-colors flex items-center justify-center gap-2 bg-transparent text-blue-600 border-2 border-blue-600 rounded-sm py-1.5 px-3 text-sm">Tombol SM</button>
@@ -78,51 +66,42 @@
                  </div>
             </section>
 
-            <!-- 3. Dropdown & Grup Aksi CRUD -->
-            <section>
-                <h2 class="text-2xl font-bold text-gray-800 mb-6">Dropdown & Grup Aksi CRUD</h2>
+            <section class="mb-10 md:mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Dropdown & Grup Aksi CRUD</h2>
                 <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-wrap items-center gap-6">
-                    <!-- Dropdown 1: Opsi -->
                     <div class="relative inline-block text-left dropdown-wrapper group">
                         <button type="button" class="dropdown-toggle inline-flex w-full justify-center gap-x-1.5 rounded-lg bg-white px-4 py-2 text-sm font-semibold text-gray-900 shadow-md border border-gray-200 hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all">
                             Opsi
                             <i data-lucide="chevron-down" class="w-5 h-5 -mr-1"></i>
                         </button>
-                        <!-- Updated dropdown-menu classes for responsiveness -->
                         <div class="dropdown-menu dropdown-animated absolute left-0 md:right-0 md:left-auto z-20 mt-2 min-w-40 w-56 origin-top-right rounded-xl bg-white shadow-2xl ring-1 ring-blue-200 ring-opacity-60 overflow-hidden border border-blue-100">
                             <a href="#" class="flex items-center gap-2 px-4 py-2 text-sm text-blue-700 hover:bg-blue-50 transition-colors"><i data-lucide="edit-3" class="w-4 h-4"></i>Edit</a>
                             <a href="#" class="flex items-center gap-2 px-4 py-2 text-sm text-red-600 hover:bg-red-50 transition-colors"><i data-lucide="trash-2" class="w-4 h-4"></i>Hapus</a>
                         </div>
                     </div>
-                    <!-- Dropdown 2: Simpan -->
                     <div class="relative inline-block text-left dropdown-wrapper group">
                         <button type="button" class="dropdown-toggle inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all">
                             <i data-lucide="save" class="h-5 w-5"></i>
                             <span>Simpan</span>
                             <i data-lucide="chevron-down" class="h-5 w-5"></i>
                         </button>
-                        <!-- Updated dropdown-menu classes for responsiveness -->
                         <div class="dropdown-menu dropdown-animated absolute left-0 md:right-0 md:left-auto z-20 mt-2 min-w-40 w-56 origin-top-right rounded-xl bg-white shadow-2xl ring-1 ring-blue-200 ring-opacity-60 overflow-hidden border border-blue-100">
                             <a href="#" class="flex items-center gap-2 px-4 py-2 text-sm text-blue-700 hover:bg-blue-50 transition-colors"><i data-lucide="check-circle" class="w-4 h-4"></i>Simpan & Publikasi</a>
                         </div>
                     </div>
-                    <!-- Dropdown 3: More -->
                     <div class="relative inline-block text-left dropdown-wrapper group">
                         <button type="button" class="dropdown-toggle p-2 rounded-full bg-white text-gray-500 hover:bg-gray-100 border border-gray-200 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all">
                             <i data-lucide="more-vertical" class="w-5 h-5"></i>
                         </button>
-                        <!-- Updated dropdown-menu classes for responsiveness -->
                         <div class="dropdown-menu dropdown-animated absolute left-0 md:right-0 md:left-auto z-20 mt-2 min-w-40 w-56 origin-top-right rounded-xl bg-white shadow-2xl ring-1 ring-blue-200 ring-opacity-60 overflow-hidden border border-blue-100">
                             <a href="#" class="flex items-center gap-2 px-4 py-2 text-sm text-blue-700 hover:bg-blue-50 transition-colors"><i data-lucide="eye" class="w-4 h-4"></i>Lihat Detail</a>
                         </div>
                     </div>
             </section>
-            
-            <!-- 4. Tombol dengan Efek Hover -->
-            <section>
-                <h2 class="text-2xl font-bold text-gray-800 mb-6">Tombol dengan Efek Hover</h2>
+
+            <section class="mb-10 md:mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Tombol dengan Efek Hover</h2>
                 <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-wrap items-center gap-4">
-                    <!-- Tombol dengan efek hover, penulisan konsisten dan warna solid 500 -->
                     <button class="btn-hover-pop bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center gap-2">Pop</button>
                     <button class="btn-hover-glow-blue bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center gap-2">Glow Biru</button>
                     <button class="btn-hover-fill-up bg-green-500 text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center gap-2 relative overflow-hidden">Isi</button>
@@ -136,9 +115,7 @@
                     <button class="btn-hover-scale-up bg-teal-500 text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center gap-2">Scale Up</button>
                     <button class="btn-hover-rotate bg-orange-500 text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center gap-2">Rotate</button>
                     <button class="btn-hover-flip bg-gray-800 text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center gap-2"><span>Flip</span></button>
-                    <!-- Gradient Hover diubah ke solid -->
                     <button class="btn-hover-gradient bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center gap-2">Gradient Hover</button>
-                    <!-- Glass Hover tetap transparan, tapi tanpa gradasi -->
                     <button class="btn-hover-glass bg-white/30 border border-white/40 text-blue-700 backdrop-blur-md font-semibold py-2 px-4 rounded-lg flex items-center justify-center gap-2">Glass Hover</button>
                     <button class="btn-hover-pulse bg-red-500 text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center gap-2">Pulse</button>
                     <button class="btn-hover-wobble bg-blue-900 text-white font-semibold py-2 px-4 rounded-lg flex items-center justify-center gap-2">Wobble</button>
@@ -146,36 +123,22 @@
                 </div>
             </section>
 
-            <!-- 5. Koleksi Tombol Animasi (Klik untuk Coba) -->
-            <section>
-                <h2 class="text-2xl font-bold text-gray-800 mb-6">Koleksi Tombol Animasi (Klik untuk Coba)</h2>
-                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-wrap items-center gap-4">
-                    <?php
-                        // Daftar animasi dari Animate.css v4
-                        $animations = [
-                            'pulse' => 'Pulse',
-                            'shakeX' => 'Shake',
-                            'wobble' => 'Wobble',
-                            'jello' => 'Jello',
-                            'rubberBand' => 'Rubber Band',
-                            'fadeInUp' => 'Fade In Up',
-                            'zoomIn' => 'Zoom In',
-                            'bounceIn' => 'Bounce In',
-                            'flipInX' => 'Flip In X',
-                            'rollIn' => 'Roll In'
-                        ];
-                        $base_class = "clickable-animated-btn font-semibold transition-colors flex items-center justify-center gap-2 bg-transparent text-blue-600 border-2 border-blue-600 rounded-lg py-2 px-4 hover:bg-blue-50";
-
-                        foreach ($animations as $anim_class => $label) {
-                            echo "<button class='{$base_class}' data-animation='{$anim_class}'>{$label}</button>";
-                        }
-                    ?>
-                </div>
+            <section class="mb-10 md:mb-12">
+                 <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Ukuran & Grup (Bentuk Kotak)</h2>
+                 <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-wrap items-center gap-4">
+                    <button class="font-semibold transition-colors flex items-center justify-center gap-2 bg-transparent text-blue-600 border-2 border-blue-600 rounded-sm py-1 px-2 text-xs">Tombol XS</button>
+                    <button class="font-semibold transition-colors flex items-center justify-center gap-2 bg-transparent text-blue-600 border-2 border-blue-600 rounded-sm py-1.5 px-3 text-sm">Tombol SM</button>
+                    <button class="font-semibold transition-colors flex items-center justify-center gap-2 bg-transparent text-blue-600 border-2 border-blue-600 rounded-sm py-2 px-4 text-base">Tombol Base</button>
+                    <button class="font-semibold transition-colors flex items-center justify-center gap-2 bg-transparent text-blue-600 border-2 border-blue-600 rounded-sm py-2.5 px-5 text-lg">Tombol LG</button>
+                    <button class="font-semibold transition-colors flex items-center justify-center gap-2 bg-transparent text-blue-600 border-2 border-blue-600 rounded-sm py-3 px-6 text-xl">Tombol XL</button>
+                 </div>
+                 <div class="flex flex-wrap items-center gap-4 mt-4">
+                    <div class="inline-flex shadow-sm"><button class="px-4 py-2 text-sm font-medium text-blue-700 bg-white border border-gray-300 rounded-l-sm hover:bg-gray-100">Satu</button><button class="px-4 py-2 text-sm font-medium text-blue-700 bg-white border-t border-b border-gray-300 hover:bg-gray-100">Dua</button><button class="px-4 py-2 text-sm font-medium text-blue-700 bg-white border border-gray-300 rounded-r-sm hover:bg-gray-100">Tiga</button></div>
+                 </div>
             </section>
 
-        <!-- 6. Tombol Link -->
-        <section>
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">Tombol Link</h2>
+        <section class="mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Tombol Link</h2>
             <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-wrap items-center gap-4">
                 <a href="#" class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 transition-colors">Link Primer</a>
                 <a href="#" class="inline-block bg-transparent border-2 border-blue-600 text-blue-600 font-semibold py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors">Link Outline</a>
@@ -184,9 +147,8 @@
             </div>
         </section>
 
-        <!-- 7. Tombol Icon Only -->
-        <section>
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">Tombol Icon Only</h2>
+        <section class="mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Tombol Icon Only</h2>
             <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-wrap items-center gap-4">
                 <button class="p-3 rounded-full bg-blue-600 text-white shadow-md hover:bg-blue-700 transition-colors"><i data-lucide="plus" class="w-5 h-5"></i></button>
                 <button class="p-3 rounded-full bg-green-600 text-white shadow-md hover:bg-green-700 transition-colors"><i data-lucide="check" class="w-5 h-5"></i></button>
@@ -195,9 +157,8 @@
             </div>
         </section>
 
-        <!-- 8. Tombol Social Media -->
-        <section>
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">Tombol Social Media</h2>
+        <section class="mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Tombol Social Media</h2>
             <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-wrap items-center gap-4">
                 <a href="#" class="flex items-center gap-2 bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-800 transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i>Facebook</a>
                 <a href="#" class="flex items-center gap-2 bg-sky-400 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-sky-500 transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i>Twitter</a>
@@ -206,9 +167,8 @@
             </div>
         </section>
 
-        <!-- 9. Tombol Toggle (Aktif/Nonaktif) -->
-        <section>
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">Tombol Toggle (Aktif/Nonaktif)</h2>
+        <section class="mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Tombol Toggle (Aktif/Nonaktif)</h2>
             <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-wrap items-center gap-4">
                 <button class="bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-green-700 transition-colors">Aktif</button>
                 <button class="bg-gray-300 text-gray-500 font-semibold py-2 px-4 rounded-lg shadow-md">Nonaktif</button>
@@ -217,9 +177,8 @@
             </div>
         </section>
 
-        <!-- 10. Tombol Status (Success, Warning, Info, Error) -->
-        <section>
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">Tombol Status</h2>
+        <section class="mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Tombol Status</h2>
             <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-wrap items-center gap-4">
                 <button class="bg-green-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-green-600 transition-colors">Success</button>
                 <button class="bg-yellow-400 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-yellow-500 transition-colors">Warning</button>
@@ -228,18 +187,16 @@
             </div>
         </section>
 
-        <!-- 11. Tombol Block/Full Width -->
-        <section>
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">Tombol Block / Full Width</h2>
+        <section class="mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Tombol Block / Full Width</h2>
             <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col items-stretch gap-4">
                 <button class="w-full bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md hover:bg-blue-700 transition-colors">Block Button</button>
                 <button class="w-full bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold py-3 px-4 rounded-lg shadow-lg hover:from-green-500 hover:to-blue-600 transition-all">Block Gradient</button>
             </div>
         </section>
 
-        <!-- 12. Tombol Minimalis -->
-        <section>
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">Tombol Minimalis</h2>
+        <section class="mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Tombol Minimalis</h2>
             <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-wrap items-center gap-4">
                 <button class="bg-transparent text-blue-600 font-semibold py-2 px-4 rounded hover:bg-blue-50 transition-colors">Minimalis</button>
                 <button class="bg-transparent text-gray-600 font-semibold py-2 px-4 rounded hover:bg-gray-100 transition-colors">Minimalis 2</button>
@@ -247,9 +204,8 @@
             </div>
         </section>
 
-        <!-- 13. Button Link Lingkaran dengan Notifikasi -->
-        <section>
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">Button Link Lingkaran dengan Notifikasi</h2>
+        <section class="mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Button Link Lingkaran dengan Notifikasi</h2>
             <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex gap-6">
                 <div class="relative">
                     <a href="#" class="flex items-center justify-center w-14 h-14 rounded-full bg-blue-600 text-white shadow-md hover:bg-blue-700 transition-colors">
@@ -266,9 +222,8 @@
             </div>
         </section>
 
-        <!-- 14. Button Icon Media Sosial dengan Tooltip Slider -->
-        <section>
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">Button Icon Media Sosial dengan Tooltip Slider</h2>
+        <section class="mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Button Icon Media Sosial dengan Tooltip Slider</h2>
             <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-wrap items-center gap-6">
                 <div class="relative group">
                     <a href="#" class="flex items-center justify-center p-4 rounded-full bg-blue-700 text-white shadow-md hover:bg-blue-800 transition-colors">
@@ -297,34 +252,23 @@
             </div>
         </section>
 
-        <!-- 15. Search & Slider Buttons -->
-        <section>
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">Search & Slider Buttons</h2>
+        <section class="mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Search & Slider Buttons</h2>
             <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col gap-6">
-                <!-- Button Search Expand on Hover (Left Icon) -->
-                <!-- Perilaku: Full width di mobile, efek expand input via JS (fokus/klik) di mobile.
-                     Di desktop, form menjadi tombol melingkar saat non-hover, dan memanjang saat hover. -->
                 <div class="relative group flex items-center mobile-slider-scroll w-full md:w-auto">
-                    <!-- Form ini akan menjadi tombol melingkar di desktop non-hover, dan memanjang saat hover -->
                     <form action="#" class="flex items-center bg-white rounded-full shadow-md border border-gray-300 transition-all duration-300
                         h-[56px] overflow-hidden desktop-expandable-form">
                         <button type="button" tabindex="-1" class="flex-shrink-0 flex items-center justify-center p-4 rounded-full bg-white text-gray-700 transition-all duration-300 focus:outline-none">
                             <i data-lucide="search" class="w-6 h-6"></i>
                         </button>
-                        <!-- Input sekarang akan beradaptasi di dalam lebar form yang memanjang -->
                         <input type="text" placeholder="Cari..." class="search-expand-input w-0 opacity-0 px-0 py-2 text-gray-700 bg-white border-0 rounded-full transition-all duration-300 focus:outline-none
                             flex-grow" autocomplete="off" />
                     </form>
                 </div>
 
-                <!-- Button Search Expand on Hover (Right Icon) -->
-                <!-- Perilaku: 70% width di mobile, rata kanan, efek expand input via JS (fokus/klik) di mobile.
-                     Di desktop, form menjadi tombol melingkar saat non-hover, dan memanjang saat hover. -->
                 <div class="relative group flex items-center mobile-slider-scroll w-full justify-end search-form-right">
-                    <!-- Form ini akan menjadi tombol melingkar di desktop non-hover, dan memanjang saat hover -->
                     <form action="#" class="flex items-center overflow-hidden bg-white rounded-full shadow-md border border-gray-300 transition-all duration-300
                         h-[56px] desktop-expandable-form">
-                        <!-- Input sekarang akan beradaptasi di dalam lebar form yang memanjang -->
                         <input type="text" placeholder="Cari..." class="search-expand-input w-0 opacity-0 px-0 py-2 text-gray-700 bg-white border-0 rounded-full transition-all duration-300 focus:outline-none
                             flex-grow" autocomplete="off" />
                         <button type="button" tabindex="-1" class="flex-shrink-0 flex items-center justify-center p-4 rounded-full bg-white text-gray-700 transition-all duration-300 focus:outline-none">
@@ -333,7 +277,6 @@
                     </form>
                 </div>
 
-                <!-- Button Slider Hover: Icon Only, Slide Text on Hover -->
                 <div class="relative group mobile-slider-scroll slider-hover-desktop slider-hover-icononly">
                     <a href="#" class="flex items-center justify-center p-4 rounded-full bg-blue-500 text-white shadow-md transition-all duration-300 overflow-hidden min-w-[56px]">
                         <i data-lucide="zap" class="w-6 h-6 transition-all duration-300"></i>

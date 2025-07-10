@@ -1,36 +1,33 @@
 <?php
 /**
- * page/content/tabs.php
+ * @[EazZy Project] Copyright (c) [2025] [EazZy Project] license
+ * @https://opensource.org/licenses/MIT MIT License
+ * @path public/pages/tabs.php
+ * @author EazZy Project
  *
  * File ini berisi konten untuk halaman komponen "Tabs".
  * Konten ini akan di-include oleh page/switch.php.
  */
 ?>
-<!-- Kontainer utama untuk konten halaman -->
-<main class="flex-1 w-full bg-gray-50">
-    <!-- Bagian Atas Halaman (Hero) -->
-    <div class="bg-white">
-        <div class="relative isolate">
-            <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-                <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#6ee7b7] to-[#60a5fa] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+<main class="flex-1 container mx-auto p-4 md:p-8 lg:p-10">
+    <div class="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl max-w-7xl mx-auto">
+
+        <div class="flex flex-col md:flex-row items-center md:space-x-4 mb-8 md:mb-12 text-center md:text-left">
+            <div class="bg-blue-100 text-blue-600 p-4 rounded-full mb-4 md:mb-0">
+                <i data-lucide="folder-kanban" class="w-10 h-10 md:w-12 md:h-12"></i>
             </div>
-            <div class="container mx-auto px-6 md:px-10 py-20 text-center">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">Tabs</h1>
-                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
+            <div>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">Tabs</h1>
+                <p class="text-lg md:text-xl text-gray-500 mt-1">
                     Contoh komponen tab yang interaktif untuk mengorganisir konten secara efisien dalam berbagai gaya dan tema.
                 </p>
             </div>
         </div>
-    </div>
 
-    <!-- Kontainer untuk semua contoh tab -->
-    <div class="container mx-auto px-6 md:px-10 py-12">
         <div class="space-y-12">
 
-            <!-- 1. Gaya Tab Standar (Garis Bawah) -->
-            <section id="default-tabs">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
-                    <i data-lucide="minus" class="w-6 h-6 text-blue-600"></i>
+            <section id="default-tabs" class="mb-10 md:mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">
                     Gaya Standar (Garis Bawah)
                 </h2>
                 <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
@@ -58,10 +55,8 @@
                 </div>
             </section>
 
-            <!-- 2. Gaya Tab Pil dengan Indikator Geser -->
-            <section id="pill-tabs">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
-                    <i data-lucide="move-horizontal" class="w-6 h-6 text-green-600"></i>
+            <section id="pill-tabs" class="mb-10 md:mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">
                     Gaya Pil dengan Indikator Geser
                 </h2>
                 <div class="space-y-8">
@@ -95,11 +90,9 @@
                     </div>
                 </div>
             </section>
-            
-            <!-- 3. Gaya Tab Vertikal dengan Ikon -->
-            <section id="vertical-tabs">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
-                    <i data-lucide="panel-left" class="w-6 h-6 text-gray-800"></i>
+
+            <section id="vertical-tabs" class="mb-10 md:mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">
                     Gaya Vertikal dengan Ikon
                 </h2>
                 <div class="bg-white rounded-lg border border-gray-200 shadow-sm">
@@ -124,10 +117,8 @@
                 </div>
             </section>
 
-            <!-- 4. Gaya Segmented Control -->
-            <section id="segmented-control-tabs">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
-                    <i data-lucide="split" class="w-6 h-6 text-gray-800"></i>
+            <section id="segmented-control-tabs" class="mb-10 md:mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">
                     Gaya Segmented Control
                 </h2>
                 <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
@@ -148,10 +139,8 @@
                 </div>
             </section>
 
-            <!-- 5. Gaya Terintegrasi (Dengan Form) -->
-            <section id="integrated-tabs">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
-                    <i data-lucide="edit-3" class="w-6 h-6 text-blue-600"></i>
+            <section id="integrated-tabs" class="mb-10 md:mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">
                     Gaya Terintegrasi (Dengan Form)
                 </h2>
                 <div class="bg-white rounded-lg border border-gray-200 shadow-sm">
@@ -200,8 +189,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- ===== 2. PERUBAHAN KELAS UNTUK POSISI TOMBOL ===== -->
-                     <div class="bg-gray-50 px-6 py-3 rounded-b-lg footer-actions">
+                    <div class="bg-gray-50 px-6 py-3 rounded-b-lg footer-actions">
                         <button type="button" class="inline-flex justify-center rounded-md border border-transparent bg-blue-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                             Simpan Perubahan
                         </button>
@@ -209,10 +197,8 @@
                 </div>
             </section>
 
-            <!-- ===== 3. PENAMBAHAN BAGIAN BARU: GAYA TERINTEGRASI VERTIKAL ===== -->
-            <section id="integrated-tabs-vertical">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
-                    <i data-lucide="layout-list" class="w-6 h-6 text-blue-600"></i>
+            <section id="integrated-tabs-vertical" class="mb-10 md:mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">
                     Gaya Terintegrasi (Vertikal)
                 </h2>
                 <div class="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
@@ -225,9 +211,7 @@
                                 <i data-lucide="key-round" class="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-500"></i><span>Info Akun</span>
                             </button>
                         </nav>
-                        <!-- Wrapper untuk konten dan footer -->
                         <div class="flex-1 flex flex-col">
-                            <!-- Kontainer panel yang bisa di-scroll jika konten panjang -->
                             <div class="p-6 flex-grow" data-tab-group="group8">
                                 <div id="vert-form-pribadi" class="tab-panel active">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -261,7 +245,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Footer dengan tombol -->
                             <div class="bg-gray-50 px-6 py-3 footer-actions">
                                 <button type="button" class="inline-flex justify-center rounded-md border border-transparent bg-blue-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                                     Simpan Perubahan

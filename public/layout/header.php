@@ -1,4 +1,4 @@
-<header class="bg-white shadow-sm sticky top-0 z-50">
+<header class="bg-white shadow-sm relative z-50">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
         <a href="/" class="flex items-center space-x-3">
             <svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H9a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1Z"/><path d="M12 18h.01"/></svg>
@@ -10,14 +10,12 @@
         </button>
         
         <!-- Kontainer untuk menu navigasi desktop. Akan diisi oleh JavaScript. -->
-        <!-- ID 'desktop-nav-container' akan digunakan oleh header.js untuk merender menu utama. -->
         <nav id="desktop-nav-container" class="hidden md:flex space-x-8 items-center">
             <!-- Menu desktop akan dirender di sini oleh js/header.js -->
         </nav>
     </div>
     
     <!-- Panel Mega Menu (Desktop) -->
-    <!-- Konten di dalamnya akan dirender secara dinamis oleh js/header.js -->
     <div id="mega-menu" class="hidden md:block absolute top-full left-1/2 -translate-x-1/2 w-[80vw] max-w-6xl bg-white rounded-b-lg shadow-xl border-t border-gray-300 opacity-0 transform -translate-y-4 pointer-events-none">
         <div class="p-8 grid grid-cols-4 gap-8">
             <!-- Kolom 1: Kategori Utama (akan diisi oleh JS) -->
@@ -34,10 +32,11 @@
     </div>
     
     <!-- Kontainer untuk menu mobile. Akan diisi oleh JavaScript. -->
-    <!-- ID 'mobile-menu' akan digunakan oleh header.js untuk merender menu accordion. -->
     <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-lg z-10">
         <nav id="mobile-nav-container" class="flex flex-col p-6 space-y-2">
             <!-- Menu mobile akan dirender di sini oleh js/header.js -->
         </nav>
     </div>
 </header>
+<!-- [BARU] Elemen penanda untuk dideteksi oleh Intersection Observer -->
+<div id="header-sentinel"></div>
