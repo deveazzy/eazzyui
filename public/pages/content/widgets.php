@@ -55,7 +55,7 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pt-10 border-t border-gray-200"> <div class="lg:col-span-3 widget-card p-6 rounded-lg animated-on-scroll animated-fade-in-up">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pt-10 "> <div class="lg:col-span-3 widget-card p-6 rounded-lg animated-on-scroll animated-fade-in-up">
                 <div class="flex items-center justify-between">
                     <h3 class="text-base font-semibold text-gray-500">Pendapatan</h3>
                     <div class="p-2 bg-blue-100 rounded-full"><i data-lucide="dollar-sign" class="w-6 h-6 text-blue-600"></i></div>
@@ -92,7 +92,7 @@
                 <img class="h-24 w-24 rounded-full mx-auto border-4 border-blue-200" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="User avatar">
                 <h3 class="text-xl font-bold mt-4">Andi Wijaya</h3>
                 <p class="text-sm text-gray-500">Administrator</p>
-                <div class="mt-4 border-t border-gray-200 w-full pt-4 flex justify-around">
+                <div class="mt-4  w-full pt-4 flex justify-around">
                     <button class="text-blue-600 hover:text-blue-800"><i data-lucide="user-cog" class="w-6 h-6"></i></button>
                     <button class="text-blue-600 hover:text-blue-800"><i data-lucide="mail" class="w-6 h-6"></i></button>
                     <button class="text-red-500 hover:text-red-700"><i data-lucide="log-out" class="w-6 h-6"></i></button>

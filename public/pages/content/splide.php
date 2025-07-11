@@ -40,7 +40,7 @@
         </p>
     </section>
 
-    <section class="mb-10 md:mb-12 pt-10 border-t border-gray-200">
+    <section class="mb-10 md:mb-12 pt-10 ">
         <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Panduan Pemasangan</h2>
         <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-4">
             Ikuti langkah-langkah berikut untuk mengintegrasikan Splide ke dalam proyek Anda:
@@ -94,7 +94,7 @@ new Splide('.splide').mount();
         </ol>
     </section>
 
-    <section class="mb-10 md:mb-12 pt-10 border-t border-gray-200">
+    <section class="mb-10 md:mb-12 pt-10 ">
         <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Manfaat Splide</h2>
         <ul class="space-y-4">
             <li class="flex items-start">
@@ -128,7 +128,7 @@ new Splide('.splide').mount();
         </ul>
     </section>
 
-    <section class="mt-16 pt-10 border-t border-gray-200">
+    <section class="mt-16 pt-10 ">
         <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Contoh Penerapan</h2>
         <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-8 max-w-2xl">
             Berikut adalah contoh slider sederhana dengan beberapa opsi kustomisasi. Slider ini menampilkan 3 slide per halaman dan memiliki panah navigasi serta pagination.

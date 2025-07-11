@@ -95,7 +95,7 @@
         </section>
 
         <!-- Bagian Baru: Apa itu PNotify? -->
-        <section class="mb-10 md:mb-12 pt-10 border-t border-gray-200">
+        <section class="mb-10 md:mb-12 pt-10 ">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Apa itu PNotify?</h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg">
                 PNotify adalah pustaka JavaScript ringan yang menyediakan notifikasi non-blokir yang dapat disesuaikan sepenuhnya untuk aplikasi web. Ini memungkinkan Anda menampilkan pesan yang menarik secara visual kepada pengguna tanpa mengganggu alur kerja mereka.
@@ -111,7 +111,7 @@
         </section>
 
         <!-- Bagian Baru: Panduan Pemasangan PNotify -->
-        <section class="mb-10 md:mb-12 pt-10 border-t border-gray-200">
+        <section class="mb-10 md:mb-12 pt-10 ">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Panduan Pemasangan PNotify</h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-4">
                 Berikut adalah langkah-langkah untuk memasang dan mengkonfigurasi PNotify di dalam proyek ini:
@@ -153,7 +153,7 @@ new PNotify({
         </section>
 
         <!-- Bagian Baru: Manfaat PNotify -->
-        <section class="mb-10 md:mb-12 pt-10 border-t border-gray-200">
+        <section class="mb-10 md:mb-12 pt-10 ">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Manfaat PNotify</h2>
             <ul class="space-y-4">
                 <li class="flex items-start">
@@ -188,7 +188,7 @@ new PNotify({
         </section>
 
         <!-- Bagian 2: Notifikasi Dinamis (PNotify) - ini adalah bagian yang sudah ada sebelumnya -->
-        <section class="mt-16 pt-10 border-t border-gray-200">
+        <section class="mt-16 pt-10 ">
              <!-- Judul bagian - disesuaikan agar seragam -->
              <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Contoh Notifikasi Dinamis</h2>
              <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-8 max-w-2xl">

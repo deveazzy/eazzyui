@@ -44,7 +44,7 @@
         </section>
 
         <!-- Bagian: Panduan Pemasangan Animate.css -->
-        <section class="mb-10 md:mb-12 pt-10 border-t border-gray-200">
+        <section class="mb-10 md:mb-12 pt-10 ">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Panduan Pemasangan Animate.css</h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-4">
                 Berikut adalah langkah-langkah untuk memasang dan menggunakan Animate.css di proyek Anda:
@@ -92,7 +92,7 @@ element.addEventListener('animationend', () => {
         </section>
 
         <!-- Bagian: Manfaat Animate.css -->
-        <section class="mb-10 md:mb-12 pt-10 border-t border-gray-200">
+        <section class="mb-10 md:mb-12 pt-10 ">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Manfaat Animate.css</h2>
             <ul class="space-y-4">
                 <li class="flex items-start">
@@ -127,7 +127,7 @@ element.addEventListener('animationend', () => {
         </section>
 
         <!-- Bagian: Contoh Penerapan Animate.css -->
-        <section class="mt-16 pt-10 border-t border-gray-200">
+        <section class="mt-16 pt-10 ">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Contoh Penerapan</h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-8 max-w-2xl">
                 Klik tombol di bawah untuk melihat elemen-elemen dianimasikan.

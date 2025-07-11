@@ -7,7 +7,7 @@ define('APP_ROOT', realpath(__DIR__ . '/..'));
 
 // Mendefinisikan path absolut ke file core.php menggunakan APP_ROOT.
 // Ini akan menghasilkan path seperti /var/www/mirror/app/Core/core.php
-include APP_ROOT . '/app/Core/core.php';
+include_once APP_ROOT . '/app/Core/core.php';
 
 // Definisikan semua halaman yang TIDAK BOLEH menggunakan sidebar
 $pages_without_sidebar = [
