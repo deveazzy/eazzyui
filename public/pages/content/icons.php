@@ -60,7 +60,7 @@
         <div id="sticky-placeholder" style="display: none;"></div>
 
         <!-- Galeri Ikon Lucide -->
-        <section id="icon-gallery" class="mb-10 md:mb-12 pt-10 border-t border-gray-200">
+        <section id="icon-gallery" class="mb-10 md:mb-12 pt-10">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Galeri Ikon</h2>
             <!-- Kontainer utama untuk kategori ikon. JavaScript akan mengisi ini. -->
             <div id="icon-grid">
