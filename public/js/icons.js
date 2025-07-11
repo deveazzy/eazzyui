@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const categorySection = document.createElement('div');
                 categorySection.className = 'mb-8 w-full'; 
                 const categoryTitle = document.createElement('h3');
-                categoryTitle.className = 'text-xl font-bold text-gray-800 border-b pb-2 mb-4';
+                categoryTitle.className = 'text-xl font-bold text-gray-600 pb-2 mb-4';
                 categoryTitle.textContent = categoryName;
                 categorySection.appendChild(categoryTitle);
                 const categoryGrid = document.createElement('div');

@@ -68,6 +68,7 @@ const globalNavigationData = [
                     { id: 'apexcharts', label: 'ApexCharts', icon: 'area-chart', page: 'apexcharts', layout: '', group: 'Tabel & Data' },
                     { id: 'tailwind-css', label: 'Tailwind CSS', icon: 'wind', page: 'tailwind-css', layout: '', group: 'Frameworks' },
                     { id: 'animate-style', label: 'Animate.css', icon: 'sparkles', page: 'animate-style', layout: '', group: 'Animasi' },
+                    { id: 'nprogress-js', label: 'NProgress.js', icon: 'gauge-circle', page: 'nprogress', layout: '', group: 'Animasi' },
                 ]
             },
             {
@@ -127,6 +128,7 @@ const sidebarNavigationData = [
             { id: 'apexcharts', label: 'ApexCharts', icon: 'area-chart', page: 'apexcharts', layout: 'sidebar-left', group: 'Tabel & Data' },
             { id: 'tailwind-css', label: 'Tailwind CSS', icon: 'wind', page: 'tailwind-css', layout: 'sidebar-left', group: 'Frameworks' },
             { id: 'animate-style', label: 'Animate.css', icon: 'sparkles', page: 'animate-style', layout: 'sidebar-left', group: 'Animasi' },
+            { id: 'nprogress-js', label: 'NProgress.js', icon: 'gauge-circle', page: 'nprogress', layout: 'sidebar-left', group: 'Animasi' },
         ]
     },
     { id: 'settings', label: 'Pengaturan', icon: 'settings', page: 'settings', layout: 'sidebar-left' },

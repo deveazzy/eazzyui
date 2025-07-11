@@ -19,8 +19,10 @@
 <!-- Memuat library Chart.js dari CDN -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
 <!-- Memuat library ApexCharts dari lokal -->
-<script src="assets/vendor/apexcharts/apexcharts.js"></script>
+<script src="/assets/vendor/apexcharts/apexcharts.js"></script>
 <!-- Memuat library Tabulator dari lokal -->
-<script src="assets/vendor/tabulator/tabulator.js"></script>
+<script src="/assets/vendor/tabulator/tabulator.js"></script>
 <!-- Memuat library Splide dari lokal -->
-<script src="assets/vendor/splide/splide.js"></script>
+<script src="/assets/vendor/splide/splide.js"></script>
+<!-- Memuat library NProgress dari lokal -->
+<script src="/assets/vendor/nprogress/nprogress.js"></script>
