@@ -15,28 +15,28 @@ const globalNavigationData = [
         id: 'home',
         label: 'Beranda',
         icon: 'home',
-        page: 'home', 
-        layout: '', 
+        page: 'home',
+        layout: '',
     },
     {
         id: 'components',
         label: 'Komponen',
         icon: 'grid',
-        children: [ 
+        children: [
             {
                 id: 'atoms',
                 label: 'Elemen Dasar',
                 icon: 'square',
-                // page: 'atoms', 
-                layout: '', 
+                // page: 'atoms',
+                layout: '',
                 children: [ // Sub-menu untuk "Elemen Dasar" (untuk Mega Menu & Mobile Accordion)
                     {
                         id: 'ui-elements',
                         label: 'Koleksi Elemen',
                         icon: 'layers',
-                        page: 'atoms', 
+                        page: 'atoms',
                         layout: '',
-                        group: 'Dasar', 
+                        group: 'Dasar',
                         children: [
                             { id: 'buttons', label: 'Buttons', page: 'atoms', hash: '#buttons', layout: '' },
                             { id: 'inputs', label: 'Inputs', page: 'atoms', hash: '#inputs', layout: '' },
@@ -49,6 +49,7 @@ const globalNavigationData = [
                     },
                     { id: 'typography', label: 'Typography', icon: 'type', page: 'typography', layout: '', group: 'Dasar' },
                     { id: 'buttons', label: 'Buttons', icon: 'circle', page: 'buttons', layout: '', group: 'Dasar' },
+                    { id: 'grid', label: 'Grid', icon: 'layout-grid', page: 'grid', layout: '', group: 'Dasar' }, 
                     { id: 'widgets', label: 'Widgets', icon: 'layout-grid', page: 'widgets', layout: '', group: 'Komponen Lanjutan' },
                     { id: 'modal-form', label: 'Modal & Form', page: 'modal-form', layout: '', group: 'Form & Utilitas' },
                     { id: 'tabs', label: 'Tabs', icon: 'folder-tabs', page: 'tabs', layout: '', group: 'Form & Utilitas' },
@@ -91,7 +92,7 @@ const globalNavigationData = [
         label: 'Tentang',
         icon: 'info',
         page: 'about',
-        layout: '', 
+        layout: '',
     },
 ];
 

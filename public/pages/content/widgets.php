@@ -90,7 +90,7 @@
 
             <div class="lg:col-span-4 widget-card p-6 rounded-lg text-center flex flex-col items-center animated-on-scroll animated-zoom-in delay-300">
                 <img class="h-24 w-24 rounded-full mx-auto border-4 border-blue-200" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="User avatar">
-                <h3 class="text-xl font-bold mt-4">Andi Wijaya</h3>
+                <h3 class="text-xl font-bold mt-4">EazZy</h3>
                 <p class="text-sm text-gray-500">Administrator</p>
                 <div class="mt-4  w-full pt-4 flex justify-around">
                     <button class="text-blue-600 hover:text-blue-800"><i data-lucide="user-cog" class="w-6 h-6"></i></button>

@@ -24,6 +24,16 @@
             </div>
         </div>
 
+        <section class="mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Apa itu Tabs?</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+                Tabs (tabulasi) adalah komponen antarmuka pengguna yang memungkinkan Anda mengorganisir dan menampilkan konten dalam beberapa bagian atau kategori di dalam satu area terbatas. Pengguna dapat beralih di antara tab-tab ini untuk melihat konten yang berbeda tanpa harus memuat ulang halaman atau berpindah ke halaman baru. Ini sangat efektif untuk menyajikan banyak informasi dalam ruang yang ringkas dan mempermudah navigasi.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+                Penggunaan tabs membantu meningkatkan keterbacaan, mengurangi *scrolling* yang berlebihan, dan membuat antarmuka terlihat lebih rapi dan terstruktur. Berbagai gaya tabs dapat disesuaikan untuk cocok dengan estetika desain proyek Anda, mulai dari gaya standar dengan garis bawah hingga gaya pil dan vertikal.
+            </p>
+        </section>
+
         <div class="space-y-12">
 
             <section id="default-tabs" class="mb-10 md:mb-12">

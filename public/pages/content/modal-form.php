@@ -23,7 +23,17 @@
         </div>
 
         <section class="mb-10 md:mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Contoh Modal</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Apa itu Modal dan Form?</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+                **Modal** (atau pop-up) adalah jendela overlay yang muncul di atas konten halaman utama untuk menarik perhatian pengguna dan memerlukan interaksi sebelum pengguna dapat kembali ke halaman di baliknya. Modal sering digunakan untuk menampilkan informasi penting, meminta konfirmasi tindakan, atau mengumpulkan input data melalui formulir.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-6">
+                **Formulir (Form)** adalah elemen interaktif yang memungkinkan pengguna untuk memasukkan data atau informasi ke dalam sistem. Formulir sangat penting untuk pendaftaran, login, pengiriman umpan balik, pencarian, dan berbagai interaksi lainnya di sebuah aplikasi web. Kombinasi modal dengan formulir adalah pola desain umum untuk mengumpulkan input pengguna tanpa mengarahkan mereka ke halaman terpisah.
+            </p>
+        </section>
+
+        <section class="mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Contoh Modal Sederhana</h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-6">
                 Berikut adalah beberapa contoh implementasi modal dengan berbagai tujuan:
             </p>
