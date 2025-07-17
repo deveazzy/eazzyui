@@ -8,8 +8,7 @@
 //  * dan font yang digunakan di EazZy Project.
 //  */
 
-import { createIcons } from "/assets/vendor/lucide/lucide.js";
-import * as icons from "/assets/vendor/lucide/iconsAndAliases.js";
+import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
 import { globalNavigationData } from "./navigation-data.js";
 
 let componentsTriggerLink = null;
@@ -318,7 +317,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
           link.href = item.disabled ? "#" : subHref;
 
-          link.className = "flex-grow text-left";
+          link.className = "grow text-left";
           link.textContent = item.label;
           button.appendChild(link);
         } else {

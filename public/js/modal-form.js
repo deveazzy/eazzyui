@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Fungsi alert kustom sebagai pengganti window.alert()
 function customAlert(message) {
     const alertBox = document.createElement('div');
-    alertBox.className = 'fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-[9999]';
+    alertBox.className = 'fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-9999';
     alertBox.innerHTML = `
         <div class="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full text-center">
             <p class="text-lg font-semibold mb-4">${message}</p>

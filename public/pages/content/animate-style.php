@@ -96,28 +96,28 @@ element.addEventListener('animationend', () => {
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Manfaat Animate.css</h2>
             <ul class="space-y-4">
                 <li class="flex items-start">
-                    <i data-lucide="bolt" class="w-6 h-6 text-yellow-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="bolt" class="w-6 h-6 text-yellow-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Implementasi Cepat</h3>
                         <p class="text-gray-600 text-base md:text-lg">Tambahkan animasi kompleks hanya dengan beberapa kelas CSS, menghemat waktu pengembangan.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="library" class="w-6 h-6 text-purple-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="library" class="w-6 h-6 text-purple-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Koleksi Animasi Luas</h3>
                         <p class="text-gray-600 text-base md:text-lg">Menyediakan puluhan efek animasi masuk, keluar, perhatian, dan efek khusus lainnya.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="brush" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="brush" class="w-6 h-6 text-green-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Dapat Disesuaikan</h3>
                         <p class="text-gray-600 text-base md:text-lg">Meskipun siap pakai, durasi, delay, dan iterasi animasi dapat dengan mudah disesuaikan.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="globe" class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="globe" class="w-6 h-6 text-blue-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Kompatibilitas Lintas Browser</h3>
                         <p class="text-gray-600 text-base md:text-lg">Bekerja dengan baik di sebagian besar browser modern tanpa masalah kompatibilitas.</p>

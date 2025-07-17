@@ -119,7 +119,7 @@
             </div>
 
             <div class="lg:col-span-6 widget-card rounded-lg overflow-hidden animated-on-scroll animated-slide-in-left delay-300">
-                <div class="relative w-full aspect-[16/9]">
+                <div class="relative w-full aspect-video">
                     <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/a8-yGm49kqk?si=WAogVvmGVM40ZC6C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
@@ -127,7 +127,7 @@
             <div class="lg:col-span-6 grid grid-cols-2 gap-8">
                 <div class="col-span-1 widget-card rounded-lg overflow-hidden relative animated-on-scroll animated-slide-in-right delay-400">
                     <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=1920&auto=format&fit=crop" class="w-full h-full object-cover" alt="Featured Image">
-                    <div class="absolute bottom-0 left-0 bg-gradient-to-t from-black/60 to-transparent w-full p-4">
+                    <div class="absolute bottom-0 left-0 bg-linear-to-t from-black/60 to-transparent w-full p-4">
                         <h4 class="font-bold text-white">Pemandangan Alam</h4>
                         <p class="text-xs text-gray-200">Diambil pada 4 Juli 2025</p>
                     </div>

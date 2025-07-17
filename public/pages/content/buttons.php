@@ -187,7 +187,7 @@
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Tombol Block / Full Width</h2>
             <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col items-stretch gap-4">
                 <button class="w-full bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md hover:bg-blue-700 transition-colors">Block Button</button>
-                <button class="w-full bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold py-3 px-4 rounded-lg shadow-lg hover:from-green-500 hover:to-blue-600 transition-all">Block Gradient</button>
+                <button class="w-full bg-linear-to-r from-green-400 to-blue-500 text-white font-semibold py-3 px-4 rounded-lg shadow-lg hover:from-green-500 hover:to-blue-600 transition-all">Block Gradient</button>
             </div>
         </section>
 
@@ -254,11 +254,11 @@
                 <div class="relative group flex items-center mobile-slider-scroll w-full md:w-auto">
                     <form action="#" class="flex items-center bg-white rounded-full shadow-md border border-gray-300 transition-all duration-300
                         h-[56px] overflow-hidden desktop-expandable-form">
-                        <button type="button" tabindex="-1" class="flex-shrink-0 flex items-center justify-center p-4 rounded-full bg-white text-gray-700 transition-all duration-300 focus:outline-none">
+                        <button type="button" tabindex="-1" class="shrink-0 flex items-center justify-center p-4 rounded-full bg-white text-gray-700 transition-all duration-300 focus:outline-none">
                             <i data-lucide="search" class="w-6 h-6"></i>
                         </button>
                         <input type="text" placeholder="Cari..." class="search-expand-input w-0 opacity-0 px-0 py-2 text-gray-700 bg-white border-0 rounded-full transition-all duration-300 focus:outline-none
-                            flex-grow" autocomplete="off" />
+                            grow" autocomplete="off" />
                     </form>
                 </div>
 
@@ -266,8 +266,8 @@
                     <form action="#" class="flex items-center overflow-hidden bg-white rounded-full shadow-md border border-gray-300 transition-all duration-300
                         h-[56px] desktop-expandable-form">
                         <input type="text" placeholder="Cari..." class="search-expand-input w-0 opacity-0 px-0 py-2 text-gray-700 bg-white border-0 rounded-full transition-all duration-300 focus:outline-none
-                            flex-grow" autocomplete="off" />
-                        <button type="button" tabindex="-1" class="flex-shrink-0 flex items-center justify-center p-4 rounded-full bg-white text-gray-700 transition-all duration-300 focus:outline-none">
+                            grow" autocomplete="off" />
+                        <button type="button" tabindex="-1" class="shrink-0 flex items-center justify-center p-4 rounded-full bg-white text-gray-700 transition-all duration-300 focus:outline-none">
                             <i data-lucide="search" class="w-6 h-6"></i>
                         </button>
                     </form>

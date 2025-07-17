@@ -11,7 +11,6 @@
  * Konten ini akan di-include oleh page/switch.php.
  */
 ?>
-
 <main class="flex-1 container mx-auto p-4 md:p-8 lg:p-10">
     <div class="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl max-w-7xl mx-auto">
 
@@ -86,21 +85,21 @@ document.addEventListener('DOMContentLoaded', function() {
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Manfaat flatpickr</h2>
             <ul class="space-y-4">
                 <li class="flex items-start">
-                    <i data-lucide="feather" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="feather" class="w-6 h-6 text-green-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Ringan & Cepat</h3>
                         <p class="text-gray-600 text-base md:text-lg">Tidak ada dependensi (seperti jQuery) dan memiliki ukuran yang sangat kecil, memastikan performa yang cepat.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="palette" class="w-6 h-6 text-purple-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="palette" class="w-6 h-6 text-purple-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Dapat Disesuaikan</h3>
                         <p class="text-gray-600 text-base md:text-lg">Mendukung berbagai tema dan opsi konfigurasi yang luas untuk menyesuaikan tampilan dan perilaku.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="smartphone" class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="smartphone" class="w-6 h-6 text-red-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Mobile Friendly</h3>
                         <p class="text-gray-600 text-base md:text-lg">Desainnya responsif dan bekerja dengan baik di perangkat mobile, memberikan pengalaman yang konsisten.</p>

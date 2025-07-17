@@ -9,8 +9,8 @@
 //  * dan font yang digunakan di EazZy Project.
 //  */
 
-import { sidebarNavigationData } from "./navigation-data.js";
 import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
+import { sidebarNavigationData } from "./navigation-data.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Elemen Sidebar Desktop
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
       link.classList.add("p-2");
     }
 
-    link.innerHTML = `<i data-lucide="${item.icon}" class="${iconSizeClass} mr-3 flex-shrink-0"></i><span class="sidebar-text whitespace-nowrap">${item.label}</span>`;
+    link.innerHTML = `<i data-lucide="${item.icon}" class="${iconSizeClass} mr-3 shrink-0"></i><span class="sidebar-text whitespace-nowrap">${item.label}</span>`;
 
     if (item.disabled) {
       link.addEventListener("click", (e) => e.preventDefault());
@@ -218,10 +218,10 @@ document.addEventListener("DOMContentLoaded", () => {
           // Terapkan buttonIconSizeClass pada elemen <i> di dalam tombol
           button.innerHTML = `
                         <span class="flex items-center overflow-hidden">
-                            <i data-lucide="${item.icon}" class="${buttonIconSizeClass} mr-3 flex-shrink-0"></i>
+                            <i data-lucide="${item.icon}" class="${buttonIconSizeClass} mr-3 shrink-0"></i>
                             <span class="sidebar-text whitespace-nowrap">${item.label}</span>
                         </span>
-                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 flex-shrink-0"></i>
+                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 shrink-0"></i>
                     `;
 
           const panelDiv = document.createElement("div");

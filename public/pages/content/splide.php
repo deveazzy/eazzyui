@@ -11,7 +11,6 @@
  * Konten ini akan di-include oleh page/switch.php.
  */
 ?>
-
 <main class="flex-1 container mx-auto p-4 md:p-8 lg:p-10">
 <div class="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl max-w-7xl mx-auto">
 
@@ -98,28 +97,28 @@ new Splide('.splide').mount();
         <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Manfaat Splide</h2>
         <ul class="space-y-4">
             <li class="flex items-start">
-                <i data-lucide="zap" class="w-6 h-6 text-yellow-500 mr-3 mt-1 flex-shrink-0"></i>
+                <i data-lucide="zap" class="w-6 h-6 text-yellow-500 mr-3 mt-1 shrink-0"></i>
                 <div>
                     <h3 class="font-semibold text-lg">Sangat Ringan dan Cepat</h3>
                     <p class="text-gray-600 text-base md:text-lg">Ukuran file yang kecil dan performa yang dioptimalkan untuk pengalaman pengguna yang lancar.</p>
                 </div>
             </li>
             <li class="flex items-start">
-                <i data-lucide="unlink" class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0"></i>
+                <i data-lucide="unlink" class="w-6 h-6 text-red-500 mr-3 mt-1 shrink-0"></i>
                 <div>
                     <h3 class="font-semibold text-lg">Tanpa Ketergantungan (No Dependency)</h3>
                     <p class="text-gray-600 text-base md:text-lg">Dibangun dengan Vanilla JavaScript, tidak memerlukan jQuery, sehingga menjaga proyek tetap ramping.</p>
                 </div>
             </li>
             <li class="flex items-start">
-                <i data-lucide="accessibility" class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0"></i>
+                <i data-lucide="accessibility" class="w-6 h-6 text-blue-500 mr-3 mt-1 shrink-0"></i>
                 <div>
                     <h3 class="font-semibold text-lg">Aksesibilitas Tinggi</h3>
                     <p class="text-gray-600 text-base md:text-lg">Dirancang dengan standar WAI-ARIA untuk memastikan dapat digunakan oleh semua orang.</p>
                 </div>
             </li>
             <li class="flex items-start">
-                <i data-lucide="settings-2" class="w-6 h-6 text-purple-500 mr-3 mt-1 flex-shrink-0"></i>
+                <i data-lucide="settings-2" class="w-6 h-6 text-purple-500 mr-3 mt-1 shrink-0"></i>
                 <div>
                     <h3 class="font-semibold text-lg">Kaya Fitur dan Fleksibel</h3>
                     <p class="text-gray-600 text-base md:text-lg">Mendukung slider vertikal, thumbnail, lazy loading, video, dan banyak lagi melalui API yang mudah digunakan.</p>

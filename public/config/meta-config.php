@@ -9,7 +9,6 @@
  * dan font yang digunakan di EazZy Project.
  */
 ?>
-
 <!-- SEO Meta Tags -->
 <meta name="google-site-verification" content="89JkTa5uXIjQ84J8qMaZEWHRh53Lqf5vFjuTKwWaYKs" />
 <meta name="description" content="Eazzy Project - Aplikasi Bisnis Gratis untuk Pelaku Usaha adalah aplikasi ini untuk membantu pelaku UMKM dan usaha agar berkembang lebih mudah. Daftar sekarang untuk mendapatkan akses pertama saat rilis!">
@@ -31,14 +30,18 @@
 <meta property="twitter:description" content="Aplikasi pintar gratis untuk membantu pelaku UMKM dan usaha berkembang lebih mudah. Daftar sekarang untuk mendapatkan akses pertama saat rilis!">
 <meta property="twitter:image" content="#"> <!-- Ganti dengan URL gambar preview Anda -->
 
-<!-- Robots -->
-<meta name="robots" content="index, follow">
+<!-- Robots search engine -->
+<!-- <meta name="robots" content="index, follow"> -->
+
+<!-- Robots not search engine -->
+<meta name="robots" content="noindex, nofollow">
 
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
+    "url": "https://eazzy-project.com/",
     "name": "EazZy Project",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web, Android, iOS",

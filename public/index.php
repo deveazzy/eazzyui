@@ -26,11 +26,9 @@ $pages_without_sidebar = [
   <link rel="stylesheet" href="/css/output.css"/>
 </head>
 <body class="bg-gray-50 text-gray-800">
-
   <?php 
     include 'layout/header.php';
   ?>
-
     <div class="flex flex-1">
         <?php
         if (isset($layout) && $layout === 'sidebar-left' && !in_array($page, $pages_without_sidebar)) {
@@ -42,7 +40,6 @@ $pages_without_sidebar = [
   <?php 
   include 'layout/footer.php'; 
   include 'config/js-config.php'; 
-
   // Logika untuk memuat JavaScript spesifik untuk sidebar.
   if (isset($layout) && $layout === 'sidebar-left' && !in_array($page, $pages_without_sidebar)) {
       echo '<script type="module" src="/js/sidebar-left.js"></script>';

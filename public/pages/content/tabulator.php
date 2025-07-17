@@ -102,28 +102,28 @@ document.addEventListener('DOMContentLoaded', function() {
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Manfaat Tabulator</h2>
             <ul class="space-y-4">
                 <li class="flex items-start">
-                    <i data-lucide="zap" class="w-6 h-6 text-yellow-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="zap" class="w-6 h-6 text-yellow-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Performa Tinggi</h3>
                         <p class="text-gray-600 text-base md:text-lg">Dirancang untuk menangani ribuan baris data dengan lancar, menjadikannya pilihan yang lebih ringan dari alternatif lain.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="settings-2" class="w-6 h-6 text-purple-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="settings-2" class="w-6 h-6 text-purple-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Sangat Dapat Disesuaikan</h3>
                         <p class="text-gray-600 text-base md:text-lg">Menawarkan berbagai opsi konfigurasi untuk kolom, baris, interaksi, dan tampilan visual.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="mouse-pointer-click" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="mouse-pointer-click" class="w-6 h-6 text-green-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Fitur Interaktif Kaya</h3>
                         <p class="text-gray-600 text-base md:text-lg">Mendukung penyortiran, pemfilteran, pengelompokan, pengeditan langsung, *pagination*, dan banyak lagi.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="file-text" class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="file-text" class="w-6 h-6 text-blue-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Dokumentasi Lengkap</h3>
                         <p class="text-gray-600 text-base md:text-lg">Memiliki dokumentasi yang sangat detail dan contoh kode yang membantu proses pengembangan.</p>

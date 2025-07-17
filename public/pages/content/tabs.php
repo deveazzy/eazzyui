@@ -222,7 +222,7 @@
                             </button>
                         </nav>
                         <div class="flex-1 flex flex-col">
-                            <div class="p-6 flex-grow" data-tab-group="group8">
+                            <div class="p-6 grow" data-tab-group="group8">
                                 <div id="vert-form-pribadi" class="tab-panel active">
                                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div>

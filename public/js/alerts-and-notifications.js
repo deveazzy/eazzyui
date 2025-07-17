@@ -9,7 +9,7 @@
 //  */
 // Import PNotify dari path lokal yang benar.
 import PNotify from "/assets/vendor/pnotify/PNotify.js";
-import PNotifyButtons from "/assets/vendor/pnotify/PNotifyButtons.js";
+// import PNotifyButtons from "/assets/vendor/pnotify/PNotifyButtons.js";
 
 // Mengatur default untuk semua notifikasi PNotify
 PNotify.defaults.delay = 3000; // Notifikasi akan hilang setelah 3 detik
