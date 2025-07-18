@@ -9,19 +9,15 @@
  * dan font yang digunakan di EazZy Project.
  */
 ?>
-<!-- Path diubah menjadi absolut dari root web (folder public) -->
-<!-- <script type="module" src="/assets/vendor/lucide/lucide.js"></script> -->
-
 <script type="module" src="/js/global.js"></script> 
 <script type="module" src="/js/header.js"></script>
 <!-- Vendor -->
-<!-- Memuat library NProgress dari lokal -->
-<script src="/assets/vendor/nprogress/nprogress.js"></script>
+<!-- <script src="/assets/dist/main.bundle.js" defer></script> -->
 <!-- Memuat library ApexCharts dari lokal -->
-<script src="/assets/vendor/apexcharts/apexcharts.js"></script>
+<script src="/assets/vendor/apexcharts/apexcharts.min.js" defer></script>
 <!-- flatpickr -->
-<script src="/assets/vendor/flatpickr/flatpickr.js"></script>
+<script src="/assets/vendor/flatpickr/flatpickr.min.js" defer></script>
 <!-- Memuat library Tabulator dari lokal -->
-<script src="/assets/vendor/tabulator/tabulator.js"></script>
+<script src="/assets/vendor/tabulator/tabulator.min.js" defer></script>
 <!-- Memuat library Splide dari lokal -->
-<script src="/assets/vendor/splide/splide.js"></script>
+<script src="/assets/vendor/splide/splide.min.js" defer></script>
