@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       status: false,
     },
   ];
+  createIcons({ icons });
   // Inisialisasi Tabulator
   var table = new Tabulator("#my-data-table", {
     height: "311px",
@@ -70,5 +71,4 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     ],
   });
-  createIcons({ icons });
 });

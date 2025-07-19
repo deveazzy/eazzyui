@@ -61,8 +61,9 @@
                     <strong>Siapkan Wadah HTML:</strong>
                     <p class="mt-1">Buat elemen `div` di HTML Anda dengan ID unik. Ini akan menjadi tempat tabel dirender.</p>
                     <pre class="bg-gray-800 text-white p-4 rounded-lg mt-2 overflow-x-auto"><code class="language-html">
-&lt;div id="my-data-table"&gt;&lt;/div&gt;
-                    </code></pre>
+&lt;!-- ID diubah agar tidak duplikat --&gt;
+&lt;div id="contoh-tabel-saja"&gt;&lt;/div&gt;
+</code></pre>
                 </li>
                  <li>
                     <strong>Inisialisasi Tabel dengan JavaScript:</strong>
@@ -146,3 +147,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     </div>
 </main>
+<!-- Memuat library Tabulator dari lokal -->
+<script src="/assets/vendor/tabulator/tabulator.min.js" defer></script>

@@ -260,9 +260,6 @@
         </section>
     </div>
 </div>
-
-<?php
-// Memuat script JavaScript spesifik untuk halaman atoms
-?>
-<!-- <script src="js/atoms-specific.js"></script> -->
 </main>
+<!-- flatpickr -->
+<script src="/assets/vendor/flatpickr/flatpickr.min.js" defer></script>

@@ -286,3 +286,5 @@ chart.render();
 
     </div>
 </main>
+<!-- Memuat library ApexCharts dari lokal -->
+<script src="/assets/vendor/apexcharts/apexcharts.min.js" defer></script>
