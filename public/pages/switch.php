@@ -14,7 +14,7 @@ $allowed_pages = [
     'alerts-and-notifications', 'tailwind-css', 
     'flatpickr', 'apexcharts', 'animate-style', 
     'tabulator', 'splide', 'redis-test', 'modal-form', 
-    'blank-content', 'nprogress'
+    'blank-content', 'nprogress', 'grid'
 ];
 
 if (in_array($page, $allowed_pages)) {

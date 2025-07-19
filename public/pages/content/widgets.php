@@ -55,7 +55,7 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pt-10 border-t border-gray-200"> <div class="lg:col-span-3 widget-card p-6 rounded-lg animated-on-scroll animated-fade-in-up">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pt-10 "> <div class="lg:col-span-3 widget-card p-6 rounded-lg animated-on-scroll animated-fade-in-up">
                 <div class="flex items-center justify-between">
                     <h3 class="text-base font-semibold text-gray-500">Pendapatan</h3>
                     <div class="p-2 bg-blue-100 rounded-full"><i data-lucide="dollar-sign" class="w-6 h-6 text-blue-600"></i></div>
@@ -90,9 +90,9 @@
 
             <div class="lg:col-span-4 widget-card p-6 rounded-lg text-center flex flex-col items-center animated-on-scroll animated-zoom-in delay-300">
                 <img class="h-24 w-24 rounded-full mx-auto border-4 border-blue-200" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="User avatar">
-                <h3 class="text-xl font-bold mt-4">Andi Wijaya</h3>
+                <h3 class="text-xl font-bold mt-4">EazZy</h3>
                 <p class="text-sm text-gray-500">Administrator</p>
-                <div class="mt-4 border-t border-gray-200 w-full pt-4 flex justify-around">
+                <div class="mt-4  w-full pt-4 flex justify-around">
                     <button class="text-blue-600 hover:text-blue-800"><i data-lucide="user-cog" class="w-6 h-6"></i></button>
                     <button class="text-blue-600 hover:text-blue-800"><i data-lucide="mail" class="w-6 h-6"></i></button>
                     <button class="text-red-500 hover:text-red-700"><i data-lucide="log-out" class="w-6 h-6"></i></button>
@@ -119,7 +119,7 @@
             </div>
 
             <div class="lg:col-span-6 widget-card rounded-lg overflow-hidden animated-on-scroll animated-slide-in-left delay-300">
-                <div class="relative w-full aspect-[16/9]">
+                <div class="relative w-full aspect-video">
                     <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/a8-yGm49kqk?si=WAogVvmGVM40ZC6C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
@@ -127,7 +127,7 @@
             <div class="lg:col-span-6 grid grid-cols-2 gap-8">
                 <div class="col-span-1 widget-card rounded-lg overflow-hidden relative animated-on-scroll animated-slide-in-right delay-400">
                     <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=1920&auto=format&fit=crop" class="w-full h-full object-cover" alt="Featured Image">
-                    <div class="absolute bottom-0 left-0 bg-gradient-to-t from-black/60 to-transparent w-full p-4">
+                    <div class="absolute bottom-0 left-0 bg-linear-to-t from-black/60 to-transparent w-full p-4">
                         <h4 class="font-bold text-white">Pemandangan Alam</h4>
                         <p class="text-xs text-gray-200">Diambil pada 4 Juli 2025</p>
                     </div>

@@ -14,5 +14,5 @@
 <title>EazZy Project | Smart App Free for Everyone</title>
 
 <!-- Favicon -->
-<link rel="icon" href="../assets/images/logo.png" type="image/png">
-<link rel="apple-touch-icon" href="../assets/images/logo.png">
+<link rel="icon" href="/assets/images/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/images/logo.png">

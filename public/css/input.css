@@ -1,20 +1,19 @@
-@import url('_global.css');
-@import url('_animate.css');
-@import url('_sidebar-left.css');
-@import url('_home.css');
-@import url('_typography.css');
-@import url('_tabs.css');
-@import url('_buttons.css');
-@import url('_apexcharts.css');
-@import url('_tabulator.css');
-@import url('_splide.css');
-@import url('_modal-form.css');
-@import url('_icons.css');
-@import url('../assets/vendor/flatpickr/flatpickr.css');
-@import url('../assets/vendor/pnotify/PNotifyBrightTheme.css');
-/* @import "tailwindcss/preflight"; */
+/* @reference url("_global.css"); */
+@import "/opt/eazzy-docker/www/mirror/src/css/_header.css";
+@import "/opt/eazzy-docker/www/mirror/src/css/_global.css";
+@import "/opt/eazzy-docker/www/mirror/src/css/_sidebar-left.css";
+@import "/opt/eazzy-docker/www/mirror/src/css/_icons.css";
+@import "/opt/eazzy-docker/www/mirror/src/css/_home.css";
+
+@import "/opt/eazzy-docker/www/mirror/src/css/_typography.css";
+@import "/opt/eazzy-docker/www/mirror/src/css/_tabs.css";
+@import "/opt/eazzy-docker/www/mirror/src/css/_buttons.css";
+@import "/opt/eazzy-docker/www/mirror/src/css/_apexcharts.css";
+@import "/opt/eazzy-docker/www/mirror/src/css/_tabulator.css";
+@import "/opt/eazzy-docker/www/mirror/src/css/_splide.css";
+@import "/opt/eazzy-docker/www/mirror/src/css/_modal-form.css";
+@import "/opt/eazzy-docker/www/mirror/src/css/vendor/animate/animate.css";
+@import "/opt/eazzy-docker/www/mirror/src/css/vendor/flatpickr/flatpickr.css";
+@import "/opt/eazzy-docker/www/mirror/src/css/vendor/pnotify/PNotifyBrightTheme.css";
 @import "tailwindcss";
-
-
-
-/* @tailwind utilities; */
+/* @source "../../src/css"; */

@@ -42,7 +42,7 @@
         </section>
 
         <!-- Bagian: Panduan Pemasangan Tailwind CSS -->
-        <section class="mb-10 md:mb-12 pt-10 border-t border-gray-200">
+        <section class="mb-10 md:mb-12 pt-10 ">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Panduan Pemasangan Tailwind CSS</h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-4">
                 Berikut adalah langkah-langkah dasar untuk memasang dan mengkonfigurasi Tailwind CSS di proyek Anda:
@@ -104,32 +104,32 @@ module.exports = {
         </section>
 
         <!-- Bagian: Manfaat Tailwind CSS -->
-        <section class="mb-10 md:mb-12 pt-10 border-t border-gray-200">
+        <section class="mb-10 md:mb-12 pt-10 ">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Manfaat Tailwind CSS</h2>
             <ul class="space-y-4">
                 <li class="flex items-start">
-                    <i data-lucide="sparkles" class="w-6 h-6 text-yellow-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="sparkles" class="w-6 h-6 text-yellow-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Desain Kustom Tanpa Batas</h3>
                         <p class="text-gray-600 text-base md:text-lg">Memberikan fleksibilitas penuh untuk membuat desain unik tanpa terikat pada komponen bawaan.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="package" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="package" class="w-6 h-6 text-green-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Ukuran File CSS Kecil</h3>
                         <p class="text-gray-600 text-base md:text-lg">Hanya menyertakan CSS yang benar-benar Anda gunakan, menghasilkan ukuran file yang sangat kecil dan performa cepat.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="code" class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="code" class="w-6 h-6 text-blue-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Pengembangan Lebih Cepat</h3>
                         <p class="text-gray-600 text-base md:text-lg">Tidak perlu beralih antara file HTML dan CSS, memungkinkan alur kerja yang lebih cepat dan fokus.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="repeat" class="w-6 h-6 text-purple-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="repeat" class="w-6 h-6 text-purple-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Konsistensi Desain</h3>
                         <p class="text-gray-600 text-base md:text-lg">Meskipun utility-first, sistem desain berbasis token membantu menjaga konsistensi di seluruh proyek.</p>
@@ -139,7 +139,7 @@ module.exports = {
         </section>
 
         <!-- Bagian: Contoh Penerapan Tailwind CSS -->
-        <section class="mt-16 pt-10 border-t border-gray-200">
+        <section class="mt-16 pt-10 ">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Contoh Penerapan</h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-8 max-w-2xl">
                 Berikut adalah contoh komponen kartu sederhana yang dibuat sepenuhnya dengan kelas-kelas utility Tailwind CSS.

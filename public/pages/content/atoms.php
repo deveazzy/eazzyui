@@ -11,10 +11,8 @@
  * Konten ini akan di-include oleh page/switch.php.
  */
 ?>
-
 <main class="flex-1 container mx-auto p-6 md:p-10">
 <!-- Konten utama halaman Anda akan ditempatkan di sini. -->
-
 <div class="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl max-w-7xl mx-auto">
     <div class="flex flex-col md:flex-row items-center md:space-x-4 mb-8 md:mb-12 text-center md:text-left relative">
         <div class="bg-blue-100 text-blue-600 p-4 rounded-full mb-4 md:mb-0">
@@ -27,7 +25,6 @@
             <p class="text-lg md:text-xl text-gray-500 mt-1">Panduan visual untuk komponen dasar Eazzy Project.</p>
         </div>
     </div>
-
     <!-- Sections Container -->
     <div class="space-y-12">
         <!-- 1. Buttons Section -->
@@ -203,7 +200,7 @@
             <div class="p-6 bg-white rounded-lg shadow-sm space-y-4">
                 <!-- Success Alert -->
                 <div class="flex items-start p-4 rounded-lg bg-green-50 border border-green-200">
-                    <i data-lucide="check-circle-2" class="w-6 h-6 text-green-600 mr-3 flex-shrink-0"></i>
+                    <i data-lucide="check-circle-2" class="w-6 h-6 text-green-600 mr-3 shrink-0"></i>
                     <div>
                         <h4 class="font-bold text-green-800">Berhasil</h4>
                         <p class="text-sm text-green-700">Data produk telah berhasil disimpan.</p>
@@ -211,7 +208,7 @@
                 </div>
                 <!-- Info Alert -->
                 <div class="flex items-start p-4 rounded-lg bg-blue-50 border border-blue-200">
-                    <i data-lucide="info" class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0"></i>
+                    <i data-lucide="info" class="w-6 h-6 text-blue-600 mr-3 shrink-0"></i>
                     <div>
                         <h4 class="font-bold text-blue-800">Informasi</h4>
                         <p class="text-sm text-blue-700">Sistem akan melakukan maintenance pada pukul 23:00 WIB.</p>
@@ -263,9 +260,6 @@
         </section>
     </div>
 </div>
-
-<?php
-// Memuat script JavaScript spesifik untuk halaman atoms
-?>
-<!-- <script src="js/atoms-specific.js"></script> -->
 </main>
+<!-- flatpickr -->
+<script src="/assets/vendor/flatpickr/flatpickr.min.js" defer></script>

@@ -33,7 +33,7 @@
             </div>
             <details class="bg-white rounded-lg shadow-sm border p-4">
                 <summary class="cursor-pointer font-semibold text-gray-700">Lihat Panduan Penggunaan</summary>
-                <div class="mt-4 space-y-6 p-4 border-t border-gray-200">
+                <div class="mt-4 space-y-6 p-4 ">
                     <div>
                         <h3 class="text-lg font-semibold mb-2">Langkah 1: Pemanggilan Script</h3>
                         <p class="text-gray-600 mb-3">Pastikan Anda telah memanggil script Lucide Icons di dalam tag `<head>` pada file HTML Anda.</p>

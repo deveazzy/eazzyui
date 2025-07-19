@@ -38,7 +38,7 @@
             <div class="space-y-6">
                 <!-- Alert: Success - ditambahkan shadow-md -->
                 <div class="p-4 rounded-lg bg-green-50 border border-green-200 flex items-start gap-4 shadow-md">
-                    <div class="flex-shrink-0 text-green-600">
+                    <div class="shrink-0 text-green-600">
                         <i data-lucide="check-circle-2" class="w-6 h-6"></i>
                     </div>
                     <div class="flex-1">
@@ -52,7 +52,7 @@
 
                 <!-- Alert: Info - ditambahkan shadow-md -->
                 <div class="p-4 rounded-lg bg-blue-50 border border-blue-200 flex items-start gap-4 shadow-md">
-                    <div class="flex-shrink-0 text-blue-600">
+                    <div class="shrink-0 text-blue-600">
                          <i data-lucide="info" class="w-6 h-6"></i>
                     </div>
                     <div class="flex-1">
@@ -66,7 +66,7 @@
 
                 <!-- Alert: Warning - ditambahkan shadow-md -->
                 <div class="p-4 rounded-lg bg-yellow-50 border border-yellow-200 flex items-start gap-4 shadow-md">
-                    <div class="flex-shrink-0 text-yellow-600">
+                    <div class="shrink-0 text-yellow-600">
                         <i data-lucide="alert-triangle" class="w-6 h-6"></i>
                     </div>
                     <div class="flex-1">
@@ -80,7 +80,7 @@
 
                 <!-- Alert: Error - ditambahkan shadow-md -->
                 <div class="p-4 rounded-lg bg-red-50 border border-red-200 flex items-start gap-4 shadow-md">
-                    <div class="flex-shrink-0 text-red-600">
+                    <div class="shrink-0 text-red-600">
                         <i data-lucide="alert-circle" class="w-6 h-6"></i>
                     </div>
                     <div class="flex-1">
@@ -95,7 +95,7 @@
         </section>
 
         <!-- Bagian Baru: Apa itu PNotify? -->
-        <section class="mb-10 md:mb-12 pt-10 border-t border-gray-200">
+        <section class="mb-10 md:mb-12 pt-10 ">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Apa itu PNotify?</h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg">
                 PNotify adalah pustaka JavaScript ringan yang menyediakan notifikasi non-blokir yang dapat disesuaikan sepenuhnya untuk aplikasi web. Ini memungkinkan Anda menampilkan pesan yang menarik secara visual kepada pengguna tanpa mengganggu alur kerja mereka.
@@ -111,7 +111,7 @@
         </section>
 
         <!-- Bagian Baru: Panduan Pemasangan PNotify -->
-        <section class="mb-10 md:mb-12 pt-10 border-t border-gray-200">
+        <section class="mb-10 md:mb-12 pt-10 ">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Panduan Pemasangan PNotify</h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-4">
                 Berikut adalah langkah-langkah untuk memasang dan mengkonfigurasi PNotify di dalam proyek ini:
@@ -153,32 +153,32 @@ new PNotify({
         </section>
 
         <!-- Bagian Baru: Manfaat PNotify -->
-        <section class="mb-10 md:mb-12 pt-10 border-t border-gray-200">
+        <section class="mb-10 md:mb-12 pt-10 ">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Manfaat PNotify</h2>
             <ul class="space-y-4">
                 <li class="flex items-start">
-                    <i data-lucide="bell" class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="bell" class="w-6 h-6 text-blue-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Non-Blokir & Tidak Mengganggu</h3>
                         <p class="text-gray-600 text-base md:text-lg">Menyampaikan informasi penting tanpa mengganggu alur kerja pengguna atau memerlukan interaksi langsung.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="palette" class="w-6 h-6 text-purple-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="palette" class="w-6 h-6 text-purple-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Sangat Dapat Disesuaikan</h3>
                         <p class="text-gray-600 text-base md:text-lg">Fleksibilitas tinggi dalam tampilan, posisi, animasi, dan perilaku notifikasi agar sesuai dengan desain aplikasi Anda.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="zap" class="w-6 h-6 text-yellow-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="zap" class="w-6 h-6 text-yellow-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Umpan Balik Instan</h3>
                         <p class="text-gray-600 text-base md:text-lg">Memberikan konfirmasi atau peringatan segera setelah tindakan pengguna, meningkatkan responsivitas aplikasi.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="smartphone" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="smartphone" class="w-6 h-6 text-green-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Responsif & Ramah Seluler</h3>
                         <p class="text-gray-600 text-base md:text-lg">Dirancang untuk bekerja dengan baik di berbagai ukuran layar, termasuk perangkat seluler.</p>
@@ -188,7 +188,7 @@ new PNotify({
         </section>
 
         <!-- Bagian 2: Notifikasi Dinamis (PNotify) - ini adalah bagian yang sudah ada sebelumnya -->
-        <section class="mt-16 pt-10 border-t border-gray-200">
+        <section class="mt-16 pt-10 ">
              <!-- Judul bagian - disesuaikan agar seragam -->
              <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Contoh Notifikasi Dinamis</h2>
              <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-8 max-w-2xl">

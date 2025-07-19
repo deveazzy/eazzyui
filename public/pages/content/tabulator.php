@@ -32,7 +32,7 @@
         </section>
 
         <!-- Bagian: Panduan Pemasangan Tabulator.info -->
-        <section class="mb-10 md:mb-12 pt-10 border-t border-gray-200">
+        <section class="mb-10 md:mb-12 pt-10 ">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Panduan Pemasangan Tabulator</h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-4">
                 Berikut adalah langkah-langkah dasar untuk memasang dan menggunakan Tabulator.info di proyek Anda:
@@ -61,8 +61,9 @@
                     <strong>Siapkan Wadah HTML:</strong>
                     <p class="mt-1">Buat elemen `div` di HTML Anda dengan ID unik. Ini akan menjadi tempat tabel dirender.</p>
                     <pre class="bg-gray-800 text-white p-4 rounded-lg mt-2 overflow-x-auto"><code class="language-html">
-&lt;div id="my-data-table"&gt;&lt;/div&gt;
-                    </code></pre>
+&lt;!-- ID diubah agar tidak duplikat --&gt;
+&lt;div id="contoh-tabel-saja"&gt;&lt;/div&gt;
+</code></pre>
                 </li>
                  <li>
                     <strong>Inisialisasi Tabel dengan JavaScript:</strong>
@@ -98,32 +99,32 @@ document.addEventListener('DOMContentLoaded', function() {
         </section>
 
         <!-- Bagian: Manfaat Tabulator.info -->
-        <section class="mb-10 md:mb-12 pt-10 border-t border-gray-200">
+        <section class="mb-10 md:mb-12 pt-10 ">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Manfaat Tabulator</h2>
             <ul class="space-y-4">
                 <li class="flex items-start">
-                    <i data-lucide="zap" class="w-6 h-6 text-yellow-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="zap" class="w-6 h-6 text-yellow-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Performa Tinggi</h3>
                         <p class="text-gray-600 text-base md:text-lg">Dirancang untuk menangani ribuan baris data dengan lancar, menjadikannya pilihan yang lebih ringan dari alternatif lain.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="settings-2" class="w-6 h-6 text-purple-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="settings-2" class="w-6 h-6 text-purple-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Sangat Dapat Disesuaikan</h3>
                         <p class="text-gray-600 text-base md:text-lg">Menawarkan berbagai opsi konfigurasi untuk kolom, baris, interaksi, dan tampilan visual.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="mouse-pointer-click" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="mouse-pointer-click" class="w-6 h-6 text-green-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Fitur Interaktif Kaya</h3>
                         <p class="text-gray-600 text-base md:text-lg">Mendukung penyortiran, pemfilteran, pengelompokan, pengeditan langsung, *pagination*, dan banyak lagi.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="file-text" class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="file-text" class="w-6 h-6 text-blue-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Dokumentasi Lengkap</h3>
                         <p class="text-gray-600 text-base md:text-lg">Memiliki dokumentasi yang sangat detail dan contoh kode yang membantu proses pengembangan.</p>
@@ -133,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </section>
 
         <!-- Bagian: Contoh Penerapan Tabulator.info -->
-        <section class="mt-16 pt-10 border-t border-gray-200">
+        <section class="mt-16 pt-10 ">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Contoh Penerapan</h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-8 max-w-2xl">
                 Berikut adalah contoh tabel sederhana yang diinisialisasi menggunakan Tabulator. Anda dapat mengklik header kolom untuk menyortir atau mengklik sel nama/kota untuk mengeditnya.
@@ -146,3 +147,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     </div>
 </main>
+<!-- Memuat library Tabulator dari lokal -->
+<script src="/assets/vendor/tabulator/tabulator.min.js" defer></script>

@@ -15,7 +15,7 @@
     <!-- Header Sidebar (Avatar, Nama, Info Online) -->
     <div class="p-4 border-b border-gray-200 flex items-center justify-between sidebar-header">
         <div class="flex items-center space-x-3 overflow-hidden">
-            <div class="relative flex-shrink-0">
+            <div class="relative shrink-0">
                 <img src="https://placehold.co/40x40/2563EB/ffffff?text=EZ" alt="EazZy Project Logo" class="w-10 h-10 rounded-full object-cover">
                 <span class="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-green-500 ring-1 ring-white"></span>
             </div>
@@ -25,7 +25,7 @@
             </div>
         </div>
         <!-- Tombol Tutup Sidebar (Hanya terlihat di mobile saat sidebar dibuka oleh tombol mobile utama) -->
-        <button id="sidebar-close-btn" class="md:hidden p-1 rounded-full hover:bg-gray-100 text-gray-600 flex-shrink-0">
+        <button id="sidebar-close-btn" class="md:hidden p-1 rounded-full hover:bg-gray-100 text-gray-600 shrink-0">
             <i data-lucide="x" class="w-5 h-5"></i>
         </button>
     </div>
@@ -55,7 +55,7 @@
 
     <!-- Tombol Utama FAB (Windows Icon) -->
     <!-- Ukuran w-20 h-20 untuk 80px -->
-    <button id="mobile-fab-toggle-btn" class="relative w-20 h-20 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg transition-all duration-300 ease-in-out flex-shrink-0">
+    <button id="mobile-fab-toggle-btn" class="relative w-20 h-20 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg transition-all duration-300 ease-in-out shrink-0">
         <i data-lucide="app-window" class="w-10 h-10"></i> <!-- Ukuran ikon w-10 h-10 untuk 40px -->
     </button>
 </div>

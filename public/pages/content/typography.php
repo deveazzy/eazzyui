@@ -27,6 +27,15 @@
             </div>
         </div>
 
+        <section class="mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Apa itu Tipografi?</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+                Tipografi adalah seni dan teknik mengatur jenis huruf untuk membuat bahasa tertulis terbaca, mudah dibaca, dan menarik secara visual. Ini melibatkan pemilihan jenis huruf, ukuran font, spasi baris (line-height), spasi huruf (letter-spacing), dan penempatan teks pada halaman. Dalam desain web, tipografi yang baik sangat penting untuk pengalaman pengguna, karena sebagian besar informasi disampaikan melalui teks.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+                Tujuan utama tipografi adalah untuk mengoptimalkan keterbacaan dan daya tarik visual teks, sehingga pesan dapat disampaikan secara efektif kepada pembaca. Dengan mengelola elemen-elemen tipografi, kita dapat menciptakan hierarki visual, menyorot informasi penting, dan membangun identitas merek yang kuat.
+            </p>
+        </section>
         <div class="space-y-12">
 
             <section id="paragraphs" class="mb-10 md:mb-12">
@@ -42,7 +51,7 @@
             </section>
 
             <section id="alignments" class="mb-10 md:mb-12">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Alignments</h2>
+                <h2 class="text-2xl md::text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Alignments</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                         <h3 class="text-lg font-semibold mb-2 text-gray-800">Rata Kiri (Default)</h3>
@@ -58,7 +67,7 @@
                     </div>
                     <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                         <h3 class="text-lg font-semibold mb-2 text-gray-800">Rata Kanan</h3>
-                        <p class="text-right text-gray-600 text-base md:text-lg">
+                        <p class="text-right text-gray-600 text-base md::text-lg">
                             Setiap elemen desain harus memiliki tujuan yang jelas dan ditempatkan secara strategis untuk menciptakan pengalaman pengguna yang kohesif dan intuitif.
                         </p>
                     </div>

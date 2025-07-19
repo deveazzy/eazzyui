@@ -1,4 +1,4 @@
-<main class="container mx-auto p-4 md:p-8 lg:p-10 flex-grow">
+<main class="container mx-auto p-4 md:p-8 lg:p-10 grow">
     <div class="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl max-w-7xl mx-auto">
 
         <!-- Judul Halaman -->
@@ -87,28 +87,28 @@ chart.render();
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Manfaat ApexCharts</h2>
             <ul class="space-y-4">
                 <li class="flex items-start">
-                    <i data-lucide="sparkles" class="w-6 h-6 text-yellow-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="sparkles" class="w-6 h-6 text-yellow-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Tampilan Modern & Estetis</h3>
                         <p class="text-gray-600 text-base md:text-lg">Menghasilkan grafik yang terlihat profesional dan indah secara default, dengan animasi yang halus saat data dimuat.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="mouse-pointer-click" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="mouse-pointer-click" class="w-6 h-6 text-green-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Sangat Interaktif</h3>
                         <p class="text-gray-600 text-base md:text-lg">Mendukung fitur zoom, pan, dan tooltips yang kaya tanpa konfigurasi tambahan, meningkatkan pengalaman pengguna.</p>
                     </div>
                 </li>
                 <li class="flex items-start">
-                    <i data-lucide="settings-2" class="w-6 h-6 text-purple-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="settings-2" class="w-6 h-6 text-purple-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Kaya Opsi Kustomisasi</h3>
                         <p class="text-gray-600 text-base md:text-lg">Menyediakan API yang luas untuk mengubah hampir setiap aspek visual dari grafik, mulai dari warna hingga format label.</p>
                     </div>
                 </li>
                  <li class="flex items-start">
-                    <i data-lucide="file-check-2" class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0"></i>
+                    <i data-lucide="file-check-2" class="w-6 h-6 text-red-500 mr-3 mt-1 shrink-0"></i>
                     <div>
                         <h3 class="font-semibold text-lg">Dokumentasi Lengkap</h3>
                         <p class="text-gray-600 text-base md:text-lg">Memiliki dokumentasi yang sangat baik dengan puluhan contoh untuk setiap jenis grafik, memudahkan proses pengembangan.</p>
@@ -286,3 +286,5 @@ chart.render();
 
     </div>
 </main>
+<!-- Memuat library ApexCharts dari lokal -->
+<script src="/assets/vendor/apexcharts/apexcharts.min.js" defer></script>
