@@ -1,6 +1,6 @@
 /*
  * @author    [EazZy Project]
- * @copyright Copyright (c) [2025] [EazZy Project]
+ * @copyright Copyright (c] [2025] [EazZy Project]
  * @license   https://opensource.org/licenses/MIT MIT License
  */
 import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
       status: false,
     },
   ];
+
   var table = new Tabulator("#my-data-table", {
     height: "311px",
     data: tabledata,
@@ -64,5 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     ],
   });
-  createIcons({ icons });
+
+  table.on("renderComplete", function () {
+    createIcons({
+      icons: icons,
+    });
+  });
 });
