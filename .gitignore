@@ -75,7 +75,15 @@ coverage/
 .classpath
 .factorypath
 .metadata/
+.vscode/
 etc/
 public/assets/vendor/
-.vscode/
-src/
+
+# if uploads to EazZyproject this must be ignored and allowed to be EazZyproject-UI
+# app/
+# public/sitemap.xml
+# public/index.php
+# public/robots.txt
+# public/layout/
+# public/config/
+# public/pages/
