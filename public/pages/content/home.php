@@ -21,7 +21,7 @@
                 EazZy Project UI: Desain Intuitif, Pengembangan Cepat
             </h1>
             <p class="text-lg md:text-xl max-w-3xl mx-auto opacity-90 animate__animated animate__fadeInUp animate__delay-1s">
-                Jelajahi koleksi aset antarmuka pengguna (UI) kami yang dirancang dengan presisi untuk mempercepat pengembangan aplikasi Anda. Fokus pada estetika, fungsionalitas, dan pengalaman pengguna yang tak tertandingi.
+                Jelajahi koleksi aset antarmuka pengguna (UI) kami yang dirancang dengan presisi untuk mempercepat pengembangan aplikasi Anda. dan pengalaman pengguna yang optimal.
             </p>
             <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate__animated animate__fadeInUp animate__delay-1-5s">
                 <a href="#ui-showcase" class="inline-block bg-white text-blue-600 font-bold px-8 py-4 rounded-full text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg transform hover:scale-105">
@@ -283,7 +283,7 @@
             </p>
             <div class="flex flex-col md:flex-row justify-center items-center gap-4 max-w-md mx-auto">
                 <!-- Tombol Kunjungi GitHub -->
-                <a href="https://github.com/deveazzy/EazZyProject/tree/uiux" target="_blank" class="w-full md:w-auto bg-gray-800 text-white font-bold px-6 py-3 rounded-lg text-lg hover:bg-gray-900 transition-colors duration-300 flex items-center justify-center gap-2 shadow-lg transform hover:scale-105">
+                <a href="https://github.com/deveazzy/EazZyProject-UI" target="_blank" class="w-full md:w-auto bg-gray-800 text-white font-bold px-6 py-3 rounded-lg text-lg hover:bg-gray-900 transition-colors duration-300 flex items-center justify-center gap-2 shadow-lg transform hover:scale-105">
                     <i data-lucide="github" class="w-6 h-6"></i>
                     Kunjungi GitHub
                 </a>

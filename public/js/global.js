@@ -10,7 +10,6 @@
  * umpan balik visual selama pemuatan halaman. Ini menggunakan NProgress.inc()
  * untuk mensimulasikan kemajuan pada koneksi yang lambat.
  */
-import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
 import { showErrorModal } from "./nprogress-utils.js";
 function loadScript(src) {
   return new Promise((resolve, reject) => {
@@ -41,8 +40,9 @@ loadScript("/assets/vendor/nprogress/nprogress.min.js")
       "Gagal memuat komponen halaman. Mohon periksa koneksi internet Anda."
     );
   });
-  
+
+// import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
 document.addEventListener("DOMContentLoaded", () => {
   // Anda bisa menambahkan fungsi global lainnya di sini.
-  createIcons({ icons });
+  // createIcons({ icons });
 });
