@@ -6,10 +6,11 @@
 import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (typeof createIcons !== "function") {
-    console.error("Lucide icons library not loaded correctly.");
-    return;
-  }
+  // Hapus pemeriksaan ini karena jika import berhasil, createIcons sudah tersedia.
+  // if (typeof createIcons !== "function") {
+  //   console.error("Lucide icons library not loaded correctly.");
+  //   return;
+  // }
 
   const initMobileSliderExpand = () => {
     if (!window.matchMedia("(max-width: 640px)").matches) return;
@@ -157,11 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initClickAnimations();
   initMobileSliderExpand();
 
-  if (window.lucide && typeof createIcons === "function") {
-    createIcons({ icons });
-  } else {
-    console.warn(
-      "Lucide or createIcons function is not available on window object. Icons might not render."
-    );
-  }
+  // Jika createIcons diimpor sebagai modul, ia akan tersedia di sini.
+  // Tidak perlu memeriksa window.lucide atau typeof createIcons.
+  createIcons({ icons });
 });

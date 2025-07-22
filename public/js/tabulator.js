@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
           allowEmpty: true,
           allowTruthy: true,
           allowFalsy: true,
+          // Hapus pemanggilan createIcons di sini
           tickElement:
             "<i data-lucide='check-circle' class='text-green-500 w-5 h-5'></i>",
           crossElement:
@@ -66,9 +67,11 @@ document.addEventListener("DOMContentLoaded", function () {
     ],
   });
 
+  // Panggil createIcons setelah tabel selesai dirender
   table.on("renderComplete", function () {
     createIcons({
       icons: icons,
+      // Anda bisa menentukan atribut atau class lain di sini jika perlu
     });
   });
 });

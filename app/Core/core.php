@@ -45,5 +45,6 @@ $allowed_pages = [
     'alerts-and-notifications', 'tailwind-css',
     'flatpickr', 'apexcharts', 'animate-style',
     'tabulator', 'splide', 'redis-test', 'modal-form',
-    'blank-content', 'nprogress', 'grid'
+    'blank-content', 'nprogress', 'grid', 'example-table', 
+    'advanced-table'
 ];

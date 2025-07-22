@@ -77,6 +77,7 @@ const globalNavigationData = [
                 label: 'Halaman',
                 icon: 'file-text',
                 children: [ // Sub-menu untuk "Halaman"
+                    { id: 'advanced-table', label: 'Nested Table', icon: 'table-2', page: 'advanced-table', layout: '', group: 'Advanced' },
                     { id: 'dashboard', label: 'Dashboard', page: 'dashboard', layout: 'sidebar-left', group: 'Contoh' },
                     { id: 'error-401', label: 'Error 401', page: '401', group: 'Error' },
                     { id: 'error-403', label: 'Error 403', page: '403', group: 'Error' },
@@ -97,7 +98,8 @@ const globalNavigationData = [
 ];
 
 const sidebarNavigationData = [
-    { id: 'dashboard', label: 'Dashboard', icon: 'layout-dashboard', page: 'dashboard', layout: 'sidebar-left' },
+    // Memindahkan Dashboard ke dalam grup Halaman baru
+    // { id: 'dashboard', label: 'Dashboard', icon: 'layout-dashboard', page: 'dashboard', layout: 'sidebar-left' },
     {
         id: 'menu-level-1',
         label: 'Menu Level 1',
@@ -130,6 +132,17 @@ const sidebarNavigationData = [
             { id: 'tailwind-css', label: 'Tailwind CSS', icon: 'wind', page: 'tailwind-css', layout: 'sidebar-left', group: 'Frameworks' },
             { id: 'animate-style', label: 'Animate.css', icon: 'sparkles', page: 'animate-style', layout: 'sidebar-left', group: 'Animasi' },
             { id: 'nprogress-js', label: 'NProgress.js', icon: 'gauge-circle', page: 'nprogress', layout: 'sidebar-left', group: 'Animasi' },
+        ]
+    },
+    // Menambahkan grup "Halaman" baru untuk sidebar
+    {
+        id: 'pages-sidebar',
+        label: 'Halaman',
+        icon: 'file-text', // Menggunakan ikon file-text untuk halaman
+        children: [
+            { id: 'dashboard', label: 'Dashboard', icon: 'layout-dashboard', page: 'dashboard', layout: 'sidebar-left', group: 'Contoh' },
+            { id: 'advanced-table', label: 'Nested Table', icon: 'table-2', page: 'advanced-table', layout: 'sidebar-left', group: 'Advanced' },
+            // Anda bisa menambahkan halaman lain di sini jika diperlukan
         ]
     },
     { id: 'settings', label: 'Pengaturan', icon: 'settings', page: 'settings', layout: 'sidebar-left' },

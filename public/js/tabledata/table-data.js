@@ -1,0 +1,266 @@
+/**
+ * @author    [EazZy Project]
+ * @copyright Copyright (c) [2025] [EazZy Project]
+ * @license   https://opensource.org/licenses/MIT MIT License
+ * @path      public/js/tabledata/table-data.js
+ *
+ * File ini berisi data contoh untuk tabel.
+ */
+
+// Ekspor data agar bisa diimpor oleh file lain
+export const tableData = [
+  {
+    nama_perusahaan: "PT. Inovasi Digital",
+    id_perusahaan: "CORP-001",
+    bidang_usaha: "Teknologi Informasi",
+    lokasi_perusahaan: "Bandung",
+    status_perusahaan: "Aktif",
+    _children: [
+      {
+        nama_cabang: "Kantor Cabang Jakarta",
+        id_cabang: "BRANCH-JKT01",
+        tipe_cabang: "Pengembangan Software",
+        lokasi_kota: "Jakarta Pusat",
+        status_cabang: "Operasional",
+        kepala_cabang: "Budi Santoso",
+        _children: [
+          {
+            nama_produk: "Sistem CRM Cloud",
+            sku_produk: "SaaS-CRM-01",
+            deskripsi_produk: "Platform Manajemen Hubungan Pelanggan",
+            lokasi_produk: "Virtual",
+            kategori_produk: "Software as a Service",
+            harga: 75000000,
+            _children: [],
+          },
+          {
+            nama_produk: "Aplikasi Mobile Banking",
+            sku_produk: "APP-MB-02",
+            deskripsi_produk: "Solusi Perbankan Digital",
+            lokasi_produk: "Mobile",
+            kategori_produk: "Aplikasi Mobile",
+            harga: 120000000,
+            _children: [],
+          },
+        ],
+      },
+      {
+        nama_cabang: "Kantor Cabang Surabaya",
+        id_cabang: "BRANCH-SBY02",
+        tipe_cabang: "Data Center",
+        lokasi_kota: "Surabaya",
+        status_cabang: "Operasional",
+        kepala_cabang: "Citra Dewi",
+        _children: [],
+      },
+    ],
+  },
+  {
+    nama_perusahaan: "CV. Agro Makmur",
+    id_perusahaan: "CORP-002",
+    bidang_usaha: "Pertanian & Pangan",
+    lokasi_perusahaan: "Yogyakarta",
+    status_perusahaan: "Aktif",
+    _children: [
+      {
+        nama_cabang: "Gudang Distribusi Solo",
+        id_cabang: "BRANCH-SLO01",
+        tipe_cabang: "Logistik",
+        lokasi_kota: "Solo",
+        status_cabang: "Operasional",
+        kepala_cabang: "Dedi Kurniawan",
+        _children: [],
+      },
+    ],
+  },
+  {
+    nama_perusahaan: "PT. Jaya Konstruksi",
+    id_perusahaan: "CORP-003",
+    bidang_usaha: "Konstruksi & Properti",
+    lokasi_perusahaan: "Surabaya",
+    status_perusahaan: "Aktif",
+  },
+  {
+    nama_perusahaan: "UD. Kreatif Furnitur",
+    id_perusahaan: "CORP-004",
+    bidang_usaha: "Manufaktur Furnitur",
+    lokasi_perusahaan: "Jepara",
+    status_perusahaan: "Aktif",
+  },
+  {
+    nama_perusahaan: "PT. Media Edukasi",
+    id_perusahaan: "CORP-005",
+    bidang_usaha: "Pendidikan & Penerbitan",
+    lokasi_perusahaan: "Jakarta",
+    status_perusahaan: "Aktif",
+    _children: [
+      {
+        nama_cabang: "Pusat Pelatihan Online",
+        id_cabang: "BRANCH-OL01",
+        tipe_cabang: "E-Learning",
+        lokasi_kota: "Virtual",
+        status_cabang: "Operasional",
+        kepala_cabang: "Eka Putri",
+        _children: [
+          {
+            nama_produk: "Kursus Data Science",
+            sku_produk: "EDU-DS-01",
+            deskripsi_produk: "Pelatihan Analisis Data",
+            lokasi_produk: "Online",
+            kategori_produk: "Kursus Online",
+            harga: 15000000,
+            _children: [],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    nama_perusahaan: "CV. Boga Rasa",
+    id_perusahaan: "CORP-006",
+    bidang_usaha: "Kuliner & Restoran",
+    lokasi_perusahaan: "Bandung",
+    status_perusahaan: "Nonaktif",
+  },
+  {
+    nama_perusahaan: "PT. Solusi Energi",
+    id_perusahaan: "CORP-007",
+    bidang_usaha: "Energi Terbarukan",
+    lokasi_perusahaan: "Semarang",
+    status_perusahaan: "Aktif",
+  },
+  {
+    nama_perusahaan: "UD. Tekstil Indah",
+    id_perusahaan: "CORP-008",
+    bidang_usaha: "Tekstil & Garmen",
+    lokasi_perusahaan: "Solo",
+    status_perusahaan: "Aktif",
+  },
+  {
+    nama_perusahaan: "PT. Logistik Cepat",
+    id_perusahaan: "CORP-009",
+    bidang_usaha: "Logistik & Pengiriman",
+    lokasi_perusahaan: "Jakarta",
+    status_perusahaan: "Aktif",
+    _children: [
+      {
+        nama_cabang: "Depo Bandung",
+        id_cabang: "BRANCH-BDG03",
+        tipe_cabang: "Gudang",
+        lokasi_kota: "Bandung",
+        status_cabang: "Operasional",
+        kepala_cabang: "Fajar Setiawan",
+        _children: [],
+      },
+    ],
+  },
+  {
+    nama_perusahaan: "CV. Pariwisata Bahagia",
+    id_perusahaan: "CORP-010",
+    bidang_usaha: "Pariwisata & Travel",
+    lokasi_perusahaan: "Bali",
+    status_perusahaan: "Aktif",
+  },
+  {
+    nama_perusahaan: "PT. Kesehatan Prima",
+    id_perusahaan: "CORP-011",
+    bidang_usaha: "Kesehatan & Farmasi",
+    lokasi_perusahaan: "Surabaya",
+    status_perusahaan: "Aktif",
+  },
+  {
+    nama_perusahaan: "UD. Kerajinan Tangan",
+    id_perusahaan: "CORP-012",
+    bidang_usaha: "Kerajinan & Seni",
+    lokasi_perusahaan: "Yogyakarta",
+    status_perusahaan: "Nonaktif",
+  },
+  {
+    nama_perusahaan: "PT. Finansial Cerdas",
+    id_perusahaan: "CORP-013",
+    bidang_usaha: "Keuangan & Investasi",
+    lokasi_perusahaan: "Jakarta",
+    status_perusahaan: "Aktif",
+    _children: [
+      {
+        nama_cabang: "Unit Wealth Management",
+        id_cabang: "BRANCH-WM01",
+        tipe_cabang: "Layanan Keuangan",
+        lokasi_kota: "Jakarta Selatan",
+        status_cabang: "Operasional",
+        kepala_cabang: "Gita Lestari",
+        _children: [],
+      },
+    ],
+  },
+  {
+    nama_perusahaan: "CV. Digital Marketing",
+    id_perusahaan: "CORP-014",
+    bidang_usaha: "Pemasaran Digital",
+    lokasi_perusahaan: "Bandung",
+    status_perusahaan: "Aktif",
+  },
+  {
+    nama_perusahaan: "PT. Otomotif Maju",
+    id_perusahaan: "CORP-015",
+    bidang_usaha: "Otomotif",
+    lokasi_perusahaan: "Bekasi",
+    status_perusahaan: "Aktif",
+  },
+  {
+    nama_perusahaan: "UD. Perkebunan Hijau",
+    id_perusahaan: "CORP-016",
+    bidang_usaha: "Agribisnis",
+    lokasi_perusahaan: "Malang",
+    status_perusahaan: "Aktif",
+  },
+  {
+    nama_perusahaan: "PT. Riset Inovatif",
+    id_perusahaan: "CORP-017",
+    bidang_usaha: "Riset & Pengembangan",
+    lokasi_perusahaan: "Bandung",
+    status_perusahaan: "Aktif",
+    _children: [
+      {
+        nama_cabang: "Lab Bioteknologi",
+        id_cabang: "BRANCH-BIO01",
+        tipe_cabang: "Laboratorium",
+        lokasi_kota: "Bandung",
+        status_cabang: "Operasional",
+        kepala_cabang: "Hadi Susanto",
+        _children: [
+          {
+            nama_produk: "Kit Uji Cepat",
+            sku_produk: "LAB-T-01",
+            deskripsi_produk: "Alat Diagnostik Cepat",
+            lokasi_produk: "Laboratorium",
+            kategori_produk: "Alat Kesehatan",
+            harga: 5000000,
+            _children: [],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    nama_perusahaan: "CV. Desain Interior",
+    id_perusahaan: "CORP-018",
+    bidang_usaha: "Desain Interior",
+    lokasi_perusahaan: "Jakarta",
+    status_perusahaan: "Nonaktif",
+  },
+  {
+    nama_perusahaan: "PT. Telekomunikasi Jaya",
+    id_perusahaan: "CORP-019",
+    bidang_usaha: "Telekomunikasi",
+    lokasi_perusahaan: "Surabaya",
+    status_perusahaan: "Aktif",
+  },
+  {
+    nama_perusahaan: "UD. Kuliner Tradisional",
+    id_perusahaan: "CORP-020",
+    bidang_usaha: "Kuliner Tradisional",
+    lokasi_perusahaan: "Solo",
+    status_perusahaan: "Aktif",
+  },
+];
