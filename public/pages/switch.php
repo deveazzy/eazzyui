@@ -1,7 +1,7 @@
 <?php
 // Tentukan urutan kategori yang akan dicari
 // Gunakan 'advanced-page' sesuai dengan nama folder Anda
-$content_categories = ['basic-page', 'advanced-page', 'vendor-page']; 
+$content_categories = ['basic-page', 'advanced-page', 'vendor-page', 'error-page']; 
 
 $found_content = false;
 $content_file = '';
@@ -27,10 +27,10 @@ if (in_array($page, $allowed_pages)) {
     if ($found_content) {
         include $content_file;
     } else {
-        include __DIR__ . '/content/404.php'; 
+        include __DIR__ . '/content/error-page/404.php'; 
     }
 } else {
-    include __DIR__ . '/content/404.php'; 
+    include __DIR__ . '/content/error-page/404.php'; 
 }
 
 ?>

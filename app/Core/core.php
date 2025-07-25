@@ -34,7 +34,7 @@ if ($page === 'redis-test' && isset($_GET['clear_cache'])) {
 $page_css_file = "/css/{$page}.css";
 
 $pages_without_sidebar = [
-    '401', '403', '500', '503', '404', 'home', 'about'
+    '401', '403', '500', '503', '404', 'home', 'about', 'login',
 ];
 
 $allowed_pages = [
@@ -46,11 +46,11 @@ $allowed_pages = [
     'tabulator', 'splide', 'redis-test', 'modal-form',
     'blank-content', 'nprogress', 'grid', 'example-table', 
     'advanced-table', 'xlsx', 'luxon', 'jspdf', 'qr-code-styling',
-    'pickr'
+    'pickr', 'login'
 ];
 
 $pages_using_advanced_js = [
-    'advanced-table',
+    'advanced-table', 'login'
 ];
 
 $js_to_load_path = '';

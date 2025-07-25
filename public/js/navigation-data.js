@@ -26,7 +26,7 @@ const globalNavigationData = [
         id: "atoms",
         label: "Elemen Dasar",
         icon: "square",
-        // page: 'atoms',
+        page: "atoms",
         layout: "",
         children: [
           // Sub-menu untuk "Elemen Dasar" (untuk Mega Menu & Mobile Accordion)
@@ -116,7 +116,7 @@ const globalNavigationData = [
           {
             id: "modal-form",
             label: "Modal & Form",
-            icon: "popup-open", // Menggunakan ikon popup-open
+            icon: "popup-open",
             page: "modal-form",
             layout: "",
             group: "Form & Utilitas",
@@ -131,7 +131,6 @@ const globalNavigationData = [
           },
         ],
       },
-      // ===================================
       {
         id: "assets",
         label: "Aset",
@@ -210,7 +209,6 @@ const globalNavigationData = [
             layout: "",
             group: "Form & Utilitas",
           },
-          // MENAMBAHKAN PICKR KE NAVIGASI GLOBAL
           {
             id: "pickr-js",
             label: "Pickr",
@@ -219,7 +217,6 @@ const globalNavigationData = [
             layout: "",
             group: "Form & Utilitas",
           },
-          // AKHIR PENAMBAHAN PICKR
           {
             id: "tailwind-css",
             label: "Tailwind CSS",
@@ -275,6 +272,14 @@ const globalNavigationData = [
             layout: "",
             group: "Contoh Lanjutan",
           },
+          {
+            id: "login-page",
+            label: "Login",
+            icon: "log-in",
+            page: "login",
+            layout: "sidebar-left",
+            group: "Contoh Lanjutan",
+          },
           { id: "error-401", label: "Error 401", page: "401", group: "Error" },
           { id: "error-403", label: "Error 403", page: "403", group: "Error" },
           { id: "error-404", label: "Error 404", page: "404", group: "Error" },
@@ -294,17 +299,16 @@ const globalNavigationData = [
 ];
 
 const sidebarNavigationData = [
-  // INI ADALAH PENGGANTI DARI "menu-level-1" DAN DIISI DENGAN KONTEN "ELEMEN DASAR" (ATOMS)
   {
-    id: "atoms-sidebar-main", // ID unik untuk induk "Elemen Dasar" di sidebar
-    label: "Elemen Dasar", // Mengganti label
-    icon: "square", // Mengganti ikon
+    id: "atoms-sidebar-main",
+    label: "Elemen Dasar",
+    icon: "square",
     children: [
       {
-        id: "ui-elements-sidebar", // ID unik untuk sidebar
+        id: "ui-elements-sidebar",
         label: "Koleksi Elemen",
         icon: "layers",
-        page: "atoms",
+        page: "#",
         layout: "sidebar-left",
         group: "Dasar",
         children: [
@@ -405,7 +409,7 @@ const sidebarNavigationData = [
 
   // Menambahkan struktur 'Aset' ke sidebarNavigationData
   {
-    id: "assets-sidebar", // ID unik untuk sidebar agar tidak bentrok dengan globalNav
+    id: "assets-sidebar",
     label: "Aset",
     icon: "image",
     children: [
@@ -481,7 +485,6 @@ const sidebarNavigationData = [
         layout: "sidebar-left",
         group: "Form & Utilitas",
       },
-      // MENAMBAHKAN PICKR KE NAVIGASI SIDEBAR
       {
         id: "pickr-js",
         label: "Pickr",
@@ -490,7 +493,6 @@ const sidebarNavigationData = [
         layout: "sidebar-left",
         group: "Form & Utilitas",
       },
-      // AKHIR PENAMBAHAN PICKR
       {
         id: "tailwind-css",
         label: "Tailwind CSS",
@@ -547,6 +549,15 @@ const sidebarNavigationData = [
         layout: "sidebar-left",
         group: "Contoh Lanjutan",
       },
+      {
+        id: "login-page",
+        label: "Login",
+        icon: "log-in",
+        page: "login",
+        layout: "sidebar-left",
+        group: "Contoh Lanjutan",
+      },
+      // AKHIR PEMBARUAN LOGIN
       {
         id: "error-401",
         label: "Error 401",
