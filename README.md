@@ -53,7 +53,7 @@ Untuk mulai menggunakan _template_ dan aset UI ini dalam proyek Anda:
 
 1.  **Kloning repositori ini:**
     ```bash
-    git clone [https://github.com/deveazzy/EazZyProject-UI.git](https://github.com/deveazzy/eazzyui.git)
+    git clone [https://github.com/deveazzy/eazzyui.git](https://github.com/deveazzy/eazzyui.git)
     cd EazZyProject-UI
     ```
 2.  **Jelajahi isinya:**
