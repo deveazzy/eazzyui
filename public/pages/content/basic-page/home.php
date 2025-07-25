@@ -286,7 +286,7 @@
                 Anda juga bisa mengunduh aset UI/UX kami secara langsung di sini.
             </p>
             <div class="flex flex-col md:flex-row justify-center items-center gap-4 max-w-md mx-auto">
-                <a href="https://github.com/deveazzy/EazZyProject-UI" target="_blank" class="w-full md:w-auto bg-gray-800 text-white font-bold px-6 py-3 rounded-lg text-lg hover:bg-gray-900 transition-colors duration-300 flex items-center justify-center gap-2 shadow-lg transform hover:scale-105">
+                <a href="https://github.com/deveazzy/eazzyui" target="_blank" class="w-full md:w-auto bg-gray-800 text-white font-bold px-6 py-3 rounded-lg text-lg hover:bg-gray-900 transition-colors duration-300 flex items-center justify-center gap-2 shadow-lg transform hover:scale-105">
                     <i data-lucide="github" class="w-6 h-6"></i>
                     Kunjungi GitHub
                 </a>

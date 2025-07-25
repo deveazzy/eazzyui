@@ -15,7 +15,7 @@
                 <a href="atoms" class="inline-block bg-white text-blue-600 font-bold px-8 py-4 rounded-full text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg transform hover:scale-105">
                     Lihat Komponen UI
                 </a>
-                <a href="https://github.com/deveazzy/EazZyProject/tree/uiux" target="_blank" class="inline-block border-2 border-white text-white font-bold px-8 py-4 rounded-full text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 shadow-lg transform hover:scale-105">
+                <a href="https://github.com/deveazzy/eazzyui" target="_blank" class="inline-block border-2 border-white text-white font-bold px-8 py-4 rounded-full text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 shadow-lg transform hover:scale-105">
                     Kunjungi GitHub
                 </a>
             </div>
@@ -103,7 +103,7 @@
                 <a href="atoms" class="w-full md:w-auto bg-blue-600 text-white font-bold px-8 py-4 rounded-full text-lg hover:bg-blue-700 transition-colors duration-300 shadow-lg transform hover:scale-105">
                     Lihat Komponen UI
                 </a>
-                <a href="https://github.com/deveazzy/EazZyProject-UI" target="_blank" class="w-full md:w-auto border-2 border-blue-600 text-blue-600 font-bold px-8 py-4 rounded-full text-lg hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-lg transform hover:scale-105">
+                <a href="https://github.com/deveazzy/eazzyui" target="_blank" class="w-full md:w-auto border-2 border-blue-600 text-blue-600 font-bold px-8 py-4 rounded-full text-lg hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-lg transform hover:scale-105">
                     Kunjungi GitHub
                 </a>
             </div>
