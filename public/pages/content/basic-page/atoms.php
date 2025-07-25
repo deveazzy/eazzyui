@@ -123,7 +123,54 @@
                 </div>
             </div>
         </section>
-        
+        <section id="validate" class="pt-20 -mt-20">
+            <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-200 pb-3 mb-6">Validasi</h2>
+            <i>Contoh Data : eazzy | eazzy@example.com</i>
+            <div class="p-6 bg-white rounded-lg shadow-sm space-y-4">
+                <form id="registrationForm" method="POST" action="">
+                    <div class="mb-4">
+                        <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Username:</label>
+                        <div class="flex items-center space-x-2">
+                            <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                class="shadow appearance-none border rounded w-11/12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                placeholder="Masukkan Username"
+                            >
+                            <div id="usernameIcon" class="flex-shrink-0 w-1/12 flex justify-center items-center">
+                                </div>
+                        </div>
+                        <p id="usernameFeedback" class="text-xs italic mt-1 leading-tight"></p>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                        <div class="flex items-center space-x-2">
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="shadow appearance-none border rounded w-11/12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                placeholder="Masukkan Email"
+                            >
+                            <div id="emailIcon" class="flex-shrink-0 w-1/12 flex justify-center items-center">
+                                </div>
+                        </div>
+                        <p id="emailFeedback" class="text-xs italic mt-1 leading-tight"></p>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <button
+                            type="submit"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        >
+                            Daftar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
         <!-- 3. Typography Section -->
         <section id="typography" class="pt-20 -mt-20">
             <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-200 pb-3 mb-6">3. Tipografi</h2>

@@ -45,7 +45,8 @@ $allowed_pages = [
     'flatpickr', 'apexcharts', 'animate-style',
     'tabulator', 'splide', 'redis-test', 'modal-form',
     'blank-content', 'nprogress', 'grid', 'example-table', 
-    'advanced-table', 'xlsx', 'luxon', 'jspdf', 'qr-code-styling'
+    'advanced-table', 'xlsx', 'luxon', 'jspdf', 'qr-code-styling',
+    'pickr'
 ];
 
 $pages_using_advanced_js = [

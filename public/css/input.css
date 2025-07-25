@@ -20,4 +20,6 @@
 @import "W:/uiux/src/css/vendor/pnotify/PNotifyBrightTheme.css";
 @import "W:/uiux/src/css/_example-table.css";
 @import "W:/uiux/src/css/_dashboard.css";
+@import "W:/uiux/src/css/vendor/pickr/classic.min.css";
+
 @import "tailwindcss";

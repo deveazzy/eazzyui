@@ -210,6 +210,16 @@ const globalNavigationData = [
             layout: "",
             group: "Form & Utilitas",
           },
+          // MENAMBAHKAN PICKR KE NAVIGASI GLOBAL
+          {
+            id: "pickr-js",
+            label: "Pickr",
+            icon: "palette",
+            page: "pickr",
+            layout: "",
+            group: "Form & Utilitas",
+          },
+          // AKHIR PENAMBAHAN PICKR
           {
             id: "tailwind-css",
             label: "Tailwind CSS",
@@ -294,13 +304,13 @@ const sidebarNavigationData = [
         id: "ui-elements-sidebar", // ID unik untuk sidebar
         label: "Koleksi Elemen",
         icon: "layers",
+        page: "atoms",
         layout: "sidebar-left",
         group: "Dasar",
         children: [
           {
             id: "buttons-atom-sidebar",
             label: "Buttons",
-            icon: "pointer",
             page: "atoms",
             hash: "#buttons",
             layout: "sidebar-left",
@@ -308,7 +318,6 @@ const sidebarNavigationData = [
           {
             id: "inputs-atom-sidebar",
             label: "Inputs",
-            icon: "text-cursor-input",
             page: "atoms",
             hash: "#inputs",
             layout: "sidebar-left",
@@ -316,7 +325,6 @@ const sidebarNavigationData = [
           {
             id: "toggles-atom-sidebar",
             label: "Toggles",
-            icon: "toggle-left",
             page: "atoms",
             hash: "#toggles",
             layout: "sidebar-left",
@@ -324,7 +332,6 @@ const sidebarNavigationData = [
           {
             id: "badges-atom-sidebar",
             label: "Badges",
-            icon: "badge",
             page: "atoms",
             hash: "#badges",
             layout: "sidebar-left",
@@ -332,7 +339,6 @@ const sidebarNavigationData = [
           {
             id: "avatars-atom-sidebar",
             label: "Avatars",
-            icon: "circle-user",
             page: "atoms",
             hash: "#avatars",
             layout: "sidebar-left",
@@ -340,7 +346,6 @@ const sidebarNavigationData = [
           {
             id: "alerts-atom-sidebar",
             label: "Alerts",
-            icon: "circle-alert",
             page: "atoms",
             hash: "#alerts",
             layout: "sidebar-left",
@@ -348,7 +353,6 @@ const sidebarNavigationData = [
           {
             id: "progress-atom-sidebar",
             label: "Progress Bars",
-            icon: "loader-circle",
             page: "atoms",
             hash: "#progress",
             layout: "sidebar-left",
@@ -382,7 +386,7 @@ const sidebarNavigationData = [
       {
         id: "modal-form-sidebar",
         label: "Modal & Form",
-        icon: "layout-template",
+        icon: "popup-open",
         page: "modal-form",
         layout: "sidebar-left",
         group: "Form & Utilitas",
@@ -398,8 +402,10 @@ const sidebarNavigationData = [
     ],
   },
   // AKHIR DARI PENGGANTIAN "MENU LEVEL"
+
+  // Menambahkan struktur 'Aset' ke sidebarNavigationData
   {
-    id: "assets-sidebar",
+    id: "assets-sidebar", // ID unik untuk sidebar agar tidak bentrok dengan globalNav
     label: "Aset",
     icon: "image",
     children: [
@@ -475,6 +481,16 @@ const sidebarNavigationData = [
         layout: "sidebar-left",
         group: "Form & Utilitas",
       },
+      // MENAMBAHKAN PICKR KE NAVIGASI SIDEBAR
+      {
+        id: "pickr-js",
+        label: "Pickr",
+        icon: "palette",
+        page: "pickr",
+        layout: "sidebar-left",
+        group: "Form & Utilitas",
+      },
+      // AKHIR PENAMBAHAN PICKR
       {
         id: "tailwind-css",
         label: "Tailwind CSS",
