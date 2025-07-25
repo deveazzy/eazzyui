@@ -76,6 +76,7 @@ coverage/
 .factorypath
 .metadata/
 public/assets/vendor/
+public/assets/file/
 .vscode/
 src/
 etc/
