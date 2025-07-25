@@ -54,7 +54,7 @@ $pages_using_advanced_js = [
 
 $js_to_load_path = '';
 if (in_array($page, $pages_using_advanced_js)) {
-    $js_to_load_path = "/js/advanced-modules/{$page}.js";
+    $js_to_load_path = "/js/advanced-js/{$page}.js";
 } else {
-    $js_to_load_path = "/js/basic/{$page}.js";
+    $js_to_load_path = "/js/basic-js/{$page}.js";
 }
