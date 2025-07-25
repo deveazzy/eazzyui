@@ -1,4 +1,4 @@
-# EazZy Project UI
+# EazZy UI
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub contributors](https://img.shields.io/github/contributors/deveazzy/EazZyProject-UI)](https://github.com/deveazzy/EazZyProject-UI/graphs/contributors)
@@ -7,9 +7,9 @@
 
 ---
 
-## Tentang EazZy Project UI
+## Tentang EazZy UI
 
-Selamat datang di repositori **EazZy Project UI**! Ini adalah jantung visual dari ekosistem EazZy Project—tempat di mana **desain intuitif dan pengembangan cepat bertemu**. Kami menghadirkan koleksi lengkap aset antarmuka pengguna (UI) yang dirancang dengan presisi untuk mempercepat pengembangan aplikasi Anda.
+Selamat datang di repositori **EazZy UI**! Ini adalah jantung visual dari ekosistem EazZy Project—tempat di mana **desain intuitif dan pengembangan cepat bertemu**. Kami menghadirkan koleksi lengkap aset antarmuka pengguna (UI) yang dirancang dengan presisi untuk mempercepat pengembangan aplikasi Anda.
 
 Fokus kami adalah pada **estetika, fungsionalitas, dan pengalaman pengguna** yang mulus. Anda akan menemukan _boilerplate_ halaman, gaya CSS yang konsisten, fungsi JavaScript esensial, dan aset gambar yang terkurasi, semuanya siap untuk diintegrasikan ke dalam proyek web Anda.
 
@@ -27,7 +27,7 @@ Dibangun dengan semangat **open-source**, repositori ini bukan hanya sekadar kol
 
 ---
 
-## Mengapa Memilih EazZy Project UI?
+## Mengapa Memilih EazZy UI?
 
 - **Pengembangan Cepat:** Hemat waktu berjam-jam dalam _setup_ UI dari nol.
 - **Desain Intuitif:** Aset yang dirancang dengan mempertimbangkan pengalaman pengguna.

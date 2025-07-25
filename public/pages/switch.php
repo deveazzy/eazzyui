@@ -1,26 +1,36 @@
 <?php
-/**
- * page/switch.php
- *
- * File ini HANYA mengelola routing konten halaman berdasarkan parameter URL 'page'.
- * Logika layout (seperti sidebar) ditangani di index.php.
- */
-// Daftar halaman yang valid untuk mencegah include file sembarangan
-// var_dump($page);
+// Tentukan urutan kategori yang akan dicari
+// Gunakan 'advanced-page' sesuai dengan nama folder Anda
+$content_categories = ['basic-page', 'advanced-page', 'vendor-page']; 
+
+$found_content = false;
+$content_file = '';
 
 if (in_array($page, $allowed_pages)) {
-    // Tambahkan '../' untuk naik satu level dari folder 'page' ke root direktori
-    $content_file = __DIR__ . '/content/' . $page . '.php'; 
-    if (file_exists($content_file)) {
+    foreach ($content_categories as $category) {
+        $potential_file = __DIR__ . '/content/' . $category . '/' . $page . '.php'; 
+        if (file_exists($potential_file)) {
+            $content_file = $potential_file;
+            $found_content = true;
+            break; 
+        }
+    }
+
+    if (!$found_content) {
+        $potential_file_in_root = __DIR__ . '/content/' . $page . '.php'; 
+        if (file_exists($potential_file_in_root)) {
+            $content_file = $potential_file_in_root;
+            $found_content = true;
+        }
+    }
+
+    if ($found_content) {
         include $content_file;
     } else {
-        // Jika file tidak ada meski ada di daftar (seharusnya tidak terjadi)
-        include 'content/404.php'; 
+        include __DIR__ . '/content/404.php'; 
     }
 } else {
-    // Jika 'page' tidak valid, tampilkan halaman 404
-    include 'content/404.php'; 
-    // http_response_code(404); // Opsional: Kirim header HTTP 404
+    include __DIR__ . '/content/404.php'; 
 }
 
 ?>

@@ -37,8 +37,8 @@ include_once APP_ROOT . '/app/Core/core.php';
       echo '<script type="module" src="/js/sidebar-left.js" defer></script>';
   }
   // Secara dinamis mencari file .js yang namanya sama dengan $page.
-  if (isset($page_js_file) && file_exists($_SERVER['DOCUMENT_ROOT'] . $page_js_file)) {
-        echo "<script type='module' src='{$page_js_file}' defer></script>";
+  if (isset($js_to_load_path) && file_exists($_SERVER['DOCUMENT_ROOT'] . $js_to_load_path)) {
+        echo "<script type='module' src='{$js_to_load_path}' defer></script>";
   }
   ?>
 </body>

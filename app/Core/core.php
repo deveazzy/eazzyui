@@ -25,14 +25,13 @@ if ($page === 'redis-test' && isset($_GET['clear_cache'])) {
             $redis->del('products:all');
         }
     } catch (Exception $e) {
-        // Error handling for Redis connection
+        
     }
     header('Location: /redis-test');
     exit;
 }
 
 $page_css_file = "/css/{$page}.css";
-$page_js_file = "/js/{$page}.js";
 
 $pages_without_sidebar = [
     '401', '403', '500', '503', '404', 'home', 'about'
@@ -41,10 +40,21 @@ $pages_without_sidebar = [
 $allowed_pages = [
     '401', '403', '500', '503', '404',
     'home', 'about', 'atoms', 'icons',
-    'typography', 'tabs', 'widgets', 'buttons',
+    'typography', 'tabs', 'dashboard', 'buttons',
     'alerts-and-notifications', 'tailwind-css',
     'flatpickr', 'apexcharts', 'animate-style',
     'tabulator', 'splide', 'redis-test', 'modal-form',
     'blank-content', 'nprogress', 'grid', 'example-table', 
-    'advanced-table'
+    'advanced-table', 'xlsx', 'luxon', 'jspdf', 'qr-code-styling'
 ];
+
+$pages_using_advanced_js = [
+    'advanced-table',
+];
+
+$js_to_load_path = '';
+if (in_array($page, $pages_using_advanced_js)) {
+    $js_to_load_path = "/js/advanced-modules/{$page}.js";
+} else {
+    $js_to_load_path = "/js/basic/{$page}.js";
+}

@@ -10,7 +10,7 @@
  * umpan balik visual selama pemuatan halaman. Ini menggunakan NProgress.inc()
  * untuk mensimulasikan kemajuan pada koneksi yang lambat.
  */
-import { showErrorModal } from "./nprogress-utils.js";
+import { showErrorModal } from "./basic/nprogress-utils.js";
 function loadScript(src) {
   return new Promise((resolve, reject) => {
     const script = document.createElement("script");

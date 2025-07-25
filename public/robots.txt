@@ -1,1 +1,6 @@
 Sitemap: https://uiux.eazzy-project.com/sitemap.xml
+Sitemap: https://uiux.eazzy-project.com/sitemap.xml
+Sitemap: https://eazzy-project.com/sitemap.xml
+User-agent: *
+Disallow: /*?q=
+Disallow: /cdn-cgi/
