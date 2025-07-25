@@ -9,7 +9,6 @@
             <i data-lucide="menu" class="h-6 w-6"></i>
         </button>
         
-        <!-- Kontainer untuk menu navigasi desktop. Akan diisi oleh JavaScript. -->
         <nav id="desktop-nav-container" class="hidden md:flex space-x-8 items-center">
             <!-- Menu desktop akan dirender di sini oleh js/header.js -->
         </nav>
@@ -18,13 +17,11 @@
     <!-- Panel Mega Menu (Desktop) -->
     <div id="mega-menu" class="hidden md:block absolute top-full left-1/2 -translate-x-1/2 w-[80vw] max-w-6xl bg-white rounded-b-lg shadow-xl border-t border-gray-300 opacity-0 transform -translate-y-4 pointer-events-none">
         <div class="p-8 grid grid-cols-4 gap-8">
-            <!-- Kolom 1: Kategori Utama (akan diisi oleh JS) -->
             <div id="mega-menu-categories" class="col-span-1 border-r border-gray-300 pr-8">
                 <ul id="mega-menu-category-list" class="space-y-2">
                     <!-- Kategori akan dirender di sini oleh js/header.js -->
                 </ul>
             </div>
-            <!-- Kolom 2-4: Konten Dinamis (akan diisi oleh JS) -->
             <div id="mega-menu-content-panel" class="col-span-3">
                 <!-- Konten submenu akan dirender di sini oleh js/header.js -->
             </div>
@@ -38,5 +35,4 @@
         </nav>
     </div>
 </header>
-<!-- [BARU] Elemen penanda untuk dideteksi oleh Intersection Observer -->
 <div id="header-sentinel"></div>

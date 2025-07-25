@@ -1,35 +1,3 @@
-<style>
-    /* Efek hover yang lebih halus untuk semua kartu widget */
-    .widget-card {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        background-color: #fff;
-        border: 1px solid #e5e7eb; /* gray-200 */
-    }
-    .widget-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1), 0 8px 10px -6px rgba(59, 130, 246, 0.08);
-    }
-
-    /* Style untuk progress bar performa situs */
-    .performance-ring {
-        transform: rotate(-90deg);
-    }
-    .performance-ring circle {
-        transition: stroke-dashoffset 1.5s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-
-    /* Style untuk widget musik */
-    .music-progress-bar-bg { background-color: rgba(255, 255, 255, 0.3); overflow: hidden; }
-    .music-progress-bar-fg { background-color: #fff; height: 100%; width: 0%; transition: width 1s linear; }
-    .music-player.playing .music-progress-bar-fg { width: 100%; }
-
-    /* Efek untuk tombol kirim */
-    .form-widget button.is-sending {
-        cursor: not-allowed;
-        background-color: #16a34a; /* green-600 */
-    }
-</style>
-
 <main class="flex-1 container mx-auto p-4 md:p-8 lg:p-10">
     <div class="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl max-w-7xl mx-auto">
 

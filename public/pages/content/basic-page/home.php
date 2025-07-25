@@ -299,5 +299,4 @@
     </section>
 </main>
 
-<!-- Memuat library Splide dari lokal -->
 <script src="/assets/vendor/splide/splide.min.js" defer></script>

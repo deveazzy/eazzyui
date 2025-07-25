@@ -1,18 +1,4 @@
-<?php
-/**
- * @[EazZy Project] Copyright (c) [2025] [EazZy Project] license
- * @https://opensource.org/licenses/MIT MIT License
- * @path public/pages/atoms.php
- * @author EazZy Project
- *
- * File ini berisi konten utama untuk halaman "Template Elemen Dasar (Atoms)" EazZy Project.
- * Ini mencakup berbagai komponen UI dasar seperti tombol, input, tipografi, badge, avatar,
- * alert, toggle, dan progress bar.
- * Konten ini akan di-include oleh page/switch.php.
- */
-?>
 <main class="flex-1 container mx-auto p-6 md:p-10">
-<!-- Konten utama halaman Anda akan ditempatkan di sini. -->
 <div class="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl max-w-7xl mx-auto">
     <div class="flex flex-col md:flex-row items-center md:space-x-4 mb-8 md:mb-12 text-center md:text-left relative">
         <div class="bg-blue-100 text-blue-600 p-4 rounded-full mb-4 md:mb-0">
@@ -25,9 +11,7 @@
             <p class="text-lg md:text-xl text-gray-500 mt-1">Panduan visual untuk komponen dasar Eazzy Project.</p>
         </div>
     </div>
-    <!-- Sections Container -->
     <div class="space-y-12">
-        <!-- 1. Buttons Section -->
         <section id="buttons" class="pt-20 -mt-20">
             <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-200 pb-3 mb-6">1. Buttons (Tombol)</h2>
             <div class="p-6 bg-white rounded-lg shadow-sm space-y-6">
@@ -118,7 +102,6 @@
                 <div class="space-y-2">
                     <label for="date-picker" class="font-medium text-gray-700">Tanggal Transaksi</label>
                     <div class="relative">
-                        <!-- <input class="flatpickr flatpickr-input" type="text" placeholder="Select Date.." readonly="readonly"> -->
                         <input type="text" id="date-picker" name="transaction_date" placeholder="Pilih rentang tanggal..." class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 pr-10 bg-white cursor-pointer" readonly>
                         <i data-lucide="calendar-days" class="absolute top-1/2 right-3 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none"></i>
                     </div>

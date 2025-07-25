@@ -1,12 +1,3 @@
-<?php
-/**
- * @author    [EazZy Project]
- * @copyright Copyright (c) [2025] [EazZy Project]
- * @license   https://opensource.org/licenses/MIT MIT License
- * @path public/pages/example-table.php
- */
-?>
-
 <main class="flex-1 container mx-auto p-4 md:p-8 lg:p-10">
     <div class="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl max-w-full mx-auto">
 
@@ -74,7 +65,7 @@
     </div>
 </main>
 
-<!-- Popup Modal (Tidak Berubah) -->
+<!-- Popup Modal -->
 <div id="action-popup" class="hidden fixed inset-0 z-50">
     <div class="flex h-full w-full items-center justify-center p-4">
         <div id="popup-content" class="bg-white rounded-xl shadow-2xl p-6 w-full max-w-sm">
@@ -94,5 +85,4 @@
 <script src="/assets/vendor/luxon/luxon.min.js" defer></script>
 <script src="/assets/vendor/jspdf/jspdf.umd.min.js"></script>
 <script src="/assets/vendor/jspdf/jspdf.plugin.autotable.min.js"></script>
-<!-- PERUBAHAN: Tambahkan type="module" -->
 <script src="/js/buttons.js" type="module" defer></script>

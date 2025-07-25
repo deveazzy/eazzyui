@@ -1,19 +1,3 @@
-<?php
-/**
- * @[EazZy Project] Copyright (c) [2025] [EazZy Project] license
- * @https://opensource.org/licenses/MIT MIT License
- * @path public/pages/buttons.php
- * @author EazZy Project
- *
- * File ini berisi konten utama untuk halaman "Variasi Tombol (Buttons)" EazZy Project.
- * Ini mencakup berbagai komponen UI tombol seperti tombol dasar, ukuran, grup, dropdown,
- * tombol dengan efek hover, tombol animasi, tombol link, tombol ikon saja,
- * tombol media sosial, tombol toggle, tombol status, tombol block, tombol minimalis,
- * tombol lingkaran dengan notifikasi, dan tombol search/slider.
- * Konten ini akan di-include oleh page/switch.php.
- */
-?>
-
 <main class="flex-1 container mx-auto p-4 md:p-8 lg:p-10">
     <div class="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl max-w-7xl mx-auto">
 

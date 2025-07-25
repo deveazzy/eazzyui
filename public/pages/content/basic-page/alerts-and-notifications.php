@@ -2,10 +2,9 @@
     <!-- Kontainer utama halaman, disesuaikan agar seragam dengan halaman lain -->
     <div class="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl max-w-7xl mx-auto">
 
-        <!-- Judul Halaman - disesuaikan agar seragam -->
         <div class="flex flex-col md:flex-row items-center md:space-x-4 mb-8 md:mb-12 text-center md:text-left">
             <div class="bg-blue-100 text-blue-600 p-4 rounded-full mb-4 md:mb-0">
-                <i data-lucide="bell-ring" class="w-10 h-10 md:w-12 md:h-12"></i> <!-- Menggunakan ikon bell-ring yang lebih relevan -->
+                <i data-lucide="bell-ring" class="w-10 h-10 md:w-12 md:h-12"></i> 
             </div>
             <div>
                 <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">
@@ -20,14 +19,13 @@
 
         <!-- Bagian 1: Alert Statis (Tailwind CSS) -->
         <section class="mb-10 md:mb-12">
-            <!-- Judul bagian - disesuaikan agar seragam -->
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Static Alerts</h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-8 max-w-2xl">
                 Alert ini dibuat murni dengan Tailwind CSS dan Lucide. Cocok untuk pesan yang perlu tetap terlihat di dalam konten halaman, seperti di atas formulir atau dalam sebuah panel.
             </p>
 
             <div class="space-y-6">
-                <!-- Alert: Success - ditambahkan shadow-md -->
+                <!-- Alert: Success -->
                 <div class="p-4 rounded-lg bg-green-50 border border-green-200 flex items-start gap-4 shadow-md">
                     <div class="shrink-0 text-green-600">
                         <i data-lucide="check-circle-2" class="w-6 h-6"></i>
@@ -41,7 +39,7 @@
                     </button>
                 </div>
 
-                <!-- Alert: Info - ditambahkan shadow-md -->
+                <!-- Alert: Info -->
                 <div class="p-4 rounded-lg bg-blue-50 border border-blue-200 flex items-start gap-4 shadow-md">
                     <div class="shrink-0 text-blue-600">
                          <i data-lucide="info" class="w-6 h-6"></i>
@@ -55,7 +53,7 @@
                     </button>
                 </div>
 
-                <!-- Alert: Warning - ditambahkan shadow-md -->
+                <!-- Alert: Warning -->
                 <div class="p-4 rounded-lg bg-yellow-50 border border-yellow-200 flex items-start gap-4 shadow-md">
                     <div class="shrink-0 text-yellow-600">
                         <i data-lucide="alert-triangle" class="w-6 h-6"></i>
@@ -69,7 +67,7 @@
                     </button>
                 </div>
 
-                <!-- Alert: Error - ditambahkan shadow-md -->
+                <!-- Alert: Error -->
                 <div class="p-4 rounded-lg bg-red-50 border border-red-200 flex items-start gap-4 shadow-md">
                     <div class="shrink-0 text-red-600">
                         <i data-lucide="alert-circle" class="w-6 h-6"></i>
@@ -85,7 +83,6 @@
             </div>
         </section>
 
-        <!-- Bagian Baru: Apa itu PNotify? -->
         <section class="mb-10 md:mb-12 pt-10 ">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Apa itu PNotify?</h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg">
@@ -94,14 +91,12 @@
             <p class="text-gray-600 leading-relaxed text-base md:text-lg mt-4">
                 Dengan berbagai jenis notifikasi (sukses, info, peringatan, error, dan notice), PNotify sangat ideal untuk memberikan umpan balik instan setelah tindakan pengguna, seperti pengiriman formulir, pembaruan data, atau indikasi kesalahan.
             </p>
-            <!-- Menambahkan backlink PNotify -->
             <p class="text-gray-600 leading-relaxed text-base md:text-lg mt-4">
                 Pelajari lebih lanjut tentang PNotify dan jelajahi dokumentasinya di situs resmi mereka: 
                 <a href="http://sciactive.com/pnotify/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-semibold">sciactive.com/pnotify</a>.
             </p>
         </section>
 
-        <!-- Bagian Baru: Panduan Pemasangan PNotify -->
         <section class="mb-10 md:mb-12 pt-10 ">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Panduan Pemasangan</h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-4">

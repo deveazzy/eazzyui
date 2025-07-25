@@ -1,14 +1,3 @@
-<?php
-/**
- * @[EazZy Project] Copyright (c) [2025] [EazZy Project] license
- * @https://opensource.org/licenses/MIT MIT License
- * @path public/pages/tabs.php
- * @author EazZy Project
- *
- * File ini berisi konten untuk halaman komponen "Tabs".
- * Konten ini akan di-include oleh page/switch.php.
- */
-?>
 <main class="flex-1 container mx-auto p-4 md:p-8 lg:p-10">
     <div class="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl max-w-7xl mx-auto">
 

@@ -64,7 +64,7 @@
     </div>
 </main>
 
-<!-- Popup Modal (Tidak Berubah) -->
+<!-- Popup Modal -->
 <div id="action-popup" class="hidden fixed inset-0 z-50">
     <div class="flex h-full w-full items-center justify-center p-4">
         <div id="popup-content" class="bg-white rounded-xl shadow-2xl p-6 w-full max-w-sm">
