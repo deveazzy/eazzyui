@@ -92,7 +92,7 @@
 
             <div class="w-full md:w-1/2 hidden md:flex items-center justify-center bg-blue-600 text-white p-8 lg:p-10 text-center">
                 <div class="max-w-md">
-                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 leading-tight">Selamat Datang di EazZy UI</h2>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 leading-tight">EazZy UI</h2>
                     <p class="text-base md:text-lg opacity-90 mb-6">
                         Platform terdepan untuk aset antarmuka pengguna modern dan pengembangan web cepat. Temukan komponen yang Anda butuhkan untuk membangun aplikasi luar biasa.
                     </p>

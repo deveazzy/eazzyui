@@ -35,6 +35,7 @@ const globalNavigationData = [
               {
                 id: "buttons",
                 label: "Buttons",
+                icon: "pointer",
                 page: "atoms",
                 hash: "#buttons",
                 layout: "",
@@ -42,6 +43,7 @@ const globalNavigationData = [
               {
                 id: "inputs",
                 label: "Inputs",
+                icon: "text-cursor-input",
                 page: "atoms",
                 hash: "#inputs",
                 layout: "",
@@ -49,6 +51,7 @@ const globalNavigationData = [
               {
                 id: "toggles",
                 label: "Toggles",
+                icon: "toggle-left",
                 page: "atoms",
                 hash: "#toggles",
                 layout: "",
@@ -56,6 +59,7 @@ const globalNavigationData = [
               {
                 id: "badges",
                 label: "Badges",
+                icon: "badge",
                 page: "atoms",
                 hash: "#badges",
                 layout: "",
@@ -63,6 +67,7 @@ const globalNavigationData = [
               {
                 id: "avatars",
                 label: "Avatars",
+                icon: "circle-user",
                 page: "atoms",
                 hash: "#avatars",
                 layout: "",
@@ -70,6 +75,7 @@ const globalNavigationData = [
               {
                 id: "alerts",
                 label: "Alerts",
+                icon: "circle-alert",
                 page: "atoms",
                 hash: "#alerts",
                 layout: "",
@@ -77,6 +83,7 @@ const globalNavigationData = [
               {
                 id: "progress",
                 label: "Progress Bars",
+                icon: "loader-circle",
                 page: "atoms",
                 hash: "#progress",
                 layout: "",
@@ -122,6 +129,55 @@ const globalNavigationData = [
             page: "tabs",
             layout: "",
             group: "Form & Utilitas",
+          },
+          {
+            id: "accordions",
+            label: "Accordions",
+            icon: "chevrons-down",
+            page: "accordions",
+            layout: "",
+            group: "Form & Utilitas",
+          },
+          // Grup Error dipindahkan ke sini sebagai item individual dengan properti group
+          {
+            id: "error-401",
+            label: "Error 401",
+            icon: "user-x",
+            page: "401",
+            layout: "",
+            group: "Status & Error",
+          },
+          {
+            id: "error-403",
+            label: "Error 403",
+            icon: "lock",
+            page: "403",
+            layout: "",
+            group: "Status & Error",
+          },
+          {
+            id: "error-404",
+            label: "Error 404",
+            icon: "circle-alert",
+            page: "404",
+            layout: "",
+            group: "Status & Error",
+          },
+          {
+            id: "error-500",
+            label: "Error 500",
+            icon: "construction",
+            page: "500",
+            layout: "",
+            group: "Status & Error",
+          },
+          {
+            id: "error-503",
+            label: "Error 503",
+            icon: "server-crash",
+            page: "503",
+            layout: "",
+            group: "Status & Error",
           },
         ],
       },
@@ -246,7 +302,7 @@ const globalNavigationData = [
       },
       {
         id: "pages",
-        label: "Halaman",
+        label: "Solusi UI/UX",
         icon: "file-text",
         children: [
           {
@@ -254,7 +310,7 @@ const globalNavigationData = [
             label: "Dashboard",
             page: "dashboard",
             layout: "sidebar-left",
-            group: "Contoh Lanjutan",
+            group: "Halaman",
           },
           {
             id: "advanced-table",
@@ -262,7 +318,7 @@ const globalNavigationData = [
             icon: "table-2",
             page: "advanced-table",
             layout: "",
-            group: "Contoh Lanjutan",
+            group: "Tabel & Data",
           },
           {
             id: "form-wizard",
@@ -270,7 +326,7 @@ const globalNavigationData = [
             icon: "send",
             page: "form-wizard",
             layout: "",
-            group: "Contoh Lanjutan",
+            group: "Form & Utilitas",
           },
           {
             id: "login-page",
@@ -278,16 +334,18 @@ const globalNavigationData = [
             icon: "log-in",
             page: "login",
             layout: "sidebar-left",
-            group: "Contoh Lanjutan",
+            group: "Form & Utilitas",
           },
-          { id: "error-401", label: "Error 401", page: "401", group: "Error" },
-          { id: "error-403", label: "Error 403", page: "403", group: "Error" },
-          { id: "error-404", label: "Error 404", page: "404", group: "Error" },
-          { id: "error-500", label: "Error 500", page: "500", group: "Error" },
-          { id: "error-503", label: "Error 503", page: "503", group: "Error" },
         ],
       },
     ],
+  },
+  {
+    id: "sponsors",
+    label: "Dukungan",
+    icon: "handshake",
+    page: "#sponsors",
+    layout: "",
   },
   {
     id: "about",
@@ -314,6 +372,7 @@ const sidebarNavigationData = [
           {
             id: "buttons-atom-sidebar",
             label: "Buttons",
+            icon: "pointer",
             page: "atoms",
             hash: "#buttons",
             layout: "sidebar-left",
@@ -321,6 +380,7 @@ const sidebarNavigationData = [
           {
             id: "inputs-atom-sidebar",
             label: "Inputs",
+            icon: "text-cursor-input",
             page: "atoms",
             hash: "#inputs",
             layout: "sidebar-left",
@@ -328,6 +388,7 @@ const sidebarNavigationData = [
           {
             id: "toggles-atom-sidebar",
             label: "Toggles",
+            icon: "toggle-left",
             page: "atoms",
             hash: "#toggles",
             layout: "sidebar-left",
@@ -335,6 +396,7 @@ const sidebarNavigationData = [
           {
             id: "badges-atom-sidebar",
             label: "Badges",
+            icon: "badge",
             page: "atoms",
             hash: "#badges",
             layout: "sidebar-left",
@@ -342,6 +404,7 @@ const sidebarNavigationData = [
           {
             id: "avatars-atom-sidebar",
             label: "Avatars",
+            icon: "circle-user",
             page: "atoms",
             hash: "#avatars",
             layout: "sidebar-left",
@@ -349,6 +412,7 @@ const sidebarNavigationData = [
           {
             id: "alerts-atom-sidebar",
             label: "Alerts",
+            icon: "circle-alert",
             page: "atoms",
             hash: "#alerts",
             layout: "sidebar-left",
@@ -356,6 +420,7 @@ const sidebarNavigationData = [
           {
             id: "progress-atom-sidebar",
             label: "Progress Bars",
+            icon: "loader-circle",
             page: "atoms",
             hash: "#progress",
             layout: "sidebar-left",
@@ -401,6 +466,55 @@ const sidebarNavigationData = [
         page: "tabs",
         layout: "sidebar-left",
         group: "Form & Utilitas",
+      },
+      {
+        id: "accordions-sidebar",
+        label: "Accordions",
+        icon: "chevrons-down",
+        page: "accordions",
+        layout: "sidebar-left",
+        group: "Form & Utilitas",
+      },
+      // Grup Error dipindahkan ke sini sebagai item individual dengan properti group untuk sidebar
+      {
+        id: "error-401",
+        label: "Error 401",
+        icon: "user-x",
+        page: "401",
+        layout: "sidebar-left",
+        group: "Status & Error",
+      },
+      {
+        id: "error-403",
+        label: "Error 403",
+        icon: "lock",
+        page: "403",
+        layout: "sidebar-left",
+        group: "Status & Error",
+      },
+      {
+        id: "error-404",
+        label: "Error 404",
+        icon: "circle-alert",
+        page: "404",
+        layout: "sidebar-left",
+        group: "Status & Error",
+      },
+      {
+        id: "error-500",
+        label: "Error 500",
+        icon: "construction",
+        page: "500",
+        layout: "sidebar-left",
+        group: "Status & Error",
+      },
+      {
+        id: "error-503",
+        label: "Error 503",
+        icon: "server-crash",
+        page: "503",
+        layout: "sidebar-left",
+        group: "Status & Error",
       },
     ],
   },
@@ -523,10 +637,9 @@ const sidebarNavigationData = [
       },
     ],
   },
-  // Menambahkan grup "Halaman" baru untuk sidebar
   {
     id: "pages-sidebar",
-    label: "Halaman",
+    label: "Solusi UI/UX",
     icon: "file-text",
     children: [
       {
@@ -535,7 +648,7 @@ const sidebarNavigationData = [
         icon: "layout-dashboard",
         page: "dashboard",
         layout: "sidebar-left",
-        group: "Contoh Lanjutan",
+        group: "Halaman",
       },
       {
         id: "advanced-table",
@@ -543,7 +656,7 @@ const sidebarNavigationData = [
         icon: "table-2",
         page: "advanced-table",
         layout: "sidebar-left",
-        group: "Contoh Lanjutan",
+        group: "Tabel & Data",
       },
       {
         id: "form-wizard-sidebar",
@@ -551,7 +664,7 @@ const sidebarNavigationData = [
         icon: "send",
         page: "form-wizard",
         layout: "sidebar-left",
-        group: "Contoh Lanjutan",
+        group: "Form & Utilitas",
       },
       {
         id: "login-page",
@@ -559,47 +672,7 @@ const sidebarNavigationData = [
         icon: "log-in",
         page: "login",
         layout: "sidebar-left",
-        group: "Contoh Lanjutan",
-      },
-      {
-        id: "error-401",
-        label: "Error 401",
-        icon: "user-x",
-        page: "401",
-        layout: "sidebar-left",
-        group: "Error",
-      },
-      {
-        id: "error-403",
-        label: "Error 403",
-        icon: "lock",
-        page: "403",
-        layout: "sidebar-left",
-        group: "Error",
-      },
-      {
-        id: "error-404",
-        label: "Error 404",
-        icon: "circle-alert",
-        page: "404",
-        layout: "sidebar-left",
-        group: "Error",
-      },
-      {
-        id: "error-500",
-        label: "Error 500",
-        icon: "construction",
-        page: "500",
-        layout: "sidebar-left",
-        group: "Error",
-      },
-      {
-        id: "error-503",
-        label: "Error 503",
-        icon: "server-crash",
-        page: "503",
-        layout: "sidebar-left",
-        group: "Error",
+        group: "Form & Utilitas",
       },
     ],
   },

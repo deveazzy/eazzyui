@@ -165,7 +165,7 @@
     <section id="vendor-support" class="py-12 md:py-16 bg-gray-50">
         <div class="container mx-auto px-6 md:px-10 py-8 bg-white rounded-xl shadow-xl max-w-7xl mb-6 md:mb-8">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-                Didukung Oleh & Dokumentasi
+                Dokumentasi
             </h2>
             <p class="text-lg text-gray-600 text-center mb-8 max-w-xl mx-auto">
                 EazZy UI dibangun dengan dukungan dari berbagai library dan framework terkemuka.
