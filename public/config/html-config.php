@@ -1,4 +1,4 @@
-<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="4d1053f1-388b-41c7-9368-aa83c50895d4" data-blockingmode="auto" type="text/javascript"></script>
+<!-- <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="4d1053f1-388b-41c7-9368-aa83c50895d4" data-blockingmode="auto" type="text/javascript"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMR8YJRKW8"></script>
 <script>
@@ -22,7 +22,7 @@
       'domains': ['eazzy-project.com', 'uiux.eazzy-project.com', 'apps.eazzy-project.com']
     }
   });
-</script>
+</script> -->
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6543484813821741" crossorigin="anonymous"></script>
 

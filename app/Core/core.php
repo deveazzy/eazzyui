@@ -31,7 +31,7 @@ if ($page === 'redis-test' && isset($_GET['clear_cache'])) {
     exit;
 }
 
-$page_css_file = "/css/{$page}.css";
+$page_css_file = "/css/custome/{$page}.css";
 
 $pages_without_sidebar = [
     '401', '403', '500', '503', '404', 'home', 'about', 'login',
@@ -46,7 +46,7 @@ $allowed_pages = [
     'tabulator', 'splide', 'redis-test', 'modal-form',
     'blank-content', 'nprogress', 'grid', 'example-table', 
     'advanced-table', 'xlsx', 'luxon', 'jspdf', 'qr-code-styling',
-    'pickr', 'login', 'form-wizard', 'accordions'
+    'pickr', 'login', 'form-wizard', 'accordions', 'sponsors'
 ];
 
 $pages_using_advanced_js = [
@@ -59,3 +59,8 @@ if (in_array($page, $pages_using_advanced_js)) {
 } else {
     $js_to_load_path = "/js/basic-js/{$page}.js";
 }
+
+$pages_requiring_sponsors_js = [
+    'home',
+    'sponsors',
+];

@@ -1,7 +1,7 @@
 <?php
 // Tentukan urutan kategori yang akan dicari
 // Gunakan 'advanced-page' sesuai dengan nama folder Anda
-$content_categories = ['basic-page', 'advanced-page', 'vendor-page', 'error-page']; 
+$content_categories = ['basic-page', 'advanced-page', 'vendor-page', 'sponsors-page','error-page']; 
 
 $found_content = false;
 $content_file = '';

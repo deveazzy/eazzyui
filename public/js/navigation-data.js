@@ -344,7 +344,7 @@ const globalNavigationData = [
     id: "sponsors",
     label: "Dukungan",
     icon: "handshake",
-    page: "#sponsors",
+    page: "sponsors",
     layout: "",
   },
   {

@@ -16,26 +16,27 @@ function manageLinkTabindex(slideElement, disableFocus) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  if (document.querySelector(".splide")) {
-    const splide = new Splide(".splide", {
+  // Hanya inisialisasi untuk Vendor Support Slider
+  if (document.querySelector("#vendorSupportSlider")) {
+    const splide = new Splide("#vendorSupportSlider", {
       type: "loop",
       perPage: 3,
       perMove: 1,
       autoplay: true,
       interval: 3000,
-      pauseOnHover: true,
+      pauseOnHover: false,
       arrows: true,
-      pagination: true,
+      pagination: false,
       gap: "1rem",
       breakpoints: {
         1024: {
           perPage: 3,
         },
         768: {
-          perPage: 2,
+          perPage: 3,
         },
         640: {
-          perPage: 2,
+          perPage: 1,
         },
         480: {
           perPage: 1,
