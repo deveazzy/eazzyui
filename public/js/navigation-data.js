@@ -2,10 +2,6 @@
  * @path    public/js/navigation-data.js
  * @author  [EazZy Project]
  * @copyright Copyright (c) [2025] [EazZy Project]
- * @license   https://opensource.org/licenses/MIT MIT License
- *
- * File ini berisi semua data untuk struktur navigasi
- * yang digunakan di EazZy Project.
  */
 
 const globalNavigationData = [
@@ -26,10 +22,8 @@ const globalNavigationData = [
         id: "atoms",
         label: "Elemen Dasar",
         icon: "square",
-        page: "atoms",
         layout: "",
         children: [
-          // Sub-menu untuk "Elemen Dasar" (untuk Mega Menu & Mobile Accordion)
           {
             id: "ui-elements",
             label: "Koleksi Elemen",
@@ -116,7 +110,7 @@ const globalNavigationData = [
           {
             id: "modal-form",
             label: "Modal & Form",
-            icon: "popup-open",
+            icon: "book-copy",
             page: "modal-form",
             layout: "",
             group: "Form & Utilitas",
@@ -136,7 +130,6 @@ const globalNavigationData = [
         label: "Aset",
         icon: "image",
         children: [
-          // Sub-menu untuk "Aset" dengan pengelompokan horizontal
           {
             id: "tabulator",
             label: "Tabulator",
@@ -256,7 +249,6 @@ const globalNavigationData = [
         label: "Halaman",
         icon: "file-text",
         children: [
-          // Sub-menu untuk "Halaman"
           {
             id: "dashboard",
             label: "Dashboard",
@@ -269,6 +261,14 @@ const globalNavigationData = [
             label: "Nested Table",
             icon: "table-2",
             page: "advanced-table",
+            layout: "",
+            group: "Contoh Lanjutan",
+          },
+          {
+            id: "form-wizard",
+            label: "Form Wizard",
+            icon: "send",
+            page: "form-wizard",
             layout: "",
             group: "Contoh Lanjutan",
           },
@@ -308,7 +308,6 @@ const sidebarNavigationData = [
         id: "ui-elements-sidebar",
         label: "Koleksi Elemen",
         icon: "layers",
-        page: "#",
         layout: "sidebar-left",
         group: "Dasar",
         children: [
@@ -390,7 +389,7 @@ const sidebarNavigationData = [
       {
         id: "modal-form-sidebar",
         label: "Modal & Form",
-        icon: "popup-open",
+        icon: "book-copy",
         page: "modal-form",
         layout: "sidebar-left",
         group: "Form & Utilitas",
@@ -405,9 +404,6 @@ const sidebarNavigationData = [
       },
     ],
   },
-  // AKHIR DARI PENGGANTIAN "MENU LEVEL"
-
-  // Menambahkan struktur 'Aset' ke sidebarNavigationData
   {
     id: "assets-sidebar",
     label: "Aset",
@@ -550,6 +546,14 @@ const sidebarNavigationData = [
         group: "Contoh Lanjutan",
       },
       {
+        id: "form-wizard-sidebar",
+        label: "Form Wizard",
+        icon: "send",
+        page: "form-wizard",
+        layout: "sidebar-left",
+        group: "Contoh Lanjutan",
+      },
+      {
         id: "login-page",
         label: "Login",
         icon: "log-in",
@@ -557,7 +561,6 @@ const sidebarNavigationData = [
         layout: "sidebar-left",
         group: "Contoh Lanjutan",
       },
-      // AKHIR PEMBARUAN LOGIN
       {
         id: "error-401",
         label: "Error 401",

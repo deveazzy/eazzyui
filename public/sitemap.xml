@@ -151,6 +151,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://uiux.eazzy-project.com/form-wizard</loc>
+    <lastmod>2025-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://uiux.eazzy-project.com/401</loc>
     <lastmod>2025-07-20</lastmod>
     <changefreq>yearly</changefreq>

@@ -46,11 +46,11 @@ $allowed_pages = [
     'tabulator', 'splide', 'redis-test', 'modal-form',
     'blank-content', 'nprogress', 'grid', 'example-table', 
     'advanced-table', 'xlsx', 'luxon', 'jspdf', 'qr-code-styling',
-    'pickr', 'login'
+    'pickr', 'login', 'form-wizard'
 ];
 
 $pages_using_advanced_js = [
-    'advanced-table', 'login'
+    'advanced-table', 'login', 'form-wizard'
 ];
 
 $js_to_load_path = '';

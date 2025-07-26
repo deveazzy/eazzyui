@@ -7536,12 +7536,6 @@ span.flatpickr-weekday {
   .z-9999 {
     z-index: 9999;
   }
-  .order-1 {
-    order: 1;
-  }
-  .order-2 {
-    order: 2;
-  }
   .col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -7963,6 +7957,9 @@ span.flatpickr-weekday {
   }
   .scale-3d {
     scale: var(--tw-scale-x) var(--tw-scale-y) var(--tw-scale-z);
+  }
+  .rotate-0 {
+    rotate: 0deg;
   }
   .rotate-90 {
     rotate: 90deg;
@@ -9464,6 +9461,11 @@ span.flatpickr-weekday {
       --tw-ring-color: var(--color-blue-500);
     }
   }
+  .focus\:ring-green-500 {
+    &:focus {
+      --tw-ring-color: var(--color-green-500);
+    }
+  }
   .focus\:ring-red-500 {
     &:focus {
       --tw-ring-color: var(--color-red-500);
@@ -9510,16 +9512,6 @@ span.flatpickr-weekday {
   .md\:left-auto {
     @media (width >= 48rem) {
       left: auto;
-    }
-  }
-  .md\:order-1 {
-    @media (width >= 48rem) {
-      order: 1;
-    }
-  }
-  .md\:order-2 {
-    @media (width >= 48rem) {
-      order: 2;
     }
   }
   .md\:col-span-2 {
@@ -9662,6 +9654,11 @@ span.flatpickr-weekday {
   .md\:border-gray-200 {
     @media (width >= 48rem) {
       border-color: var(--color-gray-200);
+    }
+  }
+  .md\:p-6 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 6);
     }
   }
   .md\:p-8 {
