@@ -16,69 +16,61 @@ const initAccordionGroup = (groupName, allowMultipleOpen) => {
   const accordionHeaders =
     accordionContainer.querySelectorAll(".accordion-header");
 
-  // Logika klik dikembalikan ke struktur asli Anda, dengan perbaikan pada animasi ikon
   accordionHeaders.forEach((header) => {
     header.addEventListener("click", () => {
       const accordionItem = header.closest(".accordion-item");
       const content = accordionItem.querySelector(".accordion-content");
-      const chevronIcon = header.querySelector("i[data-lucide='chevron-down']");
+      const chevronIcon = header.querySelector(".lucide-chevron-down");
       const isExpanded = header.getAttribute("aria-expanded") === "true";
 
-      if (allowMultipleOpen) {
-        // Logika untuk bisa membuka banyak panel
-        if (isExpanded) {
-          header.setAttribute("aria-expanded", "false");
-          content.classList.add("hidden");
-          chevronIcon?.classList.remove("rotate-180");
-        } else {
-          header.setAttribute("aria-expanded", "true");
-          content.classList.remove("hidden");
-          chevronIcon?.classList.add("rotate-180");
-        }
-      } else {
-        // Logika untuk hanya satu panel terbuka (Struktur Asli Anda)
-        // 1. Tutup semua panel lain
+      if (!allowMultipleOpen) {
         accordionHeaders.forEach((otherHeader) => {
           if (otherHeader !== header) {
-            const otherItem = otherHeader.closest(".accordion-item");
-            const otherContent = otherItem.querySelector(".accordion-content");
-            const otherChevronIcon = otherHeader.querySelector(
-              "i[data-lucide='chevron-down']"
-            );
             otherHeader.setAttribute("aria-expanded", "false");
-            otherContent.classList.add("hidden");
+            otherHeader
+              .closest(".accordion-item")
+              .querySelector(".accordion-content")
+              .classList.add("hidden");
+
+            const otherChevronIcon = otherHeader.querySelector(
+              ".lucide-chevron-down"
+            );
             otherChevronIcon?.classList.remove("rotate-180");
+            otherChevronIcon?.classList.add("rotate-0");
           }
         });
+      }
 
-        // 2. Buka atau tutup panel yang diklik
-        if (isExpanded) {
-          header.setAttribute("aria-expanded", "false");
-          content.classList.add("hidden");
-          chevronIcon?.classList.remove("rotate-180");
-        } else {
-          header.setAttribute("aria-expanded", "true");
-          content.classList.remove("hidden");
-          chevronIcon?.classList.add("rotate-180");
-        }
+      if (isExpanded) {
+        header.setAttribute("aria-expanded", "false");
+        content.classList.add("hidden");
+        chevronIcon?.classList.remove("rotate-180");
+        chevronIcon?.classList.add("rotate-0");
+      } else {
+        header.setAttribute("aria-expanded", "true");
+        content.classList.remove("hidden");
+        chevronIcon?.classList.remove("rotate-0");
+        chevronIcon?.classList.add("rotate-180");
       }
     });
   });
 
-  // PERUBAHAN HANYA DI SINI: Memaksa semua accordion tertutup saat awal
+  // Force all accordions to be closed on page load
   accordionHeaders.forEach((header) => {
     header.setAttribute("aria-expanded", "false");
     const content = header
       .closest(".accordion-item")
       .querySelector(".accordion-content");
-    const chevronIcon = header.querySelector("i[data-lucide='chevron-down']");
+    const chevronIcon = header.querySelector(".lucide-chevron-down");
+
     content.classList.add("hidden");
     chevronIcon?.classList.remove("rotate-180");
+    chevronIcon?.classList.add("rotate-0");
   });
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  // BAGIAN UNTUK SLIDER SPONSOR (TIDAK DIUBAH)
+  // BAGIAN UNTUK SLIDER SPONSOR
   if (typeof Splide !== "undefined") {
     const sponsorSliderList = document.getElementById("sponsor-slider-list");
     const splideElement = document.getElementById("sponsorSplideContainer");

@@ -21,7 +21,7 @@
         </div>
     </section>
 
-    <?php //include 'pages/content/sponsors-page/for-home.php'; ?>
+    <?php include 'pages/content/sponsors-page/for-home.php'; ?>
      
     <section id="benefits" class="py-12 md:py-8">
         <div class="container mx-auto px-6 md:px-10 py-8 bg-white rounded-xl shadow-xl max-w-7xl mb-6 md:mb-8">
