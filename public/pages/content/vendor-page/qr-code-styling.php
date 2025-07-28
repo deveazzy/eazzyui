@@ -107,22 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
             </ol>
         </section>
 
-        <section class="mt-16 pt-10 ">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Contoh Penerapan</h2>
-            <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-8 max-w-2xl">
-                Berikut adalah **contoh kode** untuk membuat QR Code yang dapat dikustomisasi. Ketika Anda mengimplementasikan kode ini di halaman web Anda, QR Code akan muncul secara visual di dalam area yang Anda tentukan.
-            </p>
-
-            <div class="bg-gray-100 p-6 rounded-lg shadow-inner mb-6 flex justify-center items-center">
-                <div id="qr-code-container-live" class="bg-white rounded shadow-md border border-gray-200" style="width: 300px; height: 300px;">
-                    </div>
-            </div>
-            
-            <p class="mt-8 text-gray-600 leading-relaxed text-base md:text-lg">
-                Ketika kode di atas diimplementasikan di halaman Anda dan dimuat di browser, Anda akan melihat QR Code yang dihasilkan secara visual di dalam elemen `#qr-code-container-live`.
-            </p>
-        </section>
-
         <section class="mb-10 md:mb-12 pt-10 ">
             <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Manfaat QR Code Styling</h2>
             <ul class="space-y-4">
@@ -148,6 +132,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </li>
             </ul>
+        </section>
+
+        <section class="mt-16 pt-10 ">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Contoh Penerapan</h2>
+            <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-8 max-w-2xl">
+                Berikut adalah **contoh kode** untuk membuat QR Code yang dapat dikustomisasi. Ketika Anda mengimplementasikan kode ini di halaman web Anda, QR Code akan muncul secara visual di dalam area yang Anda tentukan.
+            </p>
+
+            <div class="bg-gray-100 p-6 rounded-lg shadow-inner mb-6 flex justify-center items-center">
+                <div id="qr-code-container-live" class="bg-white rounded shadow-md border border-gray-200" style="width: 300px; height: 300px;">
+                    </div>
+            </div>
+            
+            <p class="mt-8 text-gray-600 leading-relaxed text-base md:text-lg">
+                Ketika kode di atas diimplementasikan di halaman Anda dan dimuat di browser, Anda akan melihat QR Code yang dihasilkan secara visual di dalam elemen `#qr-code-container-live`.
+            </p>
         </section>
 
     </div>

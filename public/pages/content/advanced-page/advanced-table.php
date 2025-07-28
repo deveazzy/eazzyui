@@ -84,4 +84,3 @@
 <script src="/assets/vendor/luxon/luxon.min.js" defer></script>
 <script src="/assets/vendor/jspdf/jspdf.umd.min.js"></script>
 <script src="/assets/vendor/jspdf/jspdf.plugin.autotable.min.js"></script>
-<script src="/js/buttons.js" type="module" defer></script>
