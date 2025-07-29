@@ -91,7 +91,22 @@
                     <input type="email" id="error-input" name="user_email_error" value="bukan-email-valid" class="w-full px-4 py-2 rounded-lg border border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500">
                     <p class="text-sm text-red-600">Format email tidak valid.</p>
                 </div>
-
+                <div class="space-y-2">
+                    <label for="rupiah-input" class="font-medium text-gray-700">Harga (Rupiah)</label>
+                    <div class="relative">
+                        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
+                            <span class="text-gray-500">Rp</span>
+                        </div>
+                        <input 
+                            type="text" 
+                            id="rupiah-input" 
+                            name="price_rupiah" 
+                            placeholder="Contoh: 25.000" 
+                            class="w-full pl-12 pr-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            inputmode="numeric"
+                        >
+                    </div>
+                </div>
                 <!-- Disabled Input -->
                 <div class="space-y-2">
                     <label for="disabled-input" class="font-medium text-gray-700">Kode Unik (Disabled)</label>

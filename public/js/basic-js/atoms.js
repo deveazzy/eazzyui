@@ -255,4 +255,26 @@ document.addEventListener("DOMContentLoaded", () => {
       disableMobile: true,
     });
   }
+  const rupiahInput = document.getElementById("rupiah-input");
+
+  if (rupiahInput) {
+    rupiahInput.addEventListener("input", function (e) {
+      // Ambil nilai input dan hapus semua karakter non-digit
+      let rawValue = e.target.value.replace(/[^\d]/g, "");
+
+      // Jika nilainya kosong setelah dibersihkan, set input menjadi kosong
+      if (rawValue === "") {
+        e.target.value = "";
+        return;
+      }
+
+      // Ubah menjadi angka, lalu format ke dalam format Rupiah (id-ID)
+      // yang secara otomatis akan menambahkan titik sebagai pemisah ribuan.
+      let numberValue = parseInt(rawValue, 10);
+      let formattedValue = numberValue.toLocaleString("id-ID");
+
+      // Setel kembali nilai input dengan nilai yang sudah diformat
+      e.target.value = formattedValue;
+    });
+  }
 });
