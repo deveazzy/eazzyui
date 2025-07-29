@@ -1,10 +1,21 @@
+/*
+ * @author    [EazZy Project]
+ * @copyright Copyright (c) [2025] [EazZy Project]
+ * @license   https://opensource.org/licenses/MIT MIT License
+ */
+
 /**
  * @path    public/js/navigation-data.js
  * @author  [EazZy Project]
  * @copyright Copyright (c) [2025] [EazZy Project]
+ * @license   https://opensource.org/licenses/MIT MIT License
+ *
+ * File ini berisi semua data untuk struktur navigasi
+ * yang digunakan di EazZy Project.
  */
 
 const globalNavigationData = [
+  // Menu Level 1
   {
     id: "home",
     label: "Beranda",
@@ -347,6 +358,14 @@ const globalNavigationData = [
             label: "Timeline",
             icon: "gallery-vertical",
             page: "timeline",
+            layout: "",
+            group: "Halaman",
+          },
+          {
+            id: "gallery",
+            label: "Galeri",
+            icon: "image",
+            page: "gallery",
             layout: "",
             group: "Halaman",
           },
@@ -700,6 +719,14 @@ const sidebarNavigationData = [
         label: "Timeline",
         icon: "gallery-vertical",
         page: "timeline",
+        layout: "sidebar-left",
+        group: "Halaman",
+      },
+      {
+        id: "gallery-sidebar",
+        label: "Galeri",
+        icon: "image",
+        page: "gallery",
         layout: "sidebar-left",
         group: "Halaman",
       },

@@ -26,7 +26,7 @@ import {
   PrintModule,
 } from "/assets/vendor/tabulator/tabulator_esm.js";
 // PERUBAHAN: Path impor disesuaikan dengan struktur folder baru
-import { tableData } from "../tabledata/table-data.js";
+import { tableData } from "../data/table-data.js";
 import { exportToCsv, exportToXlsx } from "../modules/export/export-excel.js";
 import { exportToPdf } from "../modules/export/export-pdf.js";
 import { printTable } from "../modules/print/print-table.js";

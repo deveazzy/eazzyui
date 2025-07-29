@@ -4,7 +4,7 @@
  * @license   https://opensource.org/licenses/MIT MIT License
  */
 
-import { sponsorData } from "/js/tabledata/sponsor-data.js";
+import { sponsorData } from "/js/data/sponsor-data.js";
 
 // FUNGSI UNTUK ACCORDION
 const initAccordionGroup = (groupName, allowMultipleOpen) => {

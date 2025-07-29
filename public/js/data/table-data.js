@@ -2,7 +2,7 @@
  * @author    [EazZy Project]
  * @copyright Copyright (c) [2025] [EazZy Project]
  * @license   https://opensource.org/licenses/MIT MIT License
- * @path      public/js/tabledata/table-data.js
+ * @path      public/js/data/table-data.js
  *
  * File ini berisi data contoh untuk tabel.
  */

@@ -47,11 +47,12 @@ $allowed_pages = [
     'blank-content', 'nprogress', 'grid', 'example-table', 
     'advanced-table', 'xlsx', 'luxon', 'jspdf',
     'qr-code-styling', 'pickr', 'login', 'form-wizard',
-    'accordions', 'sponsors', 'tinymce', 'timeline'
+    'accordions', 'sponsors', 'tinymce', 'timeline',
+    'gallery'
 ];
 
 $pages_using_advanced_js = [
-    'advanced-table', 'login', 'form-wizard'
+    'advanced-table', 'login', 'form-wizard', 'gallery'
 ];
 
 $js_to_load_path = '';
