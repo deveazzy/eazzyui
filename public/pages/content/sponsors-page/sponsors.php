@@ -101,6 +101,65 @@
                 </div>
             </div>
 
+            <div class="accordion-item bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden mt-4">
+                <button class="accordion-header flex justify-between items-center w-full p-4 md:p-6 text-left font-bold text-xl md:text-2xl text-gray-700 bg-gray-50 hover:bg-gray-100 transition-colors duration-200">
+                    <span class="flex items-center"><i data-lucide="gift" class="w-6 h-6 mr-3 text-red-600"></i>Dukungan Melalui Donasi</span>
+                    <i data-lucide="chevron-down" class="w-6 h-6 transform transition-transform duration-200"></i>
+                </button>
+                <div class="accordion-content border-t border-gray-200 p-4 md:p-6">
+                    <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-8 text-justify">
+                        Selain kemitraan sponsor, kami juga membuka kesempatan bagi individu atau organisasi yang ingin memberikan dukungan dalam bentuk donasi. Setiap kontribusi, berapapun nilainya, sangat berarti bagi kami untuk terus berinovasi dan menyediakan produk gratis berkualitas.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm">
+                            <div class="bg-red-100 p-3 rounded-full mr-4 shrink-0"><i data-lucide="coffee" class="w-6 h-6 text-red-600"></i></div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-800 mb-2">Platform Donasi Online</h3>
+                                <p class="text-gray-600">Anda dapat memberikan donasi secara mudah dan cepat melalui platform berikut:</p>
+                                <div class="mt-4 flex space-x-4">
+                                    <a href="https://saweria.co/eazzyproject" class="text-red-600 hover:underline font-semibold">Dukung via Saweria</a>
+                                    <a href="https://trakteer.id/eazzyproject/tip" class="text-green-600 hover:underline font-semibold">Traktir di Trakteer</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4 shrink-0"><i data-lucide="landmark" class="w-6 h-6 text-blue-600"></i></div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-800 mb-2">Transfer Bank</h3>
+                                <p class="text-gray-600">Untuk donasi melalui transfer bank, silakan kirim ke rekening berikut:</p>
+                                <ul class="text-gray-700 mt-2 list-none">
+                                    <li><strong>Bank:</strong> Bank Jago</li>
+                                    <li><strong>No. Rekening:</strong> 109950624686</li>
+                                    <li><strong>Atas Nama:</strong> Iwan Setiawan</li>
+                                </ul>
+                                <p class="text-sm text-gray-500 mt-3">Mohon konfirmasi setelah melakukan transfer agar kami dapat mencatat dukungan Anda. Kirimkan email kepada kami di <a href="mailto:deveazzy@gmail.com" class="text-blue-600 hover:underline">deveazzy@gmail.com</a> dengan subjek "Donasi EazZy Project"</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4 shrink-0"><i data-lucide="dollar-sign" class="w-6 h-6 text-blue-700"></i></div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-800 mb-2">PayPal</h3>
+                                <p class="text-gray-600">Donasi juga dapat dikirimkan melalui PayPal ke alamat email atau tautan berikut:</p>
+                                <ul class="text-gray-700 mt-2 list-none">
+                                    <li><strong>Email:</strong> <a href="mailto:deveazzy@gmail.com" class="text-blue-600 hover:underline">deveazzy@gmail.com</a></li>
+                                    <li><strong>Tautan Langsung:</strong> <a href="https://www.paypal.me/eazzyproject" class="text-blue-600 hover:underline">paypal.me/eazzyproject</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- <div class="flex items-start bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm">
+                            <div class="bg-gray-200 p-3 rounded-full mr-4 shrink-0"><i data-lucide="github" class="w-6 h-6 text-gray-800"></i></div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-800 mb-2">GitHub Sponsors</h3>
+                                <p class="text-gray-600">Dukung kami langsung melalui platform GitHub:</p>
+                                <div class="mt-4">
+                                    <a href="https://github.com/sponsors/eazzyproject" class="text-blue-600 hover:underline font-semibold">Dukung via Github</a>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </main>
