@@ -47,7 +47,7 @@ $allowed_pages = [
     'blank-content', 'nprogress', 'grid', 'example-table', 
     'advanced-table', 'xlsx', 'luxon', 'jspdf',
     'qr-code-styling', 'pickr', 'login', 'form-wizard',
-    'accordions', 'sponsors', 'tinymce'
+    'accordions', 'sponsors', 'tinymce', 'timeline'
 ];
 
 $pages_using_advanced_js = [

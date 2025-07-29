@@ -5,7 +5,6 @@
  */
 
 const globalNavigationData = [
-  // Menu Level 1
   {
     id: "home",
     label: "Beranda",
@@ -138,7 +137,6 @@ const globalNavigationData = [
             layout: "",
             group: "Form & Utilitas",
           },
-          // Grup Error dipindahkan ke sini sebagai item individual dengan properti group
           {
             id: "error-401",
             label: "Error 401",
@@ -344,6 +342,14 @@ const globalNavigationData = [
             layout: "sidebar-left",
             group: "Form & Utilitas",
           },
+          {
+            id: "timeline-page",
+            label: "Timeline",
+            icon: "gallery-vertical",
+            page: "timeline",
+            layout: "",
+            group: "Halaman",
+          },
         ],
       },
     ],
@@ -483,7 +489,6 @@ const sidebarNavigationData = [
         layout: "sidebar-left",
         group: "Form & Utilitas",
       },
-      // Grup Error dipindahkan ke sini sebagai item individual dengan properti group untuk sidebar
       {
         id: "error-401",
         label: "Error 401",
@@ -689,6 +694,14 @@ const sidebarNavigationData = [
         page: "login",
         layout: "sidebar-left",
         group: "Form & Utilitas",
+      },
+      {
+        id: "timeline-page-sidebar",
+        label: "Timeline",
+        icon: "gallery-vertical",
+        page: "timeline",
+        layout: "sidebar-left",
+        group: "Halaman",
       },
     ],
   },
