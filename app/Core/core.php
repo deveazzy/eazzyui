@@ -48,7 +48,7 @@ $allowed_pages = [
     'advanced-table', 'xlsx', 'luxon', 'jspdf',
     'qr-code-styling', 'pickr', 'login', 'form-wizard',
     'accordions', 'sponsors', 'tinymce', 'timeline',
-    'gallery'
+    'gallery', 'masonry', 'imagesloaded'
 ];
 
 $pages_using_advanced_js = [

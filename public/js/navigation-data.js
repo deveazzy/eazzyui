@@ -1,21 +1,10 @@
-/*
- * @author    [EazZy Project]
- * @copyright Copyright (c) [2025] [EazZy Project]
- * @license   https://opensource.org/licenses/MIT MIT License
- */
-
 /**
  * @path    public/js/navigation-data.js
  * @author  [EazZy Project]
  * @copyright Copyright (c) [2025] [EazZy Project]
- * @license   https://opensource.org/licenses/MIT MIT License
- *
- * File ini berisi semua data untuk struktur navigasi
- * yang digunakan di EazZy Project.
  */
 
 const globalNavigationData = [
-  // Menu Level 1
   {
     id: "home",
     label: "Beranda",
@@ -315,6 +304,24 @@ const globalNavigationData = [
             layout: "",
             group: "Grafis",
           },
+          // Penambahan untuk halaman Masonry
+          {
+            id: "masonry-lib",
+            label: "Masonry",
+            icon: "layout-grid",
+            page: "masonry",
+            layout: "",
+            group: "Grafis",
+          },
+          // Penambahan untuk halaman ImagesLoaded
+          {
+            id: "imagesloaded-lib",
+            label: "ImagesLoaded",
+            icon: "image",
+            page: "imagesloaded",
+            layout: "",
+            group: "Grafis",
+          },
         ],
       },
       {
@@ -361,13 +368,14 @@ const globalNavigationData = [
             layout: "",
             group: "Halaman",
           },
+          // Penambahan untuk halaman Galeri di bawah Solusi UI/UX
           {
             id: "gallery",
             label: "Galeri",
             icon: "image",
             page: "gallery",
             layout: "",
-            group: "Halaman",
+            group: "Halaman", // Atau group yang lebih spesifik jika ada
           },
         ],
       },
@@ -675,6 +683,24 @@ const sidebarNavigationData = [
         layout: "sidebar-left",
         group: "Grafis",
       },
+      // Penambahan untuk halaman Masonry
+      {
+        id: "masonry-sidebar",
+        label: "Masonry",
+        icon: "layout-grid",
+        page: "masonry",
+        layout: "sidebar-left",
+        group: "Grafis",
+      },
+      // Penambahan untuk halaman ImagesLoaded
+      {
+        id: "imagesloaded-sidebar",
+        label: "ImagesLoaded",
+        icon: "image",
+        page: "imagesloaded",
+        layout: "sidebar-left",
+        group: "Grafis",
+      },
     ],
   },
   {
@@ -722,13 +748,14 @@ const sidebarNavigationData = [
         layout: "sidebar-left",
         group: "Halaman",
       },
+      // Penambahan untuk halaman Galeri di bawah Solusi UI/UX
       {
         id: "gallery-sidebar",
         label: "Galeri",
         icon: "image",
         page: "gallery",
         layout: "sidebar-left",
-        group: "Halaman",
+        group: "Halaman", // Atau group yang lebih spesifik jika ada
       },
     ],
   },

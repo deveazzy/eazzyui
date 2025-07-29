@@ -128,32 +128,6 @@ document.addEventListener('DOMContentLoaded', function () {
             <p class="mt-8 text-gray-600 leading-relaxed text-base md:text-lg">
                 Untuk membuat contoh di atas, gunakan inisialisasi JavaScript yang ada di file `public/js/basic/pickr.js`.
             </p>
-            <pre class="bg-gray-800 text-white p-4 rounded-lg mt-2 overflow-x-auto"><code class="language-javascript">
-// Kode di dalam public/js/basic/pickr.js akan terlihat seperti ini:
-document.addEventListener('DOMContentLoaded', function() {
-    const el = document.querySelector('.color-picker-instance');
-
-    if (el) {
-        const pickr = Pickr.create({
-            el: el,
-            theme: 'classic', // atau 'monolith', 'nano'
-            default: '#42445A', // Warna default
-            components: {
-                preview: true, opacity: true, hue: true,
-                interaction: {
-                    hex: true, rgba: true, hsla: true,
-                    input: true, clear: true, save: true
-                }
-            }
-        });
-
-        pickr.on('change', (color, source, instance) => {
-            console.log('Warna baru:', color.toHEXA().toString());
-            // Lakukan sesuatu dengan warna yang dipilih di sini
-        });
-    }
-});
-            </code></pre>
         </section>
 
     </div>
