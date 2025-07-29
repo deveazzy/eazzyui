@@ -3,7 +3,7 @@
  * @copyright Copyright (c) [2025] [EazZy Project]
  * @license   https://opensource.org/licenses/MIT MIT License
  */
-import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
+// import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Hapus pemeriksaan ini karena jika import berhasil, createIcons sudah tersedia.
@@ -160,5 +160,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Jika createIcons diimpor sebagai modul, ia akan tersedia di sini.
   // Tidak perlu memeriksa window.lucide atau typeof createIcons.
-  createIcons({ icons });
+  // createIcons({ icons });
 });

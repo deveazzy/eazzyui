@@ -4,11 +4,7 @@
  * @license   https://opensource.org/licenses/MIT MIT License
  */
 
-import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
-
 document.addEventListener("DOMContentLoaded", () => {
-  createIcons({ icons }); // Initialize Lucide icons
-
   /**
    * Initializes accordion functionality for a given group.
    * @param {string} groupName - The value of the data-accordion-group attribute.

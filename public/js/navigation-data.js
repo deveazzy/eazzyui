@@ -114,6 +114,14 @@ const globalNavigationData = [
             group: "Dasar",
           },
           {
+            id: "timeline-page",
+            label: "Timeline",
+            icon: "gallery-vertical",
+            page: "timeline",
+            layout: "",
+            group: "Dasar",
+          },
+          {
             id: "modal-form",
             label: "Modal & Form",
             icon: "book-copy",
@@ -304,7 +312,6 @@ const globalNavigationData = [
             layout: "",
             group: "Grafis",
           },
-          // Penambahan untuk halaman Masonry
           {
             id: "masonry-lib",
             label: "Masonry",
@@ -313,7 +320,6 @@ const globalNavigationData = [
             layout: "",
             group: "Grafis",
           },
-          // Penambahan untuk halaman ImagesLoaded
           {
             id: "imagesloaded-lib",
             label: "ImagesLoaded",
@@ -361,21 +367,12 @@ const globalNavigationData = [
             group: "Form & Utilitas",
           },
           {
-            id: "timeline-page",
-            label: "Timeline",
-            icon: "gallery-vertical",
-            page: "timeline",
-            layout: "",
-            group: "Halaman",
-          },
-          // Penambahan untuk halaman Galeri di bawah Solusi UI/UX
-          {
             id: "gallery",
             label: "Galeri",
             icon: "image",
             page: "gallery",
             layout: "",
-            group: "Halaman", // Atau group yang lebih spesifik jika ada
+            group: "Halaman",
           },
         ],
       },
@@ -489,6 +486,14 @@ const sidebarNavigationData = [
         label: "Grid",
         icon: "layout-grid",
         page: "grid",
+        layout: "sidebar-left",
+        group: "Dasar",
+      },
+      {
+        id: "timeline-page-sidebar",
+        label: "Timeline",
+        icon: "gallery-vertical",
+        page: "timeline",
         layout: "sidebar-left",
         group: "Dasar",
       },
@@ -683,7 +688,6 @@ const sidebarNavigationData = [
         layout: "sidebar-left",
         group: "Grafis",
       },
-      // Penambahan untuk halaman Masonry
       {
         id: "masonry-sidebar",
         label: "Masonry",
@@ -692,7 +696,6 @@ const sidebarNavigationData = [
         layout: "sidebar-left",
         group: "Grafis",
       },
-      // Penambahan untuk halaman ImagesLoaded
       {
         id: "imagesloaded-sidebar",
         label: "ImagesLoaded",
@@ -741,21 +744,12 @@ const sidebarNavigationData = [
         group: "Form & Utilitas",
       },
       {
-        id: "timeline-page-sidebar",
-        label: "Timeline",
-        icon: "gallery-vertical",
-        page: "timeline",
-        layout: "sidebar-left",
-        group: "Halaman",
-      },
-      // Penambahan untuk halaman Galeri di bawah Solusi UI/UX
-      {
         id: "gallery-sidebar",
         label: "Galeri",
         icon: "image",
         page: "gallery",
         layout: "sidebar-left",
-        group: "Halaman", // Atau group yang lebih spesifik jika ada
+        group: "Halaman",
       },
     ],
   },
