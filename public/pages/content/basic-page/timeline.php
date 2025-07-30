@@ -15,6 +15,18 @@
             </div>
         </div>
     </div>
+    
+    <section class="mb-10 md:mb-12">
+        <div class="container mx-auto px-6 md:px-10 py-8 bg-white rounded-lg shadow-xl max-w-7xl">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Apa Itu Timeline?</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+                Timeline adalah representasi visual dari serangkaian peristiwa atau tahapan yang diatur secara kronologis. Ini adalah cara yang efektif untuk menceritakan kisah, menampilkan riwayat proyek, atau menunjukkan perkembangan suatu proses dari waktu ke waktu. Timeline membantu pengguna memahami urutan kejadian dan melihat hubungan antara satu peristiwa dengan peristiwa lainnya.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+                Penggunaan timeline sangat luas, mulai dari riwayat hidup, alur proyek, sejarah produk, hingga jadwal acara. Desain timeline dapat bervariasi dari vertikal, horizontal, hingga daftar sederhana, disesuaikan dengan kebutuhan presentasi data.
+            </p>
+        </div>
+    </section>
 
     <section id="timeline-vertical" class="py-12 md:py-16">
         <div class="container mx-auto px-6 md:px-10 py-8 bg-white rounded-lg shadow-xl max-w-7xl">

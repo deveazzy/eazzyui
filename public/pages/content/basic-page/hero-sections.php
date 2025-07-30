@@ -104,6 +104,16 @@
             </div>
         </div>
 
+        <section class="mb-10 md:mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-700 border-b-2 border-blue-200 pb-3 mb-6">Apa Itu Hero Section?</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+                Hero Section adalah bagian paling atas dari sebuah halaman web, dirancang untuk menarik perhatian pengunjung secara instan dan menyampaikan pesan inti situs. Ini sering kali menjadi kesan pertama yang didapat pengguna, sehingga penting untuk membuatnya menarik, informatif, dan relevan. Hero section biasanya mencakup judul besar, deskripsi singkat, gambar atau video latar belakang, dan ajakan bertindak (Call-to-Action/CTA).
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+                Tujuan utama hero section adalah untuk mengkomunikasikan nilai proposisi utama situs Anda dengan cepat dan mendorong pengguna untuk menjelajahi lebih lanjut atau melakukan tindakan tertentu. Berbagai efek visual dan animasi dapat ditambahkan untuk meningkatkan daya tarik dan pengalaman pengguna.
+            </p>
+        </section>
+
         <div class="space-y-16">
 
             <section>

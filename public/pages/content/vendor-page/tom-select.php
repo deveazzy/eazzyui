@@ -103,7 +103,7 @@ npm install tom-select
                 Contoh Penerapan
             </h2>
             <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-8 max-w-2xl">
-                Berikut adalah contoh penerapan Tom Select. Anda dapat menggunakan elemen <code>&lt;select multiple&gt;</code> atau <code>&lt;input type="text"&gt;</code>.
+                Berikut adalah contoh penerapan Tom Select. Anda dapat menggunakan elemen <code>&lt;select multiple&gt;</code>.
             </p>
 
             <div class="bg-gray-100 p-8 rounded-lg border border-gray-200">
@@ -122,7 +122,7 @@ npm install tom-select
             </div>
 
             <p class="mt-8 text-gray-600 leading-relaxed text-base md:text-lg">
-                File <code>tom-select-init.js</code> akan secara otomatis mencari elemen dengan ID <code>product-tags</code> dan <code>user-skills</code> dan mengubahnya menjadi input Tom Select.
+                File <code>tom-select-init.js</code> akan secara otomatis mencari elemen dengan ID <code>product-tags</code> dan mengubahnya menjadi input Tom Select.
             </p>
         </section>
 

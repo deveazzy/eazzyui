@@ -40,6 +40,7 @@ $pages = [
     ['loc' => 'https://uiux.eazzy-project.com/xlsx', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.7'],
     ['loc' => 'https://uiux.eazzy-project.com/luxon', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.7'],
     ['loc' => 'https://uiux.eazzy-project.com/jspdf', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.7'],
+    ['loc' => 'https://uiux.eazzy-project.com/tom-select', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.8'],
     ['loc' => 'https://uiux.eazzy-project.com/dashboard', 'lastmod' => date('Y-m-d'), 'changefreq' => 'daily', 'priority' => '0.9'],
     ['loc' => 'https://uiux.eazzy-project.com/qr-code-styling', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.7'],
     ['loc' => 'https://uiux.eazzy-project.com/form-wizard', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.8'],

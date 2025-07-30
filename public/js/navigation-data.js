@@ -225,6 +225,22 @@ const globalNavigationData = [
             group: "Tabel & Data",
           },
           {
+            id: "jspdf-js", // Memindahkan jsPDF ke grup "Tabel & Data"
+            label: "jsPDF",
+            icon: "file-text",
+            page: "jspdf",
+            layout: "",
+            group: "Tabel & Data",
+          },
+          {
+            id: "tom-select", // Menambahkan Tom Select
+            label: "Tom Select",
+            icon: "tags", // Ikon yang sesuai
+            page: "tom-select", // Nama file halaman yang dibuat
+            layout: "",
+            group: "Form & Utilitas", // Grup sesuai permintaan
+          },
+          {
             id: "alerts-notifications",
             label: "PNotify",
             icon: "bell-ring",
@@ -253,14 +269,6 @@ const globalNavigationData = [
             label: "Luxon",
             icon: "clock",
             page: "luxon",
-            layout: "",
-            group: "Form & Utilitas",
-          },
-          {
-            id: "jspdf-js",
-            label: "jsPDF",
-            icon: "file-text",
-            page: "jspdf",
             layout: "",
             group: "Form & Utilitas",
           },
@@ -609,6 +617,22 @@ const sidebarNavigationData = [
         group: "Tabel & Data",
       },
       {
+        id: "jspdf-js", // Memindahkan jsPDF ke grup "Tabel & Data"
+        label: "jsPDF",
+        icon: "file-text",
+        page: "jspdf",
+        layout: "sidebar-left",
+        group: "Tabel & Data",
+      },
+      {
+        id: "tom-select", // Menambahkan Tom Select
+        label: "Tom Select",
+        icon: "tags", // Ikon yang sesuai
+        page: "tom-select", // Nama file halaman yang dibuat
+        layout: "sidebar-left", // Tambahkan layout untuk sidebar
+        group: "Form & Utilitas", // Grup sesuai permintaan
+      },
+      {
         id: "alerts-notifications",
         label: "PNotify",
         icon: "bell-ring",
@@ -637,14 +661,6 @@ const sidebarNavigationData = [
         label: "Luxon",
         icon: "clock",
         page: "luxon",
-        layout: "sidebar-left",
-        group: "Form & Utilitas",
-      },
-      {
-        id: "jspdf-js",
-        label: "jsPDF",
-        icon: "file-text",
-        page: "jspdf",
         layout: "sidebar-left",
         group: "Form & Utilitas",
       },
