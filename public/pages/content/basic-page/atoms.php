@@ -91,6 +91,7 @@
                     <input type="email" id="error-input" name="user_email_error" value="bukan-email-valid" class="w-full px-4 py-2 rounded-lg border border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500">
                     <p class="text-sm text-red-600">Format email tidak valid.</p>
                 </div>
+                <!-- Rupiah -->
                 <div class="space-y-2">
                     <label for="rupiah-input" class="font-medium text-gray-700">Harga (Rupiah)</label>
                     <div class="relative">
@@ -107,6 +108,54 @@
                         >
                     </div>
                 </div>
+                <!-- spin -->
+                <div class="space-y-2">
+                    <label for="basic-spinner-input" class="font-medium text-gray-700">Jumlah</label>
+                    <div class="relative w-full max-w-[150px]">
+                        <input 
+                            type="text" 
+                            id="basic-spinner-input" 
+                            name="quantity" 
+                            class="w-full text-center px-10 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            value="1"
+                            inputmode="numeric"
+                        >
+                        <button type="button" id="basic-spinner-decrement" class="absolute left-0 top-0 h-full px-3 text-gray-600 hover:text-blue-600 rounded-l-lg transition-colors focus:outline-none">
+                            <i data-lucide="minus" class="w-4 h-4"></i>
+                        </button>
+                        <button type="button" id="basic-spinner-increment" class="absolute right-0 top-0 h-full px-3 text-gray-600 hover:text-blue-600 rounded-r-lg transition-colors focus:outline-none">
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <span class="font-medium text-gray-700">Opsi Tindakan</span>
+                    
+                    <div class="relative dropdown-wrapper">
+                        <button type="button" class="dropdown-toggle relative w-full cursor-pointer rounded-lg bg-white py-2 pl-4 pr-10 text-left border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:text-sm">
+                            <input type="text" readonly="" class="selected-option-display block w-full bg-white cursor-pointer truncate focus:outline-none" value="Pilih Opsi">
+                            <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down h-5 w-5 text-gray-400 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+                            </span>
+                        </button>
+                        
+                        <div class="dropdown-menu absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg focus:outline-none sm:text-sm">
+                            <a href="#" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors dropdown-item" data-value="Edit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="edit-3" class="lucide lucide-edit-3 w-4 h-4 text-blue-600"><path d="M12 20h9"></path><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"></path></svg>
+                                <span>Edit</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors dropdown-item" data-value="Duplikat">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="copy" class="lucide lucide-copy w-4 h-4 text-green-600"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                                <span>Duplikat</span>
+                            </a>
+                            <div class="my-1 h-px bg-gray-200"></div>
+                            <a href="#" class="flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 transition-colors dropdown-item" data-value="Hapus">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="trash-2" class="lucide lucide-trash-2 w-4 h-4"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" x2="10" y1="11" y2="17"></line><line x1="14" x2="14" y1="11" y2="17"></line></svg>
+                                <span>Hapus</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <!-- Disabled Input -->
                 <div class="space-y-2">
                     <label for="disabled-input" class="font-medium text-gray-700">Kode Unik (Disabled)</label>
@@ -117,8 +166,8 @@
                 <div class="space-y-2">
                     <label for="date-picker" class="font-medium text-gray-700">Tanggal Transaksi</label>
                     <div class="relative">
-                        <input type="text" id="date-picker" name="transaction_date" placeholder="Pilih rentang tanggal..." class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 pr-10 bg-white cursor-pointer" readonly>
-                        <i data-lucide="calendar-days" class="absolute top-1/2 right-3 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none"></i>
+                        <input type="text" id="date-picker" name="date-picker" placeholder="Pilih rentang tanggal..." class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 pr-10 bg-white cursor-pointer" readonly>
+                        <i data-lucide="calendar" class="absolute top-1/2 right-3 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none"></i>
                     </div>
                 </div>
 
@@ -126,7 +175,7 @@
                 <div class="space-y-2">
                     <label for="date-range-picker" class="font-medium text-gray-700">Rentang Tanggal Laporan</label>
                     <div class="relative">
-                        <input type="text" id="date-range-picker" name="report_date_range" placeholder="Pilih rentang tanggal..." class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 pr-10 bg-white cursor-pointer" readonly>
+                        <input type="text" id="date-range-picker" name="date-range-picker" placeholder="Pilih rentang tanggal..." class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 pr-10 bg-white cursor-pointer" readonly>
                         <i data-lucide="calendar-days" class="absolute top-1/2 right-3 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none"></i>
                     </div>
                 </div>
@@ -152,6 +201,7 @@
                                 name="username"
                                 class="shadow appearance-none border rounded w-11/12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 placeholder="Masukkan Username"
+                                autocomplete="off"
                             >
                             <div id="usernameIcon" class="flex-shrink-0 w-1/12 flex justify-center items-center">
                                 </div>
@@ -168,6 +218,7 @@
                                 name="email"
                                 class="shadow appearance-none border rounded w-11/12 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 placeholder="Masukkan Email"
+                                autocomplete="off"
                             >
                             <div id="emailIcon" class="flex-shrink-0 w-1/12 flex justify-center items-center">
                                 </div>

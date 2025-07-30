@@ -277,4 +277,136 @@ document.addEventListener("DOMContentLoaded", () => {
       e.target.value = formattedValue;
     });
   }
+
+  // Fungsi untuk menginisialisasi komponen number spinner
+  function setupNumberSpinner(inputId, incrementId, decrementId, options = {}) {
+    const input = document.getElementById(inputId);
+    const incrementBtn = document.getElementById(incrementId);
+    const decrementBtn = document.getElementById(decrementId);
+
+    if (!input || !incrementBtn || !decrementBtn) {
+      console.error("Elemen spinner tidak ditemukan:", inputId);
+      return;
+    }
+
+    // Konfigurasi default
+    const { min = 0, max = Infinity, step = 1 } = options;
+
+    // Fungsi untuk memperbarui dan memvalidasi nilai input
+    const updateValue = (newValue) => {
+      let value = parseInt(newValue, 10);
+      if (isNaN(value)) {
+        value = min; // Jika input tidak valid, kembalikan ke nilai minimum
+      }
+
+      // Pastikan nilai berada dalam rentang min dan max
+      value = Math.max(min, Math.min(max, value));
+      input.value = value;
+    };
+
+    // Event listener untuk tombol tambah
+    incrementBtn.addEventListener("click", () => {
+      updateValue(parseInt(input.value, 10) + step);
+    });
+
+    // Event listener untuk tombol kurang
+    decrementBtn.addEventListener("click", () => {
+      updateValue(parseInt(input.value, 10) - step);
+    });
+
+    // Event listener untuk memastikan hanya angka yang diinput
+    input.addEventListener("input", () => {
+      input.value = input.value.replace(/[^\d]/g, "");
+    });
+
+    // Event listener untuk memvalidasi nilai saat fokus hilang dari input
+    input.addEventListener("blur", () => {
+      updateValue(input.value);
+    });
+  }
+
+  // Inisialisasi spinner yang baru kita buat
+  setupNumberSpinner(
+    "basic-spinner-input",
+    "basic-spinner-increment",
+    "basic-spinner-decrement",
+    {
+      min: 1, // Contoh: nilai minimal adalah 1
+      max: 100, // Contoh: nilai maksimal adalah 100
+    }
+  );
+
+  function closeAllDropdowns() {
+    document.querySelectorAll(".dropdown-wrapper").forEach((wrapper) => {
+      // Gunakan 'is-open' pada wrapper, bukan 'is-active' pada menu
+      wrapper.classList.remove("is-open");
+
+      // Pastikan ikon kembali ke posisi awal
+      const icon = wrapper.querySelector(".dropdown-toggle [data-lucide]");
+      if (icon) {
+        icon.classList.remove("rotate-180");
+      }
+    });
+  }
+
+  function setupDropdowns() {
+    document.querySelectorAll(".dropdown-wrapper").forEach((wrapper) => {
+      const toggle = wrapper.querySelector(".dropdown-toggle");
+      const menu = wrapper.querySelector(".dropdown-menu"); // Tetap ambil menu
+      const icon = toggle?.querySelector("[data-lucide]");
+      const selectedDisplayInput = wrapper.querySelector(
+        ".selected-option-display"
+      );
+      const dropdownItems = menu ? menu.querySelectorAll(".dropdown-item") : [];
+
+      if (toggle && menu && selectedDisplayInput) {
+        toggle.addEventListener("click", (event) => {
+          event.stopPropagation();
+          // Periksa apakah wrapper sudah memiliki kelas 'is-open'
+          const isOpen = wrapper.classList.contains("is-open");
+          closeAllDropdowns(); // Tutup semua dropdown lain
+
+          if (!isOpen) {
+            // Jika wrapper belum aktif, aktifkan dengan menambahkan 'is-open'
+            wrapper.classList.add("is-open"); // PERUBAHAN DI SINI!
+            if (icon) {
+              icon.classList.add("rotate-180");
+            }
+          }
+        });
+
+        dropdownItems.forEach((item) => {
+          item.addEventListener("click", (event) => {
+            event.preventDefault();
+            const selectedValue = item.dataset.value;
+
+            if (selectedValue && selectedDisplayInput) {
+              selectedDisplayInput.value = selectedValue;
+            }
+            closeAllDropdowns();
+          });
+        });
+      } else {
+        console.warn(
+          "Dropdown initialization failed: Missing toggle, menu, or input display.",
+          {
+            wrapper: wrapper,
+            toggle: toggle,
+            menu: menu,
+            selectedDisplayInput: selectedDisplayInput,
+          }
+        );
+      }
+    });
+  }
+
+  setupDropdowns();
+  window.addEventListener("click", (event) => {
+    if (
+      !event.target.closest(".dropdown-wrapper") &&
+      !event.target.closest(".mobile-slider-scroll")
+    ) {
+      closeAllDropdowns();
+    }
+  });
 });
