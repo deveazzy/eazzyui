@@ -30,28 +30,28 @@
                      </div>
                 </div>
 
-                <div>
-                    <label for="full-name" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
-                    <input type="text" id="full-name" value="EazZy Project" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
+                <div class="space-y-2">
+                    <label for="full-name" class="font-medium text-gray-700">Nama Lengkap</label>
+                    <input type="text" id="full-name" value="EazZy Project" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
 
-                <div>
-                    <label for="bio" class="block text-sm font-medium text-gray-700">Bio</label>
-                    <textarea id="bio" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" placeholder="Ceritakan tentang diri Anda...">Smart App Free for Everyone</textarea>
+                <div class="space-y-2">
+                    <label for="bio" class="font-medium text-gray-700">Bio</label>
+                    <textarea id="bio" rows="3" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ceritakan tentang diri Anda...">Smart App Free for Everyone</textarea>
                 </div>
 
-                 <div>
-                    <label for="location" class="block text-sm font-medium text-gray-700">Lokasi</label>
-                    <input type="text" id="location" value="Bandung, Indonesia" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
+                 <div class="space-y-2">
+                    <label for="location" class="font-medium text-gray-700">Lokasi</label>
+                    <input type="text" id="location" value="Bandung, Indonesia" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
             </form>
         </div>
 
         <div class="flex justify-end items-center p-5 border-t border-gray-200 bg-gray-50 rounded-b-xl">
-            <button class="modal-close-btn bg-gray-200 text-gray-700 font-semibold px-5 py-2 rounded-lg hover:bg-gray-300 transition-colors mr-3">
+            <button class="modal-close-btn bg-white text-gray-700 font-semibold px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors duration-300 shadow-sm mr-3">
                 Batal
             </button>
-            <button class="bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+            <button class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-sm">
                 Simpan Perubahan
             </button>
         </div>
