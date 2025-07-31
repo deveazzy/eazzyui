@@ -49,11 +49,11 @@ $allowed_pages = [
     'qr-code-styling', 'pickr', 'login', 'form-wizard',
     'accordions', 'sponsors', 'tinymce', 'timeline',
     'gallery', 'masonry', 'imagesloaded', 'hero-sections',
-    'tom-select'
+    'tom-select', 'profile'
 ];
 
 $pages_using_advanced_js = [
-    'advanced-table', 'login', 'form-wizard', 'gallery'
+    'advanced-table', 'login', 'form-wizard', 'gallery', 'profile'
 ];
 
 $js_to_load_path = '';

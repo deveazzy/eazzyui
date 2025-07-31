@@ -123,19 +123,6 @@
                             </div>
                         </div>
                         <div class="flex items-start bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm">
-                            <div class="bg-blue-100 p-3 rounded-full mr-4 shrink-0"><i data-lucide="landmark" class="w-6 h-6 text-blue-600"></i></div>
-                            <div>
-                                <h3 class="font-semibold text-lg text-gray-800 mb-2">Transfer Bank</h3>
-                                <p class="text-gray-600">Untuk donasi melalui transfer bank, silakan kirim ke rekening berikut:</p>
-                                <ul class="text-gray-700 mt-2 list-none">
-                                    <li><strong>Bank:</strong> Bank Jago</li>
-                                    <li><strong>No. Rekening:</strong> 109950624686</li>
-                                    <li><strong>Atas Nama:</strong> Iwan Setiawan</li>
-                                </ul>
-                                <p class="text-sm text-gray-500 mt-3">Mohon konfirmasi setelah melakukan transfer agar kami dapat mencatat dukungan Anda. Kirimkan email kepada kami di <a href="mailto:deveazzy@gmail.com" class="text-blue-600 hover:underline">deveazzy@gmail.com</a> dengan subjek "Donasi EazZy Project"</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm">
                             <div class="bg-blue-100 p-3 rounded-full mr-4 shrink-0"><i data-lucide="dollar-sign" class="w-6 h-6 text-blue-700"></i></div>
                             <div>
                                 <h3 class="font-semibold text-lg text-gray-800 mb-2">PayPal</h3>

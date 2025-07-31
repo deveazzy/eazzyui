@@ -225,7 +225,7 @@ const globalNavigationData = [
             group: "Tabel & Data",
           },
           {
-            id: "jspdf-js", // Memindahkan jsPDF ke grup "Tabel & Data"
+            id: "jspdf-js",
             label: "jsPDF",
             icon: "file-text",
             page: "jspdf",
@@ -233,12 +233,12 @@ const globalNavigationData = [
             group: "Tabel & Data",
           },
           {
-            id: "tom-select", // Menambahkan Tom Select
+            id: "tom-select",
             label: "Tom Select",
-            icon: "tags", // Ikon yang sesuai
-            page: "tom-select", // Nama file halaman yang dibuat
+            icon: "tags",
+            page: "tom-select",
             layout: "",
-            group: "Form & Utilitas", // Grup sesuai permintaan
+            group: "Form & Utilitas",
           },
           {
             id: "alerts-notifications",
@@ -389,6 +389,14 @@ const globalNavigationData = [
             page: "gallery",
             layout: "",
             group: "Halaman",
+          },
+          {
+            id: "social-media-profile",
+            label: "Media Sosial",
+            icon: "users",
+            page: "profile",
+            layout: "sidebar-left",
+            group: "Front End",
           },
         ],
       },
@@ -617,7 +625,7 @@ const sidebarNavigationData = [
         group: "Tabel & Data",
       },
       {
-        id: "jspdf-js", // Memindahkan jsPDF ke grup "Tabel & Data"
+        id: "jspdf-js",
         label: "jsPDF",
         icon: "file-text",
         page: "jspdf",
@@ -625,12 +633,12 @@ const sidebarNavigationData = [
         group: "Tabel & Data",
       },
       {
-        id: "tom-select", // Menambahkan Tom Select
+        id: "tom-select",
         label: "Tom Select",
-        icon: "tags", // Ikon yang sesuai
-        page: "tom-select", // Nama file halaman yang dibuat
-        layout: "sidebar-left", // Tambahkan layout untuk sidebar
-        group: "Form & Utilitas", // Grup sesuai permintaan
+        icon: "tags",
+        page: "tom-select",
+        layout: "sidebar-left",
+        group: "Form & Utilitas",
       },
       {
         id: "alerts-notifications",
@@ -782,6 +790,14 @@ const sidebarNavigationData = [
         page: "gallery",
         layout: "sidebar-left",
         group: "Halaman",
+      },
+      {
+        id: "social-media-profile-sidebar",
+        label: "Media Sosial",
+        icon: "users",
+        page: "profile",
+        layout: "sidebar-left",
+        group: "Front End",
       },
     ],
   },
