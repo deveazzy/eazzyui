@@ -4,11 +4,6 @@
  * @license   https://opensource.org/licenses/MIT MIT License
  */
 
-/**
- * Fungsi untuk menampilkan modal error.
- * @param {string} title - Judul modal.
- * @param {string} message - Pesan yang akan ditampilkan di dalam modal.
- */
 export function showErrorModal(title, message) {
   const existingModal = document.getElementById("error-modal");
   if (existingModal) {

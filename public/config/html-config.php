@@ -1,4 +1,4 @@
-<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="4d1053f1-388b-41c7-9368-aa83c50895d4" data-blockingmode="auto" type="text/javascript"></script>
+<!-- <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="4d1053f1-388b-41c7-9368-aa83c50895d4" data-blockingmode="auto" type="text/javascript"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMR8YJRKW8"></script>
 <script>
@@ -22,13 +22,13 @@
       'domains': ['eazzy-project.com', 'uiux.eazzy-project.com', 'apps.eazzy-project.com']
     }
   });
-</script>
+</script> -->
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6543484813821741" crossorigin="anonymous"></script>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EazZy UI</title>
 
-<link rel="icon" href="/assets/images/logo.png" type="image/png">
-<link rel="apple-touch-icon" href="/assets/images/logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon-180x180.png">

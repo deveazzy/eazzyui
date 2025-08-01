@@ -6,6 +6,7 @@
         </a>
         
         <button id="menu-btn" class="md:hidden z-20">
+            <span class="sr-only">Header menu</span>
             <i data-lucide="menu" class="h-6 w-6"></i>
         </button>
         

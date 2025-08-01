@@ -5,7 +5,7 @@
             <div class="bg-white text-blue-600 p-5 rounded-full mb-6 shadow-md animate__animated animate__zoomIn animate__delay-2s">
                 <i data-lucide="info" class="w-16 h-16 md:w-20 md:h-20"></i>
             </div>
-            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 animate__animated animate__fadeInDown animate__delay-0-5s">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4 animate__animated animate__fadeInDown animate__delay-0-5s">
                 Tentang EazZy UI
             </h1>
             <p class="text-lg md:text-xl max-w-3xl mx-auto opacity-90 animate__animated animate__fadeInUp animate__delay-1s">

@@ -7,7 +7,7 @@
                 <i data-lucide="bell-ring" class="w-10 h-10 md:w-12 md:h-12"></i> 
             </div>
             <div>
-                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">
+                <h1 class="text-4xl md:text-4xl font-bold text-gray-800 leading-tight">
                     Alerts & Notifications with 
                     <a href="https://sciactive.com/pnotify/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-300">PNotify</a>
                 </h1>

@@ -6,7 +6,7 @@
                 <i data-lucide="handshake" class="w-10 h-10 md:w-12 md:h-12"></i>
             </div>
             <div>
-                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">
+                <h1 class="text-4xl md:text-4xl font-bold text-gray-800 leading-tight">
                     Sponsors
                 </h1>
                 <p class="text-lg md:text-xl text-gray-500 mt-1">
@@ -15,7 +15,7 @@
             </div>
         </div>
         
-        <?php include 'pages/content/sponsors-page/for-home.php'; ?>
+        <?php //include 'pages/content/sponsors-page/for-home.php'; ?>
 
         <div class="accordion-container" data-accordion-group="sponsor-details">
 

@@ -3,7 +3,7 @@
  * @copyright Copyright (c] [2025] [EazZy Project]
  * @license   https://opensource.org/licenses/MIT MIT License
  */
-import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
+// import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   var tabledata = [
@@ -69,9 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Panggil createIcons setelah tabel selesai dirender
   table.on("renderComplete", function () {
-    createIcons({
-      icons: icons,
-      // Anda bisa menentukan atribut atau class lain di sini jika perlu
-    });
+    lucide.createIcons();
   });
 });

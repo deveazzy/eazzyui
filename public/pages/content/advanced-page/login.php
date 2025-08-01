@@ -6,7 +6,7 @@
                 <i data-lucide="log-in" class="w-10 h-10 md:w-12 md:h-12"></i>
             </div>
             <div>
-                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">
+                <h1 class="text-4xl md:text-4xl font-bold text-gray-800 leading-tight">
                     Login Akun
                 </h1>
             </div>
@@ -92,7 +92,7 @@
 
             <div class="w-full md:w-1/2 hidden md:flex items-center justify-center bg-blue-600 text-white p-8 lg:p-10 text-center">
                 <div class="max-w-md">
-                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 leading-tight">EazZy UI</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">EazZy UI</h2>
                     <p class="text-base md:text-lg opacity-90 mb-6">
                         Platform terdepan untuk aset antarmuka pengguna modern dan pengembangan web cepat. Temukan komponen yang Anda butuhkan untuk membangun aplikasi luar biasa.
                     </p>

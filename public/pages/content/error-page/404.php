@@ -7,8 +7,8 @@
             <div class="mb-6">
                 <i data-lucide="alert-circle" class="w-24 h-24 mx-auto text-blue-600"></i>
             </div>
-            <h2 class="text-6xl font-extrabold text-blue-600 mb-4">404</h2>
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Halaman Tidak Ditemukan</h1>
+            <h2 class="text-6xl font-bold text-blue-600 mb-4">404</h2>
+            <h1 class="text-4xl md:text-4xl font-bold text-gray-900 mb-4">Halaman Tidak Ditemukan</h1>
             <p class="text-lg text-gray-600 mb-8">
                 Maaf, halaman yang Anda cari tidak dapat ditemukan. Mungkin alamat URL salah atau halaman telah dihapus.
             </p>

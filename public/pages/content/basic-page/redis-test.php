@@ -97,7 +97,7 @@ $executionTime = round(($endTime - $startTime) * 1000, 2); // Dalam milidetik
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 12.5c0-2.4-1.3-4.5-3.2-5.7"/><path d="M2.5 12.5c0-2.4 1.3-4.5 3.2-5.7"/><path d="M12.5 2.5c-2.4 0-4.5 1.3-5.7 3.2"/><path d="M12.5 21.5c-2.4 0-4.5-1.3-5.7-3.2"/><path d="M6.3 18.7c.9.9 2.2 1.5 3.7 1.5h4c1.5 0 2.8-.6 3.7-1.5"/><path d="M6.3 5.3c.9-.9 2.2-1.5 3.7-1.5h4c1.5 0 2.8.6 3.7 1.5"/></svg>
                 </div>
                 <div>
-                    <h1 class="text-3xl font-extrabold text-gray-800">Contoh Penerapan Redis Cache</h1>
+                    <h1 class="text-4xl font-bold text-gray-800">Contoh Penerapan Redis Cache</h1>
                     <p class="text-lg text-gray-500 mt-1">Mendemonstrasikan perbedaan kecepatan dengan dan tanpa cache.</p>
                 </div>
             </div>

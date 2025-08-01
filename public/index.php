@@ -17,18 +17,16 @@ include_once APP_ROOT . '/app/Core/core.php';
       include_once 'config/asset-config.php'; 
   ?>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="text-gray-800 flex flex-col min-h-dynamic-screen">
   <?php 
     include 'layout/header.php';
   ?>
-    <div class="flex flex-1">
-        <?php
-        if (isset($layout) && $layout === 'sidebar-left' && !in_array($page, $pages_without_sidebar)) {
-            include 'layout/sidebar-left.php';
-        }
-        include 'pages/switch.php'; 
-        ?>
-    </div>
+    <?php
+    if (isset($layout) && $layout === 'sidebar-left' && !in_array($page, $pages_without_sidebar)) {
+        include 'layout/sidebar-left.php';
+    }
+    include 'pages/switch.php'; 
+    ?>
   <?php 
   include 'layout/footer.php'; 
   include 'config/js-config.php';

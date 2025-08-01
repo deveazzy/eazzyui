@@ -8,8 +8,8 @@
             <div class="mb-6">
                 <i data-lucide="user-x" class="w-24 h-24 mx-auto text-yellow-600"></i>
             </div>
-            <h2 class="text-6xl font-extrabold text-yellow-600 mb-4">401</h2>
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Tidak Sah</h1>
+            <h2 class="text-6xl font-bold text-yellow-600 mb-4">401</h2>
+            <h1 class="text-4xl md:text-4xl font-bold text-gray-900 mb-4">Tidak Sah</h1>
             <p class="text-lg text-gray-600 mb-8">
                 Maaf, Anda perlu masuk atau memberikan kredensial yang valid untuk mengakses halaman ini.
             </p>

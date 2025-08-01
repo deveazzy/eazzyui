@@ -4,7 +4,7 @@
             <div class="bg-white text-blue-600 p-5 rounded-full mb-6 shadow-lg animate__animated animate__zoomIn animate__delay-2s">
                 <i data-lucide="monitor-dot" class="w-16 h-16 md:w-20 md:h-20"></i>
             </div>
-            <h1 class="text-3xl md:text-6xl font-extrabold leading-tight mb-4 animate__animated animate__fadeInDown animate__delay-0-5s">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 animate__animated animate__fadeInDown animate__delay-0-5s">
                 EazZy UI: Desain Intuitif, Pengembangan Cepat
             </h1>
             <p class="text-lg text-justify md:text-xl max-w-3xl mx-auto opacity-90 animate__animated animate__fadeInUp animate__delay-1s">
@@ -21,7 +21,7 @@
         </div>
     </section>
 
-    <?php include 'pages/content/sponsors-page/for-home.php'; ?>
+    <?php //include 'pages/content/sponsors-page/for-home.php'; ?>
      
     <section id="benefits" class="py-12 md:py-8">
         <div class="container mx-auto px-6 md:px-10 py-8 bg-white rounded-xl shadow-xl max-w-7xl mb-6 md:mb-8">
@@ -33,7 +33,7 @@
                     <div class="bg-blue-200 text-blue-700 p-4 rounded-full mb-4">
                         <i data-lucide="zap" class="w-8 h-8"></i>
                     </div>
-                    <h4 class="font-bold text-xl mb-2 text-gray-800">Efisiensi Pengembangan</h4>
+                    <h2 class="font-bold text-xl mb-2 text-gray-800">Efisiensi Pengembangan</h2>
                     <p class="text-base leading-relaxed text-gray-600 text-justify">
                         Dengan komponen UI yang siap pakai dan teruji, Anda dapat membangun fitur-fitur aplikasi lebih cepat, mengurangi waktu coding yang berulang.
                     </p>
@@ -42,7 +42,7 @@
                     <div class="bg-green-200 text-green-700 p-4 rounded-full mb-4">
                         <i data-lucide="palette" class="w-8 h-8"></i>
                     </div>
-                    <h4 class="font-bold text-xl mb-2 text-gray-800">Konsistensi Visual</h4>
+                    <h2 class="font-bold text-xl mb-2 text-gray-800">Konsistensi Visual</h2>
                     <p class="text-base leading-relaxed text-gray-600 text-justify">
                         Pastikan tampilan yang seragam dan profesional di seluruh aplikasi Anda dengan panduan desain yang jelas dan komponen yang terkoordinasi.
                     </p>
@@ -51,7 +51,7 @@
                     <div class="bg-purple-200 text-purple-700 p-4 rounded-full mb-4">
                         <i data-lucide="smartphone" class="w-8 h-8"></i>
                     </div>
-                    <h4 class="font-bold text-xl mb-2 text-gray-800">Responsif Penuh</h4>
+                    <h2 class="font-bold text-xl mb-2 text-gray-800">Responsif Penuh</h2>
                     <p class="text-base leading-relaxed text-gray-600 text-justify">
                         Desain kami dioptimalkan untuk berbagai ukuran layar, dari desktop hingga perangkat seluler, memastikan pengalaman yang mulus di mana saja.
                     </p>
@@ -60,7 +60,7 @@
                     <div class="bg-yellow-200 text-yellow-700 p-4 rounded-full mb-4">
                         <i data-lucide="user-check" class="w-8 h-8"></i>
                     </div>
-                    <h4 class="font-bold text-xl mb-2 text-gray-800">Pengalaman Pengguna Optimal</h4>
+                    <h2 class="font-bold text-xl mb-2 text-gray-800">Pengalaman Pengguna Optimal</h2>
                     <p class="text-base leading-relaxed text-gray-600 text-justify">
                         Fokus pada kemudahan navigasi, interaksi intuitif, dan alur kerja yang logis untuk kepuasan pengguna maksimal.
                     </p>
@@ -69,7 +69,7 @@
                     <div class="bg-red-200 text-red-700 p-4 rounded-full mb-4">
                         <i data-lucide="puzzle" class="w-8 h-8"></i>
                     </div>
-                    <h4 class="font-bold text-xl mb-2 text-gray-800">Modular & Fleksibel</h4>
+                    <h2 class="font-bold text-xl mb-2 text-gray-800">Modular & Fleksibel</h2>
                     <p class="text-base leading-relaxed text-gray-600 text-justify">
                         EazZy UI memanfaatkan aset-aset modular dan fleksibel, memungkinkan integrasi yang mudah dan penyesuaian yang cepat ke dalam berbagai proyek Anda.
                     </p>
@@ -95,7 +95,7 @@
                         <span class="text-2xl font-bold mt-2">Modals</span>
                     </div>
                     <div class="p-6">
-                        <h4 class="font-bold text-xl mb-2 text-gray-800">Modal & Dialog</h4>
+                        <h2 class="font-bold text-xl mb-2 text-gray-800">Modal & Dialog</h2>
                         <p class="text-sm text-gray-600">Berbagai jenis modal untuk interaksi pengguna.</p>
                         <a href="modal-form" class="mt-4 inline-block text-blue-600 hover:underline font-semibold">Lihat Detail & Demo</a>
                     </div>
@@ -106,7 +106,7 @@
                         <span class="text-2xl font-bold mt-2">Forms</span>
                     </div>
                     <div class="p-6">
-                        <h4 class="font-bold text-xl mb-2 text-gray-800">Elemen Formulir Lengkap</h4>
+                        <h2 class="font-bold text-xl mb-2 text-gray-800">Elemen Formulir Lengkap</h2>
                         <p class="text-sm text-gray-600">Input teks, checkbox, radio, dropdown, dan validasi.</p>
                         <a href="atoms" class="mt-4 inline-block text-blue-600 hover:underline font-semibold">Lihat Detail & Demo</a>
                     </div>
@@ -117,7 +117,7 @@
                         <span class="text-2xl font-bold mt-2">Navigation</span>
                     </div>
                     <div class="p-6">
-                        <h4 class="font-bold text-xl mb-2 text-gray-800">Menu Navigasi Responsif</h4>
+                        <h2 class="font-bold text-xl mb-2 text-gray-800">Menu Navigasi Responsif</h2>
                         <p class="text-sm text-gray-600">Navigasi desktop, mobile hamburger, dan breadcrumbs.</p>
                         <a href="dashboard/sidebar-left" class="mt-4 inline-block text-blue-600 hover:underline font-semibold">Lihat Detail & Demo</a>
                     </div>
@@ -128,7 +128,7 @@
                         <span class="text-2xl font-bold mt-2">Charts</span>
                     </div>
                     <div class="p-6">
-                        <h4 class="font-bold text-xl mb-2 text-gray-800">Visualisasi Data (Charts)</h4>
+                        <h2 class="font-bold text-xl mb-2 text-gray-800">Visualisasi Data (Charts)</h2>
                         <p class="text-sm text-gray-600">Berbagai jenis grafik untuk menampilkan data.</p>
                         <a href="apexcharts" class="mt-4 inline-block text-blue-600 hover:underline font-semibold">Lihat Detail & Demo</a>
                     </div>
@@ -139,7 +139,7 @@
                         <span class="text-2xl font-bold mt-2">Alerts</span>
                     </div>
                     <div class="p-6">
-                        <h4 class="font-bold text-xl mb-2 text-gray-800">Alerts & Notifikasi</h4>
+                        <h2 class="font-bold text-xl mb-2 text-gray-800">Alerts & Notifikasi</h2>
                         <p class="text-sm text-gray-600">Pesan sukses, error, peringatan, dan informasi.</p>
                         <a href="alerts-and-notifications" class="mt-4 inline-block text-blue-600 hover:underline font-semibold">Lihat Detail & Demo</a>
                     </div>
@@ -150,7 +150,7 @@
                         <span class="text-2xl font-bold mt-2">Tables</span>
                     </div>
                     <div class="p-6">
-                        <h4 class="font-bold text-xl mb-2 text-gray-800">Tabel Data Interaktif</h4>
+                        <h2 class="font-bold text-xl mb-2 text-gray-800">Tabel Data Interaktif</h2>
                         <p class="text-sm text-gray-600">Tabel dengan fitur sorting, filtering, dan pagination.</p>
                         <a href="tabulator" class="mt-4 inline-block text-blue-600 hover:underline font-semibold">Lihat Detail & Demo</a>
                     </div>

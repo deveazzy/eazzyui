@@ -19,7 +19,7 @@
                 <i data-lucide="palette" class="w-10 h-10 md:w-12 md:h-12"></i>
             </div>
             <div>
-                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">
+                <h1 class="text-4xl md:text-4xl font-bold text-gray-800 leading-tight">
                     <a href="https://lucide.dev/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-300">Galeri Ikon Lucide</a>
                 </h1>
                 <p class="text-lg md:text-xl text-gray-500 mt-1">Kumpulan ikon yang siap digunakan untuk proyek Anda, sekarang dikategorikan.</p>

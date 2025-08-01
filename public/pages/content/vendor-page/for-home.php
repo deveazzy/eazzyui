@@ -1,4 +1,4 @@
-<section id="vendor-support" class="py-8 md:py-16 bg-gray-50">
+<section id="vendor-support" class="py-8 md:py-16">
     <div class="container mx-auto px-6 md:px-10 py-8 bg-white rounded-xl shadow-xl max-w-7xl mb-6 md:mb-8">
         <h2 class="text-2xl md:text-4xl font-bold text-center text-gray-900 mb-8">
             Dokumentasi

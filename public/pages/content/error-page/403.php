@@ -8,8 +8,8 @@
             <div class="mb-6">
                 <i data-lucide="lock" class="w-24 h-24 mx-auto text-red-600"></i>
             </div>
-            <h2 class="text-6xl font-extrabold text-red-600 mb-4">403</h2>
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Akses Ditolak</h1>
+            <h2 class="text-6xl font-bold text-red-600 mb-4">403</h2>
+            <h1 class="text-4xl md:text-4xl font-bold text-gray-900 mb-4">Akses Ditolak</h1>
             <p class="text-lg text-gray-600 mb-8">
                 Maaf, Anda tidak memiliki izin untuk mengakses halaman ini.
             </p>

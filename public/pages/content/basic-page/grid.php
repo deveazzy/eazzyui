@@ -6,7 +6,7 @@
                 <i data-lucide="layout-panel-top" class="w-10 h-10 md:w-12 md:h-12"></i>
             </div>
             <div>
-                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">Grid</h1>
+                <h1 class="text-4xl md:text-4xl font-bold text-gray-800 leading-tight">Grid</h1>
                 <p class="text-lg md:text-xl text-gray-500 mt-1">
                     Membangun tata letak responsif dengan Grid.
                 </p>

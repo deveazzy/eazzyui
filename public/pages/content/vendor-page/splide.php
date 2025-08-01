@@ -18,7 +18,7 @@
         <div class="bg-blue-100 text-blue-600 p-4 rounded-full mb-4 md:mb-0">
             <i data-lucide="gallery-horizontal" class="w-10 h-10 md:w-12 md:h-12"></i> </div>
         <div>
-            <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">
+            <h1 class="text-4xl md:text-4xl font-bold text-gray-800 leading-tight">
                 <a href="https://splidejs.com/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-300">Splide</a>
             </h1>
             <p class="text-lg md:text-xl text-gray-500 mt-1">Slider/Carousel Ringan, Fleksibel, dan Aksesibel.</p>

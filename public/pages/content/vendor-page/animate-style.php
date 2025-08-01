@@ -8,7 +8,7 @@
                 <i data-lucide="sparkles" class="w-10 h-10 md:w-12 md:h-12"></i> <!-- Ikon relevan untuk animasi -->
             </div>
             <div>
-                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">
+                <h1 class="text-4xl md:text-4xl font-bold text-gray-800 leading-tight">
                     <a href="https://animate.style/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-300">Animate</a>
                 </h1>
                 <p class="text-lg md:text-xl text-gray-500 mt-1">
@@ -124,7 +124,7 @@ element.addEventListener('animationend', () => {
             </p>
 
             <div class="flex flex-col items-center space-y-6">
-                <div id="animatedElement" class="text-5xl font-extrabold text-blue-600 p-8 bg-blue-50 rounded-lg shadow-lg">
+                <div id="animatedElement" class="text-5xl font-bold text-blue-600 p-8 bg-blue-50 rounded-lg shadow-lg">
                     Animate Me!
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-2xl">

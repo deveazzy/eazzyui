@@ -8,8 +8,8 @@
             <div class="mb-6">
                 <i data-lucide="construction" class="w-24 h-24 mx-auto text-orange-600"></i>
             </div>
-            <h2 class="text-6xl font-extrabold text-orange-600 mb-4">503</h2>
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Layanan Tidak Tersedia</h1>
+            <h2 class="text-6xl font-bold text-orange-600 mb-4">503</h2>
+            <h1 class="text-4xl md:text-4xl font-bold text-gray-900 mb-4">Layanan Tidak Tersedia</h1>
             <p class="text-lg text-gray-600 mb-8">
                 Maaf, situs ini sedang dalam pemeliharaan. Kami akan segera kembali!
             </p>

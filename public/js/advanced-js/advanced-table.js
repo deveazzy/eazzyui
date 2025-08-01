@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <i data-lucide='trash-2'></i><span>Hapus Data</span>
         </button>
     `;
+    // Menambahkan event listener ke setiap tombol di dalam popup
     popupActions.querySelectorAll("button").forEach((button) => {
       button.addEventListener("click", () => {
         const action = button.dataset.action;
@@ -74,9 +75,9 @@ document.addEventListener("DOMContentLoaded", function () {
         closeActionPopup();
       });
     });
-    createIcons({
-      icons,
-      attrs: { class: "w-4 h-4" },
+
+    // Panggil lucide.createIcons dengan cara yang benar
+    lucide.createIcons({
       container: popupActions,
     });
     popup.classList.remove("hidden");
@@ -106,14 +107,17 @@ document.addEventListener("DOMContentLoaded", function () {
       "text-gray-500",
       "hover:bg-gray-100"
     );
+
     button.innerHTML = `<i data-lucide='more-vertical' class='w-5 h-5'></i>`;
+
     button.addEventListener("click", (e) => {
       e.stopPropagation();
       openActionPopup(cell.getRow().getData());
     });
-    onRendered(() =>
-      createIcons({ icons, attrs: { class: "w-5 h-5" }, container: button })
-    );
+    onRendered(() => {
+      lucide.createIcons({ container: button });
+    });
+
     return button;
   };
 
@@ -132,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
     paginationSizeSelector: [5, 10, 20, 50, 100],
     paginationElement: paginationElement,
     responsiveLayout: "collapse",
-    responsiveLayoutCollapseBtn: function (set, toggle) {
+    responsiveLayoutCollapseBtn: function (cell, toggle) {
       var btn = document.createElement("span");
       btn.classList.add(
         "w-5",
@@ -145,15 +149,27 @@ document.addEventListener("DOMContentLoaded", function () {
         "text-blue-600",
         "cursor-pointer"
       );
-      btn.innerHTML = "<i data-lucide='plus'></i>";
-      btn.onclick = function () {
+
+      var isExpanded = cell.getRow().isTreeExpanded();
+      btn.innerHTML = `<i data-lucide='${isExpanded ? "minus" : "plus"}'></i>`;
+
+      btn.onclick = function (e) {
+        e.stopPropagation();
         toggle();
+
+        var icon = btn.querySelector("i");
+        var currentIcon = icon.getAttribute("data-lucide");
+        icon.setAttribute(
+          "data-lucide",
+          currentIcon === "plus" ? "minus" : "plus"
+        );
+        lucide.createIcons();
       };
-      setTimeout(
-        () =>
-          createIcons({ icons, attrs: { class: "w-5 h-5" }, container: btn }),
-        0
-      );
+
+      setTimeout(() => {
+        lucide.createIcons({ container: btn });
+      }, 0);
+
       return btn;
     },
     rowFormatter: function (row) {

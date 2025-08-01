@@ -8,8 +8,8 @@
             <div class="mb-6">
                 <i data-lucide="server-crash" class="w-24 h-24 mx-auto text-red-700"></i>
             </div>
-            <h2 class="text-6xl font-extrabold text-red-700 mb-4">500</h2>
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Kesalahan Server Internal</h1>
+            <h2 class="text-6xl font-bold text-red-700 mb-4">500</h2>
+            <h1 class="text-4xl md:text-4xl font-bold text-gray-900 mb-4">Kesalahan Server Internal</h1>
             <p class="text-lg text-gray-600 mb-8">
                 Maaf, ada masalah di server kami. Kami sedang berupaya memperbaikinya.
             </p>

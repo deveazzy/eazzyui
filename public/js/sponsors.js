@@ -88,7 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
         img.alt = sponsor.name + " Logo";
         img.className =
           "w-32 h-32 object-contain rounded-lg bg-white shadow-md p-2";
-
+        img.width = 128;
+        img.height = 128;
         img.onerror = function () {
           this.onerror = null;
           this.src = `https://placehold.co/96x96/CCCCCC/666666?text=${sponsor.name}`;
