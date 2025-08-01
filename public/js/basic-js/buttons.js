@@ -160,5 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Jika createIcons diimpor sebagai modul, ia akan tersedia di sini.
   // Tidak perlu memeriksa window.lucide atau typeof createIcons.
-  // createIcons({ icons });
+  // ////createIcons({ icons });
+  lucide.createIcons();
 });

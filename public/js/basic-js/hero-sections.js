@@ -529,4 +529,5 @@ document.addEventListener("DOMContentLoaded", () => {
   setupHeroV2();
   setupHeroV3();
   setupHeroV4();
+  lucide.createIcons();
 });

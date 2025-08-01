@@ -4,7 +4,7 @@
  * @license   https://opensource.org/licenses/MIT MIT License
  */
 
-import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
+// import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
 import PNotify from "/assets/vendor/pnotify/PNotify.js";
 
 // Konfigurasi PNotify (jika belum dikonfigurasi secara global di global.js)
@@ -34,9 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const ICON_X = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x text-red-500"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>`;
 
   // Pastikan ikon Lucide di-render setelah DOMContentLoaded
-  createIcons({
-    icons: icons,
-  });
+  lucide.createIcons();
 
   /**
    * Mengatur status validasi input (border, pesan feedback, dan ikon).
@@ -222,9 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
       type === "password"
         ? `<i data-lucide="eye" class="w-5 h-5"></i>`
         : `<i data-lucide="eye-off" class="w-5 h-5"></i>`;
-    createIcons({
-      icons: icons,
-    });
+    lucide.createIcons();
   });
 
   // --- Event Listener untuk Submit Form ---

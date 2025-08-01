@@ -4,7 +4,7 @@
  * @license   https://opensource.org/licenses/MIT MIT License
  */
 
-import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
+// import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
 import { sidebarNavigationData } from "../navigation-data.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -62,7 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
         clearTimeout(hoverTimeout);
         sidebarDesktop.classList.remove("sidebar-collapsed");
         sidebarDesktop.classList.add("expanded");
-        createIcons({ icons });
+        //createIcons({ icons });
+        lucide.createIcons();
       }
     });
 
@@ -71,7 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
         hoverTimeout = setTimeout(() => {
           sidebarDesktop.classList.remove("expanded");
           sidebarDesktop.classList.add("sidebar-collapsed");
-          createIcons({ icons });
+          //createIcons({ icons });
+          lucide.createIcons();
         }, 300);
       }
     });
@@ -227,7 +229,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     }
-    createIcons({ icons });
+    //createIcons({ icons });
+    lucide.createIcons();
   };
 
   let currentMobileMenuLevel = sidebarNavigationData;
@@ -360,7 +363,8 @@ document.addEventListener("DOMContentLoaded", () => {
           });
         }
       });
-      createIcons({ icons });
+      //createIcons({ icons });
+      lucide.createIcons();
       markActiveLink();
     }, 200);
   };
@@ -392,7 +396,8 @@ document.addEventListener("DOMContentLoaded", () => {
         currentMobileMenuLevel = sidebarNavigationData;
       }
     }
-    createIcons({ icons });
+    //createIcons({ icons });
+    lucide.createIcons();
   };
 
   if (mobileFabToggleBtn) {

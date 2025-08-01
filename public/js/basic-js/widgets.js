@@ -4,7 +4,7 @@
  * @license   https://opensource.org/licenses/MIT MIT License
  */
 
-import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
+// import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const initPerformanceChart = () => {
@@ -85,7 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
     playPauseBtn.addEventListener("click", () => {
       const isPlaying = musicPlayer.classList.toggle("playing");
       playPauseBtn.innerHTML = isPlaying ? pauseIcon : playIcon;
-      createIcons({ icons });
+      //createIcons({ icons });
+      lucide.createIcons();
     });
   };
 

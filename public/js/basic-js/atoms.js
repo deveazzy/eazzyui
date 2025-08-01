@@ -3,7 +3,7 @@
  * @copyright Copyright (c) [2025] [EazZy Project]
  * @license   https://opensource.org/licenses/MIT MIT License
  */
-import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
+// import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
 import PNotify from "/assets/vendor/pnotify/PNotify.js";
 PNotify.defaults.delay = 2000;
 PNotify.defaults.closerHover = false;
@@ -232,7 +232,8 @@ document.addEventListener("DOMContentLoaded", () => {
       passwordToggleBtn.innerHTML = isPassword
         ? '<i data-lucide="eye-off" class="w-5 h-5 text-gray-500"></i>'
         : '<i data-lucide="eye" class="w-5 h-5 text-gray-500"></i>';
-      createIcons({ icons });
+      //createIcons({ icons });
+      lucide.createIcons();
     });
   }
 

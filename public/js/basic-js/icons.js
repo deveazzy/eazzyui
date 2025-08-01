@@ -4,7 +4,7 @@
  * @license   https://opensource.org/licenses/MIT MIT License
  */
 
-import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
+// import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const categorizedIconList = {
@@ -1471,7 +1471,8 @@ document.addEventListener("DOMContentLoaded", () => {
       iconGrid.innerHTML = `<p class="text-gray-500 col-span-full text-center">Ikon tidak ditemukan dalam kategori mana pun.</p>`;
     }
 
-    createIcons({ icons });
+    //createIcons({ icons });
+    lucide.createIcons();
   }
 
   if (searchInput) {

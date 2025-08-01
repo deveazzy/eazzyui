@@ -9,7 +9,7 @@
  */
 
 // --- Impor Modul ---
-import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
+// import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
 import {
   Tabulator,
   FormatModule,
@@ -295,5 +295,5 @@ document.addEventListener("DOMContentLoaded", function () {
     .getElementById("export-pdf-btn")
     .addEventListener("click", () => exportToPdf(table));
 
-  table.on("renderComplete", () => createIcons({ icons }));
+  table.on("renderComplete", () => lucide.createIcons());
 });

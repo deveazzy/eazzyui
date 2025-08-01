@@ -4,7 +4,7 @@
  * @license   https://opensource.org/licenses/MIT MIT License
  */
 
-import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
+// import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
 import { globalNavigationData } from "./navigation-data.js";
 
 let componentsTriggerLink = null;
@@ -361,7 +361,8 @@ document.addEventListener("DOMContentLoaded", () => {
       menuBtn.innerHTML = isHidden
         ? '<i data-lucide="menu" class="h-6 w-6"></i>'
         : '<i data-lucide="x" class="h-6 w-6"></i>';
-      createIcons({ icons });
+      //createIcons({ icons });
+      lucide.createIcons();
     });
   }
 
@@ -371,7 +372,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (menuBtn) {
       menuBtn.innerHTML = '<i data-lucide="menu" class="h-6 w-6"></i>';
-      createIcons({ icons });
+      //createIcons({ icons });
+      lucide.createIcons();
     }
   };
 
@@ -406,6 +408,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (mobileNavContainer) {
     renderMobileNav(globalNavigationData, mobileNavContainer);
   }
-  createIcons({ icons });
+  //createIcons({ icons });
+  lucide.createIcons();
   setupMegaMenuListeners();
 });

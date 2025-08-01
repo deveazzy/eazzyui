@@ -4,7 +4,7 @@
  * @license   https://opensource.org/licenses/MIT MIT License
  */
 
-import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
+// import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
 import { galleryData } from "../data/gallery-data.js";
 import { productData } from "../data/product-data.js";
 
@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const masonryInstances = {};
 
   const init = () => {
-    createIcons({ icons });
+    //createIcons({ icons });
+    lucide.createIcons();
     initTabs();
     initTimeline();
     setupGallery();
@@ -268,7 +269,8 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>`;
     if (prepend) container.insertAdjacentHTML("afterbegin", postHTML);
     else container.insertAdjacentHTML("beforeend", postHTML);
-    createIcons({ icons });
+    //createIcons({ icons });
+    lucide.createIcons();
   };
 
   const renderNewComment = (content, container) => {
@@ -285,7 +287,8 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>`;
     container.insertAdjacentHTML("beforeend", commentHTML);
-    createIcons({ icons });
+    //createIcons({ icons });
+    lucide.createIcons();
   };
 
   const setupMasonryGrid = (grid, filters, msnryInstance) => {

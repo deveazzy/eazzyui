@@ -8,3 +8,4 @@
 </style>
 <script src="/assets/vendor/nprogress/nprogress.js"></script>
 <!-- <link rel="stylesheet" href="/assets/vendor/tom/css/tom-select.bootstrap4.min.css"> -->
+<script src="/assets/vendor/lucide/umd/lucide.min.js" defer></script>

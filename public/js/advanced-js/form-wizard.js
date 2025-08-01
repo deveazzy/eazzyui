@@ -4,7 +4,7 @@
  * @license   https://opensource.org/licenses/MIT MIT License
  */
 
-import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
+// import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
 import PNotify from "/assets/vendor/pnotify/PNotify.js";
 
 PNotify.defaults.delay = 2000;
@@ -18,7 +18,8 @@ PNotify.defaults.stack = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  createIcons({ icons });
+  //createIcons({ icons });
+  lucide.createIcons();
 
   const formWizard = document.getElementById("formWizard");
   if (!formWizard) return;
