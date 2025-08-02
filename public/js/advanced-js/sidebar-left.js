@@ -5,7 +5,7 @@
  */
 
 // import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
-import { sidebarNavigationData } from "../navigation-data.js";
+import { sidebarNavigationData } from "../data/navigation-data.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const sidebarDesktop = document.getElementById("sidebar-left-desktop");

@@ -5,7 +5,7 @@
  */
 
 // import { createIcons, icons } from "/assets/vendor/lucide/lucide.js";
-import { globalNavigationData } from "./modules/navigation-data.js";
+import { globalNavigationData } from "./data/navigation-data.js";
 
 let componentsTriggerLink = null;
 
