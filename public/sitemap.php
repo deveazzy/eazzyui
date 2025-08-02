@@ -21,7 +21,7 @@ $pages = [
     // UI/UX Project (uiux.eazzy-project.com)
     ['loc' => 'https://uiux.eazzy-project.com/', 'lastmod' => date('Y-m-d'), 'changefreq' => 'weekly', 'priority' => '1.0'],
     ['loc' => 'https://uiux.eazzy-project.com/about', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.8'],
-    ['loc' => 'https://uiux.eazzy-project.com/atoms', 'lastmod' => date('Y-m-d'), 'changefreq' => 'daily', 'priority' => '0.9'],
+    ['loc' => 'https://uiux.eazzy-project.com/atoms', 'lastmod' => date('Y-m-d'), 'changefreq' => 'weekly', 'priority' => '0.9'],
     ['loc' => 'https://uiux.eazzy-project.com/typography', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.7'],
     ['loc' => 'https://uiux.eazzy-project.com/buttons', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.7'],
     ['loc' => 'https://uiux.eazzy-project.com/grid', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.7'],
@@ -41,7 +41,7 @@ $pages = [
     ['loc' => 'https://uiux.eazzy-project.com/luxon', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.7'],
     ['loc' => 'https://uiux.eazzy-project.com/jspdf', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.7'],
     ['loc' => 'https://uiux.eazzy-project.com/tom-select', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.8'],
-    ['loc' => 'https://uiux.eazzy-project.com/dashboard', 'lastmod' => date('Y-m-d'), 'changefreq' => 'daily', 'priority' => '0.9'],
+    ['loc' => 'https://uiux.eazzy-project.com/dashboard/sidebar-left', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.9'],
     ['loc' => 'https://uiux.eazzy-project.com/qr-code-styling', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.7'],
     ['loc' => 'https://uiux.eazzy-project.com/form-wizard', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.8'],
     ['loc' => 'https://uiux.eazzy-project.com/tinymce', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.8'],
@@ -54,7 +54,8 @@ $pages = [
     ['loc' => 'https://uiux.eazzy-project.com/timeline', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.7'],
     ['loc' => 'https://uiux.eazzy-project.com/gallery', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.7'],
     ['loc' => 'https://uiux.eazzy-project.com/hero-sections', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.7'],
-    ['loc' => 'https://uiux.eazzy-project.com/sponsors', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.7'],
+    ['loc' => 'https://uiux.eazzy-project.com/sponsors', 'lastmod' => date('Y-m-d'), 'changefreq' => 'daily', 'priority' => '0.7'],
+    ['loc' => 'https://uiux.eazzy-project.com/profile/sidebar-left', 'lastmod' => date('Y-m-d'), 'changefreq' => 'monthly', 'priority' => '0.7'],
     
     
     // ===========================================================================================================================================
